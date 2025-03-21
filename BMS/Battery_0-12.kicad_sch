@@ -1454,16 +1454,12 @@
 		(uuid "fd750b1d-5a76-4d70-b791-f203cf9ba4da")
 	)
 	(no_connect
-		(at 26.67 99.06)
-		(uuid "0a461ed7-994f-41ce-add4-7c40391ca362")
+		(at 26.67 144.78)
+		(uuid "27ee089a-7d9b-46ec-b2ac-a691207a9845")
 	)
 	(no_connect
 		(at 26.67 49.53)
 		(uuid "3193a6e9-d3e5-4ac5-aeee-a44a1368f946")
-	)
-	(no_connect
-		(at 26.67 101.6)
-		(uuid "6035de20-b96f-4ee8-a750-e1d5f5eb3dd2")
 	)
 	(no_connect
 		(at 26.67 46.99)
@@ -1478,8 +1474,12 @@
 		(uuid "9c54e485-6df5-45b0-baef-7d5989c0e771")
 	)
 	(no_connect
-		(at 26.67 96.52)
-		(uuid "ecbaf1b4-9338-45ce-86a8-b9eaa1d0dc23")
+		(at 26.67 142.24)
+		(uuid "a41f450a-aa8d-4ab0-bf40-f3d7e3548efd")
+	)
+	(no_connect
+		(at 26.67 139.7)
+		(uuid "bebd4c59-bb38-4c93-ae57-4b06b0de8196")
 	)
 	(wire
 		(pts
@@ -6429,119 +6429,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x17")
-		(at 21.59 116.84 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "60ca60af-97ad-4072-bbbd-fa4008cba176")
-		(property "Reference" "J1"
-			(at 21.59 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x17"
-			(at 21.59 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "footrpint:HARWIN_B5743-117-M-L-1"
-			(at 21.59 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.harwin.com/products/B5743-117-M-L-1"
-			(at 21.59 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x17, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 21.59 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "13"
-			(uuid "1120577d-b32d-4c30-8860-60123b2384e6")
-		)
-		(pin "17"
-			(uuid "cd651cc6-03fe-4d71-bcb7-8b02e76abf53")
-		)
-		(pin "3"
-			(uuid "c255166f-f138-4ff8-b139-7eeabc2aa6af")
-		)
-		(pin "4"
-			(uuid "ca1004b9-1dfc-4a65-ad23-18714eecdb91")
-		)
-		(pin "10"
-			(uuid "446abbeb-dc30-413f-981f-95f3f78b4f5b")
-		)
-		(pin "14"
-			(uuid "f2382b24-9ae6-418a-b73a-b200793ba5a5")
-		)
-		(pin "16"
-			(uuid "1bf8372b-8114-4892-a268-f69573feaeb2")
-		)
-		(pin "11"
-			(uuid "68c0e417-8980-47a4-afec-a6c6c711a6a9")
-		)
-		(pin "1"
-			(uuid "27faba2a-9bbf-4596-b5d2-651e65f9c4ac")
-		)
-		(pin "12"
-			(uuid "da486ea6-a32c-490e-86fd-ec15a5b7c5d1")
-		)
-		(pin "5"
-			(uuid "a5810085-0c07-4c77-b8e2-97ae669fc992")
-		)
-		(pin "9"
-			(uuid "d4e33b55-efd8-4c1b-ad06-acf93fe62312")
-		)
-		(pin "8"
-			(uuid "edebd5ca-81ea-4afc-878d-2eab94bda967")
-		)
-		(pin "15"
-			(uuid "007d3863-602c-4b9c-b244-8231e3734b83")
-		)
-		(pin "6"
-			(uuid "9dca4f69-c588-4871-b868-53f6eb598eb4")
-		)
-		(pin "2"
-			(uuid "27e43a6b-df67-4c08-83d4-abf44077f54e")
-		)
-		(pin "7"
-			(uuid "37a386dd-0d45-47c0-813a-6515a218255f")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Battery_Cell")
 		(at 95.25 144.78 0)
 		(unit 1)
@@ -6814,6 +6701,10 @@
 		(instances
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R38")
+					(unit 1)
+				)
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/a43b6b0a-d3da-47c5-ab92-e0e154337573"
 					(reference "R38")
 					(unit 1)
 				)
@@ -7926,6 +7817,119 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
 					(reference "R28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x17")
+		(at 21.59 124.46 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab6466ea-4fc3-4188-9798-cc3700437bf0")
+		(property "Reference" "J1"
+			(at 21.59 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x17"
+			(at 21.59 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footrpint:HARWIN_B5743-117-M-L-1"
+			(at 21.59 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.harwin.com/products/B5743-117-M-L-1"
+			(at 21.59 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x17, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 21.59 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "13"
+			(uuid "61b7cb1b-1599-4a0a-8949-a7f8f7a51181")
+		)
+		(pin "17"
+			(uuid "737cd383-7b64-427e-873e-3725aa6317df")
+		)
+		(pin "3"
+			(uuid "479060a8-8ce9-409c-8d7e-075be94d9d40")
+		)
+		(pin "4"
+			(uuid "00e070e8-97a1-4815-aae7-11a0e1e9ef2e")
+		)
+		(pin "10"
+			(uuid "c6553a56-d237-4f04-bb5d-d9529ce0685e")
+		)
+		(pin "14"
+			(uuid "19497516-0700-48e4-aed6-03ce4224db21")
+		)
+		(pin "16"
+			(uuid "a54ed39b-9f4b-4103-aa60-ddbb356452f8")
+		)
+		(pin "11"
+			(uuid "1a122df4-3fbb-4ba3-b217-bb61189a30d9")
+		)
+		(pin "1"
+			(uuid "ebb31d9b-1148-4746-874a-b86c6822f4a5")
+		)
+		(pin "12"
+			(uuid "1834e864-cd35-4189-85a4-e13d49f616aa")
+		)
+		(pin "5"
+			(uuid "aeffc58e-4d68-43e5-8389-cefacfdb88a3")
+		)
+		(pin "9"
+			(uuid "8cf1a586-ac53-4a3a-97de-75814fbea5f4")
+		)
+		(pin "8"
+			(uuid "c6f4fb64-fbe1-4957-a467-f022153cb79e")
+		)
+		(pin "15"
+			(uuid "c42e9b70-31e6-47b3-9074-f8c5fc3a4d86")
+		)
+		(pin "6"
+			(uuid "ef2d7e90-cf71-499b-a030-3cf9144d6e72")
+		)
+		(pin "2"
+			(uuid "c19fc467-a989-4263-ad46-d836cac6bff3")
+		)
+		(pin "7"
+			(uuid "e4707bfd-8217-4837-81a7-422fb881429c")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "J1")
 					(unit 1)
 				)
 			)
