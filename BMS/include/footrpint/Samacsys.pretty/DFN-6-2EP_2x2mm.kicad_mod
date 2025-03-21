@@ -1,0 +1,218 @@
+(footprint "DFN-6-2EP_2x2mm"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "UT6K30TCR-4")
+	(tags "MOSFET (N-Channel)")
+	(property "Reference" "Q**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "e338e923-7b7a-4c75-880c-582663688956")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "DFN-6-2EP_2x2mm"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "9580557b-28ba-409e-9178-b304957e9546")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2203e35d-6a48-4187-9737-c3a82ffb8495")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c8f11e17-6ed0-4227-a9f9-99c89dbe5351")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e7cd1a71-7800-4475-8f9c-e17910e291c6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.1 -1)
+		(end -1.1 1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e94555b7-abc6-4eb9-8ee6-275ba7fbc7a4")
+	)
+	(fp_line
+		(start 1.1 -1)
+		(end 1.1 1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "934f64cf-eaca-4a0d-b11b-aa567bfef700")
+	)
+	(fp_poly
+		(pts
+			(xy -1.1 1.2) (xy -1.1 1.48) (xy -1.38 1.2) (xy -1.1 1.2)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "86dd7271-a797-44b0-8622-944b9f9b318c")
+	)
+	(fp_line
+		(start -1 -1)
+		(end -1 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1f21873a-b17a-430c-9353-46ae659f0212")
+	)
+	(fp_line
+		(start -1 1)
+		(end 1 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f410669c-bddf-40b1-a028-db5ef59a5cf6")
+	)
+	(fp_line
+		(start 1 -1)
+		(end -1 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "38df4797-8291-48a9-8649-468fec9796af")
+	)
+	(fp_line
+		(start 1 1)
+		(end 1 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b418cb2a-6bde-4303-995f-b87ed93a3591")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "4c66899e-b21b-4d34-82d4-a45901aeb0bf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.65 0.863 90)
+		(size 0.425 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "44ec1508-254f-4bc2-aba0-41a8b6dd969b")
+	)
+	(pad "2" smd roundrect
+		(at 0 0.863 90)
+		(size 0.425 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "b696f29b-074c-448c-ab0d-12303a9b5e7c")
+	)
+	(pad "3" smd roundrect
+		(at 0.65 0.863 90)
+		(size 0.425 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "c8fef485-9055-4cb4-9fdc-d8bb3681c780")
+	)
+	(pad "4" smd roundrect
+		(at 0.65 -0.863 90)
+		(size 0.425 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "644b86e6-ff79-455e-8775-23d73f8610a3")
+	)
+	(pad "5" smd roundrect
+		(at 0 -0.863 90)
+		(size 0.425 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "8c5534a3-3ff2-4b4c-9bb4-b5a9beb8ce86")
+	)
+	(pad "6" smd roundrect
+		(at -0.65 -0.863 90)
+		(size 0.425 0.45)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "1a225b1f-87e2-4b35-b26f-a51d543dead1")
+	)
+	(pad "7" smd roundrect
+		(at -0.475 0)
+		(size 0.7 1)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "577cef9f-c782-4ca0-8ec8-178ee233f160")
+	)
+	(pad "8" smd roundrect
+		(at 0.475 0)
+		(size 0.7 1)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "7ed27a34-3c46-4efb-83dc-5093440e28e7")
+	)
+	(model "${KIPRJMOD}/footprint/Samacsys.3dshapes/DFN-6-2EP_2x2mm.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

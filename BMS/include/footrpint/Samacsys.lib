@@ -1,0 +1,409 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+DEF MCP3564T-E_NC IC 0 30 Y Y 1 F N
+F0 "IC" 1350 600 50 H V L CNN
+F1 "MCP3564T-E_NC" 1350 500 50 H V L CNN
+F2 "Samacsys:QFN40P300X300X60-21N-D" 1350 400 50 H I L CNN
+F3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en609858" 1350 300 50 H I L CNN
+F4 "Analog to Digital Converters - ADC 24-bit delta-sigma ADC, Quad channel, 3V,UQFN20" 1350 200 50 H I L CNN "Description"
+F5 "0.6" 1350 100 50 H I L CNN "Height"
+F6 "579-MCP3564T-E/NC" 1350 0 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP3564T-E-NC?qs=byeeYqUIh0OV7KB17bvVAQ%3D%3D" 1350 -100 50 H I L CNN "Mouser Price/Stock"
+F8 "Microchip" 1350 -200 50 H I L CNN "Manufacturer_Name"
+F9 "MCP3564T-E/NC" 1350 -300 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X REFIN- 1 0 0 200 R 50 50 0 0 P
+X REFIN+ 2 0 -100 200 R 50 50 0 0 P
+X CH0 3 0 -200 200 R 50 50 0 0 P
+X CH1 4 0 -300 200 R 50 50 0 0 P
+X CH2 5 0 -400 200 R 50 50 0 0 P
+X CH3 6 500 -1000 200 U 50 50 0 0 P
+X CH4 7 600 -1000 200 U 50 50 0 0 P
+X CH5 8 700 -1000 200 U 50 50 0 0 P
+X CH6 9 800 -1000 200 U 50 50 0 0 P
+X CH7 10 900 -1000 200 U 50 50 0 0 P
+X ~IRQ~/MDAT 15 1500 0 200 L 50 50 0 0 P
+X SDO 14 1500 -100 200 L 50 50 0 0 P
+X SDI 13 1500 -200 200 L 50 50 0 0 P
+X SCK 12 1500 -300 200 L 50 50 0 0 P
+X ~CS 11 1500 -400 200 L 50 50 0 0 P
+X EPAD 21 500 600 200 D 50 50 0 0 P
+X AGND 20 600 600 200 D 50 50 0 0 P
+X AVDD 19 700 600 200 D 50 50 0 0 P
+X DVDD 18 800 600 200 D 50 50 0 0 P
+X DGND 17 900 600 200 D 50 50 0 0 P
+X MCLK 16 1000 600 200 D 50 50 0 0 P
+P 5 0 1 6 200 400 1300 400 1300 -800 200 -800 200 400 N
+ENDDRAW
+ENDDEF
+DEF M80-5100442 J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "M80-5100442" 650 200 50 H V L CNN
+F2 "Samacsys:M80-51004YY" 650 100 50 H I L CNN
+F3 "https://cdn.harwin.com/pdfs/M80-510.pdf" 650 0 50 H I L CNN
+F4 "4 Male DIL Vertical Throughboard Conn. Jackscrews, 2.00mm Pitch High-Reliability Connector - Datamate J-Tek" 650 -100 50 H I L CNN "Description"
+F5 "" 650 -200 50 H I L CNN "Height"
+F6 "855-M80-5100442" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Harwin/M80-5100442?qs=wuXwK9wHm9vlrUDxU70C1Q%3D%3D" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Harwin" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "M80-5100442" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 0 -100 200 R 50 50 0 0 P
+X 2 2 800 -100 200 L 50 50 0 0 P
+X 3 3 0 0 200 R 50 50 0 0 P
+X 4 4 800 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+DEF PB114024 K 0 30 Y Y 1 F N
+F0 "K" 1050 300 50 H V L CNN
+F1 "PB114024" 1050 200 50 H V L CNN
+F2 "Samacsys:PB114024" 1050 100 50 H I L CNN
+F3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=PB&DocType=DS&DocLang=English" 1050 0 50 H I L CNN
+F4 "Mini SPDT 10A pcb power relay, 24Vdc SPDT PCB Mount Non-Latching Relay, 24V dc" 1050 -100 50 H I L CNN "Description"
+F5 "20" 1050 -200 50 H I L CNN "Height"
+F6 "655-PB114024" 1050 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-Schrack/PB114024?qs=io7aH2hdVh4v3MI8EX5RHg%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "TE Connectivity" 1050 -500 50 H I L CNN "Manufacturer_Name"
+F9 "PB114024" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X COM 11 0 0 200 R 50 50 0 0 P
+X NC 12 0 -100 200 R 50 50 0 0 N
+X NO 14 0 -200 200 R 50 50 0 0 P
+X COIL_1 A1 1200 0 200 L 50 50 0 0 P
+X COIL_2 A2 1200 -100 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+DEF PB134024 K 0 30 Y Y 1 F N
+F0 "K" 1050 300 50 H V L CNN
+F1 "PB134024" 1050 200 50 H V L CNN
+F2 "Samacsys:PB134024" 1050 100 50 H I L CNN
+F3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=PB&DocType=Data%20Sheet&DocLang=English&PartCntxt=3-1415030-1&DocFormat=pdf" 1050 0 50 H I L CNN
+F4 "Body Features: Product Weight .19 OZ | Product Weight 5.4 G | Insulation Special Features Tracking Index of Relay Base PTI250 | Contact Features: Contact Arrangement 1 Form A (NO) | Contact Current Class 16 AMP | Contact Current Rating (Max) 10 AMP | Contact Material AgNi90/10 | Contact Number of Poles 1 | Dimensions: Insulation Clearance Class 2.5  4 MM | Insulation Clearance Between Contact & Coil 4 MM | Product Length 15 MM | Width Class (Mechanical) 12  16 MM | Insulation Clearance Between Contact" 1050 -100 50 H I L CNN "Description"
+F5 "20" 1050 -200 50 H I L CNN "Height"
+F6 "655-PB134024" 1050 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-Schrack/PB134024?qs=io7aH2hdVh6bLq6KOapqAw%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "TE Connectivity" 1050 -500 50 H I L CNN "Manufacturer_Name"
+F9 "PB134024" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X COM 11 1200 -100 200 L 50 50 0 0 P
+X NO 14 1200 0 200 L 50 50 0 0 P
+X COIL_1 A1 0 -100 200 R 50 50 0 0 P
+X COIL_2 A2 0 0 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+DEF M80-5101422 J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "M80-5101422" 750 200 50 H V L CNN
+F2 "Samacsys:M80-51014YY" 750 100 50 H I L CNN
+F3 "https://cdn.harwin.com/pdfs/M80-510.pdf" 750 0 50 H I L CNN
+F4 "Datamate J-Tek DIL Male Vertical 3mm Throughboard Connector, selective gold + tin/lead, with jackscrews + board mount, 7+7 contacts" 750 -100 50 H I L CNN "Description"
+F5 "" 750 -200 50 H I L CNN "Height"
+F6 "855-M80-5101422" 750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Harwin/M80-5101422?qs=fW6Py%2FssUEkbBr1pTdzojA%3D%3D" 750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Harwin" 750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "M80-5101422" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+X 4 4 0 -300 200 R 50 50 0 0 P
+X 5 5 0 -400 200 R 50 50 0 0 P
+X 6 6 0 -500 200 R 50 50 0 0 P
+X 7 7 0 -600 200 R 50 50 0 0 P
+X 8 8 900 0 200 L 50 50 0 0 P
+X 9 9 900 -100 200 L 50 50 0 0 P
+X 10 10 900 -200 200 L 50 50 0 0 P
+X 11 11 900 -300 200 L 50 50 0 0 P
+X 12 12 900 -400 200 L 50 50 0 0 P
+X 13 13 900 -500 200 L 50 50 0 0 P
+X 14 14 900 -600 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 700 100 700 -700 200 -700 200 100 N
+ENDDRAW
+ENDDEF
+DEF M80-5103442 J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "M80-5103442" 750 200 50 H V L CNN
+F2 "Samacsys:M80-51034YY" 750 100 50 H I L CNN
+F3 "https://cdn.harwin.com/pdfs/M80-510.pdf" 750 0 50 H I L CNN
+F4 "Datamate J-Tek DIL Male Vertical 3mm Throughboard Connector, selective gold + tin, with jackscrews + board mount, 17+17 contacts" 750 -100 50 H I L CNN "Description"
+F5 "" 750 -200 50 H I L CNN "Height"
+F6 "855-M80-5103442" 750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Harwin/M80-5103442?qs=7jyBjEprRBjNw3dCRzEBIQ%3D%3D" 750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Harwin" 750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "M80-5103442" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+X 4 4 0 -300 200 R 50 50 0 0 P
+X 5 5 0 -400 200 R 50 50 0 0 P
+X 6 6 0 -500 200 R 50 50 0 0 P
+X 7 7 0 -600 200 R 50 50 0 0 P
+X 8 8 0 -700 200 R 50 50 0 0 P
+X 9 9 0 -800 200 R 50 50 0 0 P
+X 10 10 0 -900 200 R 50 50 0 0 P
+X 11 11 0 -1000 200 R 50 50 0 0 P
+X 12 12 0 -1100 200 R 50 50 0 0 P
+X 13 13 0 -1200 200 R 50 50 0 0 P
+X 14 14 0 -1300 200 R 50 50 0 0 P
+X 15 15 0 -1400 200 R 50 50 0 0 P
+X 16 16 0 -1500 200 R 50 50 0 0 P
+X 17 17 0 -1600 200 R 50 50 0 0 P
+X 18 18 900 0 200 L 50 50 0 0 P
+X 19 19 900 -100 200 L 50 50 0 0 P
+X 20 20 900 -200 200 L 50 50 0 0 P
+X 21 21 900 -300 200 L 50 50 0 0 P
+X 22 22 900 -400 200 L 50 50 0 0 P
+X 23 23 900 -500 200 L 50 50 0 0 P
+X 24 24 900 -600 200 L 50 50 0 0 P
+X 25 25 900 -700 200 L 50 50 0 0 P
+X 26 26 900 -800 200 L 50 50 0 0 P
+X 27 27 900 -900 200 L 50 50 0 0 P
+X 28 28 900 -1000 200 L 50 50 0 0 P
+X 29 29 900 -1100 200 L 50 50 0 0 P
+X 30 30 900 -1200 200 L 50 50 0 0 P
+X 31 31 900 -1300 200 L 50 50 0 0 P
+X 32 32 900 -1400 200 L 50 50 0 0 P
+X 33 33 900 -1500 200 L 50 50 0 0 P
+X 34 34 900 -1600 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 700 100 700 -1700 200 -1700 200 100 N
+ENDDRAW
+ENDDEF
+DEF M80-5100642 J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "M80-5100642" 650 200 50 H V L CNN
+F2 "Samacsys:M80-51006YY" 650 100 50 H I L CNN
+F3 "https://cdn.harwin.com/pdfs/M80-510.pdf" 650 0 50 H I L CNN
+F4 "6 Male DIL Vertical Throughboard Conn. Jackscrews, 2.00mm Pitch High-Reliability Connector - Datamate J-Tek" 650 -100 50 H I L CNN "Description"
+F5 "" 650 -200 50 H I L CNN "Height"
+F6 "855-M80-5100642" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Harwin/M80-5100642?qs=vF78I%252BjhbY%2FbF6fcSHA07A%3D%3D" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Harwin" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "M80-5100642" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+X 4 4 800 0 200 L 50 50 0 0 P
+X 5 5 800 -100 200 L 50 50 0 0 P
+X 6 6 800 -200 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+DEF FTSH-107-01-L-D-K J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "FTSH-107-01-L-D-K" 750 200 50 H V L CNN
+F2 "Samacsys:FTSH-107-XX-YYY-D-K" 750 100 50 H I L CNN
+F3 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-d-xxx-xx-mkt.pdf" 750 0 50 H I L CNN
+F4 "14 Position, High Reliability Header Strips, 0.050&quot; pitch" 750 -100 50 H I L CNN "Description"
+F5 "" 750 -200 50 H I L CNN "Height"
+F6 "200-FTSH10701LDK" 750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Samtec/FTSH-107-01-L-D-K?qs=%252BZP6%2F%252BtExtDf9U3LcTl7MA%3D%3D" 750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "SAMTEC" 750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "FTSH-107-01-L-D-K" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 900 0 200 L 50 50 0 0 P
+X 3 3 0 -100 200 R 50 50 0 0 P
+X 4 4 900 -100 200 L 50 50 0 0 P
+X 5 5 0 -200 200 R 50 50 0 0 P
+X 6 6 900 -200 200 L 50 50 0 0 P
+X 7 7 0 -300 200 R 50 50 0 0 P
+X 8 8 900 -300 200 L 50 50 0 0 P
+X 9 9 0 -400 200 R 50 50 0 0 P
+X 10 10 900 -400 200 L 50 50 0 0 P
+X 11 11 0 -500 200 R 50 50 0 0 P
+X 12 12 900 -500 200 L 50 50 0 0 P
+X 13 13 0 -600 200 R 50 50 0 0 P
+X 14 14 900 -600 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 700 100 700 -700 200 -700 200 100 N
+ENDDRAW
+ENDDEF
+DEF TLP152_TPL,E IC 0 30 Y Y 1 F N
+F0 "IC" 1050 300 50 H V L CNN
+F1 "TLP152_TPL,E" 1050 200 50 H V L CNN
+F2 "Samacsys:SOIC127P700X230-6N" 1050 100 50 H I L CNN
+F3 "http://toshiba.semicon-storage.com/info/docget.jsp?did=13615&prodName=TLP152" 1050 0 50 H I L CNN
+F4 "Logic Output Optocouplers Gate Drive Phcplr 3750 Vrms" 1050 -100 50 H I L CNN "Description"
+F5 "2.3" 1050 -200 50 H I L CNN "Height"
+F6 "757-TLP152TPLE" 1050 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Toshiba/TLP152TPLE?qs=WTEd434rUSUZa6a75d6uQg%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Toshiba" 1050 -500 50 H I L CNN "Manufacturer_Name"
+F9 "TLP152(TPL,E" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X ANODE 1 0 0 200 R 50 50 0 0 P
+X NP 2 0 -100 200 R 50 50 0 0 P
+X CATHODE 3 0 -200 200 R 50 50 0 0 P
+X VCC 6 1200 0 200 L 50 50 0 0 P
+X VO 5 1200 -100 200 L 50 50 0 0 P
+X GND 4 1200 -200 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+DEF TPL7407LADR IC 0 30 Y Y 1 F N
+F0 "IC" 950 300 50 H V L CNN
+F1 "TPL7407LADR" 950 200 50 H V L CNN
+F2 "Samacsys:SOIC127P600X175-16N" 950 100 50 H I L CNN
+F3 "http://www.ti.com/lit/gpn/tpl7407la" 950 0 50 H I L CNN
+F4 "Gate Drivers 30-V, 7-Channel NMOS Array Low-Side Driver 16-SOIC -40 to 125" 950 -100 50 H I L CNN "Description"
+F5 "1.75" 950 -200 50 H I L CNN "Height"
+F6 "595-TPL7407LADR" 950 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPL7407LADR?qs=MLItCLRbWsy4i2JfnIu0zA%3D%3D" 950 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Texas Instruments" 950 -500 50 H I L CNN "Manufacturer_Name"
+F9 "TPL7407LADR" 950 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X IN1 1 0 0 200 R 50 50 0 0 P
+X IN2 2 0 -100 200 R 50 50 0 0 P
+X IN3 3 0 -200 200 R 50 50 0 0 P
+X IN4 4 0 -300 200 R 50 50 0 0 P
+X IN5 5 0 -400 200 R 50 50 0 0 P
+X IN6 6 0 -500 200 R 50 50 0 0 P
+X IN7 7 0 -600 200 R 50 50 0 0 P
+X GND 8 0 -700 200 R 50 50 0 0 P
+X OUT1 16 1100 0 200 L 50 50 0 0 P
+X OUT2 15 1100 -100 200 L 50 50 0 0 P
+X OUT3 14 1100 -200 200 L 50 50 0 0 P
+X OUT4 13 1100 -300 200 L 50 50 0 0 P
+X OUT5 12 1100 -400 200 L 50 50 0 0 P
+X OUT6 11 1100 -500 200 L 50 50 0 0 P
+X OUT7 10 1100 -600 200 L 50 50 0 0 P
+X COM 9 1100 -700 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 900 100 900 -800 200 -800 200 100 N
+ENDDRAW
+ENDDEF
+DEF CDMA15M0D2500DE5 R 0 30 Y Y 1 F N
+F0 "R" 650 300 50 H V L CNN
+F1 "CDMA15M0D2500DE5" 650 200 50 H V L CNN
+F2 "Samacsys:CDMA5M00F5000DE5" 650 100 50 H I L CNN
+F3 "https://www.vishay.com/docs/68049/cdma.pdf" 650 0 50 H I L CNN
+F4 "Thick Film Chip Dividers, Medium Voltage" 650 -100 50 H I L CNN "Description"
+F5 "0.762" 650 -200 50 H I L CNN "Height"
+F6 "71-CDMA15M0D2500DE5" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Vishay-Techno/CDMA15M0D2500DE5?qs=Znm5pLBrcAIdH5zqf9zCng%3D%3D" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Vishay" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "CDMA15M0D2500DE5" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 800 0 200 L 50 50 0 0 P
+X 2 2 0 0 200 R 50 50 0 0 P
+X 3 3 0 -100 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+DEF UT6K30TCR Q 0 30 Y Y 1 F N
+F0 "Q" 1650 300 50 H V L CNN
+F1 "UT6K30TCR" 1650 200 50 H V L CNN
+F2 "Samacsys:UT6K30TCR" 1650 100 50 H I L CNN
+F3 "https://fscdn.rohm.com/en/products/databook/datasheet/discrete/transistor/mosfet/ut6k30-e.pdf" 1650 0 50 H I L CNN
+F4 "UT6K30TCR Dual N-Channel MOSFET, 3 A, 60 V UT6K30, 8-Pin DFN2020, HUML2020L ROHM" 1650 -100 50 H I L CNN "Description"
+F5 "0.65" 1650 -200 50 H I L CNN "Height"
+F6 "755-UT6K30TCR" 1650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/ROHM-Semiconductor/UT6K30TCR?qs=YCa%2FAAYMW02IaiVVbwrI%2FQ%3D%3D" 1650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "ROHM Semiconductor" 1650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "UT6K30TCR" 1650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X TR1_SOURCE 1 0 0 200 R 50 50 0 0 P
+X TR1_GATE 2 0 -100 200 R 50 50 0 0 P
+X TR2_DRAIN_1 3 0 -200 200 R 50 50 0 0 P
+X TR2_SOURCE 4 0 -300 200 R 50 50 0 0 P
+X TR2_GATE 5 1800 0 200 L 50 50 0 0 P
+X TR1_DRAIN_1 6 1800 -100 200 L 50 50 0 0 P
+X TR1_DRAIN_2 7 1800 -200 200 L 50 50 0 0 P
+X TR2_DRAIN_2 8 1800 -300 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1600 100 1600 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+DEF DMT6018LDR-7 Q 0 30 Y Y 1 F N
+F0 "Q" 750 300 50 H V L CNN
+F1 "DMT6018LDR-7" 750 200 50 H V L CNN
+F2 "Samacsys:DMT6018LDR7" 750 100 50 H I L CNN
+F3 "https://www.diodes.com/assets/Datasheets/DMT6018LDR.pdf" 750 0 50 H I L CNN
+F4 "DIODES INC. - DMT6018LDR-7 - Dual MOSFET, N Channel, 60 V, 60 V, 8.8 A, 8.8 A, 0.013 ohm" 750 -100 50 H I L CNN "Description"
+F5 "0.85" 750 -200 50 H I L CNN "Height"
+F6 "621-DMT6018LDR-7" 750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMT6018LDR-7?qs=4EhzHfbM1GhfDx1FS0oSLQ%3D%3D" 750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Diodes Incorporated" 750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "DMT6018LDR-7" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X G1 1 0 0 200 R 50 50 0 0 P
+X S1 2 0 -100 200 R 50 50 0 0 P
+X S2 3 0 -200 200 R 50 50 0 0 P
+X G2 4 900 0 200 L 50 50 0 0 P
+X D1 5 900 -100 200 L 50 50 0 0 P
+X D2 6 900 -200 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 700 100 700 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+DEF BQ79600PWRQ1 IC 0 30 Y Y 1 F N
+F0 "IC" 1750 300 50 H V L CNN
+F1 "BQ79600PWRQ1" 1750 200 50 H V L CNN
+F2 "Samacsys:SOP65P640X120-16N" 1750 100 50 H I L CNN
+F3 "https://www.arrow.com/en/products/bq79600pwrq1/texas-instruments" 1750 0 50 H I L CNN
+F4 "Battery Management Automotive SPI/UART communication interface functional-safety compliant with automatic host wakeup" 1750 -100 50 H I L CNN "Description"
+F5 "1.2" 1750 -200 50 H I L CNN "Height"
+F6 "595-BQ79600PWRQ1" 1750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/BQ79600PWRQ1?qs=bAKSY%2FctAC74v4PXQeVHrA%3D%3D" 1750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Texas Instruments" 1750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "BQ79600PWRQ1" 1750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X DVDD 1 0 0 200 R 50 50 0 0 P
+X NFAULT 2 0 -100 200 R 50 50 0 0 P
+X VIO 3 0 -200 200 R 50 50 0 0 P
+X MOSI/RX 4 0 -300 200 R 50 50 0 0 P
+X MISO/TX 5 0 -400 200 R 50 50 0 0 P
+X SCLK 6 0 -500 200 R 50 50 0 0 P
+X NCS 7 0 -600 200 R 50 50 0 0 P
+X NUART/SPI_(SPI_RDY) 8 0 -700 200 R 50 50 0 0 P
+X INH 16 1900 0 200 L 50 50 0 0 P
+X BAT 15 1900 -100 200 L 50 50 0 0 P
+X CVDD 14 1900 -200 200 L 50 50 0 0 P
+X COMHP 13 1900 -300 200 L 50 50 0 0 P
+X COMHN 12 1900 -400 200 L 50 50 0 0 P
+X COMLN 11 1900 -500 200 L 50 50 0 0 P
+X COMLP 10 1900 -600 200 L 50 50 0 0 P
+X GND 9 1900 -700 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1700 100 1700 -800 200 -800 200 100 N
+ENDDRAW
+ENDDEF
+DEF ETC1-1T-2TR T 0 30 Y Y 1 F N
+F0 "T" 1750 300 50 H V L CNN
+F1 "ETC1-1T-2TR" 1750 200 50 H V L CNN
+F2 "Samacsys:E_SERIES_1" 1750 100 50 H I L CNN
+F3 "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets_SAMA/85d3f36e6ccd244b2f23e0daa3d02a86.pdf" 1750 0 50 H I L CNN
+F4 "Audio Transformers / Signal Transformers .1-200MHz IL 1.5dB Impedance Ratio 1:1" 1750 -100 50 H I L CNN "Description"
+F5 "" 1750 -200 50 H I L CNN "Height"
+F6 "937-ETC1-1T-2" 1750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/MACOM/ETC1-1T-2TR?qs=Z9twEOuL%252B%2FJJqd2fxpSi6w%3D%3D" 1750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "MACOM" 1750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "ETC1-1T-2TR" 1750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X SECONDARY 1 1900 0 200 L 50 50 0 0 P
+X SECONDARY_CT 2 1900 -100 200 L 50 50 0 0 P
+X SECONDARY_DOT 3 1900 -200 200 L 50 50 0 0 P
+X PRIMARY_DOT 4 0 -100 200 R 50 50 0 0 P
+X PRIMARY 5 0 0 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 1700 100 1700 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+DEF ESMIT-4180_C T 0 30 Y Y 1 F N
+F0 "T" 1050 300 50 H V L CNN
+F1 "ESMIT-4180_C" 1050 200 50 H V L CNN
+F2 "Samacsys:SOP254P914X350-4N" 1050 100 50 H I L CNN
+F3 "http://products.sumida.com/products/pdf/CBM5D33_Ver1.0_E.pdf" 1050 0 50 H I L CNN
+F4 "Audio Transformers / Signal Transformers 125uH min 120uH Nom" 1050 -100 50 H I L CNN "Description"
+F5 "3.5" 1050 -200 50 H I L CNN "Height"
+F6 "851-ESMIT-4180/C" 1050 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Sumida/ESMIT-4180-C?qs=uFNwyRpLCSIys3VDNoqXHQ%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Sumida" 1050 -500 50 H I L CNN "Manufacturer_Name"
+F9 "ESMIT-4180/C" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X PRI_1 1 0 0 200 R 50 50 0 0 P
+X PRI_2 2 0 -100 200 R 50 50 0 0 P
+X SEC_2 4 1200 0 200 L 50 50 0 0 P
+X SEC_1 3 1200 -100 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+# End Library

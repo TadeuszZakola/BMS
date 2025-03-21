@@ -1,0 +1,98 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MCP3564T-E_NC
+D Analog to Digital Converters - ADC 24-bit delta-sigma ADC, Quad channel, 3V,UQFN20
+K
+F http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en609858
+$ENDCMP
+#
+$CMP M80-5100442
+D 4 Male DIL Vertical Throughboard Conn. Jackscrews, 2.00mm Pitch High-Reliability Connector - Datamate J-Tek
+K
+F https://cdn.harwin.com/pdfs/M80-510.pdf
+$ENDCMP
+#
+$CMP PB114024
+D Mini SPDT 10A pcb power relay, 24Vdc SPDT PCB Mount Non-Latching Relay, 24V dc
+K
+F http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=PB&DocType=DS&DocLang=English
+$ENDCMP
+#
+$CMP PB134024
+D Body Features: Product Weight .19 OZ | Product Weight 5.4 G | Insulation Special Features Tracking Index of Relay Base PTI250 | Contact Features: Contact Arrangement 1 Form A (NO) | Contact Current Class 16 AMP | Contact Current Rating (Max) 10 AMP | Contact Material AgNi90/10 | Contact Number of Poles 1 | Dimensions: Insulation Clearance Class 2.5  4 MM | Insulation Clearance Between Contact & Coil 4 MM | Product Length 15 MM | Width Class (Mechanical) 12  16 MM | Insulation Clearance Between Contact
+K
+F https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=PB&DocType=Data%20Sheet&DocLang=English&PartCntxt=3-1415030-1&DocFormat=pdf
+$ENDCMP
+#
+$CMP M80-5101422
+D Datamate J-Tek DIL Male Vertical 3mm Throughboard Connector, selective gold + tin/lead, with jackscrews + board mount, 7+7 contacts
+K
+F https://cdn.harwin.com/pdfs/M80-510.pdf
+$ENDCMP
+#
+$CMP M80-5103442
+D Datamate J-Tek DIL Male Vertical 3mm Throughboard Connector, selective gold + tin, with jackscrews + board mount, 17+17 contacts
+K
+F https://cdn.harwin.com/pdfs/M80-510.pdf
+$ENDCMP
+#
+$CMP M80-5100642
+D 6 Male DIL Vertical Throughboard Conn. Jackscrews, 2.00mm Pitch High-Reliability Connector - Datamate J-Tek
+K
+F https://cdn.harwin.com/pdfs/M80-510.pdf
+$ENDCMP
+#
+$CMP FTSH-107-01-L-D-K
+D 14 Position, High Reliability Header Strips, 0.050&quot; pitch
+K
+F http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-d-xxx-xx-mkt.pdf
+$ENDCMP
+#
+$CMP TLP152_TPL,E
+D Logic Output Optocouplers Gate Drive Phcplr 3750 Vrms
+K
+F http://toshiba.semicon-storage.com/info/docget.jsp?did=13615&prodName=TLP152
+$ENDCMP
+#
+$CMP TPL7407LADR
+D Gate Drivers 30-V, 7-Channel NMOS Array Low-Side Driver 16-SOIC -40 to 125
+K
+F http://www.ti.com/lit/gpn/tpl7407la
+$ENDCMP
+#
+$CMP CDMA15M0D2500DE5
+D Thick Film Chip Dividers, Medium Voltage
+K
+F https://www.vishay.com/docs/68049/cdma.pdf
+$ENDCMP
+#
+$CMP UT6K30TCR
+D UT6K30TCR Dual N-Channel MOSFET, 3 A, 60 V UT6K30, 8-Pin DFN2020, HUML2020L ROHM
+K
+F https://fscdn.rohm.com/en/products/databook/datasheet/discrete/transistor/mosfet/ut6k30-e.pdf
+$ENDCMP
+#
+$CMP DMT6018LDR-7
+D DIODES INC. - DMT6018LDR-7 - Dual MOSFET, N Channel, 60 V, 60 V, 8.8 A, 8.8 A, 0.013 ohm
+K
+F https://www.diodes.com/assets/Datasheets/DMT6018LDR.pdf
+$ENDCMP
+#
+$CMP BQ79600PWRQ1
+D Battery Management Automotive SPI/UART communication interface functional-safety compliant with automatic host wakeup
+K
+F https://www.arrow.com/en/products/bq79600pwrq1/texas-instruments
+$ENDCMP
+#
+$CMP ETC1-1T-2TR
+D Audio Transformers / Signal Transformers .1-200MHz IL 1.5dB Impedance Ratio 1:1
+K
+F https://datasheet.datasheetarchive.com/originals/distributors/Datasheets_SAMA/85d3f36e6ccd244b2f23e0daa3d02a86.pdf
+$ENDCMP
+#
+$CMP ESMIT-4180_C
+D Audio Transformers / Signal Transformers 125uH min 120uH Nom
+K
+F http://products.sumida.com/products/pdf/CBM5D33_Ver1.0_E.pdf
+$ENDCMP
+#End Doc Library

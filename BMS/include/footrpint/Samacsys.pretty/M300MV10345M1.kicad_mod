@@ -1,0 +1,332 @@
+(footprint "M300MV10345M1"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "M300-MV10345M1-1")
+	(tags "Connector")
+	(property "Reference" "J1"
+		(at 0 0.375 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "6eef61d7-950f-4edd-a6c9-325f83370cdb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "M300-MV10345M1"
+		(at 0 0.375 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "8900d41e-e9f8-4dc1-990b-1c07f359c7a1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Footprint" "Samacsys:M300MV10345M1_NoPin2"
+		(at 3 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "58ebb9d3-f6cc-4994-b71d-e84489746aa5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://cdn.harwin.com/pdfs/M300-MV10345M1.pdf"
+		(at 3 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "69d806e7-5ab7-412d-a436-17559016443d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "M300 - 3mm Pitch - SIL Male Throughboard Connector, with Jackscrews, 3 contacts"
+		(at 108.2 43.625 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b9d67670-f913-49bf-9d95-af3f7335d047")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "7"
+		(at 3 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "520ade3a-4380-4d31-a48b-bdf010db08b6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Harwin"
+		(at 3 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bbbfb82b-e1dc-4767-9dd9-f376085aabff")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "M300-MV10345M1"
+		(at 3 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f2b39f28-a9cc-426e-b65e-eac45db58414")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "855-M300-MV10345M1"
+		(at 3 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5352af34-c2a6-40a1-8b5c-e72f9801038b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Harwin/M300-MV10345M1?qs=QkPn6D1Vh3i6f7zpJZvlHw%3D%3D"
+		(at 3 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0c16bdb1-c9c6-4300-99be-4b2ddfdf7394")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "In Order" ""
+		(at 3 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "85568370-30ea-4b40-8c91-10f9063a921b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -7.65 3)
+		(end 7.65 3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "04112e5f-f40b-4192-ac17-3809ef03829f")
+	)
+	(fp_line
+		(start 7.65 -3)
+		(end -7.65 -3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "725add73-e908-4230-b1eb-c68541a76475")
+	)
+	(fp_arc
+		(start -7.65 3)
+		(mid -10.65 0)
+		(end -7.65 -3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "fd4e4764-3a3f-4e22-b822-3e352fa00f6f")
+	)
+	(fp_arc
+		(start 7.65 -3)
+		(mid 10.65 0)
+		(end 7.65 3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "21fc6f84-bbc1-4919-bbcd-5f0f3ab6c538")
+	)
+	(fp_poly
+		(pts
+			(xy 3 -3.5) (xy 2.66 -3.97) (xy 3.34 -3.97) (xy 3 -3.5)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "8140be81-bf5c-4022-92ef-d8367b04c5f1")
+	)
+	(fp_line
+		(start -11.65 -4)
+		(end -11.65 4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "739ffb7f-e1e3-4f2f-8d4d-530ac17fadc5")
+	)
+	(fp_line
+		(start -11.65 4)
+		(end 11.65 4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "22d40b9b-129e-43cb-92e7-35e2e67c22e9")
+	)
+	(fp_line
+		(start 11.65 -4)
+		(end -11.65 -4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0eb69fbb-c06b-4c58-8bc6-fb748038ab9b")
+	)
+	(fp_line
+		(start 11.65 4)
+		(end 11.65 -4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ab4b761f-f51e-497d-8a7f-a5303d25f4f5")
+	)
+	(fp_line
+		(start -7.65 -3)
+		(end 7.65 -3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "063ac9bc-44e7-410f-9c35-811b55211bae")
+	)
+	(fp_line
+		(start 7.9 3)
+		(end -7.65 3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "098aa541-82f5-44a3-be2b-a4db87c0dd96")
+	)
+	(fp_arc
+		(start -7.65 3)
+		(mid -10.65 0)
+		(end -7.65 -3)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "56761e0c-524a-48e3-9315-c4e380b9ee0b")
+	)
+	(fp_arc
+		(start 7.65 -3)
+		(mid 10.65 0)
+		(end 7.65 3)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "176e9625-b76e-4753-af62-2653634b70e7")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0.375 180)
+		(layer "F.Fab")
+		(uuid "1e01b66a-46be-48f4-8b22-d6158d165920")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 3 0)
+		(size 2.025 2.025)
+		(drill 1.35)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e0bc6e7e-7b8f-4dc2-b64a-7077425b9978")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0)
+		(size 2.025 2.025)
+		(drill 1.35)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 1)
+		(thermal_bridge_width 1)
+		(thermal_gap 0.2)
+		(uuid "4a495992-e888-4647-9a25-2c6e20edb0ac")
+	)
+	(pad "3" thru_hole circle
+		(at -3 0)
+		(size 2.025 2.025)
+		(drill 1.35)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 1)
+		(thermal_bridge_width 1)
+		(thermal_gap 0.2)
+		(uuid "7eaefe22-6bdb-485f-82f6-eff9aea6077f")
+	)
+	(model "${KIPRJMOD}/footprint/Samacsys.3dshapes/M300-MV10345M1.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 180)
+		)
+	)
+)

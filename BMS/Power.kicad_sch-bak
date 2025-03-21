@@ -1,0 +1,122 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "4074319c-e7a4-4aba-a717-50495b62b8ec")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 20.32 161.29)
+		(size 53.34 30.48)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3120d456-738f-4dcb-b831-006287d4ee74")
+		(property "Sheetname" "5V"
+			(at 20.32 160.5784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "5V_sch.kicad_sch"
+			(at 20.32 192.3546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 120.65 24.13)
+		(size 60.96 53.34)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "36deb01f-8567-4cbb-9333-b925b4509962")
+		(property "Sheetname" "Power_3.3V"
+			(at 120.65 23.4184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power_3.3V.kicad_sch"
+			(at 120.65 78.0546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 24.13 22.86)
+		(size 87.63 53.34)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9bdc9175-b68e-4a9e-8cef-2862f4ff2525")
+		(property "Sheetname" "Power_12V"
+			(at 24.13 22.1484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power_12V.kicad_sch"
+			(at 24.13 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a"
+					(page "12")
+				)
+			)
+		)
+	)
+)

@@ -1,0 +1,205 @@
+(footprint "CDMA5M00F5000DE5"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "CDMA2512_2023")
+	(tags "Resistor")
+	(property "Reference" "RD**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "5f3ec792-538e-4358-9331-1042269327d6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "CDMA5M00F5000DE5"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "c575d161-f5f3-4b0c-a30c-2472e538fab9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d8502ff3-fbc0-4d4b-ba56-b2522e422e76")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "faf8819c-77ad-4801-994f-8ab06496b133")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "848376e1-14f9-4476-9773-0b4bbbbf61b3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2 -1.6)
+		(end 2.1 -1.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "de96610c-8987-4bad-a003-c0127f7fb050")
+	)
+	(fp_line
+		(start 2.1 1.6)
+		(end -2 1.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e5afc6af-af81-4b64-a51c-aef01a568449")
+	)
+	(fp_poly
+		(pts
+			(xy 3 2.1) (xy 3.34 2.57) (xy 2.66 2.57) (xy 3 2.1)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "9424b2c8-0fc9-4c21-abf4-796faa6dbe1a")
+	)
+	(fp_rect
+		(start -4.3 -2.6)
+		(end 4.2 2.6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "16df95da-92a5-41f3-8799-13cc32e00745")
+	)
+	(fp_line
+		(start -3.2 -1.6)
+		(end -3.2 1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "224ad5aa-f647-4acf-8949-d0e68cea3598")
+	)
+	(fp_line
+		(start -3.2 1.6)
+		(end 3.2 1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "29ec289c-8418-4460-8da3-d626519166fa")
+	)
+	(fp_line
+		(start 3.2 -1.6)
+		(end -3.2 -1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3a36beb8-32df-4dc2-a018-508bc728f884")
+	)
+	(fp_line
+		(start 3.2 1.6)
+		(end 3.2 -1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0f11d9b1-7d5c-4042-a8de-82a8330cedef")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "a8ce0627-c1f8-4202-937f-c82e01983c6e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 2.95 0)
+		(size 1.1 3.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1363636364)
+		(uuid "ed972a4b-f02d-4840-b62e-2d88295a3660")
+	)
+	(pad "2" smd roundrect
+		(at -2.9 -1.105 90)
+		(size 1.19 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1260504202)
+		(uuid "a6ed99c0-cd54-4064-b6dc-1c9f32271786")
+	)
+	(pad "3" smd roundrect
+		(at -2.9 1.105 90)
+		(size 1.19 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1260504202)
+		(uuid "81a74ab6-701c-44c2-ba8e-a621b00d59ae")
+	)
+	(model "${KICAD_3RD_PARTY}/Samacsys.3dshapes/CDMA15M0D2500DE5.stp"
+		(offset
+			(xyz -3.049999907 -1.6 0.01999999925)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "${KIPRJMOD}/footprint/Samacsys.3dshapes/CDMA15M0D2500DE5.stp"
+		(offset
+			(xyz -3 -1.6 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

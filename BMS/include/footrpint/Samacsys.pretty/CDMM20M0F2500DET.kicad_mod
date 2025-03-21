@@ -1,0 +1,334 @@
+(footprint "CDMM20M0F2500DET"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "2543f0b4-2a4a-4a49-938e-7480c2e29e02")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "CDMM20M0F2500DET"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b5db84c5-d1de-4bcb-acf7-ceee11ef6701")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9fceab9d-8a9c-4161-ba49-9c2518004318")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8f20f054-be47-4a69-8470-ac58b5b41577")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "74633d47-85a5-42de-997d-1d304281026d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "CDMM20M0F2500DET"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c57c7bec-d73c-4118-80e8-667736b42fbb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "71-CDMM20M0F2500DET"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a2424e04-5c52-40ef-a616-2f93710c1572")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "4.494"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "371246e5-f3ab-4e89-9b68-02713bccd640")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Vishay-Techno/CDMM20M0F2500DET?qs=pUKx8fyJudDtrYAwlAh%252BkQ%3D%3D"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2ae4ccf3-70a3-4bcb-93b4-4423729a0a8d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Vishay"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "88b84ba6-8525-4545-8aaf-7bc9fc659a45")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -5.9 -3.6)
+		(end 5.9 -3.6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bb794a87-6886-478a-ab1b-51840fa9800c")
+	)
+	(fp_line
+		(start -5.9 -3.05)
+		(end -5.9 -3.6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b8a82137-b2bf-487c-b1e9-b3e0a63abd42")
+	)
+	(fp_line
+		(start -5.9 3.05)
+		(end -5.9 3.6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5b7939b2-b7f2-4003-9225-e3a6b4265230")
+	)
+	(fp_line
+		(start -5.9 3.6)
+		(end 5.9 3.6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2de2b7dc-9cb2-4f83-8ae6-1e6608009a5d")
+	)
+	(fp_line
+		(start 5.9 -3.05)
+		(end 5.9 -3.6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2ba2eb6b-58c2-4880-9061-f22c857f0ba5")
+	)
+	(fp_line
+		(start 5.9 3.6)
+		(end 5.9 3.05)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7056f3e1-33a4-4af1-930c-e2bae91246d6")
+	)
+	(fp_poly
+		(pts
+			(xy 6.55 3.15) (xy 6.89 3.62) (xy 6.21 3.62) (xy 6.55 3.15)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "ba4141c8-9376-4a22-90a7-fef044d6418d")
+	)
+	(fp_line
+		(start -7.92 -4.49)
+		(end -7.92 4.49)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ca24ef1a-35c3-4c17-870d-91de6e6b73bd")
+	)
+	(fp_line
+		(start -7.92 4.49)
+		(end 7.92 4.49)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ee094d97-a44e-4298-b6be-af61657a19b4")
+	)
+	(fp_line
+		(start 7.92 -4.49)
+		(end -7.92 -4.49)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "430ae117-67e2-4bd4-b92f-d98851c11bdf")
+	)
+	(fp_line
+		(start 7.92 4.49)
+		(end 7.92 -4.49)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7d377683-4758-4509-a687-330ee358e2fd")
+	)
+	(fp_line
+		(start -5.78 -3.49)
+		(end -5.78 3.49)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f7e2ed50-1f73-4417-9d09-657d11cd7f2a")
+	)
+	(fp_line
+		(start -5.78 3.49)
+		(end 5.78 3.49)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7cdfb9ef-45c1-4482-a0f4-41f2b20aa262")
+	)
+	(fp_line
+		(start 5.78 -3.49)
+		(end -5.78 -3.49)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "820c9c78-7b74-4211-aa32-7787c23697fd")
+	)
+	(fp_line
+		(start 5.78 3.49)
+		(end 5.78 -3.49)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d1350ae3-ac9f-4dce-a270-d3ecaa9927d8")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "490fbe47-cdac-4f42-ae4e-d5884732cb71")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "7eda3ea1-4eb6-4da5-ab5e-4cff7eff0270")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 5.08 0)
+		(size 3.68 5.72)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "1cacb441-6f1d-4161-8519-ce6a091ffc48")
+	)
+	(pad "2" smd rect
+		(at -5.08 -1.755 90)
+		(size 2.21 3.68)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "8a2696c6-4c43-4f16-9f92-41e3d6c098d7")
+	)
+	(pad "3" smd rect
+		(at -5.08 1.755 90)
+		(size 2.21 3.68)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "6f13bebe-58cf-4698-ac64-dd8b9f49eb3f")
+	)
+	(model "${KIPRJMOD}/footprint/Samacsys.3dshapes/CDMM20M0F2500DET.stp"
+		(offset
+			(xyz 0 0 4.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 180 0 0)
+		)
+	)
+)

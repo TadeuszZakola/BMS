@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "footrpint")(type "KiCad")(uri "${KIPRJMOD}/include/footrpint")(options "")(descr ""))
+  (lib (name "Samacsys")(type "KiCad")(uri "${KIPRJMOD}/include/footrpint/Samacsys.pretty")(options "")(descr ""))
+  (lib (name "Samacsys.3dshapes")(type "KiCad")(uri "${KIPRJMOD}/include/footrpint/Samacsys.3dshapes")(options "")(descr ""))
+)
