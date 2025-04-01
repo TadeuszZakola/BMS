@@ -4639,52 +4639,6 @@
 		)
 		(uuid "fd88dde6-1e88-4b5c-a022-1924b944761a")
 	)
-	(netclass_flag ""
-		(length 2.54)
-		(shape round)
-		(at 154.94 133.35 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2d0a09bb-651c-4a93-8b38-79ab59f69693")
-		(property "Netclass" "0.3mm trace"
-			(at 155.6385 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-	)
-	(netclass_flag ""
-		(length 2.54)
-		(shape round)
-		(at 125.73 133.35 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7075aab1-c68a-4be5-9d70-e20e0fd3e149")
-		(property "Netclass" "0.3mm trace"
-			(at 126.4285 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
 		(at 95.25 119.38 0)
@@ -6701,10 +6655,6 @@
 		(instances
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R38")
-					(unit 1)
-				)
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/a43b6b0a-d3da-47c5-ab92-e0e154337573"
 					(reference "R38")
 					(unit 1)
 				)

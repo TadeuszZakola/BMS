@@ -409,16 +409,6 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 105.41) (xy 127 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "028f07a0-29ee-4817-b57a-53a18e9b242f")
-	)
-	(wire
-		(pts
 			(xy 88.9 105.41) (xy 99.06 105.41)
 		)
 		(stroke
@@ -589,6 +579,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 105.41) (xy 140.97 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab15d4cb-b45c-4073-9796-761145d05da5")
+	)
+	(wire
+		(pts
 			(xy 99.06 105.41) (xy 99.06 107.95)
 		)
 		(stroke
@@ -629,7 +629,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 105.41) (xy 149.86 105.41)
+			(xy 146.05 105.41) (xy 149.86 105.41)
 		)
 		(stroke
 			(width 0)
@@ -666,6 +666,50 @@
 			)
 		)
 		(uuid "e886a402-f8a7-4566-9434-0d3de4a41e01")
+	)
+	(label "S2-"
+		(at 133.35 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e52032d-8c3c-4698-aef9-c5fcb9c47505")
+	)
+	(label "S1+"
+		(at 115.57 82.55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8331147a-40c2-419b-9b6b-8a2f738ae323")
+	)
+	(label "S2+"
+		(at 133.35 82.55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cd760faf-443b-4937-9936-d104478fea2d")
+	)
+	(label "S1-"
+		(at 115.57 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e618a028-4d00-4724-abda-c4a77ff07d33")
 	)
 	(hierarchical_label "COMHP"
 		(shape input)
@@ -926,7 +970,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 133.35 105.41 90)
+		(at 143.51 105.41 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -935,7 +979,7 @@
 		(fields_autoplaced yes)
 		(uuid "3d830b0c-22d6-432b-8af4-f2a07fd08581")
 		(property "Reference" "R13"
-			(at 133.35 100.33 90)
+			(at 143.51 100.33 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -943,7 +987,7 @@
 			)
 		)
 		(property "Value" "49"
-			(at 133.35 102.87 90)
+			(at 143.51 102.87 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -951,7 +995,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 133.35 105.41 0)
+			(at 143.51 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -960,7 +1004,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/KOA-Speer/RK73H1HRTTCM49R9F?qs=sGAEpiMZZMvdGkrng054txLI%2FDB4oIKDjd1z9Y%252BmyaXFChdzxTCbsQ%3D%3D"
-			(at 133.35 105.41 0)
+			(at 143.51 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -969,7 +1013,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 133.35 105.41 0)
+			(at 143.51 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)

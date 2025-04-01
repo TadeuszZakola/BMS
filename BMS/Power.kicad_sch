@@ -362,6 +362,18 @@
 		)
 	)
 	(junction
+		(at 24.13 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "111b32ed-a5a9-4f3b-bf19-8d5f2b3c2995")
+	)
+	(junction
+		(at 24.13 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34611c29-f1b0-485e-a2dd-e9aec74128c0")
+	)
+	(junction
 		(at 44.45 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -385,6 +397,26 @@
 	)
 	(wire
 		(pts
+			(xy 24.13 49.53) (xy 24.13 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10311a6a-4e8a-443a-a320-03a5c5130993")
+	)
+	(wire
+		(pts
+			(xy 21.59 35.56) (xy 24.13 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18ba17df-00ec-406c-bf13-396368fb547a")
+	)
+	(wire
+		(pts
 			(xy 130.81 44.45) (xy 171.45 44.45)
 		)
 		(stroke
@@ -395,7 +427,47 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 40.64) (xy 38.1 40.64)
+			(xy 21.59 49.53) (xy 24.13 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36d92fea-ad27-4e11-a81d-ab019f70bcfe")
+	)
+	(wire
+		(pts
+			(xy 24.13 43.18) (xy 49.53 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44697a0c-bb5c-4066-bd1e-b10333d48c46")
+	)
+	(wire
+		(pts
+			(xy 24.13 35.56) (xy 24.13 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72c85a70-d89c-4775-85cd-4e30c8d9d064")
+	)
+	(wire
+		(pts
+			(xy 24.13 40.64) (xy 38.1 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "855be105-d990-48f8-9c77-e067d8817493")
+	)
+	(wire
+		(pts
+			(xy 21.59 40.64) (xy 24.13 40.64)
 		)
 		(stroke
 			(width 0)
@@ -405,7 +477,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 43.18) (xy 49.53 43.18)
+			(xy 21.59 43.18) (xy 24.13 43.18)
 		)
 		(stroke
 			(width 0)
@@ -482,6 +554,50 @@
 			)
 		)
 		(uuid "9694cefd-dd70-46f8-9640-e079dcfb1419")
+	)
+	(global_label "+12V"
+		(shape input)
+		(at 21.59 35.56 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6ac8b53b-22cd-4658-9b35-d6d87e39bc41")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 13.5248 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape input)
+		(at 21.59 49.53 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8295fd6d-36ee-44c9-be6e-66179b639c4a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 14.7343 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:+12V")
@@ -617,32 +733,34 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 25.4 43.18 180)
+		(at 16.51 43.18 180)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b6b64427-99d4-45b1-8fe9-650b0cbaf19b")
 		(property "Reference" "J18"
-			(at 25.4 34.29 0)
+			(at 16.51 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Value" "Conn_01x02"
-			(at 25.4 36.83 0)
+			(at 16.51 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "footrpint:HARWIN_M80-5000000M1-02-PM1-00-000"
-			(at 25.4 43.18 0)
+			(at 16.51 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -651,7 +769,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.harwin.com/products/M80-5000000M1-02-PM1-00-000"
-			(at 25.4 43.18 0)
+			(at 16.51 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -660,7 +778,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 24.892 46.482 0)
+			(at 16.002 46.482 0)
 			(effects
 				(font
 					(size 1.27 1.27)

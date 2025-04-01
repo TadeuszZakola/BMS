@@ -1029,6 +1029,12 @@
 		)
 	)
 	(junction
+		(at 91.44 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "08758eec-8b70-40da-92a2-f487ef2d87e9")
+	)
+	(junction
 		(at 68.58 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1047,10 +1053,22 @@
 		(uuid "6f56404f-c960-4930-969e-72a8532713a2")
 	)
 	(junction
+		(at 162.56 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "828e7659-74a0-4622-a001-1ac52e2269a6")
+	)
+	(junction
 		(at 58.42 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8e2ffb77-6a96-49ef-bbcb-82a978090775")
+	)
+	(junction
+		(at 91.44 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8fda9aaa-52c6-47f8-af64-bae5e6d4d597")
 	)
 	(junction
 		(at 68.58 60.96)
@@ -1069,6 +1087,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c7bd2436-51fb-4a45-b9ed-9b85f558ecc3")
+	)
+	(junction
+		(at 162.56 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c90ee9de-efa7-4f21-9fd3-64cd43ab4ac4")
 	)
 	(junction
 		(at 139.7 76.2)
@@ -1118,6 +1142,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 78.74) (xy 162.56 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22f8dfbd-cb2e-4e56-bcb3-1ae267156f94")
+	)
+	(wire
+		(pts
 			(xy 91.44 66.04) (xy 91.44 60.96)
 		)
 		(stroke
@@ -1135,6 +1169,16 @@
 			(type default)
 		)
 		(uuid "293ea38a-868e-43ba-851e-056069c85b29")
+	)
+	(wire
+		(pts
+			(xy 97.79 76.2) (xy 91.44 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a9ce3ce-aa43-4896-a1ab-b6485e2367e6")
 	)
 	(wire
 		(pts
@@ -1165,6 +1209,16 @@
 			(type default)
 		)
 		(uuid "3506fd36-4c78-4bff-abcc-7e37d4c8f6e5")
+	)
+	(wire
+		(pts
+			(xy 165.1 59.69) (xy 162.56 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40495294-4d2c-4473-87ba-7cc499f47186")
 	)
 	(wire
 		(pts
@@ -1308,6 +1362,26 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 58.42) (xy 91.44 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97708e3f-863c-4480-984b-1f48f0e4e61f")
+	)
+	(wire
+		(pts
+			(xy 165.1 78.74) (xy 162.56 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9de856dc-10c5-4f56-97f3-2afc9d30371e")
+	)
+	(wire
+		(pts
 			(xy 139.7 73.66) (xy 139.7 76.2)
 		)
 		(stroke
@@ -1325,6 +1399,16 @@
 			(type default)
 		)
 		(uuid "a7d1cab6-be36-4f5d-898b-759d551d9811")
+	)
+	(wire
+		(pts
+			(xy 97.79 58.42) (xy 91.44 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a88e619d-4f50-40af-bff6-0948ffe6fa46")
 	)
 	(wire
 		(pts
@@ -1365,6 +1449,26 @@
 			(type default)
 		)
 		(uuid "bf4492b0-c09a-4690-a41c-f49d17b36ffa")
+	)
+	(wire
+		(pts
+			(xy 162.56 59.69) (xy 162.56 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2efe8d3-4fcc-4d77-bc8d-d79fc07ef9dd")
+	)
+	(wire
+		(pts
+			(xy 91.44 76.2) (xy 91.44 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7d09a79-05d7-4d7c-9bef-939230b49e44")
 	)
 	(wire
 		(pts
@@ -1450,6 +1554,42 @@
 		)
 		(uuid "1800b26e-f5e4-434a-ade6-61d089d83317")
 	)
+	(hierarchical_label "Relay_IN"
+		(shape input)
+		(at 97.79 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "28ed6faa-efd1-412f-ae4d-25043c0dacd6")
+	)
+	(hierarchical_label "PreCharge_OUT"
+		(shape input)
+		(at 165.1 78.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "73aa15f8-d823-44fb-abbf-0b63bd248e37")
+	)
+	(hierarchical_label "PreCharge_IN"
+		(shape input)
+		(at 165.1 59.69 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "75e26c18-c4f1-4d77-9fbe-d6950e7d2c3f")
+	)
 	(hierarchical_label "Relay"
 		(shape input)
 		(at 45.72 81.28 180)
@@ -1461,6 +1601,18 @@
 			(justify right)
 		)
 		(uuid "ccf301b2-ccb9-4a97-bad9-30def3b2228c")
+	)
+	(hierarchical_label "Relay_OUT"
+		(shape input)
+		(at 97.79 76.2 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e1fb3eec-74b6-49b0-9fc3-63324a7fe838")
 	)
 	(symbol
 		(lib_id "Samacsys_kicad_sym:DMT6018LDR-7")
@@ -2214,10 +2366,10 @@
 		(lib_id "Connector:Conn_01x02_Socket")
 		(at 167.64 68.58 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "74a2d94b-ad82-458e-8eeb-03ca57d50741")
 		(property "Reference" "J6"
@@ -2577,10 +2729,10 @@
 		(lib_id "Connector:Conn_01x02_Socket")
 		(at 96.52 66.04 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d745287a-f8dd-4298-a2b5-57829aa362bb")
 		(property "Reference" "J5"

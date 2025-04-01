@@ -2829,6 +2829,10 @@
 		(uuid "d77a9d09-4f10-4254-856c-e505f5cc26ac")
 	)
 	(no_connect
+		(at 137.16 133.35)
+		(uuid "e8e6437a-455c-44a6-b7a6-8b2ddf4bb55e")
+	)
+	(no_connect
 		(at 119.38 74.93)
 		(uuid "ea8779aa-80eb-4697-8686-a0a3ab3dc6f8")
 	)
@@ -3193,16 +3197,6 @@
 			(type default)
 		)
 		(uuid "3b9fc42f-5d31-4b1d-ade8-9cc265fd0387")
-	)
-	(wire
-		(pts
-			(xy 80.01 97.79) (xy 83.82 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3beb8792-847b-476e-8a1f-2b212adf3ca2")
 	)
 	(wire
 		(pts
@@ -3786,16 +3780,6 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 133.35) (xy 137.16 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c13f29ec-09df-43f4-9231-75510d1fd25a")
-	)
-	(wire
-		(pts
 			(xy 111.76 87.63) (xy 119.38 87.63)
 		)
 		(stroke
@@ -4346,17 +4330,6 @@
 		)
 		(uuid "5e77decc-2c9d-4937-8f72-ca8d3019c036")
 	)
-	(label "3.3V_Enable"
-		(at 83.82 97.79 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "604afebc-c82d-4af3-9dc6-9307f171419c")
-	)
 	(label "12V_Enable"
 		(at 134.62 148.59 90)
 		(fields_autoplaced yes)
@@ -4598,17 +4571,6 @@
 			(justify left bottom)
 		)
 		(uuid "d754c0be-836c-4419-b34e-25474eafdb82")
-	)
-	(label "3.3V_Enable"
-		(at 137.16 148.59 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ddf16303-62a9-4ac5-ab7b-cebc38507ca3")
 	)
 	(label "SWCLK"
 		(at 187.96 25.4 270)
@@ -7038,16 +7000,6 @@
 				(justify right)
 			)
 			(uuid "9812b1d8-ac23-4049-8fef-bb0c260afdf0")
-		)
-		(pin "3.3V_Enable" input
-			(at 80.01 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "81be086a-275e-4172-9e84-1dfa68d26c97")
 		)
 		(pin "12V_Enable" input
 			(at 80.01 95.25 0)

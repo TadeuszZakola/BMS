@@ -449,7 +449,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 97.79) (xy 144.78 97.79)
+			(xy 142.24 97.79) (xy 144.78 97.79)
 		)
 		(stroke
 			(width 0)
@@ -639,7 +639,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 97.79) (xy 121.92 97.79)
+			(xy 137.16 97.79) (xy 121.92 97.79)
 		)
 		(stroke
 			(width 0)
@@ -666,6 +666,50 @@
 			)
 		)
 		(uuid "18fd0dbc-9a2e-4354-b3e5-3c3cef997e74")
+	)
+	(label "S2+"
+		(at 127 74.93 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1b7ab4f2-adbe-4584-81ee-6821bc8c5c97")
+	)
+	(label "S2-"
+		(at 127 97.79 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4feadfb9-b351-490f-85f1-f18b3950b0ba")
+	)
+	(label "S1-"
+		(at 107.95 97.79 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8b0305ff-95fd-498f-b8dd-08d7ce2fe40d")
+	)
+	(label "S1+"
+		(at 107.95 74.93 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c34dbf38-2281-48ac-a7c3-d10d157e23e9")
 	)
 	(hierarchical_label "COMLP"
 		(shape input)
@@ -1602,7 +1646,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 128.27 97.79 90)
+		(at 139.7 97.79 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1611,7 +1655,7 @@
 		(fields_autoplaced yes)
 		(uuid "8fb3d377-2189-4e02-89cc-4aa4c30fcbeb")
 		(property "Reference" "R72"
-			(at 128.27 92.71 90)
+			(at 139.7 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1619,7 +1663,7 @@
 			)
 		)
 		(property "Value" "49"
-			(at 128.27 95.25 90)
+			(at 139.7 95.25 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1627,7 +1671,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 128.27 97.79 0)
+			(at 139.7 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1636,7 +1680,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/KOA-Speer/RK73H1HRTTCM49R9F?qs=sGAEpiMZZMvdGkrng054txLI%2FDB4oIKDjd1z9Y%252BmyaXFChdzxTCbsQ%3D%3D"
-			(at 128.27 97.79 0)
+			(at 139.7 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1645,7 +1689,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 128.27 97.79 0)
+			(at 139.7 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
