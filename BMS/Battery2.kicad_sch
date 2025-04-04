@@ -1,14 +1,18 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "777c10fe-2146-48d5-8700-418110838b8c")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:Battery_Cell"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -91,7 +95,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0.762) (xy 0 0)
+						(xy 0 1.778) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -103,7 +107,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 1.778) (xy 0 2.54)
+						(xy 0 0.762) (xy 0 0)
 					)
 					(stroke
 						(width 0)
@@ -176,11 +180,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -250,10 +259,10 @@
 			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -262,10 +271,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -311,11 +320,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -433,12 +447,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -529,7 +548,18 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "'GND_HV2' is connected via 'Batt_coupling' to cell number 13 and serves as a ground for 2nd ltc"
+		(exclude_from_sim no)
+		(at 97.536 203.962 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1f732330-eb9f-445c-bf15-25d659317023")
 	)
 	(junction
 		(at 154.94 171.45)
@@ -3245,16 +3275,6 @@
 		)
 		(uuid "fff92c97-053f-4225-be8a-dc37c4b37f94")
 	)
-	(text "'GND_HV2' is connected via 'Batt_coupling' to cell number 13 and serves as a ground for 2nd ltc"
-		(exclude_from_sim no)
-		(at 97.536 203.962 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "1f732330-eb9f-445c-bf15-25d659317023")
-	)
 	(global_label "CELL17"
 		(shape input)
 		(at 25.4 125.73 180)
@@ -3588,7 +3608,6 @@
 	(hierarchical_label "VC1"
 		(shape input)
 		(at 123.19 175.26 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3600,7 +3619,6 @@
 	(hierarchical_label "CB8"
 		(shape input)
 		(at 165.1 82.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3612,7 +3630,6 @@
 	(hierarchical_label "CB9"
 		(shape input)
 		(at 165.1 72.39 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3624,7 +3641,6 @@
 	(hierarchical_label "VC7"
 		(shape input)
 		(at 123.19 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3636,7 +3652,6 @@
 	(hierarchical_label "VC10"
 		(shape input)
 		(at 123.19 63.5 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3648,7 +3663,6 @@
 	(hierarchical_label "VC3"
 		(shape input)
 		(at 121.92 149.86 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3660,7 +3674,6 @@
 	(hierarchical_label "VC4"
 		(shape input)
 		(at 124.46 137.16 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3672,7 +3685,6 @@
 	(hierarchical_label "CB3"
 		(shape input)
 		(at 162.56 146.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3684,7 +3696,6 @@
 	(hierarchical_label "CB1"
 		(shape input)
 		(at 163.83 171.45 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3696,7 +3707,6 @@
 	(hierarchical_label "CB13"
 		(shape input)
 		(at 163.83 19.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3708,7 +3718,6 @@
 	(hierarchical_label "CB6"
 		(shape input)
 		(at 163.83 107.95 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3720,7 +3729,6 @@
 	(hierarchical_label "CB5"
 		(shape input)
 		(at 165.1 120.65 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3732,7 +3740,6 @@
 	(hierarchical_label "CB12"
 		(shape input)
 		(at 163.83 31.75 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3744,7 +3751,6 @@
 	(hierarchical_label "VC8"
 		(shape input)
 		(at 124.46 86.36 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3756,7 +3762,6 @@
 	(hierarchical_label "VC11"
 		(shape input)
 		(at 123.19 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3768,7 +3773,6 @@
 	(hierarchical_label "Batt2_+"
 		(shape input)
 		(at 106.68 13.97 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3780,7 +3784,6 @@
 	(hierarchical_label "CB4"
 		(shape input)
 		(at 165.1 133.35 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3792,7 +3795,6 @@
 	(hierarchical_label "VC5"
 		(shape input)
 		(at 124.46 124.46 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3804,7 +3806,6 @@
 	(hierarchical_label "CB2"
 		(shape input)
 		(at 163.83 158.75 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3816,7 +3817,6 @@
 	(hierarchical_label "VC9"
 		(shape input)
 		(at 124.46 76.2 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3828,7 +3828,6 @@
 	(hierarchical_label "CB11"
 		(shape input)
 		(at 163.83 46.99 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3840,7 +3839,6 @@
 	(hierarchical_label "VC0"
 		(shape input)
 		(at 124.46 187.96 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3852,7 +3850,6 @@
 	(hierarchical_label "CB7"
 		(shape input)
 		(at 163.83 95.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3864,7 +3861,6 @@
 	(hierarchical_label "VC2"
 		(shape input)
 		(at 123.19 162.56 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3876,7 +3872,6 @@
 	(hierarchical_label "VC6"
 		(shape input)
 		(at 123.19 111.76 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3888,7 +3883,6 @@
 	(hierarchical_label "VC13"
 		(shape input)
 		(at 123.19 22.86 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3900,7 +3894,6 @@
 	(hierarchical_label "CB0"
 		(shape input)
 		(at 165.1 180.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3912,7 +3905,6 @@
 	(hierarchical_label "CB10"
 		(shape input)
 		(at 163.83 59.69 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3924,7 +3916,6 @@
 	(hierarchical_label "VC12"
 		(shape input)
 		(at 123.19 35.56 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

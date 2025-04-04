@@ -1,14 +1,18 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "9e040bd4-d379-4468-a6d7-de43ef08a622")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:C_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -78,10 +82,10 @@
 			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -90,10 +94,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -139,11 +143,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -261,12 +270,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -357,7 +371,28 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "49 ohm overall\n"
+		(exclude_from_sim no)
+		(at 103.886 89.916 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0c81a43c-d76f-45f7-be3e-e266113fb36e")
+	)
+	(text "49 ohm overall\n"
+		(exclude_from_sim no)
+		(at 133.096 89.916 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "18fd0dbc-9a2e-4354-b3e5-3c3cef997e74")
 	)
 	(junction
 		(at 83.82 74.93)
@@ -647,29 +682,8 @@
 		)
 		(uuid "f788ede5-8f4f-45de-ae94-383be75dcae6")
 	)
-	(text "49 ohm overall\n"
-		(exclude_from_sim no)
-		(at 103.886 89.916 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "0c81a43c-d76f-45f7-be3e-e266113fb36e")
-	)
-	(text "49 ohm overall\n"
-		(exclude_from_sim no)
-		(at 133.096 89.916 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "18fd0dbc-9a2e-4354-b3e5-3c3cef997e74")
-	)
 	(label "S2+"
 		(at 127 74.93 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -680,7 +694,6 @@
 	)
 	(label "S2-"
 		(at 127 97.79 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -691,7 +704,6 @@
 	)
 	(label "S1-"
 		(at 107.95 97.79 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -702,7 +714,6 @@
 	)
 	(label "S1+"
 		(at 107.95 74.93 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -714,7 +725,6 @@
 	(hierarchical_label "COMLP"
 		(shape input)
 		(at 80.01 74.93 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -726,7 +736,6 @@
 	(hierarchical_label "COMHP"
 		(shape input)
 		(at 161.29 74.93 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -738,7 +747,6 @@
 	(hierarchical_label "COMHN"
 		(shape input)
 		(at 161.29 97.79 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -750,7 +758,6 @@
 	(hierarchical_label "COMLN"
 		(shape input)
 		(at 80.01 97.79 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

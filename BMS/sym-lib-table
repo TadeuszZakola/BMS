@@ -12,4 +12,6 @@
   (lib (name "M22-7140842")(type "KiCad")(uri "${KIPRJMOD}/include/symbol/M22-7140842.kicad_sym")(options "")(descr ""))
   (lib (name "M80-8542042")(type "KiCad")(uri "${KIPRJMOD}/include/symbol/M80-8542042.kicad_sym")(options "")(descr ""))
   (lib (name "RDX0007A-MFG")(type "KiCad")(uri "${KIPRJMOD}/include/symbol/RDX0007A-MFG.kicad_sym")(options "")(descr ""))
+  (lib (name "DMT6018LDR-7")(type "KiCad")(uri "${KIPRJMOD}/include/symbol/DMT6018LDR-7.kicad_sym")(options "")(descr ""))
+  (lib (name "USB4235-03-C_REVA")(type "KiCad")(uri "${KIPRJMOD}/include/symbol/USB4235-03-C_REVA.kicad_sym")(options "")(descr ""))
 )

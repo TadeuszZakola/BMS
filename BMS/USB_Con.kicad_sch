@@ -2192,6 +2192,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 62.23) (xy 50.8 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90301e4c-236c-442c-b2bb-7ba085749a2b")
+	)
+	(wire
+		(pts
 			(xy 52.07 81.28) (xy 54.61 81.28)
 		)
 		(stroke
@@ -2209,6 +2219,16 @@
 			(type default)
 		)
 		(uuid "915b33d8-7e86-470e-b0ed-f15544c46c50")
+	)
+	(wire
+		(pts
+			(xy 49.53 69.85) (xy 50.8 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c236ee2-36a6-43dc-bef2-81370aca8a71")
 	)
 	(wire
 		(pts
@@ -2430,7 +2450,7 @@
 	)
 	(hierarchical_label "USB2 +"
 		(shape input)
-		(at 50.8 69.85 180)
+		(at 48.26 62.23 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2442,7 +2462,7 @@
 	)
 	(hierarchical_label "USB2 -"
 		(shape input)
-		(at 50.8 62.23 180)
+		(at 49.53 69.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font

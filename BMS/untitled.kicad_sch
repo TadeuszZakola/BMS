@@ -167,6 +167,229 @@
 				)
 			)
 		)
+		(symbol "DMT6018LDR-7:DMT6018LDR-7"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 19.05 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "DMT6018LDR-7"
+				(at 19.05 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "DMT6018LDR7"
+				(at 19.05 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT6018LDR.pdf"
+				(at 19.05 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "DIODES INC. - DMT6018LDR-7 - Dual MOSFET, N Channel, 60 V, 60 V, 8.8 A, 8.8 A, 0.013 ohm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "0.85"
+				(at 19.05 -394.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "621-DMT6018LDR-7"
+				(at 19.05 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMT6018LDR-7?qs=4EhzHfbM1GhfDx1FS0oSLQ%3D%3D"
+				(at 19.05 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "Diodes Incorporated"
+				(at 19.05 -694.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "DMT6018LDR-7"
+				(at 19.05 -794.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "DMT6018LDR-7_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 17.78 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "G1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "S1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 0)
+					(length 5.08)
+					(name "S2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 0 180)
+					(length 5.08)
+					(name "G2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 -2.54 180)
+					(length 5.08)
+					(name "D1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 22.86 -5.08 180)
+					(length 5.08)
+					(name "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:D_Schottky_Small"
 			(pin_numbers hide)
 			(pin_names
@@ -1100,6 +1323,12 @@
 		(color 0 0 0 0)
 		(uuid "db62f0e5-9cc1-481f-82f6-8fa78d0f44a4")
 	)
+	(junction
+		(at 80.01 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f3c7f43f-4e77-429e-abd8-7f4a81796f1d")
+	)
 	(wire
 		(pts
 			(xy 68.58 60.96) (xy 91.44 60.96)
@@ -1109,6 +1338,16 @@
 			(type default)
 		)
 		(uuid "01969470-f103-4b95-9172-340a100abbd4")
+	)
+	(wire
+		(pts
+			(xy 78.74 92.71) (xy 82.55 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10b695df-3b25-4d82-a33e-ad41d02840b4")
 	)
 	(wire
 		(pts
@@ -1132,6 +1371,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 95.25) (xy 106.68 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17b5ce0b-c3ed-4b39-9b01-f00db91ecc0d")
+	)
+	(wire
+		(pts
 			(xy 68.58 53.34) (xy 68.58 60.96)
 		)
 		(stroke
@@ -1139,16 +1388,6 @@
 			(type default)
 		)
 		(uuid "1afc8d74-5b76-4baf-878f-4db684f59d53")
-	)
-	(wire
-		(pts
-			(xy 162.56 78.74) (xy 162.56 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22f8dfbd-cb2e-4e56-bcb3-1ae267156f94")
 	)
 	(wire
 		(pts
@@ -1172,7 +1411,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 76.2) (xy 91.44 76.2)
+			(xy 95.25 73.66) (xy 91.44 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1212,13 +1451,33 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 59.69) (xy 162.56 59.69)
+			(xy 80.01 95.25) (xy 82.55 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "398c58c5-972b-4929-aba4-a8e54718d9ff")
+	)
+	(wire
+		(pts
+			(xy 165.1 63.5) (xy 162.56 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "40495294-4d2c-4473-87ba-7cc499f47186")
+	)
+	(wire
+		(pts
+			(xy 105.41 92.71) (xy 106.68 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44c58e10-03c7-4d6e-8d1e-e6c8fe4486f3")
 	)
 	(wire
 		(pts
@@ -1229,6 +1488,16 @@
 			(type default)
 		)
 		(uuid "462f63e2-b13d-43c4-8c11-8d6c6b1f8f22")
+	)
+	(wire
+		(pts
+			(xy 105.41 97.79) (xy 106.68 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c7cf1bc-6a46-44a5-9827-3e1ba08cc3f5")
 	)
 	(wire
 		(pts
@@ -1249,6 +1518,16 @@
 			(type default)
 		)
 		(uuid "5174cf70-e869-4050-bca7-b53a13b5a440")
+	)
+	(wire
+		(pts
+			(xy 82.55 97.79) (xy 80.01 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51926d44-be78-416b-93e3-e97fe6e67ac2")
 	)
 	(wire
 		(pts
@@ -1362,17 +1641,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 58.42) (xy 91.44 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97708e3f-863c-4480-984b-1f48f0e4e61f")
-	)
-	(wire
-		(pts
-			(xy 165.1 78.74) (xy 162.56 78.74)
+			(xy 165.1 76.2) (xy 162.56 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1402,13 +1671,23 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 58.42) (xy 91.44 58.42)
+			(xy 96.52 60.96) (xy 91.44 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a88e619d-4f50-40af-bff6-0948ffe6fa46")
+	)
+	(wire
+		(pts
+			(xy 80.01 97.79) (xy 80.01 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac9ab8d1-98de-4ac3-9e62-1c273b145a4f")
 	)
 	(wire
 		(pts
@@ -1452,26 +1731,6 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 59.69) (xy 162.56 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2efe8d3-4fcc-4d77-bc8d-d79fc07ef9dd")
-	)
-	(wire
-		(pts
-			(xy 91.44 76.2) (xy 91.44 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c7d09a79-05d7-4d7c-9bef-939230b49e44")
-	)
-	(wire
-		(pts
 			(xy 139.7 88.9) (xy 139.7 93.98)
 		)
 		(stroke
@@ -1492,6 +1751,16 @@
 	)
 	(wire
 		(pts
+			(xy 80.01 100.33) (xy 80.01 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6e5dccb-2bdc-4d64-a57a-168e56e76311")
+	)
+	(wire
+		(pts
 			(xy 139.7 55.88) (xy 139.7 63.5)
 		)
 		(stroke
@@ -1500,9 +1769,19 @@
 		)
 		(uuid "e7130858-6e55-4eea-a8c3-2586a0a1c0e0")
 	)
+	(text "symbol stedni, potem zmienie na czytelniejszy\n"
+		(exclude_from_sim no)
+		(at 97.79 110.744 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6dd4e35b-af41-487f-b993-d0480a8a5ffd")
+	)
 	(text "Relay connector\n\n"
 		(exclude_from_sim no)
-		(at 171.196 65.786 0)
+		(at 170.942 66.802 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1512,7 +1791,7 @@
 	)
 	(text "Relay connector\n\n"
 		(exclude_from_sim no)
-		(at 100.076 63.246 0)
+		(at 100.076 64.516 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1520,7 +1799,29 @@
 		)
 		(uuid "b5da76be-d414-433a-baa1-80bcde5c53d6")
 	)
-	(label "G2"
+	(label "D1"
+		(at 68.58 76.2 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.5 0.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "48020a63-84e6-44e4-817a-15c062b12d16")
+	)
+	(label "D2"
+		(at 106.68 97.79 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "53d7be1f-3dbf-42e3-bb8d-5f81b1c71914")
+	)
+	(label "G1"
 		(at 57.15 81.28 180)
 		(fields_autoplaced yes)
 		(effects
@@ -1532,6 +1833,28 @@
 		(uuid "6598ccda-c43d-4db2-ade5-0aefcc06e430")
 	)
 	(label "G2"
+		(at 106.68 92.71 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "68bbe98d-f996-4819-9c6d-1fd83e68b5e4")
+	)
+	(label "D1"
+		(at 106.68 95.25 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "74e4e201-10c1-4d9b-9ee3-654a5b7a7a75")
+	)
+	(label "G2"
 		(at 128.27 83.82 180)
 		(fields_autoplaced yes)
 		(effects
@@ -1541,6 +1864,28 @@
 			(justify right bottom)
 		)
 		(uuid "8308d322-b4db-48af-a6ba-1439cc776baa")
+	)
+	(label "G1"
+		(at 78.74 92.71 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "888e83cf-19df-468b-9864-12bb6c9df7f0")
+	)
+	(label "D2"
+		(at 139.7 78.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.5 0.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "8929027b-41c1-49ae-8eec-e5572f1386b6")
 	)
 	(hierarchical_label "PreCharge"
 		(shape input)
@@ -1556,7 +1901,7 @@
 	)
 	(hierarchical_label "Relay_IN"
 		(shape input)
-		(at 97.79 58.42 0)
+		(at 96.52 60.96 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1568,7 +1913,7 @@
 	)
 	(hierarchical_label "PreCharge_OUT"
 		(shape input)
-		(at 165.1 78.74 0)
+		(at 165.1 76.2 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1580,7 +1925,7 @@
 	)
 	(hierarchical_label "PreCharge_IN"
 		(shape input)
-		(at 165.1 59.69 0)
+		(at 165.1 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1604,7 +1949,7 @@
 	)
 	(hierarchical_label "Relay_OUT"
 		(shape input)
-		(at 97.79 76.2 0)
+		(at 95.25 73.66 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1615,13 +1960,79 @@
 		(uuid "e1fb3eec-74b6-49b0-9fc3-63324a7fe838")
 	)
 	(symbol
-		(lib_id "Samacsys_kicad_sym:DMT6018LDR-7")
-		(at 139.7 83.82 0)
-		(unit 2)
+		(lib_name "GND_2")
+		(lib_id "power:GND")
+		(at 80.01 100.33 0)
+		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(uuid "1210f372-ef2a-45bd-a436-6512f79c7e36")
+		(property "Reference" "#PWR031"
+			(at 80.01 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 80.137 104.7242 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4612de18-0797-4801-896c-cdf7d9ff610c")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2/a0d80e5f-ff53-4098-b80d-db34d41b1f32"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Samacsys_kicad_sym:DMT6018LDR-7")
+		(at 139.7 83.82 0)
+		(unit 2)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "18e1c41f-6dc0-4731-978d-f10f19b1a6ad")
 		(property "Reference" "Q6"
@@ -2050,10 +2461,10 @@
 		(lib_id "Samacsys_kicad_sym:DMT6018LDR-7")
 		(at 68.58 81.28 0)
 		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "67ce22ee-b721-4d7c-9236-6eaa1464b0f7")
 		(property "Reference" "Q3"
@@ -2427,6 +2838,138 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2/a0d80e5f-ff53-4098-b80d-db34d41b1f32"
 					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DMT6018LDR-7:DMT6018LDR-7")
+		(at 82.55 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97194482-7bf5-473a-8c27-a626c739759f")
+		(property "Reference" "Q5"
+			(at 93.98 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DMT6018LDR-7"
+			(at 93.98 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "DMT6018LDR7"
+			(at 101.6 187.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT6018LDR.pdf"
+			(at 101.6 287.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "DIODES INC. - DMT6018LDR-7 - Dual MOSFET, N Channel, 60 V, 60 V, 8.8 A, 8.8 A, 0.013 ohm"
+			(at 82.55 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "0.85"
+			(at 101.6 487.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "621-DMT6018LDR-7"
+			(at 101.6 587.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMT6018LDR-7?qs=4EhzHfbM1GhfDx1FS0oSLQ%3D%3D"
+			(at 101.6 687.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Diodes Incorporated"
+			(at 101.6 787.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "DMT6018LDR-7"
+			(at 101.6 887.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "ad7cdf4c-30a4-4327-9525-e908db40dfc4")
+		)
+		(pin "4"
+			(uuid "a5963090-7cd1-4b2c-ba51-413a9ab40751")
+		)
+		(pin "3"
+			(uuid "565978a4-d56d-405d-bbd7-2110ee3d6d79")
+		)
+		(pin "2"
+			(uuid "4f6c613a-eb93-4e47-a935-3b555d5e32f8")
+		)
+		(pin "5"
+			(uuid "f2c99990-00f4-4592-8dd5-8ac00640ccb5")
+		)
+		(pin "1"
+			(uuid "f82b3d26-8b9e-4af2-b027-6be31112f76f")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2/a0d80e5f-ff53-4098-b80d-db34d41b1f32"
+					(reference "Q5")
 					(unit 1)
 				)
 			)
