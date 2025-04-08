@@ -1,4 +1,4 @@
-25287259475261373
+25289003607418757
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -101408,6 +101408,13 @@ BQ79614PAPRQ1
 0
 65
 65
+footrpint
+CAPC5728X280N
+2211 (5728)
+Capacitor
+0
+2
+2
 footrpint
 CLF7045__
 CLF7045_*

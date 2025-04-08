@@ -444,6 +444,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 105.41) (xy 140.97 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15144095-de16-491a-b4f4-fecaabb8d9a6")
+	)
+	(wire
+		(pts
 			(xy 88.9 105.41) (xy 99.06 105.41)
 		)
 		(stroke
@@ -454,7 +464,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 105.41) (xy 121.92 105.41)
+			(xy 106.68 105.41) (xy 113.03 105.41)
 		)
 		(stroke
 			(width 0)
@@ -494,6 +504,16 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 82.55) (xy 127 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f139676-52c0-4cba-86df-4fb1ac9a9e94")
+	)
+	(wire
+		(pts
 			(xy 88.9 82.55) (xy 88.9 91.44)
 		)
 		(stroke
@@ -511,6 +531,16 @@
 			(type default)
 		)
 		(uuid "51cdc711-98e3-4c35-b4b0-92100f5a8cbc")
+	)
+	(wire
+		(pts
+			(xy 132.08 82.55) (xy 140.97 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "591bdfd4-96fc-4d74-8ba8-b931386f6b07")
 	)
 	(wire
 		(pts
@@ -594,7 +624,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 82.55) (xy 121.92 82.55)
+			(xy 106.68 82.55) (xy 113.03 82.55)
 		)
 		(stroke
 			(width 0)
@@ -614,16 +644,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 105.41) (xy 140.97 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab15d4cb-b45c-4073-9796-761145d05da5")
-	)
-	(wire
-		(pts
 			(xy 99.06 105.41) (xy 99.06 107.95)
 		)
 		(stroke
@@ -634,13 +654,13 @@
 	)
 	(wire
 		(pts
-			(xy 127 82.55) (xy 140.97 82.55)
+			(xy 118.11 105.41) (xy 125.73 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c6982869-7ca0-4858-aaf3-e6c2eb8cb5e7")
+		(uuid "c78c1715-61cd-44f1-8d29-e6e18e94d164")
 	)
 	(wire
 		(pts
@@ -683,17 +703,37 @@
 		(uuid "f805282b-dac1-4235-a1a2-2a570f903ae3")
 	)
 	(label "S2-"
-		(at 133.35 105.41 0)
+		(at 121.92 105.41 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "5e52032d-8c3c-4698-aef9-c5fcb9c47505")
+		(uuid "25eb572b-8a3e-4260-97f2-1b946dd89f1c")
+	)
+	(label "S2+"
+		(at 120.65 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "564167b2-fdd8-457a-a780-7eaa9bada7fb")
+	)
+	(label "S3-"
+		(at 134.62 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "65f6f3a1-6ccc-40c3-b007-5215321c8425")
 	)
 	(label "S1+"
-		(at 115.57 82.55 0)
+		(at 110.49 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -702,18 +742,18 @@
 		)
 		(uuid "8331147a-40c2-419b-9b6b-8a2f738ae323")
 	)
-	(label "S2+"
-		(at 133.35 82.55 0)
+	(label "S3+"
+		(at 135.89 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "cd760faf-443b-4937-9936-d104478fea2d")
+		(uuid "a0a0f894-1e67-4554-8893-f859f2e83d16")
 	)
 	(label "S1-"
-		(at 115.57 105.41 0)
+		(at 109.22 105.41 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1045,7 +1085,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 124.46 82.55 270)
+		(at 115.57 82.55 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1054,7 +1094,7 @@
 		(fields_autoplaced yes)
 		(uuid "41114647-10a4-4689-a721-88a231a4e67b")
 		(property "Reference" "C12"
-			(at 124.4536 76.2 90)
+			(at 115.5636 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1062,24 +1102,15 @@
 			)
 		)
 		(property "Value" "2.2n"
-			(at 124.4536 78.74 90)
+			(at 115.5636 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 124.46 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/CGA3E2C0G1H222J080AE?qs=P1JMDcb91o5KNu2GzASXrQ%3D%3D"
-			(at 124.46 82.55 0)
+		(property "Footprint" "footrpint:CAPC5728X280N"
+			(at 115.57 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1087,8 +1118,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 124.46 82.55 0)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Walsin/S252B222K502CT?qs=wUXugUrL1qx2Bha0j7hz5g%3D%3D"
+			(at 115.57 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Kondensator Bezpieczeństwa 250V"
+			(at 115.57 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1106,6 +1146,74 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/1b8fbd81-7ef0-462a-a785-6c377cb64ff7"
 					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 129.54 82.55 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4754a2f7-1bf6-4260-b8cb-528fa1351991")
+		(property "Reference" "C145"
+			(at 129.5336 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2n"
+			(at 129.5336 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footrpint:CAPC5728X280N"
+			(at 129.54 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Walsin/S252B222K502CT?qs=wUXugUrL1qx2Bha0j7hz5g%3D%3D"
+			(at 129.54 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Kondensator Bezpieczeństwa 250V"
+			(at 129.54 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "daa65e49-e17b-4ee8-b037-6096f11ce9fd")
+		)
+		(pin "1"
+			(uuid "315fc43d-3f8e-4f5a-bc44-0ba939cc49c3")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/1b8fbd81-7ef0-462a-a785-6c377cb64ff7"
+					(reference "C145")
 					(unit 1)
 				)
 			)
@@ -1375,6 +1483,74 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/1b8fbd81-7ef0-462a-a785-6c377cb64ff7"
 					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 128.27 105.41 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "77d71ec2-8472-41fb-885e-8e05ec96650e")
+		(property "Reference" "C144"
+			(at 128.2636 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2n"
+			(at 128.2636 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footrpint:CAPC5728X280N"
+			(at 128.27 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Walsin/S252B222K502CT?qs=wUXugUrL1qx2Bha0j7hz5g%3D%3D"
+			(at 128.27 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Kondensator Bezpieczeństwa 250V"
+			(at 128.27 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "aec685aa-8321-4ce3-8278-a33223dd7779")
+		)
+		(pin "1"
+			(uuid "3272c022-cfa3-45ad-a6f4-70b15b83dd73")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/1b8fbd81-7ef0-462a-a785-6c377cb64ff7"
+					(reference "C144")
 					(unit 1)
 				)
 			)
@@ -1792,7 +1968,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 124.46 105.41 270)
+		(at 115.57 105.41 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1801,7 +1977,7 @@
 		(fields_autoplaced yes)
 		(uuid "fe857f99-477f-4dfb-9b9c-d2af5f57aa1a")
 		(property "Reference" "C13"
-			(at 124.4536 99.06 90)
+			(at 115.5636 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1809,24 +1985,15 @@
 			)
 		)
 		(property "Value" "2.2n"
-			(at 124.4536 101.6 90)
+			(at 115.5636 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 124.46 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/CGA3E2C0G1H222J080AE?qs=P1JMDcb91o5KNu2GzASXrQ%3D%3D"
-			(at 124.46 105.41 0)
+		(property "Footprint" "footrpint:CAPC5728X280N"
+			(at 115.57 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1834,8 +2001,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 124.46 105.41 0)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Walsin/S252B222K502CT?qs=wUXugUrL1qx2Bha0j7hz5g%3D%3D"
+			(at 115.57 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Kondensator Bezpieczeństwa 250V"
+			(at 115.57 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)

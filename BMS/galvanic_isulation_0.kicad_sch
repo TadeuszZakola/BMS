@@ -474,16 +474,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 74.93) (xy 135.89 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3731e82e-c884-489d-af3b-99c27a6236a1")
-	)
-	(wire
-		(pts
 			(xy 142.24 97.79) (xy 144.78 97.79)
 		)
 		(stroke
@@ -514,7 +504,17 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 97.79) (xy 116.84 97.79)
+			(xy 111.76 97.79) (xy 120.65 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "673b4a46-1277-4fda-9635-9ddc7c645fce")
+	)
+	(wire
+		(pts
+			(xy 101.6 97.79) (xy 106.68 97.79)
 		)
 		(stroke
 			(width 0)
@@ -554,7 +554,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 74.93) (xy 116.84 74.93)
+			(xy 101.6 74.93) (xy 106.68 74.93)
 		)
 		(stroke
 			(width 0)
@@ -571,6 +571,16 @@
 			(type default)
 		)
 		(uuid "88ef4b76-1457-4d04-ad79-1e19a04f40d4")
+	)
+	(wire
+		(pts
+			(xy 125.73 97.79) (xy 137.16 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "918f2b92-b7fb-4926-8ae4-3bdf3e368b1c")
 	)
 	(wire
 		(pts
@@ -624,6 +634,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 74.93) (xy 121.92 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6aee3ed-a1b2-4e6d-92b7-08366ac42689")
+	)
+	(wire
+		(pts
 			(xy 144.78 97.79) (xy 154.94 97.79)
 		)
 		(stroke
@@ -674,36 +694,46 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 97.79) (xy 121.92 97.79)
+			(xy 127 74.93) (xy 135.89 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f788ede5-8f4f-45de-ae94-383be75dcae6")
+		(uuid "f2e2cec7-bb5a-4144-9941-e7e492918a41")
 	)
 	(label "S2+"
-		(at 127 74.93 0)
+		(at 115.57 74.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "1b7ab4f2-adbe-4584-81ee-6821bc8c5c97")
+		(uuid "20828dee-d786-4d2e-8297-e0b23e5f3286")
+	)
+	(label "S3+"
+		(at 130.81 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7a5fb480-fe37-4a2b-8aae-06f9d8bb0250")
 	)
 	(label "S2-"
-		(at 127 97.79 0)
+		(at 116.84 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "4feadfb9-b351-490f-85f1-f18b3950b0ba")
+		(uuid "8ae7c5ee-2e69-482f-9b6d-39c118fadbcc")
 	)
 	(label "S1-"
-		(at 107.95 97.79 0)
+		(at 102.87 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -712,8 +742,18 @@
 		)
 		(uuid "8b0305ff-95fd-498f-b8dd-08d7ce2fe40d")
 	)
+	(label "S3-"
+		(at 129.54 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9c863ca8-6bdc-487d-80f2-1c7c5512fea7")
+	)
 	(label "S1+"
-		(at 107.95 74.93 0)
+		(at 102.87 74.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -968,7 +1008,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 119.38 74.93 270)
+		(at 109.22 74.93 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -977,7 +1017,7 @@
 		(fields_autoplaced yes)
 		(uuid "17200a82-5fbe-4690-90ad-60dea5307d31")
 		(property "Reference" "C61"
-			(at 119.3736 68.58 90)
+			(at 109.2136 68.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -985,24 +1025,15 @@
 			)
 		)
 		(property "Value" "2.2n"
-			(at 119.3736 71.12 90)
+			(at 109.2136 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 119.38 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/CGA3E2C0G1H222J080AE?qs=P1JMDcb91o5KNu2GzASXrQ%3D%3D"
-			(at 119.38 74.93 0)
+		(property "Footprint" "footrpint:CAPC5728X280N"
+			(at 109.22 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1010,8 +1041,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 119.38 74.93 0)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Walsin/S252B222K502CT?qs=wUXugUrL1qx2Bha0j7hz5g%3D%3D"
+			(at 109.22 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Kondensator Bezpieczeństwa 250V"
+			(at 109.22 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1029,6 +1069,74 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/40b62235-494b-489c-87ee-38a07fa46b52"
 					(reference "C61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 123.19 97.79 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "26b47fe4-364d-4484-9284-b8f8f9e125a5")
+		(property "Reference" "C146"
+			(at 123.1836 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2n"
+			(at 123.1836 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footrpint:CAPC5728X280N"
+			(at 123.19 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Walsin/S252B222K502CT?qs=wUXugUrL1qx2Bha0j7hz5g%3D%3D"
+			(at 123.19 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Kondensator Bezpieczeństwa 250V"
+			(at 123.19 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3feb4f19-71d5-49bf-95dd-a29037f0a0ad")
+		)
+		(pin "1"
+			(uuid "45793bbb-4c93-4c2e-b325-6badb017da5f")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/40b62235-494b-489c-87ee-38a07fa46b52"
+					(reference "C146")
 					(unit 1)
 				)
 			)
@@ -1107,7 +1215,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 119.38 97.79 270)
+		(at 109.22 97.79 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1116,7 +1224,7 @@
 		(fields_autoplaced yes)
 		(uuid "4380acd4-b6bf-457f-bade-d4977fa775e7")
 		(property "Reference" "C62"
-			(at 119.3736 91.44 90)
+			(at 109.2136 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1124,24 +1232,15 @@
 			)
 		)
 		(property "Value" "2.2n"
-			(at 119.3736 93.98 90)
+			(at 109.2136 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 119.38 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/CGA3E2C0G1H222J080AE?qs=P1JMDcb91o5KNu2GzASXrQ%3D%3D"
-			(at 119.38 97.79 0)
+		(property "Footprint" "footrpint:CAPC5728X280N"
+			(at 109.22 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1149,8 +1248,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 119.38 97.79 0)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Walsin/S252B222K502CT?qs=wUXugUrL1qx2Bha0j7hz5g%3D%3D"
+			(at 109.22 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Kondensator Bezpieczeństwa 250V"
+			(at 109.22 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1510,6 +1618,74 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/40b62235-494b-489c-87ee-38a07fa46b52"
 					(reference "C59")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 124.46 74.93 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7225e1ca-38f5-4e7f-a2a9-64277bd41d83")
+		(property "Reference" "C147"
+			(at 124.4536 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2n"
+			(at 124.4536 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footrpint:CAPC5728X280N"
+			(at 124.46 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Walsin/S252B222K502CT?qs=wUXugUrL1qx2Bha0j7hz5g%3D%3D"
+			(at 124.46 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Kondensator Bezpieczeństwa 250V"
+			(at 124.46 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9e9b910a-4f31-4242-bb76-762113abbc9e")
+		)
+		(pin "1"
+			(uuid "fb719b56-95ee-4ef8-b038-f3ca05134514")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/40b62235-494b-489c-87ee-38a07fa46b52"
+					(reference "C147")
 					(unit 1)
 				)
 			)
