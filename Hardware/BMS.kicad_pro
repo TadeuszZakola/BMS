@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "min_clearance": 0.1
         }
       },
       "diff_pair_dimensions": [
@@ -72,14 +72,6 @@
         [
           "footprint_type_mismatch|183675000|151000000|903cceb1-e6f3-41bc-a034-243853d084b5|00000000-0000-0000-0000-000000000000",
           "taki footprint ;-;"
-        ],
-        [
-          "items_not_allowed|183700000|125450000|e220096e-2c1f-451f-8039-748c9699464f|00000000-0000-0000-0000-000000000000",
-          "taki footprint ;-;"
-        ],
-        [
-          "items_not_allowed|183700000|94450000|dbd8c844-daa1-4983-91c3-a9fd88d721fd|00000000-0000-0000-0000-000000000000",
-          ""
         ],
         [
           "solder_mask_bridge|182375000|150100000|f1953efb-8524-43b7-b3fe-768ecb3bb94f|4b939467-0046-42eb-8c41-7264f56b013e",

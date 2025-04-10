@@ -2116,7 +2116,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footrpint:RDX0007A-MFG"
+		(property "Footprint" "footrpint:RDX0007A-MFG_NOVIA"
 			(at 157.48 76.2 0)
 			(effects
 				(font

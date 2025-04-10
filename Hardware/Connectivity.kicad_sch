@@ -16086,6 +16086,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 143.51 158.75 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7a431e9d-1fa4-4700-9084-d31d87147ba0")
+		(property "Reference" "#PWR033"
+			(at 137.16 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 139.7 158.7499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 143.51 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "00f4612f-93c0-462d-b973-f99ad7a1023b")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Power_Protection:ESDA5V3SC5")
 		(at 165.1 63.5 0)
 		(unit 1)
@@ -17771,7 +17838,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "footrpint:HARWIN_M80-5402642"
+		(property "Footprint" "footrpint:HARWIN_M80-5002642"
 			(at 148.59 148.59 0)
 			(effects
 				(font
@@ -17780,7 +17847,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.harwin.com/products/M80-5402642"
+		(property "Datasheet" "https://www.harwin.com/products/M80-5002642"
 			(at 148.59 148.59 0)
 			(effects
 				(font

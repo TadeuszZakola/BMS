@@ -1,4 +1,4 @@
-25289003607418757
+25295981298803849
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -101472,12 +101472,33 @@ HARWIN_M80-5000000M1-02-PM1-00-000
 2
 2
 footrpint
+HARWIN_M80-5002642
+
+
+0
+26
+26
+footrpint
+HARWIN_M80-5002842
+
+
+0
+28
+28
+footrpint
 HARWIN_M80-5100442
 
 
 0
 4
 4
+footrpint
+HARWIN_M80-5102642
+
+
+0
+26
+26
 footrpint
 HARWIN_M80-5402642
 
@@ -101544,10 +101565,17 @@ BQ79614PAPRQ1
 footrpint
 RDX0007A-MFG
 
-PTPSM863253RDXR 
+PTPSM863252RDXR 
 0
 19
 19
+footrpint
+RDX0007A-MFG_NOVIA
+
+PTPSM863252RDXR 
+0
+7
+7
 footrpint
 RESC6331X80N
 CRM2512
