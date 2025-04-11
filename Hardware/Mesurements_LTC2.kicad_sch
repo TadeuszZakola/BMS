@@ -1920,16 +1920,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "sprwadzic to\n"
-		(exclude_from_sim no)
-		(at 150.876 131.064 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "102da05f-ff2c-4a9f-87b6-2a5289aa5a40")
-	)
 	(text "max 370ohm\n"
 		(exclude_from_sim no)
 		(at 51.562 78.486 0)

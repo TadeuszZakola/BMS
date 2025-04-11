@@ -1940,16 +1940,6 @@
 		)
 		(uuid "631b8c5f-8abb-4176-a2ad-83081971601b")
 	)
-	(text "sprwadzic to\n"
-		(exclude_from_sim no)
-		(at 137.414 134.62 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "89058561-9566-4d42-97fc-06e187af0ee4")
-	)
 	(text "49 ohm overall\n"
 		(exclude_from_sim no)
 		(at 186.436 96.266 0)
