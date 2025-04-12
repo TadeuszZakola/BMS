@@ -4251,16 +4251,6 @@
 		)
 		(uuid "063d2ee8-2247-4520-8e28-05d86b0b2675")
 	)
-	(label "CAN_OUT+"
-		(at 83.82 87.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "06797c3e-16bf-4380-b91e-e784cdec7329")
-	)
 	(label "ERROR"
 		(at 111.76 54.61 0)
 		(effects
@@ -4271,7 +4261,7 @@
 		)
 		(uuid "0caa908c-21fe-416e-a9c7-9fcd43d84a36")
 	)
-	(label "CAN_OUT+"
+	(label "CAN_TX"
 		(at 172.72 31.75 90)
 		(effects
 			(font
@@ -4300,16 +4290,6 @@
 			(justify left bottom)
 		)
 		(uuid "117b0f4a-d3bc-4a62-9522-db1da896a977")
-	)
-	(label "CAN_OUT-"
-		(at 83.82 90.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1d4adb46-43c3-4baa-a2b0-dda38182c08f")
 	)
 	(label "USB2+"
 		(at 83.82 71.12 0)
@@ -4451,6 +4431,16 @@
 		)
 		(uuid "5e77decc-2c9d-4937-8f72-ca8d3019c036")
 	)
+	(label "CAN_RX"
+		(at 83.82 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "63295fc7-923c-4779-b85d-b9ba3a8e65d3")
+	)
 	(label "12V_Enable"
 		(at 134.62 148.59 90)
 		(effects
@@ -4551,7 +4541,7 @@
 		)
 		(uuid "9c3c0def-cb26-423f-bde3-a576af3af9eb")
 	)
-	(label "CAN_OUT-"
+	(label "CAN_RX"
 		(at 175.26 31.75 90)
 		(effects
 			(font
@@ -4660,6 +4650,16 @@
 			(justify left bottom)
 		)
 		(uuid "d4a76e9b-6f00-4451-8577-580e333a20fd")
+	)
+	(label "CAN_TX"
+		(at 83.82 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dad9b939-353c-4be5-a0a1-cc92cd72dae3")
 	)
 	(label "SWCLK"
 		(at 187.96 25.4 270)

@@ -6427,6 +6427,19 @@
 		(uuid 0cbca538-74d1-4edd-8b65-9f28012cde4a)
 	)
 	(rectangle
+		(start 312.42 171.45)
+		(end 405.13 250.19)
+		(stroke
+			(width 0.5)
+			(type dash)
+			(color 0 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 104c41ce-516a-4ee4-a264-e69e95f8d886)
+	)
+	(rectangle
 		(start 100.33 15.24)
 		(end 191.77 73.66)
 		(stroke
@@ -6530,6 +6543,17 @@
 		)
 		(uuid dcac2877-6078-432e-a99b-ef61dbb5433c)
 	)
+	(text "Some of the items are crossed out, the crossed \nout items are ment to show how the elements \nare connected, in reality the components\nare connected to another footrpint that \ndoes that function. For example:"
+		(exclude_from_sim no)
+		(at 358.14 196.85 0)
+		(effects
+			(font
+				(size 2 2)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "02a05d03-69b4-4143-a55d-0faf700176c4")
+	)
 	(text "będzie czujnik 4 pinowy\n"
 		(exclude_from_sim no)
 		(at 216.662 126.492 0)
@@ -6549,6 +6573,17 @@
 			)
 		)
 		(uuid "0f77543c-6f13-46a7-8df0-c506752a0ee9")
+	)
+	(text "Meaning that its connected to external connector\nin reality there is no 4 pin connector but the\nconnection is on a bigger 26 pin with other signals."
+		(exclude_from_sim no)
+		(at 359.41 224.79 0)
+		(effects
+			(font
+				(size 2 2)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "14449ce9-b86c-4864-ae64-3b1b5f21d257")
 	)
 	(text "USB_A \n"
 		(exclude_from_sim no)
@@ -6572,7 +6607,7 @@
 		)
 		(uuid "34cab4dc-3bff-49b2-8537-feb01ba2186c")
 	)
-	(text "symbol stedni, potem zmienie na czytelniejszy\n"
+	(text "DMT6018LDR-7 is a package with 2 mossfets inside.\n"
 		(exclude_from_sim no)
 		(at 345.44 87.884 0)
 		(effects
@@ -6592,6 +6627,16 @@
 		)
 		(uuid "46d91424-297b-4660-8253-b5e6e96b014c")
 	)
+	(text "The connection is on the main connector"
+		(exclude_from_sim no)
+		(at 57.15 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7091d2bd-266c-4978-9bdc-006f90d57707")
+	)
 	(text "External Power\n"
 		(exclude_from_sim no)
 		(at 240.03 20.828 0)
@@ -6602,6 +6647,18 @@
 			)
 		)
 		(uuid "8312235c-9003-4caf-8e00-06f4fcdf8ba0")
+	)
+	(text "Explanation:"
+		(exclude_from_sim no)
+		(at 358.14 179.07 0)
+		(effects
+			(font
+				(size 5 5)
+				(thickness 0.625)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "84df4d70-7795-4c23-99c3-c342f3ffc655")
 	)
 	(text "RELAYS"
 		(exclude_from_sim no)
@@ -16332,6 +16389,80 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
 					(reference "#PWR0100")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 356.87 213.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
+		(uuid "8386ecb4-3686-4777-be42-63ff3c736c10")
+		(property "Reference" "J20"
+			(at 353.06 209.296 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 356.616 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "footrpint:HARWIN_M80-5100442"
+			(at 356.87 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 356.87 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 356.87 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "c44947dd-a155-4f54-aefe-34238b74fd75")
+		)
+		(pin "1"
+			(uuid "df8a1dc9-0970-42ce-b3d2-5f7f7777b8bf")
+		)
+		(pin "2"
+			(uuid "04e189d5-0c91-4348-8e6a-48977a0e253e")
+		)
+		(pin "3"
+			(uuid "b2b905df-97b8-441f-9e39-0e72d69e02dd")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
+					(reference "J20")
 					(unit 1)
 				)
 			)

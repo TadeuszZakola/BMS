@@ -551,6 +551,19 @@
 			(embedded_fonts no)
 		)
 	)
+	(rectangle
+		(start 186.69 19.05)
+		(end 279.4 97.79)
+		(stroke
+			(width 0.5)
+			(type dash)
+			(color 0 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 9f947ac3-92e4-4bc4-86df-4b7272e70d0f)
+	)
 	(text "'GND_HV2' is connected via 'Batt_coupling' to cell number 13 and serves as a ground for 2nd ltc"
 		(exclude_from_sim no)
 		(at 97.536 203.962 0)
@@ -560,6 +573,29 @@
 			)
 		)
 		(uuid "1f732330-eb9f-445c-bf15-25d659317023")
+	)
+	(text "Batteries in the schematic are there only for \nprinciple,they are ment to show how the pcb \nis connected to the battery pack. In reality\nthe connection is purely external as the\nconnector on the left shows. \n\n"
+		(exclude_from_sim no)
+		(at 232.41 44.45 0)
+		(effects
+			(font
+				(size 2 2)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "3f91609f-7d8f-4d01-8360-8682e58b05c9")
+	)
+	(text "Explanation:"
+		(exclude_from_sim no)
+		(at 232.41 26.67 0)
+		(effects
+			(font
+				(size 5 5)
+				(thickness 0.625)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "7fc6b010-a4f6-4373-a52d-a76d18d0703d")
 	)
 	(junction
 		(at 154.94 171.45)
@@ -1054,6 +1090,17 @@
 			(type default)
 		)
 		(uuid "0ffad56e-ced8-4f0b-8106-240c466c73a5")
+	)
+	(polyline
+		(pts
+			(xy 226.06 54.61) (xy 237.49 64.77)
+		)
+		(stroke
+			(width 0.5)
+			(type solid)
+			(color 255 0 0 1)
+		)
+		(uuid "100774e2-b12f-47de-bf94-adb8708f9995")
 	)
 	(wire
 		(pts
@@ -2374,6 +2421,17 @@
 			(type default)
 		)
 		(uuid "a1545343-55fb-4652-94ec-38f60d1b4d29")
+	)
+	(polyline
+		(pts
+			(xy 226.06 64.77) (xy 236.22 54.61)
+		)
+		(stroke
+			(width 0.5)
+			(type solid)
+			(color 255 0 0 1)
+		)
+		(uuid "a22290a1-88bb-475e-99d3-cd49038f268e")
 	)
 	(wire
 		(pts
@@ -5732,6 +5790,78 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/99f7ea83-6836-44ea-889b-f0d453e84b38/3dcd8643-765f-4aab-99d6-4ed68d4de44f"
 					(reference "C90")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 231.14 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "773d2b9f-b98f-4bd4-ada4-5c8778d5f814")
+		(property "Reference" "BT28"
+			(at 234.95 57.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "Battery_Cell"
+			(at 234.95 60.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 231.14 59.436 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 231.14 59.436 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single-cell battery"
+			(at 231.14 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1066ecb6-8107-484f-9c42-0da5b65c4f98")
+		)
+		(pin "2"
+			(uuid "6eba42b0-4bfc-4097-97d0-b03a7d372b9d")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/99f7ea83-6836-44ea-889b-f0d453e84b38/3dcd8643-765f-4aab-99d6-4ed68d4de44f"
+					(reference "BT28")
 					(unit 1)
 				)
 			)
