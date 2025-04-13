@@ -1,4 +1,4 @@
-25295981298803849
+25302959408638250
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -101423,6 +101423,13 @@ Inductor
 2
 2
 footrpint
+ESDSB12VLBTP
+ESDSB12VLB-TP-1
+TVS Diode (Bi-directional)
+0
+2
+2
+footrpint
 GCT_USB4235-03-C_REVA
 
 
@@ -101591,6 +101598,13 @@ SC59-3_1P5X2P9_ONS
 3
 3
 footrpint
+SOT95P230X110-3N
+SOT 23 (TO-236AB)_2023
+Transistor BJT NPN
+0
+3
+3
+footrpint
 SOT95P280X145-5N
 ESDA5V3SC5
 Integrated Circuit
@@ -101625,3 +101639,17 @@ Connector
 0
 6
 6
+footrpint
+USB4140GF0070C
+USB4140-GF-0070-C-2
+Connector
+0
+10
+10
+footrpint
+USB412003C
+USB4120-03-C
+Connector
+0
+20
+20
