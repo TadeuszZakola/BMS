@@ -2291,7 +2291,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "PTPSM863253RDXR"
+		(property "Datasheet" "https://www.mouser.fi/ProductDetail/Texas-Instruments/TPSM863253RDXR?qs=dbcCsuKDzFVdFTfaJMWCkQ%3D%3D"
 			(at 157.48 76.2 0)
 			(effects
 				(font
@@ -2569,7 +2569,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TVS diode 5V"
+		(property "Value" "TVS diode 3.3V"
 			(at 233.68 97.7899 90)
 			(effects
 				(font
