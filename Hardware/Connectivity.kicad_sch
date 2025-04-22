@@ -6886,12 +6886,6 @@
 		(uuid "4c354645-4ab7-4d25-8e41-4c7ff2b0388a")
 	)
 	(junction
-		(at 346.71 151.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "53d9c907-840c-4c4d-a85d-94394274feed")
-	)
-	(junction
 		(at 217.17 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7010,12 +7004,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8d4d8916-39f3-4814-8428-3238005b4af9")
-	)
-	(junction
-		(at 346.71 156.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8f65a512-550b-4377-98f1-612bb95a85c0")
 	)
 	(junction
 		(at 66.04 97.79)
@@ -7829,16 +7817,6 @@
 	)
 	(wire
 		(pts
-			(xy 346.71 149.86) (xy 346.71 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "302e8c9b-5f7f-4587-9cff-7b44bc70094b")
-	)
-	(wire
-		(pts
 			(xy 396.24 44.45) (xy 396.24 49.53)
 		)
 		(stroke
@@ -7956,16 +7934,6 @@
 			(type default)
 		)
 		(uuid "3cb1741d-7145-4a91-b086-ef4714a5fd40")
-	)
-	(wire
-		(pts
-			(xy 345.44 152.4) (xy 346.71 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d6e0e76-e822-4a3a-a2cd-784f6bb8f46b")
 	)
 	(wire
 		(pts
@@ -8569,16 +8537,6 @@
 	)
 	(wire
 		(pts
-			(xy 346.71 157.48) (xy 345.44 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6cef17b1-4f85-4d24-be9a-48551f274fce")
-	)
-	(wire
-		(pts
 			(xy 215.9 43.18) (xy 217.17 43.18)
 		)
 		(stroke
@@ -9099,26 +9057,6 @@
 	)
 	(wire
 		(pts
-			(xy 346.71 156.21) (xy 346.71 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a73d6e9c-c95e-4800-b30d-45a32d6f0d7d")
-	)
-	(wire
-		(pts
-			(xy 347.98 156.21) (xy 346.71 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a79b065f-5187-48c9-a45c-8ed9d70e78a9")
-	)
-	(wire
-		(pts
 			(xy 326.39 69.85) (xy 330.2 69.85)
 		)
 		(stroke
@@ -9166,16 +9104,6 @@
 			(type default)
 		)
 		(uuid "a9585d8f-b7e8-4d8a-a78a-b8f47921a42b")
-	)
-	(wire
-		(pts
-			(xy 346.71 152.4) (xy 346.71 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abfc2159-1156-4b4b-90d2-af1ff073770c")
 	)
 	(wire
 		(pts
@@ -9279,16 +9207,6 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 149.86) (xy 346.71 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b0a49827-755e-4298-8870-1c68c204d6fa")
-	)
-	(wire
-		(pts
 			(xy 218.44 27.94) (xy 236.22 27.94)
 		)
 		(stroke
@@ -9316,16 +9234,6 @@
 			(type default)
 		)
 		(uuid "b23020c6-ec65-4223-becb-7ee49964cf2e")
-	)
-	(wire
-		(pts
-			(xy 345.44 154.94) (xy 346.71 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b23a2af5-7043-47a4-a6db-6e8afe3f5223")
 	)
 	(wire
 		(pts
@@ -9866,16 +9774,6 @@
 			(type default)
 		)
 		(uuid "e7822885-1571-49b2-8ea2-9fa53e52fcda")
-	)
-	(wire
-		(pts
-			(xy 346.71 154.94) (xy 346.71 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e82bcc22-89da-4c75-9e92-747c0f7916bc")
 	)
 	(wire
 		(pts
@@ -13412,73 +13310,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
 					(reference "C115")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "GND_28")
-		(lib_id "power:GND")
-		(at 347.98 156.21 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "36d2d616-c544-4d30-b785-bccd447f2dac")
-		(property "Reference" "#PWR0142"
-			(at 354.33 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 353.06 156.21 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 347.98 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 347.98 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 347.98 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c983d8f4-28a2-46be-97e1-77f1306e6a3b")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
-					(reference "#PWR0142")
 					(unit 1)
 				)
 			)
@@ -19922,73 +19753,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
 					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "GND_28")
-		(lib_id "power:GND")
-		(at 346.71 151.13 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cfbe7226-1b48-4cf7-8afe-2661456f3224")
-		(property "Reference" "#PWR0144"
-			(at 353.06 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 351.79 151.13 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 346.71 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 346.71 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 346.71 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "61260e23-1c59-4714-8cef-354fc3301fa8")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
-					(reference "#PWR0144")
 					(unit 1)
 				)
 			)
