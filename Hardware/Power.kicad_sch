@@ -254,131 +254,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+12V"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+12V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+12V\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+12V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+12V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -539,12 +414,6 @@
 		(color 0 0 0 0)
 		(uuid "34611c29-f1b0-485e-a2dd-e9aec74128c0")
 	)
-	(junction
-		(at 27.94 40.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "95f71135-7e65-4d7c-bfeb-0e026f81b494")
-	)
 	(wire
 		(pts
 			(xy 130.81 41.91) (xy 171.45 41.91)
@@ -587,7 +456,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 38.1) (xy 24.13 40.64)
+			(xy 24.13 35.56) (xy 24.13 40.64)
 		)
 		(stroke
 			(width 0)
@@ -604,16 +473,6 @@
 			(type default)
 		)
 		(uuid "854e19a5-fbe0-4b68-95fd-c9807b6e6027")
-	)
-	(wire
-		(pts
-			(xy 24.13 40.64) (xy 27.94 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "855be105-d990-48f8-9c77-e067d8817493")
 	)
 	(wire
 		(pts
@@ -637,7 +496,17 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 40.64) (xy 49.53 40.64)
+			(xy 22.86 35.56) (xy 24.13 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6501e5f-1e3d-4587-b33b-518cda337516")
+	)
+	(wire
+		(pts
+			(xy 24.13 40.64) (xy 49.53 40.64)
 		)
 		(stroke
 			(width 0)
@@ -645,137 +514,35 @@
 		)
 		(uuid "f525c7bb-ede9-4616-9350-e6fb7240cd96")
 	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 27.94 40.64 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+	(global_label "12V_IN"
+		(shape input)
+		(at 22.86 35.56 180)
 		(fields_autoplaced yes)
-		(uuid "7f5b27f6-52ce-48cf-88f9-bba44684e11f")
-		(property "Reference" "TP12"
-			(at 29.21 39.3699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify right)
 		)
-		(property "Value" "TestPoint_Small"
-			(at 29.21 41.9099 0)
+		(uuid "82bb52ea-c785-44f2-8284-1c3d2f348589")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 13.4643 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 33.02 40.64 0)
+		(property "Netclass" ""
+			(at 22.86 37.7508 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 33.02 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 27.94 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1c21e4fb-6467-4e2d-b4f5-438d034cbd68")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a"
-					(reference "TP12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 24.13 38.1 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9f26ea55-97e7-4bb9-8841-7b4fa1fc0fcc")
-		(property "Reference" "#PWR0136"
-			(at 24.13 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 24.13 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 24.13 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 24.13 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 24.13 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "88f812db-803c-41fb-81f8-807cd853cd90")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a"
-					(reference "#PWR0136")
-					(unit 1)
-				)
 			)
 		)
 	)
