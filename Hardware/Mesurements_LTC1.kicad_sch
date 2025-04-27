@@ -1961,7 +1961,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 134.62) (xy 125.73 134.62)
+			(xy 121.92 134.62) (xy 124.46 134.62)
 		)
 		(stroke
 			(width 0)
@@ -2961,16 +2961,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 133.35) (xy 125.73 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fadb66a9-252c-41c4-b828-77df2789daa8")
-	)
-	(wire
-		(pts
 			(xy 40.64 106.68) (xy 44.45 106.68)
 		)
 		(stroke
@@ -3500,7 +3490,7 @@
 		(uuid "d8e3217f-a224-4585-b0a5-793bbdbe3f04")
 	)
 	(label "to_rx"
-		(at 125.73 133.35 0)
+		(at 124.46 134.62 0)
 		(effects
 			(font
 				(size 1.27 1.27)

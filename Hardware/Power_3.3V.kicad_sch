@@ -1178,12 +1178,6 @@
 		(uuid "15e1c4cc-4c9f-4976-98e2-8301d32d824a")
 	)
 	(junction
-		(at 231.14 120.65)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1f614d99-42ed-45b1-9dba-1dfba2f9d0fb")
-	)
-	(junction
 		(at 127 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1194,12 +1188,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "21a47ea6-1ec6-4fd2-92c4-7c0cd374d9d6")
-	)
-	(junction
-		(at 231.14 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2955897e-f8ac-43d5-a54b-c6b28fb89556")
 	)
 	(junction
 		(at 222.25 120.65)
@@ -1387,16 +1375,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 100.33) (xy 231.14 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "273ce3d8-b208-4df1-8826-910fa8e8462f")
-	)
-	(wire
-		(pts
 			(xy 212.09 120.65) (xy 198.12 120.65)
 		)
 		(stroke
@@ -1424,16 +1402,6 @@
 			(type default)
 		)
 		(uuid "3532b3b4-db60-4f75-9b20-6bb620f9fc7d")
-	)
-	(wire
-		(pts
-			(xy 231.14 76.2) (xy 231.14 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43095a81-ac97-4b19-b20c-237c4719f2af")
 	)
 	(wire
 		(pts
@@ -1547,16 +1515,6 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 120.65) (xy 231.14 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8706c36c-c715-42c7-aa0c-69e5543ab234")
-	)
-	(wire
-		(pts
 			(xy 76.2 76.2) (xy 76.2 93.98)
 		)
 		(stroke
@@ -1607,7 +1565,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 120.65) (xy 222.25 120.65)
+			(xy 222.25 120.65) (xy 236.22 120.65)
 		)
 		(stroke
 			(width 0)
@@ -1727,7 +1685,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 76.2) (xy 233.68 76.2)
+			(xy 222.25 76.2) (xy 233.68 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1764,16 +1722,6 @@
 			(type default)
 		)
 		(uuid "e3012b31-ccdc-4c9b-894a-ed966b00671d")
-	)
-	(wire
-		(pts
-			(xy 222.25 76.2) (xy 231.14 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7a97bee-1397-46e1-8455-971ff931f3ad")
 	)
 	(wire
 		(pts
@@ -2545,76 +2493,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
 					(reference "#PWR0131")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_TVS")
-		(at 231.14 96.52 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a482304d-7dcd-4872-b2db-26deb5371152")
-		(property "Reference" "D15"
-			(at 233.68 95.2499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TVS diode 3.3V"
-			(at 233.68 97.7899 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-882"
-			(at 231.14 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Littelfuse/SP3205-01ETG?qs=vHuUswq2%252BswfNhVD4WkB%252BQ%3D%3D"
-			(at 231.14 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Bidirectional transient-voltage-suppression diode"
-			(at 231.14 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "691ed04a-bb82-4bdb-b37a-9f17236d7920")
-		)
-		(pin "2"
-			(uuid "0696e677-eb6d-41d4-ae4a-281d54b03a51")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
-					(reference "D15")
 					(unit 1)
 				)
 			)
