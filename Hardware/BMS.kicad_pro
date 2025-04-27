@@ -75,39 +75,71 @@
       ],
       "drc_exclusions": [
         [
-          "footprint_type_mismatch|183675000|151000000|903cceb1-e6f3-41bc-a034-243853d084b5|00000000-0000-0000-0000-000000000000",
-          "taki footprint ;-;"
-        ],
-        [
-          "solder_mask_bridge|182375000|150100000|f1953efb-8524-43b7-b3fe-768ecb3bb94f|4b939467-0046-42eb-8c41-7264f56b013e",
+          "footprint_type_mismatch|184635000|151550000|806a7243-948f-4bf4-806c-abe2914795d2|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "solder_mask_bridge|182375000|151100000|fe36bff7-eed7-4c22-af27-7daf5a0222e3|d1a3c913-937f-4a83-bcf4-06ef53276f04",
+          "missing_courtyard|123900000|176300000|ce874b89-b3c1-4ac5-96a3-26e0482c53b4|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "solder_mask_bridge|182375000|151600000|aaccd89a-9bd9-4ed1-9d47-c9308b562e1d|fe36bff7-eed7-4c22-af27-7daf5a0222e3",
+          "missing_courtyard|143401770|45854048|c1e77e94-d3a8-49f1-81f4-b349ff591567|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "solder_mask_bridge|184105000|149900000|4c2f96a5-0844-4394-84ea-d61953d98755|57cdbf21-385e-45a9-a14c-db470970aead",
+          "missing_courtyard|179200000|83300000|496c2d43-806a-4373-89c4-1a7ad234ecc5|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "solder_mask_bridge|184105000|150400000|57cdbf21-385e-45a9-a14c-db470970aead|42ea6993-8b95-4f39-8168-e9d2ffb1aa8e",
+          "missing_courtyard|183300000|160000000|73be2020-525c-4ed5-8d4f-cb850f6be3b8|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "solder_mask_bridge|184105000|150900000|42ea6993-8b95-4f39-8168-e9d2ffb1aa8e|cba07845-fd96-4585-af2a-e0decda17cc8",
+          "missing_courtyard|82500000|182200000|c9fd253f-c036-470c-901b-c86f6b1ae3e1|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "solder_mask_bridge|184105000|151400000|cba07845-fd96-4585-af2a-e0decda17cc8|256b2fd3-d1af-4dd0-94c2-64fa082ac167",
+          "missing_courtyard|90100000|173500000|8a4c09e3-2490-49f5-b313-52d73e8fed89|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "solder_mask_bridge|184105000|151900000|256b2fd3-d1af-4dd0-94c2-64fa082ac167|880e19b6-3768-41a3-be34-932287d2bab7",
+          "solder_mask_bridge|183335000|150650000|a206d8f6-52a8-49cd-a51d-61316386f2d7|4518939b-8b22-46fd-8685-c1a346cee8a4",
+          ""
+        ],
+        [
+          "solder_mask_bridge|183335000|151150000|f0bae4da-196b-4533-882a-e4154f20a573|a206d8f6-52a8-49cd-a51d-61316386f2d7",
+          ""
+        ],
+        [
+          "solder_mask_bridge|183335000|151650000|964bac1d-7f2f-4af9-bf24-a6c81e9e86bb|f0bae4da-196b-4533-882a-e4154f20a573",
+          ""
+        ],
+        [
+          "solder_mask_bridge|183335000|152150000|93279776-c0d9-4c89-b825-1dcacc002631|964bac1d-7f2f-4af9-bf24-a6c81e9e86bb",
+          ""
+        ],
+        [
+          "solder_mask_bridge|183335000|152650000|077f8309-0305-4aaa-81f1-7a74f4c916b5|93279776-c0d9-4c89-b825-1dcacc002631",
+          ""
+        ],
+        [
+          "solder_mask_bridge|185065000|150450000|a5ddfeee-0b50-4666-a498-32dc843514e5|357a6b10-8671-4367-9815-30f1598ea786",
+          ""
+        ],
+        [
+          "solder_mask_bridge|185065000|150950000|357a6b10-8671-4367-9815-30f1598ea786|bcc388cc-03bd-4aaf-ad3b-5b2bbc803cc3",
+          ""
+        ],
+        [
+          "solder_mask_bridge|185065000|151450000|bcc388cc-03bd-4aaf-ad3b-5b2bbc803cc3|fd2981e1-ec8c-4f9d-b4e8-20435cdccfeb",
+          ""
+        ],
+        [
+          "solder_mask_bridge|185065000|151950000|fd2981e1-ec8c-4f9d-b4e8-20435cdccfeb|82099762-ebd1-4615-acff-86dfa0d37f69",
+          ""
+        ],
+        [
+          "solder_mask_bridge|185065000|152450000|82099762-ebd1-4615-acff-86dfa0d37f69|410f0284-3dbc-4d49-8e56-fc119401f4c8",
           ""
         ]
       ],
@@ -539,9 +571,9 @@
       {
         "bus_width": 12,
         "clearance": 0.15,
-        "diff_pair_gap": 0.2,
+        "diff_pair_gap": 0.3,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "diff_pair_width": 0.12,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
