@@ -58,6 +58,11 @@
           "width": 0.0
         },
         {
+          "gap": 0.03533,
+          "via_gap": 0.03,
+          "width": 0.102
+        },
+        {
           "gap": 0.3,
           "via_gap": 0.5,
           "width": 0.2
@@ -78,19 +83,11 @@
           ""
         ],
         [
-          "solder_mask_bridge|182375000|150600000|d1a3c913-937f-4a83-bcf4-06ef53276f04|f1953efb-8524-43b7-b3fe-768ecb3bb94f",
-          ""
-        ],
-        [
           "solder_mask_bridge|182375000|151100000|fe36bff7-eed7-4c22-af27-7daf5a0222e3|d1a3c913-937f-4a83-bcf4-06ef53276f04",
           ""
         ],
         [
           "solder_mask_bridge|182375000|151600000|aaccd89a-9bd9-4ed1-9d47-c9308b562e1d|fe36bff7-eed7-4c22-af27-7daf5a0222e3",
-          ""
-        ],
-        [
-          "solder_mask_bridge|182375000|152100000|0ce6d84a-6fbc-49ba-9727-35d9ee87f9fd|aaccd89a-9bd9-4ed1-9d47-c9308b562e1d",
           ""
         ],
         [
@@ -281,6 +278,10 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.4,
+          "drill": 0.3
         },
         {
           "diameter": 1.2,
@@ -538,7 +539,7 @@
       {
         "bus_width": 12,
         "clearance": 0.15,
-        "diff_pair_gap": 0.25,
+        "diff_pair_gap": 0.2,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
@@ -552,6 +553,18 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.2,
+        "diff_pair_gap": 0.2,
+        "diff_pair_width": 0.2,
+        "name": "usb_c",
+        "pcb_color": "rgb(255, 15, 31)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "via_diameter": 0.4,
+        "via_drill": 0.3
       }
     ],
     "meta": {
