@@ -2295,16 +2295,6 @@
 		)
 		(uuid a6a63567-1754-4c7f-87b5-5da724d809d3)
 	)
-	(text "zasilacz (ten na 5v) jest do 17v wiec \ntvs z przebiciem na 13 \nbedzie git raczej, pozdrawiam :3\n"
-		(exclude_from_sim no)
-		(at 38.1 96.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "2121df18-620e-4a7d-aecf-79ccb270521f")
-	)
 	(text "Smoothened 5V for delicate signals\n"
 		(exclude_from_sim no)
 		(at 259.842 18.796 0)

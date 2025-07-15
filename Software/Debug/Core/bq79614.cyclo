@@ -1,0 +1,15 @@
+../Core/bq79614.c:5:16:BQ79614_InitByteWrite	3
+../Core/bq79614.c:12:16:BQ79614_InitByteRead	3
+../Core/bq79614.c:19:19:BQ79614_Init	2
+../Core/bq79614.c:32:19:BQ79614_InitUART	2
+../Core/bq79614.c:45:19:BQ79614_InitStack	2
+../Core/bq79614.c:52:19:BQ79614_InitVoltageMeasurement	1
+../Core/bq79614.c:58:19:BQ79614_InitOVUV	7
+../Core/bq79614.c:71:19:BQ79614_InitTemperatureMeasurements	4
+../Core/bq79614.c:89:19:BQ79614_InitOTUT	8
+../Core/bq79614.c:100:19:BQ79614_StartMeasurements	1
+../Core/bq79614.c:106:19:BQ79614_UpdateStatus	5
+../Core/bq79614.c:122:19:BQ79614_UpdateData	7
+../Core/bq79614.c:144:19:BQ79614_WakeUp	4
+../Core/bq79614.c:156:19:BQ79614_Write	4
+../Core/bq79614.c:175:19:BQ79614_Read	7

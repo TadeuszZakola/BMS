@@ -1,0 +1,2 @@
+../Core/Src/crc16ibm.c:5:6:Crc16_Init	40	static
+../Core/Src/crc16ibm.c:36:10:Crc16_Fast	40	static

@@ -1149,16 +1149,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "sprwdz prosze czy dobrze dobralem diody, sa linki do mousera"
-		(exclude_from_sim no)
-		(at 45.72 105.41 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "91a759a8-57dd-453c-a035-cc10bd601140")
-	)
 	(junction
 		(at 171.45 120.65)
 		(diameter 0)
@@ -1202,12 +1192,6 @@
 		(uuid "427b8644-c82a-461a-a772-7653c0b91041")
 	)
 	(junction
-		(at 241.3 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4aa77317-113b-423e-9705-3bcaa9c60315")
-	)
-	(junction
 		(at 86.36 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1226,7 +1210,7 @@
 		(uuid "6bd8ddac-7ff2-40f8-bfd5-71d4705962da")
 	)
 	(junction
-		(at 248.92 76.2)
+		(at 237.49 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "72ae4280-a541-4bdf-beca-974c1026febe")
@@ -1238,16 +1222,22 @@
 		(uuid "8bf4d3a0-12c8-4bc7-a908-c0c597a27978")
 	)
 	(junction
-		(at 222.25 76.2)
+		(at 229.87 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "923822da-89f1-4a01-811e-75ab4bf15275")
+		(uuid "8f396293-fdfe-4a42-ae7a-85ac700cb78d")
 	)
 	(junction
 		(at 96.52 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "92f88201-fe06-4d80-bdd4-0078a72e9dcc")
+	)
+	(junction
+		(at 222.25 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9c4dfe8f-cfbb-4cbc-9ef5-1cab605b51e2")
 	)
 	(junction
 		(at 198.12 120.65)
@@ -1305,7 +1295,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 71.12) (xy 248.92 76.2)
+			(xy 237.49 74.93) (xy 237.49 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1375,6 +1365,16 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 76.2) (xy 229.87 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b6b5a77-4128-4c8f-a089-d560466f5ede")
+	)
+	(wire
+		(pts
 			(xy 212.09 120.65) (xy 198.12 120.65)
 		)
 		(stroke
@@ -1402,16 +1402,6 @@
 			(type default)
 		)
 		(uuid "3532b3b4-db60-4f75-9b20-6bb620f9fc7d")
-	)
-	(wire
-		(pts
-			(xy 238.76 76.2) (xy 241.3 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44d5eb10-bb48-46d0-bf32-f3b140593bc4")
 	)
 	(wire
 		(pts
@@ -1445,6 +1435,16 @@
 	)
 	(wire
 		(pts
+			(xy 222.25 76.2) (xy 222.25 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "675f552e-be97-4087-92b6-224105c3c080")
+	)
+	(wire
+		(pts
 			(xy 207.01 76.2) (xy 203.2 76.2)
 		)
 		(stroke
@@ -1465,16 +1465,6 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 92.71) (xy 222.25 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7697d5ce-cef0-4132-a975-ea7cc980c6ce")
-	)
-	(wire
-		(pts
 			(xy 76.2 120.65) (xy 86.36 120.65)
 		)
 		(stroke
@@ -1485,7 +1475,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 76.2) (xy 248.92 76.2)
+			(xy 229.87 76.2) (xy 237.49 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1685,7 +1675,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 76.2) (xy 233.68 76.2)
+			(xy 222.25 76.2) (xy 223.52 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1775,7 +1765,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 76.2) (xy 255.27 76.2)
+			(xy 237.49 76.2) (xy 243.84 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1785,7 +1775,7 @@
 	)
 	(global_label "+3.3V"
 		(shape input)
-		(at 255.27 76.2 0)
+		(at 243.84 76.2 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1795,7 +1785,7 @@
 		)
 		(uuid "901b2b8f-4068-4e43-a784-7e24dc1af321")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 263.94 76.2 0)
+			(at 252.51 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2290,7 +2280,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 248.92 71.12 0)
+		(at 237.49 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2298,7 +2288,7 @@
 		(dnp no)
 		(uuid "705a6fae-0ae1-4b06-94e9-9d03cb778e41")
 		(property "Reference" "#PWR01"
-			(at 248.92 74.93 0)
+			(at 237.49 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2307,7 +2297,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 248.92 67.31 0)
+			(at 237.49 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2315,7 +2305,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 248.92 71.12 0)
+			(at 237.49 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2324,7 +2314,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 248.92 71.12 0)
+			(at 237.49 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2333,7 +2323,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 248.92 71.12 0)
+			(at 237.49 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2566,7 +2556,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Small")
-		(at 241.3 76.2 0)
+		(at 229.87 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2575,7 +2565,7 @@
 		(fields_autoplaced yes)
 		(uuid "b6cff2c0-950c-4d4e-aa17-4a6b9af586fe")
 		(property "Reference" "TP16"
-			(at 242.57 74.9299 0)
+			(at 231.14 74.9299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2584,7 +2574,7 @@
 			)
 		)
 		(property "Value" "TestPoint_Small"
-			(at 242.57 77.4699 0)
+			(at 231.14 77.4699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2594,7 +2584,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 246.38 76.2 0)
+			(at 234.95 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2603,7 +2593,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 246.38 76.2 0)
+			(at 234.95 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2612,7 +2602,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 241.3 76.2 0)
+			(at 229.87 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2702,7 +2692,7 @@
 	)
 	(symbol
 		(lib_id "Device:Fuse_Small")
-		(at 236.22 76.2 0)
+		(at 226.06 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2710,7 +2700,7 @@
 		(dnp no)
 		(uuid "d0724606-a305-4efd-8c7f-af80f26ed521")
 		(property "Reference" "F5"
-			(at 233.426 74.422 0)
+			(at 223.266 74.422 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2719,7 +2709,7 @@
 			)
 		)
 		(property "Value" "1A"
-			(at 236.728 78.74 0)
+			(at 226.568 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2727,7 +2717,7 @@
 			)
 		)
 		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
-			(at 236.22 76.2 0)
+			(at 226.06 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2736,7 +2726,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/SF-0603F100-2?qs=sGAEpiMZZMsIz3CjQ1xegdp54%252BzS9Epn%252B5yJC0KdyEI%3D"
-			(at 236.22 76.2 0)
+			(at 226.06 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2745,7 +2735,7 @@
 			)
 		)
 		(property "Description" "Fuse, small symbol"
-			(at 236.22 76.2 0)
+			(at 226.06 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
