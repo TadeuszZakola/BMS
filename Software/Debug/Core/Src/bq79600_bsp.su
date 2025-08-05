@@ -1,0 +1,6 @@
+../Core/Src/bq79600_bsp.c:13:20:__delayus	24	static,ignoring_inline_asm
+../Core/Src/bq79600_bsp.c:22:6:bq79600_bsp_wakeup	40	static
+../Core/Src/bq79600_bsp.c:34:6:bq79600_bsp_uart_init	40	static
+../Core/Src/bq79600_bsp.c:44:6:bq79600_bsp_ready	24	static
+../Core/Src/bq79600_bsp.c:57:6:bq79600_bsp_uart_tx	16	static
+../Core/Src/bq79600_bsp.c:65:10:bq79600_bsp_crc	24	static

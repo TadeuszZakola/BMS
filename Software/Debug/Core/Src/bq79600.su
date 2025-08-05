@@ -1,0 +1,8 @@
+../Core/Src/bq79600.c:9:6:bq79600_construct_command	32	static
+../Core/Src/bq79600.c:27:6:bq79600_tx	24	static
+../Core/Src/bq79600.c:41:6:bq79600_rx_callback	176	static
+../Core/Src/bq79600.c:67:6:bq79600_read_reg	32	static
+../Core/Src/bq79600.c:74:6:bq79600_write_reg	32	static
+../Core/Src/bq79600.c:81:12:open_bq79600_instance	16	static
+../Core/Src/bq79600.c:86:6:bq79600_wakeup	16	static
+../Core/Src/bq79600.c:99:17:bq79600_auto_addressing	48	static

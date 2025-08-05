@@ -53,7 +53,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void MX_UART4_Init(int boudrate);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
