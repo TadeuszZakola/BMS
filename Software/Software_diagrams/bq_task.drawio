@@ -1,0 +1,215 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="27.1.5">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1665" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-2" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="Set boudrate&amp;nbsp;&lt;div&gt;to 3600B/s&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="40" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-0" value="Send a 0 singal" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="130" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-1" value="0 sent at 3600 boudrate sends a 2.75ms low signal" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="180" y="140" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-2" target="tVsPi1Musz5_5TuPTtM3-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-7" value="Wait 15ms" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tVsPi1Musz5_5TuPTtM3-6">
+          <mxGeometry x="-0.12" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-2" value="Send a 0 singal" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="220" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-3" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="200" as="sourcePoint" />
+            <mxPoint x="100" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="100" y="170" />
+              <mxPoint x="100" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-4" value="Wait 15ms" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tVsPi1Musz5_5TuPTtM3-3">
+          <mxGeometry x="0.225" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-5" target="tVsPi1Musz5_5TuPTtM3-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-5" value="Reinitialize uart&lt;div&gt;at 1000000B/s boudrate&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-8" value="A seccond signal is sent becouse&amp;nbsp;&lt;div&gt;bq79600 may be in shutdown mode&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="170" y="225" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-9" target="tVsPi1Musz5_5TuPTtM3-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-13" value="Wait 12*x ms" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tVsPi1Musz5_5TuPTtM3-12">
+          <mxGeometry x="-0.2" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-9" value="Write to CONTROL1&lt;div&gt;register of bq79600&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-11" target="tVsPi1Musz5_5TuPTtM3-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-11" value="Write to CONTROL1&lt;div&gt;register of bq79600&lt;/div&gt;&lt;div&gt;to enable auto adressing&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="525" width="120" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-14" value="&lt;div&gt;This register wakes up other devices in daisychain&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="170" y="425" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-15" value="&lt;div&gt;Wait for device wakeup where x =&amp;nbsp; number of devices on daisychain&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="170" y="490" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-16" target="tVsPi1Musz5_5TuPTtM3-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-16" value="Briadcast write to DIR0&lt;div&gt;register of every device to set bq79614&lt;br&gt;&lt;/div&gt;&lt;div&gt;as stack devices&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="15" y="650" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-20" target="tVsPi1Musz5_5TuPTtM3-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-20" value="Write to COMM_DIR&lt;div&gt;register of every device to set bq79614&lt;br&gt;&lt;/div&gt;&lt;div&gt;communication&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="15" y="800" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-22" target="tVsPi1Musz5_5TuPTtM3-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="1065" />
+              <mxPoint x="460" y="1065" />
+              <mxPoint x="460" y="40" />
+              <mxPoint x="685" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-22" value="Stack read of a register to check for integrity" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="15" y="945" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-25" target="tVsPi1Musz5_5TuPTtM3-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-29" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tVsPi1Musz5_5TuPTtM3-28">
+          <mxGeometry x="-0.3091" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-25" target="tVsPi1Musz5_5TuPTtM3-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-25" value="Every device&amp;nbsp;&lt;div&gt;responded?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="627.5" y="60" width="115" height="84.5" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-27" value="AUTOADDRES&lt;div&gt;ERROR&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="470" y="82.25" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-31" target="tVsPi1Musz5_5TuPTtM3-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-31" value="Stack write to COMM_TIMEOUT&lt;div&gt;to set communication&lt;/div&gt;&lt;div&gt;timeout&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="607.5" y="170" width="155" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-32" target="tVsPi1Musz5_5TuPTtM3-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-32" value="Stack write to ACTIVE_CELL&lt;div&gt;to set number of cells per BQ79614&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="607.5" y="300" width="155" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-34" target="tVsPi1Musz5_5TuPTtM3-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-34" value="Stack write to ADC_CTRL1&lt;div&gt;to configure ADC&#39;s of each device&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="607.5" y="410" width="155" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-38" target="tVsPi1Musz5_5TuPTtM3-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-38" value="Stack write to OV_Thresh, UV_Thresh&lt;div&gt;to set values for over and unvervoltage&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="607.5" y="520" width="155" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-40" target="tVsPi1Musz5_5TuPTtM3-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-40" value="Stack read of DEV_Stat&lt;div&gt;to check for errors&lt;/div&gt;&lt;div&gt;(under/overvoltage etc)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="607.5" y="630" width="155" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-43" target="tVsPi1Musz5_5TuPTtM3-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-47" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tVsPi1Musz5_5TuPTtM3-46">
+          <mxGeometry x="-0.3091" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-43" target="tVsPi1Musz5_5TuPTtM3-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-43" value="Errors detected?" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="627.5" y="740" width="115" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-45" value="BQ_ERROR" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="470" y="760" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-48" target="tVsPi1Musz5_5TuPTtM3-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-48" value="Stack read&amp;nbsp; DIETEMP1_HI&lt;div&gt;to read temperatures&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="607.5" y="860" width="155" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-50" target="tVsPi1Musz5_5TuPTtM3-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-50" value="Stack read&amp;nbsp; cell_registers&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;to read voltages&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="607.5" y="960" width="155" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-52" target="tVsPi1Musz5_5TuPTtM3-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-56" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tVsPi1Musz5_5TuPTtM3-55">
+          <mxGeometry x="-0.0667" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="tVsPi1Musz5_5TuPTtM3-52" target="tVsPi1Musz5_5TuPTtM3-48">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="1160" />
+              <mxPoint x="783" y="1160" />
+              <mxPoint x="783" y="895" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-58" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tVsPi1Musz5_5TuPTtM3-57">
+          <mxGeometry x="-0.7076" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-52" value="Data received?" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="627.5" y="1060" width="115" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tVsPi1Musz5_5TuPTtM3-54" value="BQ_COMM_ERROR" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="470" y="1080" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
