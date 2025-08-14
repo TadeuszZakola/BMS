@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -26,13 +27,16 @@
 #include "bq79600_def.h"
 #include "bq79616_def.h"
 #include "SEGGER_RTT.h"
-//#include "stm32f103xb.h"
+#include "usbd_cdc_if.h"
 #include "stm32h7xx_hal_gpio.h"
+#include <string.h>
+#include <stdio.h>
+#include "queue.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+#define MSGQUEUE_OBJECTS 16
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -57,22 +61,21 @@ UART_HandleTypeDef huart4;
 DMA_HandleTypeDef hdma_uart4_tx;
 DMA_HandleTypeDef hdma_uart4_rx;
 
-PCD_HandleTypeDef hpcd_USB_OTG_FS;
-HCD_HandleTypeDef hhcd_USB_OTG_HS;
+PCD_HandleTypeDef hpcd_USB_OTG_HS;
 
 /* Definitions for Default_task */
 osThreadId_t Default_taskHandle;
 const osThreadAttr_t Default_task_attributes = {
   .name = "Default_task",
   .stack_size = 512 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for BQ_comm_task */
 osThreadId_t BQ_comm_taskHandle;
 const osThreadAttr_t BQ_comm_task_attributes = {
   .name = "BQ_comm_task",
-  .stack_size = 1024 * 4,
-  .priority = (osPriority_t) osPriorityAboveNormal7,
+  .stack_size = 2048 * 4,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for Safety_task */
 osThreadId_t Safety_taskHandle;
@@ -99,30 +102,113 @@ const osThreadAttr_t Can_task_attributes = {
 osThreadId_t Usb_taskHandle;
 const osThreadAttr_t Usb_task_attributes = {
   .name = "Usb_task",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .stack_size = 3086 * 4,
+  .priority = (osPriority_t) osPriorityBelowNormal,
+};
+/* Definitions for BQ79614_Queue */
+osMessageQueueId_t BQ79614_QueueHandle;
+const osMessageQueueAttr_t BQ79614_Queue_attributes = {
+  .name = "BQ79614_Queue"
+};
+/* Definitions for BQ79600_Queue */
+osMessageQueueId_t BQ79600_QueueHandle;
+const osMessageQueueAttr_t BQ79600_Queue_attributes = {
+  .name = "BQ79600_Queue"
+};
+/* Definitions for Messages_Queue */
+osMessageQueueId_t Messages_QueueHandle;
+const osMessageQueueAttr_t Messages_Queue_attributes = {
+  .name = "Messages_Queue"
+};
+/* Definitions for BQ_Safety_Status_Queue */
+osMessageQueueId_t BQ_Safety_Status_QueueHandle;
+const osMessageQueueAttr_t BQ_Safety_Status_Queue_attributes = {
+  .name = "BQ_Safety_Status_Queue"
+};
+/* Definitions for Other_Safety_Status_Queue */
+osMessageQueueId_t Other_Safety_Status_QueueHandle;
+const osMessageQueueAttr_t Other_Safety_Status_Queue_attributes = {
+  .name = "Other_Safety_Status_Queue"
 };
 /* USER CODE BEGIN PV */
-#define n_devices 2
+#define n_devices 3
 #define n_cells_per_device 13
 #define n_temp_pre_device 8
 
 typedef struct {
   float temperature[n_temp_pre_device];  // degC
-  float vcells[n_cells_per_device];      // mV
+  float vcells[n_cells_per_device];   // mV
+  float t_ref;
   float dietemp;                         // degC
-  uint32_t timestamp;
+  int timestamp;
 } module_t;
 module_t modules[n_devices - 1] = {0};
 typedef struct {
+int BQ_Number ;
 int BQ_Overvoltage_Error  ;
-int BQ_Unvervoltage_Error  ;
+int BQ_Undervoltage_Error  ;
 int BQ_Autoadressing_Error ;
 int BQ_Communication_Error ;
-float Bq_Voltages[13][2] ;
-float Bq_Temperatures[8][2] ;
+int Bq_Timestamp ;
+float Bq_Voltages[n_cells_per_device] ;   // mV
+float Bq_Temperatures[n_temp_pre_device]; // degC
+float dietemp;                            // degC
 } BQ_Data;
 BQ_Data Data_Receaved = {0} ;
+
+int ballancing;
+
+
+typedef struct {                                // object data type
+  char Buf[64];
+  uint32_t Timestamp;
+} Message;
+Message msg;
+
+//usb receive variables
+uint8_t usbRxBuf[128];
+uint16_t usbRxBufLen;
+uint8_t usbRxFlag = 0 ;
+
+
+char message[128];
+char buffer_usb1[] = "BMS TEST /n";
+char buffer_usb2[] = "PORT COMM TEST /n";
+char buffer_usb3[] = "USB FS TEST /n";
+char bq_message[32] = {0};
+char message_buffer[32];
+
+volatile uint8_t CDC_TransmitReady = 1;
+
+typedef struct {
+  float R_top ;  // R100 (ohms)  pull-up from TSREF to node
+  float R_bias ;  // R101 (ohms)  bias to GND (parallel with NTC)
+  float R0 ;     // 10k at 25°C
+  float B ;       // e.g., 3380
+} ntc_cfg_t;
+
+float gpio_ratio_to_celsius(float gpio_meas, float tsref_meas, ntc_cfg_t cfg)
+{
+    // 1) ratiometric ratio g = Vgpio / Vtsref
+    float g = gpio_meas / tsref_meas;
+    if (g <= 0.0f) return -273.15f;        // out-of-range guard
+    if (g >= 0.9999f) g = 0.9999f;         // avoid div-by-zero
+
+    // 2) Equivalent bottom resistance from ratio
+    float Req = (g * cfg.R_top) / (1.0f - g);
+
+    // 3) Solve NTC resistance from Req = (Rntc || R_bias)
+    float denom = cfg.R_bias - Req;
+    if (denom <= 1e-6f) denom = 1e-6f;     // guard
+    float Rntc = (Req * cfg.R_bias) / denom;
+
+    // 4) Beta model -> temperature
+    const float T0 = 298.15f;              // 25°C in Kelvin
+    float invT = (1.0f / T0) + (1.0f / cfg.B) * logf(Rntc / cfg.R0);
+    float T_K = 1.0f / invT;
+    return T_K - 273.15f;
+}
+
 
 
 
@@ -133,13 +219,12 @@ void SystemClock_Config(void);
 static void MPU_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
- void MX_UART4_Init(int boudrate);
+void MX_UART4_Init(int boudrate);
 static void MX_TIM1_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_FDCAN1_Init(void);
-static void MX_USB_OTG_FS_PCD_Init(void);
-static void MX_USB_OTG_HS_HCD_Init(void);
+static void MX_USB_OTG_HS_PCD_Init(void);
 void Default(void *argument);
 void Bq_comm(void *argument);
 void Safety(void *argument);
@@ -170,6 +255,12 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size) {
   instance->rx_len = size;
   bq79600_rx_callback(instance);
   HAL_UARTEx_ReceiveToIdle_IT(&huart4, instance->rx_buf, sizeof(instance->rx_buf));
+}
+void USB_RXCallback(uint8_t* Buf, uint32_t *Len)
+{
+	memcpy(usbRxBuf, Buf, *Len);
+	usbRxBufLen = *Len;
+	usbRxFlag = 1;
 }
 
 UART_HandleTypeDef huart4;
@@ -217,8 +308,7 @@ int main(void)
   MX_TIM2_Init();
   MX_ADC1_Init();
   MX_FDCAN1_Init();
-  MX_USB_OTG_FS_PCD_Init();
-  MX_USB_OTG_HS_HCD_Init();
+  MX_USB_OTG_HS_PCD_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start(&htim2);
   HAL_TIM_Base_Start(&htim1);
@@ -240,6 +330,22 @@ int main(void)
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
+
+  /* Create the queue(s) */
+  /* creation of BQ79614_Queue */
+  BQ79614_QueueHandle = osMessageQueueNew (10, sizeof(BQ_Data), &BQ79614_Queue_attributes);
+
+  /* creation of BQ79600_Queue */
+  BQ79600_QueueHandle = osMessageQueueNew (10, sizeof(Message), &BQ79600_Queue_attributes);
+
+  /* creation of Messages_Queue */
+  Messages_QueueHandle = osMessageQueueNew (16, sizeof(char), &Messages_Queue_attributes);
+
+  /* creation of BQ_Safety_Status_Queue */
+  BQ_Safety_Status_QueueHandle = osMessageQueueNew (16, sizeof(uint16_t), &BQ_Safety_Status_Queue_attributes);
+
+  /* creation of Other_Safety_Status_Queue */
+  Other_Safety_Status_QueueHandle = osMessageQueueNew (16, sizeof(uint16_t), &Other_Safety_Status_Queue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -571,7 +677,7 @@ static void MX_TIM2_Init(void)
   * @param None
   * @retval None
   */
- void MX_UART4_Init(int boudrate)
+void MX_UART4_Init(int boudrate)
 {
 
   /* USER CODE BEGIN UART4_Init 0 */
@@ -616,47 +722,11 @@ static void MX_TIM2_Init(void)
 }
 
 /**
-  * @brief USB_OTG_FS Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USB_OTG_FS_PCD_Init(void)
-{
-
-  /* USER CODE BEGIN USB_OTG_FS_Init 0 */
-
-  /* USER CODE END USB_OTG_FS_Init 0 */
-
-  /* USER CODE BEGIN USB_OTG_FS_Init 1 */
-
-  /* USER CODE END USB_OTG_FS_Init 1 */
-  hpcd_USB_OTG_FS.Instance = USB_OTG_FS;
-  hpcd_USB_OTG_FS.Init.dev_endpoints = 9;
-  hpcd_USB_OTG_FS.Init.speed = PCD_SPEED_FULL;
-  hpcd_USB_OTG_FS.Init.dma_enable = DISABLE;
-  hpcd_USB_OTG_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
-  hpcd_USB_OTG_FS.Init.Sof_enable = DISABLE;
-  hpcd_USB_OTG_FS.Init.low_power_enable = DISABLE;
-  hpcd_USB_OTG_FS.Init.lpm_enable = DISABLE;
-  hpcd_USB_OTG_FS.Init.battery_charging_enable = DISABLE;
-  hpcd_USB_OTG_FS.Init.vbus_sensing_enable = DISABLE;
-  hpcd_USB_OTG_FS.Init.use_dedicated_ep1 = DISABLE;
-  if (HAL_PCD_Init(&hpcd_USB_OTG_FS) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USB_OTG_FS_Init 2 */
-
-  /* USER CODE END USB_OTG_FS_Init 2 */
-
-}
-
-/**
   * @brief USB_OTG_HS Initialization Function
   * @param None
   * @retval None
   */
-static void MX_USB_OTG_HS_HCD_Init(void)
+static void MX_USB_OTG_HS_PCD_Init(void)
 {
 
   /* USER CODE BEGIN USB_OTG_HS_Init 0 */
@@ -666,15 +736,18 @@ static void MX_USB_OTG_HS_HCD_Init(void)
   /* USER CODE BEGIN USB_OTG_HS_Init 1 */
 
   /* USER CODE END USB_OTG_HS_Init 1 */
-  hhcd_USB_OTG_HS.Instance = USB_OTG_HS;
-  hhcd_USB_OTG_HS.Init.Host_channels = 16;
-  hhcd_USB_OTG_HS.Init.speed = HCD_SPEED_FULL;
-  hhcd_USB_OTG_HS.Init.dma_enable = DISABLE;
-  hhcd_USB_OTG_HS.Init.phy_itface = USB_OTG_EMBEDDED_PHY;
-  hhcd_USB_OTG_HS.Init.Sof_enable = DISABLE;
-  hhcd_USB_OTG_HS.Init.low_power_enable = DISABLE;
-  hhcd_USB_OTG_HS.Init.use_external_vbus = DISABLE;
-  if (HAL_HCD_Init(&hhcd_USB_OTG_HS) != HAL_OK)
+  hpcd_USB_OTG_HS.Instance = USB_OTG_HS;
+  hpcd_USB_OTG_HS.Init.dev_endpoints = 9;
+  hpcd_USB_OTG_HS.Init.speed = PCD_SPEED_FULL;
+  hpcd_USB_OTG_HS.Init.dma_enable = DISABLE;
+  hpcd_USB_OTG_HS.Init.phy_itface = USB_OTG_EMBEDDED_PHY;
+  hpcd_USB_OTG_HS.Init.Sof_enable = DISABLE;
+  hpcd_USB_OTG_HS.Init.low_power_enable = DISABLE;
+  hpcd_USB_OTG_HS.Init.lpm_enable = DISABLE;
+  hpcd_USB_OTG_HS.Init.vbus_sensing_enable = DISABLE;
+  hpcd_USB_OTG_HS.Init.use_dedicated_ep1 = DISABLE;
+  hpcd_USB_OTG_HS.Init.use_external_vbus = DISABLE;
+  if (HAL_PCD_Init(&hpcd_USB_OTG_HS) != HAL_OK)
   {
     Error_Handler();
   }
@@ -780,6 +853,8 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_Default */
 void Default(void *argument)
 {
+  /* init code for USB_DEVICE */
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)
@@ -800,14 +875,7 @@ void Bq_comm(void *argument)
 {
   /* USER CODE BEGIN Bq_comm */
 
-	bms_run();
 	bq79600_t *bms_instance = open_bq79600_instance(0);
-	  //float napiecia[13] = {0}  ;
-	  //for(int i =0 ; i < 5 ; i++ ){
-	  //uint8_t UART1_rxBuffer[12] = {0};
-	  //HAL_UART_Transmit_DMA(&huart4, UART1_rxBuffer, 12);
-	  //}
-	  //huart4.gState = HAL_UART_STATE_READY;
 
 	    bms_instance->mode = BQ_UART;
 	    bms_instance->state = BQ_SHUTDOWN;
@@ -816,6 +884,7 @@ void Bq_comm(void *argument)
 	    bms_instance->rx_pin = 1;
 	    bms_instance->tx_pin = 0;
 
+	    // wake up ping using slowed uart communication
 	    HAL_UART_DeInit(&huart4);
 	    MX_UART4_Init(3250);
 	    osDelay(10);
@@ -827,6 +896,7 @@ void Bq_comm(void *argument)
 	   HAL_UART_DeInit(&huart4);
 	    MX_UART4_Init(1000000);
 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
+
 
 	     if( HAL_UARTEx_ReceiveToIdle_IT(&huart4, bms_instance->rx_buf, sizeof(bms_instance->rx_buf)) == HAL_ERROR)
 	     {
@@ -846,8 +916,17 @@ void Bq_comm(void *argument)
 
 	      bq79600_error_t err = bq79600_auto_addressing(bms_instance, n_devices);
 	      if (err) {
-	       // SEGGER_RTT_printf(0, "[BQ79600] Auto addressing failed.\n");
-	        while (1);
+	    	  Message autoadress = {0};
+	    	  strcpy(autoadress.Buf, "Autoadressing failed!\n0");
+	    	  autoadress.Timestamp = HAL_GetTick();
+	    	  osMessageQueuePut(Messages_QueueHandle, &autoadress, 0, 50);
+	    	  }
+	      else
+	      {
+	    	  Message autoadress = {0};
+	    	  strcpy(autoadress.Buf, "Autoadressing succesful!\n0");
+	    	  autoadress.Timestamp = HAL_GetTick();
+	    	  osMessageQueuePut(Messages_QueueHandle, &autoadress, 0, 50);
 	      }
 
 	      /* Set long communication timeout */
@@ -866,79 +945,73 @@ void Bq_comm(void *argument)
 	      bq79600_tx(bms_instance);
 	      osDelay(1 * n_devices);
 
-	      /*  Setup OV, UV for balancing  */
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, OV_THRESH, 1, 0x22); // 0x22 = 4175mV
+	  //    buf = 0x06;
+	   //   bq79600_construct_command(bms_instance, STACK_WRITE, 0, ADC_CTRL3, 1, &buf);
+	  //    bq79600_tx(bms_instance);
+	  //    osDelay(1 * n_devices);
+
+	      // temp readings  CONTROL2
+	     // GPIO_CONF1
+   /*
+
+	      buf = 0x01;
+	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, CONTROL2, 1, &buf); // enable T_REF adc reading
 	      bq79600_tx(bms_instance);
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, UV_THRESH, 1, 0x26); // 0x26 = 3100mV
+	      osDelay(1 * n_devices);
+
+
+	      buf = 0x09; // 001001  see page 35, 162
+
+	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, GPIO_CONF1, 1, &buf); // enable gpio as OTUT input
+	      bq79600_tx(bms_instance);
+	      osDelay(1 * n_devices);
+   */
+
+	      /*
+	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, GPIO_CONF2, 1, &buf); // enable gpio as OTUT input
+	      bq79600_tx(bms_instance);
+	      osDelay(1 * n_devices);
+
+
+	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, GPIO_CONF3, 1, &buf); // enable gpio as OTUT input
+	      bq79600_tx(bms_instance);
+	      osDelay(1 * n_devices);
+
+
+	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, GPIO_CONF4, 1, &buf); // enable gpio as OTUT input
+	      bq79600_tx(bms_instance);
+	      osDelay(1 * n_devices);
+
+
+
+
+
+
+
+
+	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, ADC_CTRL3, 1, &buf);
+	      bq79600_tx(bms_instance);
+	      osDelay(1 * n_devices);
+
+	      /*  Setup OV, UV for balancing  */
+	      uint8_t ov_threshold = 0x22; // 4175 mV threshold value
+	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, OV_THRESH, 1, &ov_threshold);
+
+	      uint8_t uv_threshold = 0x26; // 3100 mV threshold value
+	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, UV_THRESH, 1, &uv_threshold);
 	      bq79600_tx(bms_instance);
 	      uint8_t OV_UV_MODE = 0x01; // Set mode to run OV and UV round robin on all cells
 	      uint8_t OV_UV_GO = 0x01; // Start OV UV comparators
 	      uint8_t OV_UV_CONTROL_DATA[] = {OV_UV_MODE,OV_UV_GO};
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, OVUV_CTRL, sizeof(OV_UV_CONTROL_DATA), OV_UV_CONTROL_DATA); // 0x26 = 3100mV
+	      buf = 0x3;
+	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, OVUV_CTRL, 1, &buf); // 0x26 = 3100mV
 	      bq79600_tx(bms_instance);
 	      osDelay(1 * n_devices); // wait for stack write
 
-
-	      // Read status of devices , OVUV - bit 3
-		  bq79600_construct_command(bms_instance, STACK_READ, 0, DEV_STAT, 0, NULL); // 0x26 = 3100mV
-		  bq79600_tx(bms_instance);
-		  bq79600_bsp_ready(bms_instance);
-		  osDelay(1 * n_devices); // wait for stack read
-		  // the bit is to be determined
-		  uint8_t dev_stat = {0} ;
-		  for (int i = 0; i < n_devices; i++) {
-		       dev_stat = bms_instance->rx_buf[4 + i];
-		      SEGGER_RTT_printf(0, "Device %d DEV_STAT: 0x%02X\n", i, dev_stat);
-
-		      if (dev_stat & (1 << 7))
-		      {
-		    	  SEGGER_RTT_printf(0, "  - PLL_LOCK: PLL is locked\n");
-		    		  }
-		      else
-		    	  {
-		    	  SEGGER_RTT_printf(0, "  - PLL_LOCK: Not locked\n");
-		    	  }
-
-		      if (dev_stat & (1 << 6))
-		    	  {
-		    	  SEGGER_RTT_printf(0, "  - UV_FLT: Undervoltage fault\n");
-		    	  Data_Receaved.BQ_Unvervoltage_Error = 1;
-		    	  }
-		      if (dev_stat & (1 << 5))
-		    	  {
-		    	  SEGGER_RTT_printf(0, "  - OV_FLT: Overvoltage fault\n");
-		    	  Data_Receaved.BQ_Overvoltage_Error = 1;
-		    	  }
-		      if (dev_stat & (1 << 4))
-		    	  {
-		    	  SEGGER_RTT_printf(0, "  - TSD: Thermal shutdown\n");
-		    	  }
-		      if (dev_stat & (1 << 3))
-		    	  {
-		    	  SEGGER_RTT_printf(0, "  - OVUV_FLT: OV/UV fault detected\n");
-		    	  }
-		      if (dev_stat & (1 << 2))
-		    	  {
-		    	  SEGGER_RTT_printf(0, "  - DCHG_FLT: Discharge fault\n");
-		    	  }
-		      if (dev_stat & (1 << 1))
-		    	  {
-		    	  SEGGER_RTT_printf(0, "  - CHG_FLT: Charge fault\n");
-		    	  }
-		      if (dev_stat & (1 << 0))
-		    	  {
-		    	  SEGGER_RTT_printf(0, "  - COM_LOSS_FLT: Communication loss fault\n");
-		    	  }
-
-		      if ((dev_stat & 0x7F) == 0)
-		    	  {
-		    	  SEGGER_RTT_printf(0, "  - No faults detected.\n");
-		    	  }
-
-		      SEGGER_RTT_printf(0, "\n");
-		  }
   /* Infinite loop */
 	  while (1) {
+
+
 	         bq79600_construct_command(bms_instance, STACK_READ, 0, DIETEMP1_HI, 2, NULL);
 	         bq79600_tx(bms_instance);
 	         bq79600_bsp_ready(bms_instance);
@@ -946,7 +1019,6 @@ void Bq_comm(void *argument)
 	         for (int i = 0; i < n_devices - 1; i++)
 	         {
 	           modules[i].dietemp = raw_to_float(&bms_instance->rx_buf[4 + i * 8]) * 0.025;
-	           Data_Receaved.Bq_Temperatures[1][i] =  modules[i].dietemp ;
 	         }
 	         uint32_t start_vcells = VCELL1_HI - n_cells_per_device * 2 + 2;
 	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_vcells, n_cells_per_device * 2, NULL);
@@ -954,42 +1026,84 @@ void Bq_comm(void *argument)
 	         bq79600_bsp_ready(bms_instance);
 
 	         for (int i = 0; i < n_devices - 1; i++)
+	         {
 	           for (int j = 0; j < n_cells_per_device; j++)
 	           {
 	             modules[i].vcells[j] =
 	                 raw_to_float(&bms_instance->rx_buf[4 + i * (n_cells_per_device * 2 + 6) + 2 * j]) * 0.19073;
-	             Data_Receaved.Bq_Voltages[j][i] = modules[i].vcells[j];
-
-
 	           }
-	         for (int i = 0; i < n_devices - 2; i++) modules[i].timestamp = HAL_GetTick();
-
-
-	         bq79600_construct_command(bms_instance, STACK_READ, 0, DEV_STAT, 0, NULL); // read errors
+	         }
+	         memset(&bms_instance->rx_buf, 0 , sizeof(&bms_instance->rx_buf));
+	         uint32_t start_temp = GPIO1_HI; // GPIO8_HI ;
+	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_temp, n_temp_pre_device  * 2, NULL);
 	         bq79600_tx(bms_instance);
 	         bq79600_bsp_ready(bms_instance);
 
-	         for (int i = 0; i < n_devices; i++) {
-	        	 dev_stat = bms_instance->rx_buf[4 + i];
-	        	 if (dev_stat & (1 << 6) && i >1 ) // first device is BQ79600 thats why there is no point to read OV/UV
-	        	 {
-	        		 Data_Receaved.BQ_Unvervoltage_Error = 1;
-	        	 }
-	        	 if (dev_stat & (1 << 5) && i >1  )
-	        	 {
-	        	 	 Data_Receaved.BQ_Overvoltage_Error = 1;
-	        	 }
-	        	 if (dev_stat & (1 << 0))
-	        	 {
-	        	 	 Data_Receaved.BQ_Communication_Error = 1;
-	        	 }
-
+	         for (int i = 0; i < n_devices - 1; i++)
+	         {
+	           for (int j = 0; j < n_temp_pre_device; j++)
+	           {
+	             modules[i].temperature[j] =
+	                 raw_to_float(&bms_instance->rx_buf[4 + i * (n_temp_pre_device * 2 + 6) + 2 * j]) * 0.15259;
+	           }
 	         }
+	         uint32_t start_temp_ref = TSREF_HI ;
+	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_temp_ref, 2, NULL);
+	         bq79600_tx(bms_instance);
+	         bq79600_bsp_ready(bms_instance);
+
+	         for (int i = 0; i < n_devices - 1; i++)
+	             modules[i].t_ref =
+	                 raw_to_float(&bms_instance->rx_buf[4 + i * 8]) * 0.16954;
+
+	         ntc_cfg_t cfg = {
+	           .R_top  = 10000.0f,   // R100
+	           .R_bias = 100000.0f,  // R101
+	           .R0     = 10000.0f,
+	           .B      = 3380.0f     // or 3000 if that’s your actual NTC
+	         };
+	         float t_c   = gpio_ratio_to_celsius( (modules[1].temperature[0] * -1), modules[1].t_ref ,cfg );
 
 
 
-	         osDelay(50);
-  }
+	         for (int i = 0; i < n_devices - 1; i++) modules[i].timestamp = HAL_GetTick();
+	         bq79600_construct_command(bms_instance, STACK_READ, 0, DEV_STAT, 1, NULL); // DEV_STAT READ.
+	         bq79600_tx(bms_instance);
+	         bq79600_bsp_ready(bms_instance);
+
+	         // end of reading data from BQ79600
+
+	         for (int i = 0; i < n_devices - 1; i++) // send data from bq to different tasks.
+	         {
+		     BQ_Data Data_to_send = {0}; // struct to send to queue
+		     Data_to_send.BQ_Number = i ;
+		     for (int j = 0; j < n_cells_per_device; j++)
+		     Data_to_send.Bq_Voltages[j] = modules[i].vcells[j];
+		   //  Data_to_send.Bq_Temperatures[j] = modules[i].temperature;
+		     Data_to_send.dietemp =  modules[i].dietemp;
+		     Data_to_send.Bq_Timestamp = modules[i].timestamp;
+
+		     uint8_t dev_stat =  bms_instance->rx_buf[4 + i];
+		     if (dev_stat & (1 << 6))
+		    	 Data_to_send.BQ_Undervoltage_Error = 1;
+		     if (dev_stat & (1 << 5))
+		    	 Data_to_send.BQ_Overvoltage_Error = 1;
+		     if (dev_stat & (1 << 4))
+		    	 Data_to_send.BQ_Communication_Error = 1;
+            if( osMessageQueuePut(BQ79614_QueueHandle, &Data_to_send, 5, 5) == osOK)
+            	 {
+           	 Message bq_mes = {0};
+             strcpy(bq_mes.Buf, "BQ_Message succesfully sent!\n0");
+           	 bq_mes.Timestamp = HAL_GetTick();
+           	 osMessageQueuePut(Messages_QueueHandle, &bq_mes, 0, 5);
+           	 }
+	         }
+	         HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_2) ;
+	         memset(&bms_instance->rx_buf, 0 , sizeof(&bms_instance->rx_buf));
+	         vTaskDelay(100);
+	         //osDelay(50);
+	  }
+
   /* USER CODE END Bq_comm */
 }
 
@@ -1004,16 +1118,31 @@ void Safety(void *argument)
 {
   /* USER CODE BEGIN Safety */
 	// this task is responsible for enabling the relay responsible for supplying power to the inverter.
+	int overvoltage = 0;
+    int undervoltage = 0;
+    int comm_err = 0 ;
+    int autoadressing_error = 0 ;
   /* Infinite loop */
   for(;;)
   {
-	  if(!Data_Receaved.BQ_Autoadressing_Error && !Data_Receaved.BQ_Communication_Error && !Data_Receaved.BQ_Overvoltage_Error && !Data_Receaved.BQ_Unvervoltage_Error)
+
+	 // BQ_Data Data_received = {0};
+	 /*  if (osMessageQueueGet(BQ79614_QueueHandle, &Data_received, NULL, 10) == osOK)
+	  	 {
+	  		undervoltage = Data_received.BQ_Undervoltage_Error ;
+	  	    overvoltage = Data_received.BQ_Overvoltage_Error ;
+	  	    comm_err = Data_received.BQ_Communication_Error ;
+	  	    autoadressing_error = Data_received.BQ_Autoadressing_Error;
+	  	 } */
+
+	  if(!autoadressing_error && !comm_err && !overvoltage && !undervoltage)
 	  	{
 	  		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8,  1);
 	  	}
 	  	else
 	  	{
 	  		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8,  0);
+	  		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_4,  0);
 	  	}
 	      osDelay(10);
     osDelay(1);
@@ -1031,11 +1160,25 @@ void Safety(void *argument)
 void Led(void *argument)
 {
   /* USER CODE BEGIN Led */
+
 	HAL_GPIO_WritePin(GPIOE, GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5, GPIO_PIN_SET);
+	int overvoltage = 0;
+	int undervoltage = 0;
+	int comm_err = 0 ;
   /* Infinite loop */
   for(;;)
   {
-	  if( Data_Receaved.BQ_Overvoltage_Error || Data_Receaved.BQ_Unvervoltage_Error )
+
+	  BQ_Data Data_received = {0};
+	  if (osMessageQueueGet(BQ79614_QueueHandle, &Data_received, NULL, 10) == osOK)
+	  {
+		  undervoltage = Data_received.BQ_Undervoltage_Error ;
+	      overvoltage = Data_received.BQ_Overvoltage_Error ;
+	      comm_err = Data_received.BQ_Communication_Error ;
+	  }
+
+
+	 if( undervoltage || overvoltage )
 	  {
 		  HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_2) ;
 	  }
@@ -1044,7 +1187,7 @@ void Led(void *argument)
 		  HAL_GPIO_WritePin(GPIOE, GPIO_PIN_2,1); // led pins serve as a pulldown thats why the led-off is to set pin high.
 
 	  }
-	  if( Data_Receaved.BQ_Communication_Error )
+	  if( comm_err )
 	  {
 		  HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_3) ;
 	  }
@@ -1076,7 +1219,9 @@ void StartTask05(void *argument)
 	  if(!HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_11)) // for debugging the button resets all the errors; pressed state is zero
 		{
 		  Data_Receaved.BQ_Autoadressing_Error = Data_Receaved.BQ_Overvoltage_Error = Data_Receaved.BQ_Communication_Error = 0;
-		  osDelay(1000);
+		  osDelay(2000);
+		  HAL_NVIC_SystemReset();
+
 		}
 	  osDelay(100);
 
@@ -1095,10 +1240,108 @@ void Usb(void *argument)
 {
   /* USER CODE BEGIN Usb */
   /* Infinite loop */
+	uint8_t priority = 5 ;
+	BQ_Data Data_received = {0};
+	Message Message_received = {0};
+	char message[32]={0};
   for(;;)
-  {
-    osDelay(1);
+  {   //   (Messages_QueueHandle
+
+	       if (osMessageQueueGet(Messages_QueueHandle, &Message_received, &priority, 1) == osOK)
+	           {
+
+		         while (CDC_Transmit_FS((uint8_t*)Message_received.Buf, strlen(Message_received.Buf)) == USBD_BUSY){
+		        	 vTaskDelay(10);
+		         }
+
+	           }
+
+	       if (osMessageQueueGet(BQ79614_QueueHandle, &Data_received, &priority, 1) == osOK)
+	  		{
+	    	   for(int i = 0 ; i< n_cells_per_device; i++ )
+	    	                 {
+	    	                 char message[64] = {0};
+	    	                 sprintf(message  , "BQ Number:%d bq voltage value:%d [mV] \n" ,Data_received.BQ_Number+1 , (int)Data_received.Bq_Voltages[i] );
+	    	                // CDC_Transmit_FS((uint8_t*)message, strlen(message));
+	    	                 while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+	    	                	 	 	 vTaskDelay(1); // Delay to allow USB stack to process
+	    	                 	    	   }
+	    	                 }
+
+	    	   	   	   	   	if(Data_received.BQ_Overvoltage_Error)
+	    	   	   	   	   	{
+	    	   	   	   	   		sprintf(message  , "BQ OVERVOLTAGE ERROR! \n" );
+	    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+	    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+	    	   	   	   	          	}
+	    	   	   	   	   	}
+		    	   	   	   	   	if(Data_received.BQ_Undervoltage_Error)
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "BQ UNDERVOLTAGE ERROR! \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+		    	   	   	   	   	if(Data_received.BQ_Communication_Error)
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "BQ COMM ERROR! \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+		    	   	   	   	   	   sprintf(message  , "Temperature of BQ: %d  [deg C]\n" , (int)Data_received.dietemp );
+		    	   	   	   	   	   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   	   	   		   	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   }
+		    	   	   	   	   	   sprintf(message  , "Timestamp: %d \n" , Data_received.Bq_Timestamp );
+		    	   	   	   	   	   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   	   		   	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	   }
+	    	                 //CDC_Transmit_FS((uint8_t*)message2, strlen(message2));
+	    	                 osDelay(5);
+	    	                 char message[6] = " \n";
+	    	                 for(int i = 0 ; i< 3; i++ )
+	    	                while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+	    	                			vTaskDelay(10); // Delay to allow USB stack to process
+	    	                }
+
+
+
+
+	  		}
+	       HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_3) ;
+
+	  if(usbRxFlag && usbRxBufLen)
+	  {
+
+		 /* switch(usbd_ch)
+		  {
+		  case '1' :
+			   CDC_Transmit_FS((uint8_t*)buffer_usb1, strlen(buffer_usb1));
+			   break;
+		  case '2' :
+			   CDC_Transmit_FS((uint8_t*)buffer_usb2, strlen(buffer_usb2));
+			   break;
+		  case '3' :
+			   CDC_Transmit_FS((uint8_t*)buffer_usb3, strlen(buffer_usb3));
+			   break;
+		  case '4' :
+			  HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_3);
+			   break;
+		  }
+		  flag_usb = 0 ; */
+		  CDC_Transmit_FS((uint8_t*)buffer_usb1, strlen(buffer_usb1));
+		  usbRxFlag = 0 ;
+		  usbRxBufLen = 0 ;
+		  vTaskDelay(100);
+
+	  }
+
+
+	  vTaskDelay(1);
+    //osDelay(1);
   }
+
   /* USER CODE END Usb */
 }
 
@@ -1165,6 +1408,7 @@ void Error_Handler(void)
   {
   }
   /* USER CODE END Error_Handler_Debug */
+
 }
 
 #ifdef  USE_FULL_ASSERT
