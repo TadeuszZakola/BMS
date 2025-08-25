@@ -141,14 +141,31 @@ typedef struct {
   float t_ref;
   float dietemp;                         // degC
   int timestamp;
+  uint8_t DEV_STAT_RAW ;
+  uint8_t UV_RAW_1 ;
+  uint8_t UV_RAW_2 ;
+  uint8_t OV_RAW_1 ;
+  uint8_t OV_RAW_2 ;
+
 } module_t;
 module_t modules[n_devices - 1] = {0};
+typedef struct {
+int MAIN_ADC_RUN	;
+int AUX_ADC_RUN	;
+int CS_RUN ;
+int OVUV_RUN;
+int OTUT_RUN;
+
+} DEV_STATS;
 typedef struct {
 int BQ_Number ;
 int BQ_Overvoltage_Error  ;
 int BQ_Undervoltage_Error  ;
 int BQ_Autoadressing_Error ;
 int BQ_Communication_Error ;
+int OV_ERROR[n_cells_per_device];
+int UV_ERROR[n_cells_per_device];
+DEV_STATS Device_Stat;
 int Bq_Timestamp ;
 float Bq_Voltages[n_cells_per_device] ;   // mV
 float Bq_Temperatures[n_temp_pre_device]; // mV
@@ -181,58 +198,7 @@ char message_buffer[32];
 
 volatile uint8_t CDC_TransmitReady = 1;
 
-typedef struct {
-  float R_top ;  // R100 (ohms)  pull-up from TSREF to node
-  float R_bias ;  // R101 (ohms)  bias to GND (parallel with NTC)
-  float R0 ;     // 10k at 25°C
-  float B ;       // e.g., 3380
-} ntc_cfg_t;
 
-float gpio_ratio_to_celsius(float gpio_meas, float tsref_meas, ntc_cfg_t cfg)
-{
-    // 1) ratiometric ratio g = Vgpio / Vtsref
-    float g = gpio_meas / tsref_meas;
-    if (g <= 0.0f) return -273.15f;        // out-of-range guard
-    if (g >= 0.9999f) g = 0.9999f;         // avoid div-by-zero
-
-    // 2) Equivalent bottom resistance from ratio
-    float Req = (g * cfg.R_top) / (1.0f - g);
-
-    // 3) Solve NTC resistance from Req = (Rntc || R_bias)
-    float denom = cfg.R_bias - Req;
-    if (denom <= 1e-6f) denom = 1e-6f;     // guard
-    float Rntc = (Req * cfg.R_bias) / denom;
-
-    // 4) Beta model -> temperature
-    const float T0 = 298.15f;              // 25°C in Kelvin
-    float invT = (1.0f / T0) + (1.0f / cfg.B) * logf(Rntc / cfg.R0);
-    float T_K = 1.0f / invT;
-    return T_K - 273.15f;
-}
-float calculate_ntc_value (float TS_REF, float TEMP , int t_number)
-{
-	float b= 10000;
-	float a = 1;
-	float c = TEMP/TS_REF;
-	 double delta = b * b - 4 * a * c;
-
-	    //std::cout << std::fixed << std::setprecision(2); // Formatowanie wyjścia do 2 miejsc po przecinku
-
-	    if (delta < 0) {
-	       // std::cout << "Funkcja nie ma miejsc zerowych w zbiorze liczb rzeczywistych." << std::endl;
-	    	return 0;
-	    } else if (delta == 0) {
-	    	float x0 = -b / (2 * a);
-	    	return x0
-	    			;
-	       // std::cout << "Funkcja ma jedno miejsce zerowe: x0 = " << x0 << std::endl;
-	    } else { // delta > 0
-	        float x1 = (-b - sqrt(delta)) / (2 * a);
-	        float x2 = (-b + sqrt(delta)) / (2 * a);
-	        return x1 ;
-	        //std::cout << "Funkcja ma dwa miejsca zerowe: x1 = " << x1 << ", x2 = " << x2 << std::endl;
-	    }
-}
 
 
 
@@ -989,12 +955,14 @@ void Bq_comm(void *argument)
 	    //  osDelay(1 * n_devices);
 
 
-    	    buf =  0x09;
+    	    buf = 0x12; // 0x09;
     	    bq79600_construct_command(bms_instance, STACK_WRITE, 0, GPIO_CONF1, 4, &buf); // enable gpio as OTUT input
     	    bq79600_tx(bms_instance);
     	    osDelay(1 * n_devices);
-    		buf =  0x06;
-    	    bq79600_construct_command(bms_instance, STACK_WRITE, 0, ADC_CTRL3, 1, &buf); // enable reading gpio voltage
+
+
+    	    buf = 0x6;  //
+    	    bq79600_construct_command(bms_instance, STACK_WRITE, 0, ADC_CTRL3, 1, &buf);
     	    bq79600_tx(bms_instance);
     	    osDelay(1 * n_devices);
 
@@ -1002,27 +970,24 @@ void Bq_comm(void *argument)
 
 
 
+	      /*  Setup OV, UV for balancing  */
 
-
-
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, ADC_CTRL3, 1, &buf);
+	      uint8_t ov_threshold = 0x22;//0x22; // 4175 mV threshold value
+	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, OV_THRESH, 1, &ov_threshold);
 	      bq79600_tx(bms_instance);
 	      osDelay(1 * n_devices);
-
-	      /*  Setup OV, UV for balancing  */
-	      uint8_t ov_threshold = 0x22; // 4175 mV threshold value
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, OV_THRESH, 1, &ov_threshold);
-
 	      uint8_t uv_threshold = 0x22; // 3000 mV threshold value
 	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, UV_THRESH, 1, &uv_threshold);
 	      bq79600_tx(bms_instance);
+	      osDelay(1 * n_devices);
 
-
-	      buf = 0x3;
+	      buf = 0x5 ; //0x5;
 	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, OVUV_CTRL, 1, &buf); // Set mode to run OV and UV round robin on all cells
 	      bq79600_tx(bms_instance);														// and start OV UV comparators
 	      osDelay(1 * n_devices); // wait for stack write
-	      vTaskDelay(600);
+	      vTaskDelay(100);
+
+
 
   /* Infinite loop */
 	  while (1) {
@@ -1032,7 +997,7 @@ void Bq_comm(void *argument)
 	         bq79600_construct_command(bms_instance, STACK_READ, 0, DIETEMP1_HI, 2, NULL);
 	         bq79600_tx(bms_instance);
 	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(50);
+	         vTaskDelay(150);
 	         for (int i = 0; i < n_devices - 1; i++)
 	         {
 	           modules[i].dietemp = raw_to_float(&bms_instance->rx_buf[4 + i * 8]) * 0.025;
@@ -1078,14 +1043,8 @@ void Bq_comm(void *argument)
 	         vTaskDelay(50);
 	         for (int i = 0; i < n_devices - 1; i++)
 	             modules[i].t_ref =
-	                 raw_to_float(&bms_instance->rx_buf[4 + i * 8]) * 0.16954;
+	                 raw_to_float(&bms_instance->rx_buf[4 + i * 7]) * 0.16954;
 
-	         float chuj[8] = {0};
-	         for (int j = 0; j < n_temp_pre_device; j++)
-	         	           {
-                              chuj[j] = calculate_ntc_value(modules[0].t_ref , modules[0].temperature[j] , j );
-	         	           }
-	         vTaskDelay(150);
 
 
 	         for (int i = 0; i < n_devices - 1; i++) modules[i].timestamp = HAL_GetTick();
@@ -1094,7 +1053,48 @@ void Bq_comm(void *argument)
 	         bq79600_construct_command(bms_instance, STACK_READ, 0, DEV_STAT, 1, NULL); // DEV_STAT READ.
 	         bq79600_tx(bms_instance);
 	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(50);
+	         vTaskDelay(100);
+	         for (int i = 0; i < n_devices - 1; i++)
+	         modules[i].DEV_STAT_RAW = bms_instance->rx_buf[4 + i * 7];
+
+
+
+	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_UV1, 1, NULL); // DEV_STAT READ.
+	         bq79600_tx(bms_instance);
+	         bq79600_bsp_ready(bms_instance);
+	         vTaskDelay(100);
+	         for (int i = 0; i < n_devices - 1; i++)
+	         modules[i].UV_RAW_1 = bms_instance->rx_buf[4 + i * 7];
+
+
+
+	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_UV2, 1, NULL); // DEV_STAT READ.
+	         bq79600_tx(bms_instance);
+	         bq79600_bsp_ready(bms_instance);
+	         vTaskDelay(150);
+	         for (int i = 0; i < n_devices - 1; i++)
+	         modules[i].UV_RAW_2 = bms_instance->rx_buf[4 + i * 7];
+
+
+	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_OV1, 1, NULL); // DEV_STAT READ.
+	         bq79600_tx(bms_instance);
+	         bq79600_bsp_ready(bms_instance);
+	         vTaskDelay(150);
+	         for (int i = 0; i < n_devices - 1; i++)
+	         modules[i].OV_RAW_1 = bms_instance->rx_buf[4 + i * 7];
+
+
+
+	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_OV2, 1, NULL); // DEV_STAT READ.
+	         bq79600_tx(bms_instance);
+	         bq79600_bsp_ready(bms_instance);
+	         vTaskDelay(150);
+	         for (int i = 0; i < n_devices - 1; i++)
+	         modules[i].OV_RAW_2 = bms_instance->rx_buf[4 + i * 7];
+
+
+
+
 	         // end of reading data from BQ79600
 
 	         for (int i = 0; i < n_devices - 1; i++) // send data from bq to different tasks.
@@ -1111,13 +1111,40 @@ void Bq_comm(void *argument)
 		     Data_to_send.Bq_Timestamp = modules[i].timestamp;
 		     Data_to_send.T_ref = modules[i].t_ref;
 
-		     uint8_t dev_stat =  bms_instance->rx_buf[4 + i];
-		     if (dev_stat & (1 << 6))
-		    	 Data_to_send.BQ_Undervoltage_Error = 1;
-		     if (dev_stat & (1 << 5))
-		    	 Data_to_send.BQ_Overvoltage_Error = 1;
-		     if (dev_stat & (1 << 4))
-		    	 Data_to_send.BQ_Communication_Error = 1;
+		   //  uint8_t dev_stat =   bms_instance->rx_buf[4 + i * 7];
+		     Data_to_send.Device_Stat.MAIN_ADC_RUN = (modules[i].DEV_STAT_RAW >> 0) & 0x01;
+		     Data_to_send.Device_Stat.AUX_ADC_RUN = (modules[i].DEV_STAT_RAW >> 1) & 0x01;
+		     Data_to_send.Device_Stat.CS_RUN = (modules[i].DEV_STAT_RAW >> 2) & 0x01;
+		     Data_to_send.Device_Stat.OVUV_RUN = (modules[i].DEV_STAT_RAW >> 3) & 0x01;
+		     Data_to_send.Device_Stat.OTUT_RUN = (modules[i].DEV_STAT_RAW >> 4) & 0x01;
+
+		     for(int x = 0 ; x < 8  ; x++)
+		     {
+		    	 Data_to_send.UV_ERROR[x] = (modules[i].UV_RAW_2 >> x  ) & 0x01;
+		    	 Data_to_send.OV_ERROR[x] = (modules[i].OV_RAW_2 >> x  ) & 0x01;
+
+		     }
+		     for(int x = 8 ; x <  n_cells_per_device ; x++)
+		     {
+		    	 Data_to_send.UV_ERROR[x] = (modules[i].UV_RAW_1 >> (x - 8 ) ) & 0x01;
+		    	 Data_to_send.OV_ERROR[x] = (modules[i].OV_RAW_1 >> (x - 8 ) ) & 0x01;
+		     }
+		     // Reverse the array for consistancy
+		     for(int x = 0; x < n_cells_per_device / 2; x++)
+		     {
+		         int tmp = Data_to_send.UV_ERROR[x];
+		         int tmp2 = Data_to_send.OV_ERROR[x];
+		         Data_to_send.UV_ERROR[x] = Data_to_send.UV_ERROR[n_cells_per_device - 1 - x];
+		         Data_to_send.UV_ERROR[n_cells_per_device - 1 - x] = tmp;
+		         Data_to_send.OV_ERROR[x] = Data_to_send.OV_ERROR[n_cells_per_device - 1 - x];
+		         Data_to_send.OV_ERROR[n_cells_per_device - 1 - x] = tmp2;
+		     }
+
+
+
+
+
+
             if( osMessageQueuePut(BQ79614_QueueHandle, &Data_to_send, 5, 5) == osOK)
             	 {
            	 Message bq_mes = {0};
@@ -1127,8 +1154,7 @@ void Bq_comm(void *argument)
            	 }
 	         }
 	         HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_2) ;
-	         vTaskDelay(100);
-	         //osDelay(50);
+	        // vTaskDelay(150);
 	  }
 
   /* USER CODE END Bq_comm */
@@ -1149,6 +1175,7 @@ void Safety(void *argument)
     int undervoltage = 0;
     int comm_err = 0 ;
     int autoadressing_error = 0 ;
+	vTaskDelay(800);
   /* Infinite loop */
   for(;;)
   {
@@ -1192,6 +1219,7 @@ void Led(void *argument)
 	int overvoltage = 0;
 	int undervoltage = 0;
 	int comm_err = 0 ;
+	vTaskDelay(800);
   /* Infinite loop */
   for(;;)
   {
@@ -1271,6 +1299,7 @@ void Usb(void *argument)
 	BQ_Data Data_received = {0};
 	Message Message_received = {0};
 	char message[64]={0};
+	vTaskDelay(800);
   for(;;)
   {   //   (Messages_QueueHandle
 
@@ -1287,13 +1316,39 @@ void Usb(void *argument)
 	  		{
 	    	   	   	   for(int i = 0 ; i< n_cells_per_device; i++ )
 	    	                 {
-	    	                 char message[64] = {0};
-	    	                 sprintf(message  , "BQ Number:%d bq voltage value:%d [mV] \n" ,Data_received.BQ_Number+1 , (int)Data_received.Bq_Voltages[i] );
+
+	    	                 sprintf(message  , "BQ Number:%d bq voltage value:%d [mV]  " ,Data_received.BQ_Number+1 , (int)Data_received.Bq_Voltages[i] );
 	    	                // CDC_Transmit_FS((uint8_t*)message, strlen(message));
 	    	                 while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
 	    	                	 	 	 vTaskDelay(1); // Delay to allow USB stack to process
 	    	                 	    	   }
+	    	                 if(Data_received.UV_ERROR[i] && Data_received.OV_ERROR[i])
+	    	                 {
+	    	                	 sprintf(message  , " - OV/UV SETPOINT ERROR! \n");
 	    	                 }
+	    	                 if(Data_received.OV_ERROR[i])
+	    	                 {
+	    	                	 sprintf(message  , " - OVERVOLTAGE ON THIS CELL! \n");
+	    	                 }
+	    	                 else if(Data_received.UV_ERROR[i])
+	    	                 {
+	    	                	 sprintf(message  , " - UNDERVOLTAGE ON THIS CELL! \n");
+	    	                 }
+	    	                 else
+	    	                 {
+    	                	 sprintf(message  , "\n");
+	    	                 }
+    	                	 while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+    	                		    	                	 	 	 vTaskDelay(1); // Delay to allow USB stack to process
+    	                	 }
+
+
+
+
+
+	    	                 }
+
+
 	    	   	   	   for(int i = 0 ; i< 8; i++ ) {
                	   	   	   	  sprintf(message  , "BQ Number:%d bq temperature value: %d [mV] \n" ,Data_received.BQ_Number+1 , (int)Data_received.Bq_Temperatures[i]);
                	   	   	   	  while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
@@ -1327,6 +1382,107 @@ void Usb(void *argument)
 		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
 		    	   	   	   	   	         }
 	    	        	    	   }
+
+	    	   	   	   	   		sprintf(message  , "DEVICE STATUS READOUT: \n" );
+	    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+	    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+	    	   	   	   	   	         }
+
+		    	   	   	   	   	if(Data_received.Device_Stat.MAIN_ADC_RUN)
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "MAIN ADC IS RUNNING. \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+		    	   	   	   	   	else
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "MAIN ADC IS TURNED OFF. \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+
+		    	   	   	   	   	if(Data_received.Device_Stat.AUX_ADC_RUN)
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "AUXILIARY ADC IS RUNNING. \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+		    	   	   	   	   	else
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "AUXILIARY ADC IS TURNED OFF. \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+
+
+
+		    	   	   	   	   	if(Data_received.Device_Stat.CS_RUN)
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "CS IS RUNNING. \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+		    	   	   	   	   	else
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "CS IS TURNED OFF. \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+
+
+
+		    	   	   	   	   	if(Data_received.Device_Stat.OVUV_RUN)
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "OVERVOLTAGE/UNDERVOLTAGE PROTECTION CURRENTLY ACTIVE \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+		    	   	   	   	   	else
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "OVERVOLTAGE/UNDERVOLTAGE PROTECTION CURRENTLY DISABLED \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+
+
+		    	   	   	   	   	if(Data_received.Device_Stat.OTUT_RUN)
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "OVERTEMPERATUE/UNDERTEMPERATURE PROTECTION CURRENTLY ACTIVE \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+		    	   	   	   	   	else
+		    	   	   	   	   	{
+		    	   	   	   	   		sprintf(message  , "OVERTEMPERATUE/UNDERTEMPERATURE PROTECTION CURRENTLY DISABLED \n" );
+		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	   	   	         }
+	    	        	    	   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		    	   	   	   	   	   sprintf(message  , "Temperature of BQ: %d  [deg C]\n" , (int)Data_received.dietemp );
 		    	   	   	   	   	   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
 		    	   	   	   	   	   		   	   vTaskDelay(1); // Delay to allow USB stack to process
