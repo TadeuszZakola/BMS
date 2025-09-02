@@ -1857,16 +1857,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "vc14 powinno byc do bat cnie?\n"
-		(exclude_from_sim no)
-		(at 80.01 83.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "4a84fa7c-003f-42bd-814a-b110d098926b")
-	)
 	(text "max 370ohm\n"
 		(exclude_from_sim no)
 		(at 51.562 78.486 0)

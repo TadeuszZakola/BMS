@@ -614,7 +614,7 @@
       "plot": "C:/Users/wikto/Desktop/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../Gokart_Battery/Components/BMS/BMS.step",
       "svg": "",
       "vrml": ""
     },

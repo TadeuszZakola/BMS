@@ -1910,10 +1910,6 @@
 		(uuid "7cc9dc60-d5cc-488b-997d-97d170900b0b")
 	)
 	(no_connect
-		(at 76.2 91.44)
-		(uuid "7d3f44de-32d3-42de-81c8-e6766cef5045")
-	)
-	(no_connect
 		(at 121.92 140.97)
 		(uuid "a5137935-f43f-4202-a470-b9b5e68a1b17")
 	)
