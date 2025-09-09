@@ -6,3 +6,4 @@
 ../Core/Src/bq79600.c:81:12:open_bq79600_instance	16	static
 ../Core/Src/bq79600.c:86:6:bq79600_wakeup	16	static
 ../Core/Src/bq79600.c:99:17:bq79600_auto_addressing	48	static
+../Core/Src/bq79600.c:151:6:initalize_communication	40	static

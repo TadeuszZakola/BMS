@@ -68,8 +68,8 @@ all: main-build
 main-build: PODEJSCIE3.elf secondary-outputs
 
 # Tool invocations
-PODEJSCIE3.elf PODEJSCIE3.map: $(OBJS) $(USER_OBJS) C:\Users\wikto\Desktop\Szkola\stm32_projekty2\PODEJSCIE3\STM32H742VITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "PODEJSCIE3.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\wikto\Desktop\Szkola\stm32_projekty2\PODEJSCIE3\STM32H742VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PODEJSCIE3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+PODEJSCIE3.elf PODEJSCIE3.map: $(OBJS) $(USER_OBJS) C:\Users\wikto\Desktop\BMS_GOKART\Software\STM32H742VITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "PODEJSCIE3.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\wikto\Desktop\BMS_GOKART\Software\STM32H742VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PODEJSCIE3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

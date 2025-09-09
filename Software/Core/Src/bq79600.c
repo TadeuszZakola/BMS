@@ -147,3 +147,121 @@ bq79600_error_t bq79600_auto_addressing(bq79600_t *instance, const size_t n_devi
   }
   return BQ_SUCCESS;
 }
+
+void initalize_communication(bq79600_t *instance,UART_HandleTypeDef *uart_port , int n_devices, int n_cells_per_device)
+{
+
+
+
+		      uint8_t buf = 0x20;
+		      bq79600_write_reg(instance, 0x00, CONTROL1, &buf, 1);
+		      HAL_Delay(12 * n_devices);
+
+		      bq79600_error_t err = bq79600_auto_addressing(instance, n_devices);
+		      if (err) {
+		    	//  Message autoadress = {0};
+		    	//  strcpy(autoadress.Buf, "Autoadressing failed!\n0");
+		    	//  autoadress.Timestamp = HAL_GetTick();
+		    	 // osMessageQueuePut(Messages_QueueHandle, &autoadress, 0, 50);
+		    	  }
+		      else
+		      {
+		    	 // Message autoadress = {0};
+		    	 // strcpy(autoadress.Buf, "Autoadressing succesful!\n0");
+		    	 // autoadress.Timestamp = HAL_GetTick();
+		    	 // osMessageQueuePut(Messages_QueueHandle, &autoadress, 0, 50);
+		      }
+
+
+		      /* Set long communication timeout */
+		      buf = 0x0A;  // CTL_ACT=1 | CTL_TIME=010 (2s)
+		      bq79600_construct_command(instance, STACK_WRITE, 0, COMM_TIMEOUT_CONF, 5, &buf);
+		      bq79600_tx(instance);
+		      HAL_Delay(1);
+
+
+
+		      buf = 0x01; // 0x01
+		      	      bq79600_construct_command(instance, STACK_WRITE, 0, CONTROL2, 1, &buf); // enable T_REF adc reading
+		      	      bq79600_tx(instance);
+		      	    HAL_Delay(10);
+
+
+
+
+
+
+		      /* Config stack device ADCs */
+		      buf = n_cells_per_device - 6;
+		      bq79600_construct_command(instance, STACK_WRITE, 0, ACTIVE_CELL, 1, &buf);
+		      bq79600_tx(instance);
+
+		  	  buf =0x9; // 0x9; // 0x09;
+		      bq79600_construct_command(instance, STACK_WRITE, 0, GPIO_CONF1, 1, &buf);
+		      bq79600_tx(instance);
+		      buf =0x9; // 0x9; // 0x09;
+		      	      bq79600_construct_command(instance, STACK_WRITE, 0, GPIO_CONF2, 1, &buf);
+		      	      bq79600_tx(instance);
+		      	    buf =0x9; // 0x9; // 0x09;
+		      	    	      bq79600_construct_command(instance, STACK_WRITE, 0, GPIO_CONF3, 1, &buf);
+		      	    	      bq79600_tx(instance);
+		      	    	    buf =0x9; // 0x9; // 0x09;
+		      	    	    	      bq79600_construct_command(instance, STACK_WRITE, 0, GPIO_CONF4, 1, &buf);
+		      	    	    	      bq79600_tx(instance);
+
+		      buf = 0x06;
+		      bq79600_construct_command(instance, STACK_WRITE, 0, ADC_CTRL1, 1, &buf);
+		      bq79600_tx(instance);
+		      HAL_Delay(1 * n_devices);
+
+		      buf = 0x06;
+		      bq79600_construct_command(instance, STACK_WRITE, 0, ADC_CTRL1, 1, &buf);
+		      bq79600_tx(instance);
+		      HAL_Delay(1 * n_devices);
+
+
+
+
+	/*
+		      buf = 0x01; // 0x01
+		      bq79600_construct_command(bms_instance, STACK_WRITE, 0, CONTROL2, 1, &buf); // enable T_REF adc reading
+		      bq79600_tx(bms_instance);
+		      osDelay(1 * n_devices); */
+
+
+
+
+	  /*
+	    	    buf = 0x6;  //
+	    	    bq79600_construct_command(bms_instance, STACK_WRITE, 0, ADC_CTRL3, 1, &buf);
+	    	    bq79600_tx(bms_instance);
+	    	    osDelay(1 * n_devices);
+	 */
+
+
+
+
+		      /*  Setup OV, UV for balancing  */
+
+		      uint8_t ov_threshold = 0x22;//0x22; // 4175 mV threshold value
+		      bq79600_construct_command(instance, STACK_WRITE, 0, OV_THRESH, 1, &ov_threshold);
+		      bq79600_tx(instance);
+		      HAL_Delay(1 * n_devices);
+		      uint8_t uv_threshold = 0x22; // 3000 mV threshold value
+		      bq79600_construct_command(instance, STACK_WRITE, 0, UV_THRESH, 1, &uv_threshold);
+		      bq79600_tx(instance);
+		      HAL_Delay(1 * n_devices);
+
+		      buf = 0x5 ; //0x5;
+		      bq79600_construct_command(instance, STACK_WRITE, 0, OVUV_CTRL, 1, &buf); // Set mode to run OV and UV round robin on all cells
+		      bq79600_tx(instance);														// and start OV UV comparators
+
+
+		      uint8_t ot_threshold = 0x3; // 0x3 = 80C threshold
+		      bq79600_construct_command(instance, STACK_WRITE, 0, OTUT_THRESH, 1, &ot_threshold);
+		      bq79600_tx(instance);
+
+		      buf = 0x5 ; //0x5;
+		      bq79600_construct_command(instance, STACK_WRITE, 0, OTUT_CTRL, 1, &buf); // Set mode to run OT and UT round robin on all cells
+		      bq79600_tx(instance);
+}

@@ -2,7 +2,7 @@
 
 #include <stddef.h>
 #include <stdint.h>
-
+#include "main.h"
 #include "bq79600_def.h"
 
 typedef enum {
@@ -45,6 +45,7 @@ void bq79600_tx(bq79600_t *instance);
 void bq79600_rx_callback(bq79600_t *instance);
 
 bq79600_error_t bq79600_auto_addressing(bq79600_t *instance, const size_t n_devices);
+void initalize_communication(bq79600_t *instance , UART_HandleTypeDef  *uart_port , int n_devices, int n_cells_per_device);
 
 /* Read/Write register of single device */
 void bq79600_read_reg(bq79600_t *instance, uint8_t dev_addr, uint16_t reg_addr, uint8_t *data);
