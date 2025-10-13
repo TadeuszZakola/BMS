@@ -32,6 +32,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "queue.h"
+//#include "Structs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -131,48 +132,11 @@ const osMessageQueueAttr_t Other_Safety_Status_Queue_attributes = {
   .name = "Other_Safety_Status_Queue"
 };
 /* USER CODE BEGIN PV */
-#define n_devices 3
-#define n_cells_per_device 13
-#define n_temp_pre_device 8
+osMessageQueueId_t BQ79614Incoming_QueueHandle;
+const osMessageQueueAttr_t BQ79614Incoming_Queue_attributes = {
+  .name = "BQ79614Incoming_Queue"
+};
 
-typedef struct {
-  float temperature[n_temp_pre_device];  // degC
-  float vcells[n_cells_per_device];   // mV
-  float t_ref;
-  float dietemp;                         // degC
-  int timestamp;
-  uint8_t DEV_STAT_RAW ;
-  uint8_t UV_RAW_1 ;
-  uint8_t UV_RAW_2 ;
-  uint8_t OV_RAW_1 ;
-  uint8_t OV_RAW_2 ;
-
-} module_t;
-module_t modules[n_devices - 1] = {0};
-typedef struct {
-int MAIN_ADC_RUN	;
-int AUX_ADC_RUN	;
-int CS_RUN ;
-int OVUV_RUN;
-int OTUT_RUN;
-
-} DEV_STATS;
-typedef struct {
-int BQ_Number ;
-int BQ_Overvoltage_Error  ;
-int BQ_Undervoltage_Error  ;
-int BQ_Autoadressing_Error ;
-int BQ_Communication_Error ;
-int OV_ERROR[n_cells_per_device];
-int UV_ERROR[n_cells_per_device];
-DEV_STATS Device_Stat;
-int Bq_Timestamp ;
-float Bq_Voltages[n_cells_per_device] ;   // mV
-float Bq_Temperatures[n_temp_pre_device]; // mV
-float T_ref;                               //mV
-float dietemp;                            // degC
-} BQ_Data;
-BQ_Data Data_Receaved = {0} ;
 
 int ballancing;
 
@@ -185,8 +149,9 @@ Message msg;
 
 //usb receive variables
 uint8_t usbRxBuf[128];
-uint16_t usbRxBufLen;
+uint16_t usbRxLen;
 uint8_t usbRxFlag = 0 ;
+
 
 
 char message[128];
@@ -199,7 +164,12 @@ char message_buffer[32];
 volatile uint8_t CDC_TransmitReady = 1;
 
 
-
+ void USB_RXCallback(uint8_t* Buf, uint32_t *Len)
+{
+    memcpy(usbRxBuf, Buf, *Len);
+    usbRxLen = *Len;
+    usbRxFlag = 1;
+}
 
 
 
@@ -234,7 +204,7 @@ void Usb(void *argument);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-
+/*
 float raw_to_float(void *raw) {
   return (float)(int16_t)(((*(uint16_t *)raw & 0xFF) << 8) | ((*(uint16_t *)raw & 0xFF00) >> 8));
 }
@@ -253,10 +223,27 @@ void USB_RXCallback(uint8_t* Buf, uint32_t *Len)
 	usbRxBufLen = *Len;
 	usbRxFlag = 1;
 }
+int voltage_to_temperature(float voltage) // formula based of fitted logarytmic function fitted in curve fitting
+                                          // toolbox in matlab
+{
+	if(voltage > 3500)
+		return 0;
+	else
+		return -50.2*log(voltage)+ 416;
+}
+int voltage_to_temperature2(float voltage) // formula based of fitted logarytmic function fitted in curve fitting
+                                          // toolbox in matlab this one if for 0603 ntc thermistor that has a different B value
+{
+	if(voltage > 3500)
+		return 0;
+	else
+		return 154/(1 + exp(0.0012*(voltage-910)));
+} */
 
 UART_HandleTypeDef huart4;
 DMA_HandleTypeDef hdma_usart4_tx;
 DMA_HandleTypeDef hdma_usart4_rx;
+
 
 #define bms_run() HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_5) ;
 /* USER CODE END 0 */
@@ -304,7 +291,6 @@ int main(void)
   HAL_TIM_Base_Start(&htim2);
   HAL_TIM_Base_Start(&htim1);
 
-
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -339,6 +325,7 @@ int main(void)
   Other_Safety_Status_QueueHandle = osMessageQueueNew (16, sizeof(uint16_t), &Other_Safety_Status_Queue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
+  BQ79614Incoming_QueueHandle = osMessageQueueNew (10, sizeof(int), &BQ79614Incoming_Queue_attributes);
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
@@ -866,7 +853,12 @@ void Bq_comm(void *argument)
 {
   /* USER CODE BEGIN Bq_comm */
 
-	bq79600_t *bms_instance = open_bq79600_instance(0);
+		vTaskSuspend(Usb_taskHandle);
+		vTaskSuspend(Can_taskHandle);
+		vTaskSuspend(Led_taskHandle);
+		vTaskSuspend(Safety_taskHandle);
+		vTaskSuspend(Default_taskHandle);
+	   bq79600_t *bms_instance = open_bq79600_instance(0);
 
 	    bms_instance->mode = BQ_UART;
 	    bms_instance->state = BQ_SHUTDOWN;
@@ -886,9 +878,6 @@ void Bq_comm(void *argument)
 	   osDelay(50);
 	   HAL_UART_DeInit(&huart4);
 	    MX_UART4_Init(1000000);
-	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
-
-
 	     if( HAL_UARTEx_ReceiveToIdle_IT(&huart4, bms_instance->rx_buf, sizeof(bms_instance->rx_buf)) == HAL_ERROR)
 	     {
 	    	 while (1);
@@ -899,93 +888,21 @@ void Bq_comm(void *argument)
 	       {
 	    	   while (1);
 	       }
+	    initalize_communication(bms_instance,&huart4,N_DEVICES,N_CELLS_PER_DEVICE);
+	    uint8_t buf = 0x3;
+
+	    //uint8_t buf = 0x3;
+	   // uint32_t start_cbcells = CB_CELL1_CTRL - N_CELLS_PER_DEVICE  + 1;
 
 
-	      uint8_t buf = 0x20;
-	      bq79600_write_reg(bms_instance, 0x00, CONTROL1, &buf, 1);
-	      osDelay(12 * n_devices);
+	    HAL_Delay(15);
 
-	      bq79600_error_t err = bq79600_auto_addressing(bms_instance, n_devices);
-	      if (err) {
-	    	  Message autoadress = {0};
-	    	  strcpy(autoadress.Buf, "Autoadressing failed!\n0");
-	    	  autoadress.Timestamp = HAL_GetTick();
-	    	  osMessageQueuePut(Messages_QueueHandle, &autoadress, 0, 50);
-	    	  }
-	      else
-	      {
-	    	  Message autoadress = {0};
-	    	  strcpy(autoadress.Buf, "Autoadressing succesful!\n0");
-	    	  autoadress.Timestamp = HAL_GetTick();
-	    	  osMessageQueuePut(Messages_QueueHandle, &autoadress, 0, 50);
-	      }
-
-	      /* Set long communication timeout */
-	      buf = 0x0A;  // CTL_ACT=1 | CTL_TIME=010 (2s)
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, COMM_TIMEOUT_CONF, 5, &buf);
-	      bq79600_tx(bms_instance);
-	      osDelay(1);
-
-	      /* Config stack device ADCs */
-	      buf = n_cells_per_device - 6;
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, ACTIVE_CELL, 1, &buf);
-	      bq79600_tx(bms_instance);
-
-	      buf = 0x06;
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, ADC_CTRL1, 1, &buf);
-	      bq79600_tx(bms_instance);
-	      osDelay(1 * n_devices);
+	  //  buf = 0x1;
+	  //  bq79600_construct_command(bms_instance, STACK_WRITE, 0, BAL_CTRL1, 1, &buf);
+	  // 	bq79600_tx(bms_instance);
+	  //  HAL_Delay(1);
 
 
-
-	      // temp readings  CONTROL2
-	     // GPIO_CONF1
-
-
-	      buf = 0x01; // 0x01
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, CONTROL2, 1, &buf); // enable T_REF adc reading
-	      bq79600_tx(bms_instance);
-	      osDelay(1 * n_devices);
-
-
-	      // DIAG_COMP_CTRL3
-	   //   buf = 0x03;
-	    //  bq79600_construct_command(bms_instance, STACK_WRITE, 0, DIAG_COMP_CTRL3, 1, &buf); // enable gpio as OTUT input
-	    //  bq79600_tx(bms_instance);
-	    //  osDelay(1 * n_devices);
-
-
-    	    buf = 0x12; // 0x09;
-    	    bq79600_construct_command(bms_instance, STACK_WRITE, 0, GPIO_CONF1, 4, &buf); // enable gpio as OTUT input
-    	    bq79600_tx(bms_instance);
-    	    osDelay(1 * n_devices);
-
-
-    	    buf = 0x6;  //
-    	    bq79600_construct_command(bms_instance, STACK_WRITE, 0, ADC_CTRL3, 1, &buf);
-    	    bq79600_tx(bms_instance);
-    	    osDelay(1 * n_devices);
-
-
-
-
-
-	      /*  Setup OV, UV for balancing  */
-
-	      uint8_t ov_threshold = 0x22;//0x22; // 4175 mV threshold value
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, OV_THRESH, 1, &ov_threshold);
-	      bq79600_tx(bms_instance);
-	      osDelay(1 * n_devices);
-	      uint8_t uv_threshold = 0x22; // 3000 mV threshold value
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, UV_THRESH, 1, &uv_threshold);
-	      bq79600_tx(bms_instance);
-	      osDelay(1 * n_devices);
-
-	      buf = 0x5 ; //0x5;
-	      bq79600_construct_command(bms_instance, STACK_WRITE, 0, OVUV_CTRL, 1, &buf); // Set mode to run OV and UV round robin on all cells
-	      bq79600_tx(bms_instance);														// and start OV UV comparators
-	      osDelay(1 * n_devices); // wait for stack write
-	      vTaskDelay(100);
 
 
 
@@ -993,169 +910,262 @@ void Bq_comm(void *argument)
 	  while (1) {
 
 
-
-	         bq79600_construct_command(bms_instance, STACK_READ, 0, DIETEMP1_HI, 2, NULL);
-	         bq79600_tx(bms_instance);
-	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(150);
-	         for (int i = 0; i < n_devices - 1; i++)
-	         {
-	           modules[i].dietemp = raw_to_float(&bms_instance->rx_buf[4 + i * 8]) * 0.025;
-	         }
-	         uint32_t start_vcells = VCELL1_HI - n_cells_per_device * 2 + 2;
-	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_vcells, n_cells_per_device * 2, NULL);
-	         bq79600_tx(bms_instance);
-	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(50);
-	         for (int i = 0; i < n_devices - 1; i++)
-	         {
-	           for (int j = 0; j < n_cells_per_device; j++)
-	           {
-	             modules[i].vcells[j] =
-	                 raw_to_float(&bms_instance->rx_buf[4 + i * (n_cells_per_device * 2 + 6) + 2 * j]) * 0.19073;
-	           }
-	         }
+		  // Suspend all other task to let stm32 read all bq measurements
+		 		     vTaskSuspend(Usb_taskHandle);
+		 		     vTaskSuspend(Can_taskHandle);
+		 		     vTaskSuspend(Led_taskHandle);
+		 		     vTaskSuspend(Safety_taskHandle);
+		 		     vTaskSuspend(Default_taskHandle);
+		 		     osDelay(5);
+		 		    //BQ_Data_Combined xd = read_data(&bms_instance,&huart4,N_DEVICES,N_CELLS_PER_DEVICE, N_TEMPS_PER_DEVICE);
+		 		   //vTaskDelay(80);
 
 
 
 
-	         uint32_t start_temp = GPIO1_HI;
-	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_temp, 16, NULL);
-	         bq79600_tx(bms_instance);
-	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(50);
-	         for (int i = 0; i < n_devices - 1; i++)
-	         {
-	           for (int j = 0; j < n_temp_pre_device; j++)
-	           {
-	             modules[i].temperature[j] =
-	                 raw_to_float(&bms_instance->rx_buf[4 + i * (n_temp_pre_device * 2 + 6) + 2 * j])  * 0.15259;
-	           }
-	         }
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0, DIETEMP1_HI, 2, NULL);
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         {
+		 	           modules[i].dietemp = raw_to_float(&bms_instance->rx_buf[4 + i * 8]) * 0.025;
+		 	         }
 
 
+		 	         uint32_t start_vcells = VCELL1_HI - N_CELLS_PER_DEVICE * 2 + 2;
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_vcells, N_CELLS_PER_DEVICE * 2, NULL);
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i <N_DEVICES - 1; i++)
+		 	         {
+		 	           for (int j = 0; j < N_CELLS_PER_DEVICE; j++)
+		 	           {
+		 	             modules[i].vcells[j] =
+		 	                 raw_to_float(&bms_instance->rx_buf[4 + i * (N_CELLS_PER_DEVICE * 2 + 6) + 2 * j]) * 0.19073;
+		 	           }
+		 	         } // bq2 temp 2 works fine
 
-	         uint32_t start_temp_ref = TSREF_HI ;
+		 	       // osDelay(5);
 
-	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_temp_ref, 2, NULL);
-	         bq79600_tx(bms_instance);
-	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(50);
-	         for (int i = 0; i < n_devices - 1; i++)
-	             modules[i].t_ref =
-	                 raw_to_float(&bms_instance->rx_buf[4 + i * 7]) * 0.16954;
+		 	         uint32_t start_temp = GPIO1_HI  ;
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_temp, N_TEMPS_PER_DEVICE * 2, NULL);
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
 
-
-
-	         for (int i = 0; i < n_devices - 1; i++) modules[i].timestamp = HAL_GetTick();
-
-
-	         bq79600_construct_command(bms_instance, STACK_READ, 0, DEV_STAT, 1, NULL); // DEV_STAT READ.
-	         bq79600_tx(bms_instance);
-	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(100);
-	         for (int i = 0; i < n_devices - 1; i++)
-	         modules[i].DEV_STAT_RAW = bms_instance->rx_buf[4 + i * 7];
-
-
-
-	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_UV1, 1, NULL); // DEV_STAT READ.
-	         bq79600_tx(bms_instance);
-	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(100);
-	         for (int i = 0; i < n_devices - 1; i++)
-	         modules[i].UV_RAW_1 = bms_instance->rx_buf[4 + i * 7];
-
-
-
-	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_UV2, 1, NULL); // DEV_STAT READ.
-	         bq79600_tx(bms_instance);
-	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(150);
-	         for (int i = 0; i < n_devices - 1; i++)
-	         modules[i].UV_RAW_2 = bms_instance->rx_buf[4 + i * 7];
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         {
+		 	           for (int j = 0; j < N_TEMPS_PER_DEVICE; j++)
+		 	           {
+		 	        	   if(j==0)
+		 	        	   {
+		 	        		 modules[i].temperature[j] =voltage_to_temperature2(
+		 	        		   	                 raw_to_float(&bms_instance->rx_buf[4 + i * (N_TEMPS_PER_DEVICE * 2 + 4) + 2 * j ] )  * 0.15259);
+		 	        	   }
+		 	        	   else
+		 	        	   {
+		 	             modules[i].temperature[j] =voltage_to_temperature(
+		 	                 raw_to_float(&bms_instance->rx_buf[4 + i * (N_TEMPS_PER_DEVICE * 2 + 4) + 2 * j ] )  * 0.15259);
+		 	        	   }
+		 	           }
+		 	         }
 
 
-	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_OV1, 1, NULL); // DEV_STAT READ.
-	         bq79600_tx(bms_instance);
-	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(150);
-	         for (int i = 0; i < n_devices - 1; i++)
-	         modules[i].OV_RAW_1 = bms_instance->rx_buf[4 + i * 7];
+		 	        osDelay(5);
 
-
-
-	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_OV2, 1, NULL); // DEV_STAT READ.
-	         bq79600_tx(bms_instance);
-	         bq79600_bsp_ready(bms_instance);
-	         vTaskDelay(150);
-	         for (int i = 0; i < n_devices - 1; i++)
-	         modules[i].OV_RAW_2 = bms_instance->rx_buf[4 + i * 7];
-
-
-
-
-	         // end of reading data from BQ79600
-
-	         for (int i = 0; i < n_devices - 1; i++) // send data from bq to different tasks.
-	         {
-		     BQ_Data Data_to_send = {0}; // struct to send to queue
-		     Data_to_send.BQ_Number = i ;
-		     for (int j = 0; j < n_cells_per_device; j++)
-		     {
-		     Data_to_send.Bq_Voltages[j] = modules[i].vcells[j];
-
-		     Data_to_send.Bq_Temperatures[j] = modules[i].temperature[j];
-		     }
-		     Data_to_send.dietemp =  modules[i].dietemp;
-		     Data_to_send.Bq_Timestamp = modules[i].timestamp;
-		     Data_to_send.T_ref = modules[i].t_ref;
-
-		   //  uint8_t dev_stat =   bms_instance->rx_buf[4 + i * 7];
-		     Data_to_send.Device_Stat.MAIN_ADC_RUN = (modules[i].DEV_STAT_RAW >> 0) & 0x01;
-		     Data_to_send.Device_Stat.AUX_ADC_RUN = (modules[i].DEV_STAT_RAW >> 1) & 0x01;
-		     Data_to_send.Device_Stat.CS_RUN = (modules[i].DEV_STAT_RAW >> 2) & 0x01;
-		     Data_to_send.Device_Stat.OVUV_RUN = (modules[i].DEV_STAT_RAW >> 3) & 0x01;
-		     Data_to_send.Device_Stat.OTUT_RUN = (modules[i].DEV_STAT_RAW >> 4) & 0x01;
-
-		     for(int x = 0 ; x < 8  ; x++)
-		     {
-		    	 Data_to_send.UV_ERROR[x] = (modules[i].UV_RAW_2 >> x  ) & 0x01;
-		    	 Data_to_send.OV_ERROR[x] = (modules[i].OV_RAW_2 >> x  ) & 0x01;
-
-		     }
-		     for(int x = 8 ; x <  n_cells_per_device ; x++)
-		     {
-		    	 Data_to_send.UV_ERROR[x] = (modules[i].UV_RAW_1 >> (x - 8 ) ) & 0x01;
-		    	 Data_to_send.OV_ERROR[x] = (modules[i].OV_RAW_1 >> (x - 8 ) ) & 0x01;
-		     }
-		     // Reverse the array for consistancy
-		     for(int x = 0; x < n_cells_per_device / 2; x++)
-		     {
-		         int tmp = Data_to_send.UV_ERROR[x];
-		         int tmp2 = Data_to_send.OV_ERROR[x];
-		         Data_to_send.UV_ERROR[x] = Data_to_send.UV_ERROR[n_cells_per_device - 1 - x];
-		         Data_to_send.UV_ERROR[n_cells_per_device - 1 - x] = tmp;
-		         Data_to_send.OV_ERROR[x] = Data_to_send.OV_ERROR[n_cells_per_device - 1 - x];
-		         Data_to_send.OV_ERROR[n_cells_per_device - 1 - x] = tmp2;
-		     }
+		 	         uint32_t start_temp_ref = TSREF_HI ;
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_temp_ref, 2, NULL);
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	             modules[i].t_ref =
+		 	                 raw_to_float(&bms_instance->rx_buf[4 + i * 8]) * 0.16954;
 
 
 
 
 
 
-            if( osMessageQueuePut(BQ79614_QueueHandle, &Data_to_send, 5, 5) == osOK)
-            	 {
-           	 Message bq_mes = {0};
-             strcpy(bq_mes.Buf, "BQ_Message succesfully sent!\n0");
-           	 bq_mes.Timestamp = HAL_GetTick();
-           	 osMessageQueuePut(Messages_QueueHandle, &bq_mes, 0, 5);
-           	 }
-	         }
-	         HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_2) ;
-	        // vTaskDelay(150);
-	  }
+		 	         for (int i = 0; i < N_DEVICES - 1; i++) modules[i].timestamp = HAL_GetTick();
+
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0, BAL_STAT, 1, NULL); // BAL_STAT READ.
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         modules[i].BAL_STAT_RAW = bms_instance->rx_buf[4 + i * 7];
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0, CB_COMPLETE1, 1, NULL); // BAL_STAT READ.
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         modules[i].CB_COMPLETE1_RAW = bms_instance->rx_buf[4 + i * 7];
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0, CB_COMPLETE2, 1, NULL); // BAL_STAT READ.
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         modules[i].CB_COMPLETE2_RAW = bms_instance->rx_buf[4 + i * 7];
+
+
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0, DEV_STAT, 1, NULL); // DEV_STAT READ.
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         modules[i].DEV_STAT_RAW = bms_instance->rx_buf[4 + i * 7];
+
+
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_UV1, 1, NULL); // DEV_STAT READ.
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         modules[i].UV_RAW_1 = bms_instance->rx_buf[4 + i * 7];
+
+
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_UV2, 1, NULL); // DEV_STAT READ.
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         modules[i].UV_RAW_2 = bms_instance->rx_buf[4 + i * 7];
+
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_OV1, 1, NULL); // DEV_STAT READ.
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         modules[i].OV_RAW_1 = bms_instance->rx_buf[4 + i * 7];
+
+
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_OV2, 1, NULL); //
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         modules[i].OV_RAW_2 = bms_instance->rx_buf[4 + i * 7];
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_UT, 1, NULL); //
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         modules[i].UT_RAW = bms_instance->rx_buf[4 + i * 7];
+
+		 	         bq79600_construct_command(bms_instance, STACK_READ, 0,  FAULT_OT, 1, NULL); //
+		 	         bq79600_tx(bms_instance);
+		 	         bq79600_bsp_ready(bms_instance);
+		 	         for (int i = 0; i < N_DEVICES - 1; i++)
+		 	         modules[i].OT_RAW = bms_instance->rx_buf[4 + i * 7];
+
+                    int datain = 0;
+		 	        if (osMessageQueueGet(BQ79614Incoming_QueueHandle, &datain, 5, 1) == osOK)
+		 	        {
+		 	        	switch(datain)
+		 	        	{
+		 	        	case 1:
+			 	        	buf = 0x3; // fault detection off, autoballancing on, ballgo = 1
+			 	            bq79600_construct_command(bms_instance, STACK_WRITE, 0, BAL_CTRL2, 1, &buf);
+			 	        	bq79600_tx(bms_instance);
+			 	        	break;
+		 	        	case 2:
+			 	        	buf = 0x40; // fault detection off, autoballancing on, ballgo = 1
+			 	            bq79600_construct_command(bms_instance, STACK_WRITE, 0, BAL_CTRL2, 1, &buf);
+			 	        	bq79600_tx(bms_instance);
+			 	        	break;
+		 	        	}
+		 	        	HAL_Delay(10);
+		 	        }
+
+
+		 	         BQ_Data Data_to_send = {0} ;
+
+		 	         // end of reading data from BQ79600
+		 	         for (int i = 0; i < N_DEVICES - 1; i++) // send data from bq to different tasks.
+		 	         {
+                     if(modules[i].dietemp > 150 || modules[i].dietemp < 5) // redundancy, if the comm with bq failes, initalize it again!
+                     {
+                    	 initalize_communication(bms_instance,&huart4,N_DEVICES,N_CELLS_PER_DEVICE);
+                    	 break;
+                     }
+		 		     Data_to_send.BQ_Number = i ;
+		 		     for (int j = 0; j < N_CELLS_PER_DEVICE; j++)
+		 		     {
+		 		     Data_to_send.Bq_Voltages[j] = modules[i].vcells[j];
+
+		 		     Data_to_send.Bq_Temperatures[j] = modules[i].temperature[j];
+		 		     }
+		 		     Data_to_send.dietemp =  modules[i].dietemp;
+		 		     Data_to_send.Bq_Timestamp = modules[i].timestamp;
+		 		     Data_to_send.T_ref = modules[i].t_ref;
+
+		 		   //  uint8_t dev_stat =   bms_instance->rx_buf[4 + i * 7];
+		 		     Data_to_send.Device_Stat.MAIN_ADC_RUN = (modules[i].DEV_STAT_RAW >> 0) & 0x01;
+		 		     Data_to_send.Device_Stat.AUX_ADC_RUN = (modules[i].DEV_STAT_RAW >> 1) & 0x01;
+		 		     Data_to_send.Device_Stat.CS_RUN = (modules[i].DEV_STAT_RAW >> 2) & 0x01;
+		 		     Data_to_send.Device_Stat.OVUV_RUN = (modules[i].DEV_STAT_RAW >> 3) & 0x01;
+		 		     Data_to_send.Device_Stat.OTUT_RUN = (modules[i].DEV_STAT_RAW >> 4) & 0x01;
+
+		 		     Data_to_send.CB_DONE = (modules[i].BAL_STAT_RAW >> 0) & 0x01;
+		 		     Data_to_send.MB_DONE = (modules[i].BAL_STAT_RAW >> 1) & 0x01;
+		 		     Data_to_send.ABORTFLT = (modules[i].BAL_STAT_RAW >> 2) & 0x01;
+		 		     Data_to_send.CB_RUN = (modules[i].BAL_STAT_RAW >> 3) & 0x01;
+		 		     Data_to_send.MB_RUN = (modules[i].BAL_STAT_RAW >> 4) & 0x01;
+		 		     Data_to_send.CB_INPAUSE = (modules[i].BAL_STAT_RAW >> 5) & 0x01;
+		 		     Data_to_send.OT_PAUSE_DET = (modules[i].BAL_STAT_RAW >> 6) & 0x01;
+		 		     Data_to_send.INVALID_CBCONF = (modules[i].BAL_STAT_RAW >> 7) & 0x01;
+
+		 		    for(int x = 0 ; x < 8  ; x++)
+		 		    {
+		 		    	Data_to_send.OT_ERROR[x] = (modules[i].UT_RAW >> x  ) & 0x01;
+		 		    	Data_to_send.UT_ERROR[x] = (modules[i].OT_RAW >> x  ) & 0x01;
+		 		    }
+		 		     for(int x = 0 ; x < N_CELLS_PER_DEVICE - 8  ; x++)
+		 		     {
+		 		    	 Data_to_send.UV_ERROR[x+8] = (modules[i].UV_RAW_2 >> x  ) & 0x01;
+		 		    	 Data_to_send.OV_ERROR[x+8] = (modules[i].OV_RAW_2 >> x  ) & 0x01;
+		 		    	 Data_to_send.CB_Done[x+8] = (modules[i].CB_COMPLETE2_RAW >> x  ) & 0x01;
+
+		 		     }
+		 		     for(int x = 0 ; x < 8 ; x++)
+		 		     {
+		 		    	 Data_to_send.UV_ERROR[x] = (modules[i].UV_RAW_1 >> (x) ) & 0x01;
+		 		    	 Data_to_send.OV_ERROR[x] = (modules[i].OV_RAW_1 >> (x) ) & 0x01;
+		 		    	 Data_to_send.CB_Done[x] = (modules[i].CB_COMPLETE1_RAW >> (x - 8 ) ) & 0x01;
+		 		     }
+
+		 	         osMessageQueuePut(BQ79614_QueueHandle, &Data_to_send, 5, 5) ;
+
+
+		 	         osMessageQueuePut(BQ_Safety_Status_QueueHandle, &Data_to_send, 5, 5);
+
+		 	         }
+
+
+/*
+		 		    BQ_Data Data_to_send ;
+		 		    for(int i = 0 ; i < N_DEVICES -1 ; i++)
+		 		    {
+		 		    	Data_to_send = xd.Device[i];
+			 	         osMessageQueuePut(BQ79614_QueueHandle, &Data_to_send, 5, 5) ;
+
+
+			 	         osMessageQueuePut(BQ_Safety_Status_QueueHandle, &Data_to_send, 5, 5);
+
+		 		    } */
+
+		 	         HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_4) ;
+
+		 	         // resume the rest of tasks
+		 	  	  	 vTaskResume(Usb_taskHandle);
+		 	  	     vTaskDelay(80);
+		 	         vTaskResume(Can_taskHandle);
+		 	         vTaskResume(Led_taskHandle);
+		 	         vTaskResume(Safety_taskHandle);
+		 	         vTaskResume(Default_taskHandle);
+		 	  	     // delay to let usb send its data then resume the rest
+		 	         vTaskDelay(400);
+		 	  }
 
   /* USER CODE END Bq_comm */
 }
@@ -1225,12 +1235,12 @@ void Led(void *argument)
   {
 
 	  BQ_Data Data_received = {0};
-	  if (osMessageQueueGet(BQ79614_QueueHandle, &Data_received, NULL, 10) == osOK)
+	 /* if (osMessageQueueGet(BQ79614_QueueHandle, &Data_received, NULL, 10) == osOK)
 	  {
 		  undervoltage = Data_received.BQ_Undervoltage_Error ;
 	      overvoltage = Data_received.BQ_Overvoltage_Error ;
 	      comm_err = Data_received.BQ_Communication_Error ;
-	  }
+	  } */
 
 
 	 if( undervoltage || overvoltage )
@@ -1267,7 +1277,9 @@ void Led(void *argument)
 /* USER CODE END Header_StartTask05 */
 void StartTask05(void *argument)
 {
+	vTaskSuspend( NULL );
   /* USER CODE BEGIN StartTask05 */
+	BQ_Data Data_Receaved ;
   /* Infinite loop */
   for(;;)
   {
@@ -1314,7 +1326,7 @@ void Usb(void *argument)
 
 	       if (osMessageQueueGet(BQ79614_QueueHandle, &Data_received, &priority, 1) == osOK)
 	  		{
-	    	   	   	   for(int i = 0 ; i< n_cells_per_device; i++ )
+	    	   	   	   for(int i = 0 ; i< N_CELLS_PER_DEVICE; i++ )
 	    	                 {
 
 	    	                 sprintf(message  , "BQ Number:%d bq voltage value:%d [mV]  " ,Data_received.BQ_Number+1 , (int)Data_received.Bq_Voltages[i] );
@@ -1326,7 +1338,7 @@ void Usb(void *argument)
 	    	                 {
 	    	                	 sprintf(message  , " - OV/UV SETPOINT ERROR! \n");
 	    	                 }
-	    	                 if(Data_received.OV_ERROR[i])
+	    	                 if(Data_received.OV_ERROR[i] )
 	    	                 {
 	    	                	 sprintf(message  , " - OVERVOLTAGE ON THIS CELL! \n");
 	    	                 }
@@ -1343,20 +1355,41 @@ void Usb(void *argument)
     	                	 }
 
 
-
-
-
 	    	                 }
 
 
-	    	   	   	   for(int i = 0 ; i< 8; i++ ) {
-               	   	   	   	  sprintf(message  , "BQ Number:%d bq temperature value: %d [mV] \n" ,Data_received.BQ_Number+1 , (int)Data_received.Bq_Temperatures[i]);
-               	   	   	   	  while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-               	   	   	   		  vTaskDelay(1); // Delay to allow USB stack to process
 
 
-               	   	   	   	  }
-	    	   	   	   }
+	    	   	   	for(int i = 0 ; i< N_TEMPS_PER_DEVICE; i++ ) {
+	    	   	   	               	   	   	   	  sprintf(message  , "BQ Number:%d bq temperature value: %d [deg C] " ,Data_received.BQ_Number+1 , (int)Data_received.Bq_Temperatures[i]);
+	    	   	   	               	   	   	   	  while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+	    	   	   	               	   	   	   		  vTaskDelay(1); // Delay to allow USB stack to process
+
+
+	    	   	   	               	   	   	   	  }
+
+	    	   	   		    	    	                 if(Data_received.UT_ERROR[i] && Data_received.OV_ERROR[i])
+	    	   	   		    	    	                 {
+	    	   	   		    	    	                	 sprintf(message  , " - OT/UT SETPOINT ERROR! \n");
+	    	   	   		    	    	                 }
+	    	   	   		    	    	                 if(Data_received.OT_ERROR[i])
+	    	   	   		    	    	                 {
+	    	   	   		    	    	                	 sprintf(message  , " - OVERTEMPERATURE! \n");
+	    	   	   		    	    	                 }
+	    	   	   		    	    	                 else if(Data_received.UT_ERROR[i])
+	    	   	   		    	    	                 {
+	    	   	   		    	    	                	 sprintf(message  , " - UNDERTEMPERATURE! \n");
+	    	   	   		    	    	                 }
+	    	   	   		    	    	                 else
+	    	   	   		    	    	                 {
+	    	   	   		        	                	 sprintf(message  , "\n");
+	    	   	   		    	    	                 }
+	    	   	   		        	                	 while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+	    	   	   		        	                		    	                	 	 	 vTaskDelay(1); // Delay to allow USB stack to process
+	    	   	   		        	                	 }
+
+	    	   	   		    	   	   	   } // END OF TEMPERATURE PRINT
+
                	   	   	   	  sprintf(message  , "BQ Number:%d bq REFERENCE temperature value: %d [mV] \n" ,Data_received.BQ_Number+1 , (int)Data_received.T_ref);
                	   	   	      while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
                	   	   	               	 vTaskDelay(1); // Delay to allow USB stack to process
@@ -1468,19 +1501,82 @@ void Usb(void *argument)
 		    	   	   	   	   	         }
 	    	        	    	   }
 
+		    	   	   	  sprintf(message  , "BALLANCING STATS: \n" );
+		    	   	   	  		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   	  		    	   	   	   		    	   vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   	  		    	   	   	   	   	         }
+
+		    	   	   			if(Data_received.CB_DONE)
+		    	   	   			  	{
+		    	   	   			    sprintf(message  , "CELL BALLANCING DONE \n" );
+		    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   			    	   	 vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   			    	   	  }
+		    	   	   		    	}
+
+		    	   	   			if(Data_received.MB_DONE)
+		    	   	   			  	{
+		    	   	   			    sprintf(message  , "MODULE BALLANCING DONE \n" );
+		    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   			    	   	 vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   			    	   	  }
+		    	   	   		    	}
+
+		    	   	   			if(Data_received.ABORTFLT)
+		    	   	   			  	{
+		    	   	   			    sprintf(message  , "BALLANCING ABORTED, ABORTFLT=1 \n" );
+		    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   			    	   	 vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   			    	   	  }
+		    	   	   		    	}
+		    	   	   			if(Data_received.CB_RUN)
+		    	   	   			  	{
+		    	   	   			    sprintf(message  , "BALLANCING IS RUNNING \n" );
+		    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   			    	   	 vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   			    	   	  }
+		    	   	   		    	}
+		    	   	   			if(Data_received.MB_RUN)
+		    	   	   			  	{
+		    	   	   			    sprintf(message  , "MODULE BALLANCING IS RUNNING \n" );
+		    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   			    	   	 vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   			    	   	  }
+		    	   	   		    	}
+		    	   	   			if(Data_received.CB_INPAUSE)
+		    	   	   			  	{
+		    	   	   			    sprintf(message  , " BALLANCING IS PAUSED \n" );
+		    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   			    	   	 vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   			    	   	  }
+		    	   	   		    	}
+		    	   	   			if(Data_received.OT_PAUSE_DET)
+		    	   	   			  	{
+		    	   	   			    sprintf(message  , " BALLANCING IS PAUSED DUE TO OVERTEMPERATURE \n" );
+		    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   			    	   	 vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   			    	   	  }
+		    	   	   		    	}
+		    	   	   			if(Data_received.INVALID_CBCONF)
+		    	   	   			  	{
+		    	   	   			    sprintf(message  , " INVALID BALLANCE CONFIG  \n" );
+		    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   			    	   	 vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   			    	   	  }
+		    	   	   		    	}
+
+		    	   	   		for(int i = 0 ; i< N_CELLS_PER_DEVICE; i++ )
+		    	   	   			    {
 
 
-
-
-
-
-
-
-
-
-
-
-
+		    	   	   			   if(Data_received.CB_Done[i])
+		    	   	   			     {
+		    	   	   			    sprintf(message  , "Ballancing done on cell: %d \n",i+1);
+		    	   	   			   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
+		    	   	   					    	   	   			    	    vTaskDelay(1); // Delay to allow USB stack to process
+		    	   	   			     }
+		    	   	   			}
+		    	   	   			    }
 
 
 		    	   	   	   	   	   sprintf(message  , "Temperature of BQ: %d  [deg C]\n" , (int)Data_received.dietemp );
@@ -1496,39 +1592,37 @@ void Usb(void *argument)
 	    	                 char message[6] = " \n";
 	    	                 for(int i = 0 ; i< 3; i++ )
 	    	                while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-	    	                			vTaskDelay(10); // Delay to allow USB stack to process
+	    	                			vTaskDelay(1); // Delay to allow USB stack to process
 	    	                }
-
-
 
 
 	  		}
 	       HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_3) ;
 
-	  if(usbRxFlag && usbRxBufLen)
+	  if(usbRxFlag && usbRxLen)
 	  {
 
-		 /* switch(usbd_ch)
+		  int data_out =0;
+		  if (strcmp((char*)usbRxBuf, "Ballance start\n") == 0)
 		  {
-		  case '1' :
-			   CDC_Transmit_FS((uint8_t*)buffer_usb1, strlen(buffer_usb1));
-			   break;
-		  case '2' :
-			   CDC_Transmit_FS((uint8_t*)buffer_usb2, strlen(buffer_usb2));
-			   break;
-		  case '3' :
-			   CDC_Transmit_FS((uint8_t*)buffer_usb3, strlen(buffer_usb3));
-			   break;
-		  case '4' :
-			  HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_3);
-			   break;
+			  data_out =1;
+			  osMessageQueuePut(BQ79614Incoming_QueueHandle, &data_out, 5, 5) ;
+		      // handle start
 		  }
-		  flag_usb = 0 ; */
-		  CDC_Transmit_FS((uint8_t*)buffer_usb1, strlen(buffer_usb1));
+		  else if (strcmp((char*)usbRxBuf, "Ballance end\n") == 0)
+		  {
+			  data_out =2;
+			  osMessageQueuePut(BQ79614Incoming_QueueHandle, &data_out, 5, 5) ;
+		      // handle stop
+		  }
+		  else if (strcmp((char*)usbRxBuf, "Restart\n") == 0)
+		  {
+			  osDelay(1000);
+			  HAL_NVIC_SystemReset();
+		  }
+		  memset(usbRxBuf,0, sizeof(usbRxBuf));
 		  usbRxFlag = 0 ;
-		  usbRxBufLen = 0 ;
-		  vTaskDelay(100);
-
+		  usbRxLen  = 0 ;
 	  }
 
 

@@ -52,9 +52,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../USB_DEVICE/App/usb_device.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  ../USB_DEVICE/Target/usbd_conf.h ../Core/Inc/bq79600.h \
- ../BQ79600/bq79600_def.h ../BQ79600/bq79616_def.h \
- ../Core/Inc/SEGGER_RTT.h ../SEGGER_RTT/Config/SEGGER_RTT_Conf.h \
- ../USB_DEVICE/App/usbd_cdc_if.h \
+ ../BQ79600/bq79600_def.h ../Core/Inc/Structs.h ../Core/Inc/structs.h \
+ ../Core/Inc/main.h ../BQ79600/bq79616_def.h ../Core/Inc/SEGGER_RTT.h \
+ ../SEGGER_RTT/Config/SEGGER_RTT_Conf.h ../USB_DEVICE/App/usbd_cdc_if.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
@@ -119,6 +119,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../USB_DEVICE/Target/usbd_conf.h:
 ../Core/Inc/bq79600.h:
 ../BQ79600/bq79600_def.h:
+../Core/Inc/Structs.h:
+../Core/Inc/structs.h:
+../Core/Inc/main.h:
 ../BQ79600/bq79616_def.h:
 ../Core/Inc/SEGGER_RTT.h:
 ../SEGGER_RTT/Config/SEGGER_RTT_Conf.h:

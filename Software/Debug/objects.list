@@ -1,5 +1,6 @@
 "./Core/Src/SEGGER_RTT.o"
 "./Core/Src/SEGGER_RTT_printf.o"
+"./Core/Src/Structs.o"
 "./Core/Src/bq79600.o"
 "./Core/Src/bq79600_bsp.o"
 "./Core/Src/freertos.o"

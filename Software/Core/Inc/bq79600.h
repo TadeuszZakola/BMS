@@ -2,8 +2,11 @@
 
 #include <stddef.h>
 #include <stdint.h>
-
 #include "bq79600_def.h"
+#include "Structs.h"
+#include "main.h"
+
+//#include "main.h"
 
 typedef enum {
   BQ_ACTIVATE,
@@ -36,6 +39,10 @@ typedef struct {
   uint8_t ready;
 } bq79600_t;
 
+
+
+
+
 bq79600_t *open_bq79600_instance(uint32_t id);
 
 void bq79600_wakeup(bq79600_t *instance);
@@ -45,6 +52,9 @@ void bq79600_tx(bq79600_t *instance);
 void bq79600_rx_callback(bq79600_t *instance);
 
 bq79600_error_t bq79600_auto_addressing(bq79600_t *instance, const size_t n_devices);
+void initalize_communication(bq79600_t *instance , UART_HandleTypeDef  *uart_port , int n_devices, int n_cells_per_device);
+
+BQ_Data_Combined read_data(bq79600_t *instance , UART_HandleTypeDef  *uart_port , int n_devices,  int n_cells_per_device, int n_temp_pre_device);
 
 /* Read/Write register of single device */
 void bq79600_read_reg(bq79600_t *instance, uint8_t dev_addr, uint16_t reg_addr, uint8_t *data);
@@ -57,3 +67,10 @@ void bq79600_bsp_uart_init(bq79600_t *instance);
 void bq79600_bsp_uart_tx(bq79600_t *instance);
 void bq79600_bsp_ready(bq79600_t *instance);
 uint32_t bq79600_bsp_crc(uint8_t *buf, size_t len);
+
+
+
+float raw_to_float(void *raw) ;
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size);
+int voltage_to_temperature(float voltage);
+int voltage_to_temperature2(float voltage);
