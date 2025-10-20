@@ -25,7 +25,7 @@ typedef struct {
     float vcells[N_CELLS_PER_DEVICE];      // mV
     float t_ref;
     float dietemp;                         // degC
-    int   timestamp;
+    uint32_t   timestamp;
     uint8_t DEV_STAT_RAW;
     uint8_t UV_RAW_1;
     uint8_t UV_RAW_2;
