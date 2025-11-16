@@ -70,7 +70,7 @@ typedef struct {
     int MB_DONE;
     int CB_DONE;
     DEV_STATS Device_Stat;
-    int   Bq_Timestamp;
+    uint32_t   Bq_Timestamp;
     float Bq_Voltages[N_CELLS_PER_DEVICE];   // mV
     int   Bq_Temperatures[N_TEMPS_PER_DEVICE]; // degC
     int  CB_Done[N_CELLS_PER_DEVICE]; // if cell ballancing is done on this cell then = 1 else 0

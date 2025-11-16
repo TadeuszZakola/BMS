@@ -50,9 +50,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
-
+extern USBD_HandleTypeDef hUsbDeviceFS;
 FDCAN_HandleTypeDef hfdcan1;
-
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
 
@@ -63,8 +62,8 @@ DMA_HandleTypeDef hdma_uart4_rx;
 PCD_HandleTypeDef hpcd_USB_OTG_HS;
 
 /* USER CODE BEGIN PV */
-
-
+int Safety_Error;
+int Battery_status; // 0 = standby, 1= charging , 2=discharging , 3 =  Error
 int ballancing;
 int data_in;
 BQ_Data BqMeasurements[2];
@@ -110,8 +109,8 @@ static void MX_FDCAN1_Init(void);
 static void MX_USB_OTG_HS_PCD_Init(void);
 /* USER CODE BEGIN PFP */
 
-
-
+void BQ_COMM(bq79600_t *bms_instance);
+void Usb_COMM();
 //#define bms_fault(state) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, (state) ? GPIO_PIN_RESET : GPIO_PIN_SET)
 //#define bms_run() HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13)
 /* USER CODE END PFP */
@@ -189,7 +188,6 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -205,21 +203,32 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start(&htim2);
   HAL_TIM_Base_Start(&htim1);
-
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
     /* USER CODE END WHILE */
+  Safety_Error = 0 ;
   bq79600_t *bms_instance = open_bq79600_instance(0);
   BQ_INNIT(bms_instance);
 
   while(1)
   {
 	  BQ_COMM(bms_instance);
+	  if (hUsbDeviceFS.dev_state == USBD_STATE_CONFIGURED)
 	  Usb_COMM();
-	  HAL_Delay(100);
+	  if(HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_2))
+	  {
+		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_2);
+	  }
+	  HAL_GPIO_TogglePin (GPIOC, GPIO_PIN_7);
+	  HAL_GPIO_TogglePin (GPIOC, GPIO_PIN_8);
+	  HAL_GPIO_TogglePin (GPIOA, GPIO_PIN_5);
+	  Safety();
+	  HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_3) ;
+	  HAL_Delay(5000);
   }
     /* USER CODE BEGIN 3 */
 
@@ -703,7 +712,7 @@ void BQ_INNIT(bq79600_t *bms_instance)
 		   while (1);
 	   }
 	initalize_communication(bms_instance,&huart4,N_DEVICES,N_CELLS_PER_DEVICE);
-	uint8_t buf = FF;
+	uint8_t buf = 0xFF;
 	bq79600_construct_command(bms_instance, STACK_WRITE, 0, FAULT_MSK1, 1 , NULL);
 
 	//uint8_t buf = 0x3;
@@ -780,7 +789,7 @@ void BQ_COMM(bq79600_t *bms_instance)
 
 
 
- 	         for (int i = 0; i < N_DEVICES - 1; i++) modules[i].timestamp = HAL_GetTick() / 100;
+ 	         for (int i = 0; i < N_DEVICES - 1; i++) modules[i].timestamp = HAL_GetTick() ;
 
 
  	         bq79600_construct_command(bms_instance, STACK_READ, 0, BAL_STAT, 1, NULL); // BAL_STAT READ.
@@ -860,10 +869,17 @@ void BQ_COMM(bq79600_t *bms_instance)
 	 	        	bq79600_tx(bms_instance);
 	 	        	break;
  	        	case 2:
-	 	        	buf = 0x40; // fault detection off, autoballancing on, ballgo = 1
+	 	        	buf = 0x40;
 	 	            bq79600_construct_command(bms_instance, STACK_WRITE, 0, BAL_CTRL2, 1, &buf);
 	 	        	bq79600_tx(bms_instance);
 	 	        	break;
+ 	        	case 3:
+	 	        	buf = 0x3;
+	 	            bq79600_construct_command(bms_instance, STACK_WRITE, 0, CONTROL1, 1, &buf); // send soft restart up the stack
+	 	        	bq79600_tx(bms_instance);
+	 	        	//BQ_INNIT(bms_instance);
+	 	        	data_in =0;
+ 	        		break;
  	        	}
 
 
@@ -913,14 +929,14 @@ void BQ_COMM(bq79600_t *bms_instance)
  		     {
  		    	BqMeasurements[i].UV_ERROR[x+8] = (modules[i].UV_RAW_2 >> x  ) & 0x01;
  		    	BqMeasurements[i].OV_ERROR[x+8] = (modules[i].OV_RAW_2 >> x  ) & 0x01;
- 		    	BqMeasurements[i].CB_Done[x+8] = (modules[i].CB_COMPLETE2_RAW >> x  ) & 0x01;
+ 		    	BqMeasurements[i].CB_Done[x+8] = (modules[i].CB_COMPLETE1_RAW >> x  ) & 0x01;
 
  		     }
  		     for(int x = 0 ; x < 8 ; x++)
  		     {
  		    	BqMeasurements[i].UV_ERROR[x] = (modules[i].UV_RAW_1 >> (x) ) & 0x01;
  		    	BqMeasurements[i].OV_ERROR[x] = (modules[i].OV_RAW_1 >> (x) ) & 0x01;
- 		    	BqMeasurements[i].CB_Done[x] = (modules[i].CB_COMPLETE1_RAW >> (x - 8 ) ) & 0x01;
+ 		    	BqMeasurements[i].CB_Done[x] = (modules[i].CB_COMPLETE2_RAW >> (x) ) & 0x01;
  		     }
  	         }
 
@@ -931,9 +947,19 @@ void BQ_COMM(bq79600_t *bms_instance)
 void Usb_COMM()
 {
 	  char message[64]={0};
+
+
 	  for(int x =0; x < N_DEVICES - 1 ; x++)
 	  {   //   (Messages_QueueHandle
-
+		  if(Battery_status == 3) // error
+		  sprintf(message  , "Battery error, relay open. \n"  );
+		  else if(Battery_status == 2 )
+		  sprintf(message  , "Battery discharge mode, relay closed! \n"  );
+		  else if(Battery_status == 1 )
+		  sprintf(message  , "Battery charge mode, relay closed! \n"  );
+		  else if (Battery_status == 0 )
+		  sprintf(message  , "Battery on standby, relay open. \n"  );
+		  Send_USB_Message(message, 5); // Send with a 5ms timeout
 
 
 		    	   	   	   for(int i = 0 ; i< N_CELLS_PER_DEVICE; i++ )
@@ -941,9 +967,7 @@ void Usb_COMM()
 
 		    	                 sprintf(message  , "BQ Number:%d bq voltage value:%d [mV]  " ,BqMeasurements[x].BQ_Number+1 , (int)BqMeasurements[x].Bq_Voltages[i] );
 		    	                // CDC_Transmit_FS((uint8_t*)message, strlen(message));
-		    	                 while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-		    	                	 HAL_Delay(1); // Delay to allow USB stack to process
-		    	                 	    	   }
+		    	                 Send_USB_Message(message, 5); // Send with a 5ms timeout
 		    	                 if(BqMeasurements[x].UV_ERROR[i] && BqMeasurements[x].OV_ERROR[i])
 		    	                 {
 		    	                	 sprintf(message  , " - OV/UV SETPOINT ERROR! \n");
@@ -960,9 +984,7 @@ void Usb_COMM()
 		    	                 {
 	    	                	 sprintf(message  , "\n");
 		    	                 }
-	    	                	 while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-	    	                		 HAL_Delay(1); // Delay to allow USB stack to process
-	    	                	 }
+		    	                 Send_USB_Message(message, 2); // Send with a 5ms timeout
 
 
 		    	                 }
@@ -972,11 +994,7 @@ void Usb_COMM()
 
 		    	   	   	for(int i = 0 ; i< N_TEMPS_PER_DEVICE; i++ ) {
 		    	   	   	               	   	   	   	  sprintf(message  , "BQ Number:%d bq temperature value: %d [deg C] " ,BqMeasurements[x].BQ_Number+1 , (int)BqMeasurements[x].Bq_Temperatures[i]);
-		    	   	   	               	   	   	   	  while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-		    	   	   	               	   	                   HAL_Delay(1); // Delay to allow USB stack to process
-
-
-		    	   	   	               	   	   	   	  }
+		    	   	   	               	   	          Send_USB_Message(message, 5); // Send with a 5ms timeout
 
 		    	   	   		    	    	                 if(BqMeasurements[x].UT_ERROR[i] && BqMeasurements[x].OV_ERROR[i])
 		    	   	   		    	    	                 {
@@ -994,71 +1012,51 @@ void Usb_COMM()
 		    	   	   		    	    	                 {
 		    	   	   		        	                	 sprintf(message  , "\n");
 		    	   	   		    	    	                 }
-		    	   	   		        	                	 while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-		    	   	   		        	                	                 HAL_Delay(1); // Delay to allow USB stack to process
-		    	   	   		        	                	 }
+		    	   	   		    	    	           Send_USB_Message(message, 5); // Send with a 5ms timeout
 
 		    	   	   		    	   	   	   } // END OF TEMPERATURE PRINT
 
 	               	   	   	   	  sprintf(message  , "BQ Number:%d bq REFERENCE temperature value: %d [mV] \n" ,BqMeasurements[x].BQ_Number+1 , (int)BqMeasurements[x].T_ref);
-	               	   	   	      while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-	               	   	   	                   HAL_Delay(1); // Delay to allow USB stack to process
-		    	   	   	   	   	   	   	   }
+	               	   	        	Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	   	   	   	   	if(BqMeasurements[x].BQ_Overvoltage_Error)
 		    	   	   	   	   	{
 		    	   	   	   	   		sprintf(message  , "BQ OVERVOLTAGE ERROR! \n" );
-		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-		    	   	   	   		                HAL_Delay(1); // Delay to allow USB stack to process
-		    	   	   	   	          	}
+		    	   	   	         	Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	   	   	   	   	}
 			    	   	   	   	   	if(BqMeasurements[x].BQ_Undervoltage_Error)
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "BQ UNDERVOLTAGE ERROR! \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   		            HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	         	Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 			    	   	   	   	   	if(BqMeasurements[x].BQ_Communication_Error)
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "BQ COMM ERROR! \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   	                	HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	         	Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 
 		    	   	   	   	   		sprintf(message  , "DEVICE STATUS READOUT: \n" );
-		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-		    	   	   	   			   	   	   HAL_Delay(1); // Delay to allow USB stack to process
-		    	   	   	   	   	         }
+		    	   	   	        	Send_USB_Message(message, 2); // Send with a 5ms timeout
 
 			    	   	   	   	   	if(BqMeasurements[x].Device_Stat.MAIN_ADC_RUN)
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "MAIN ADC IS RUNNING. \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   			   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	         	Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 			    	   	   	   	   	else
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "MAIN ADC IS TURNED OFF. \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   			   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	         	Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 
 			    	   	   	   	   	if(BqMeasurements[x].Device_Stat.AUX_ADC_RUN)
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "AUXILIARY ADC IS RUNNING. \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   			   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	            Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 			    	   	   	   	   	else
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "AUXILIARY ADC IS TURNED OFF. \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   			   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	   	        Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 
 
@@ -1066,16 +1064,12 @@ void Usb_COMM()
 			    	   	   	   	   	if(BqMeasurements[x].Device_Stat.CS_RUN)
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "CS IS RUNNING. \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   			   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	   	        Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 			    	   	   	   	   	else
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "CS IS TURNED OFF. \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   			   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	   	        Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 
 
@@ -1083,98 +1077,71 @@ void Usb_COMM()
 			    	   	   	   	   	if(BqMeasurements[x].Device_Stat.OVUV_RUN)
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "OVERVOLTAGE/UNDERVOLTAGE PROTECTION CURRENTLY ACTIVE \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   		    	   	  HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	   	        Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 			    	   	   	   	   	else
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "OVERVOLTAGE/UNDERVOLTAGE PROTECTION CURRENTLY DISABLED \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   			   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	   	        Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 
 
 			    	   	   	   	   	if(BqMeasurements[x].Device_Stat.OTUT_RUN)
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "OVERTEMPERATUE/UNDERTEMPERATURE PROTECTION CURRENTLY ACTIVE \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   			   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	         	Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 			    	   	   	   	   	else
 			    	   	   	   	   	{
 			    	   	   	   	   		sprintf(message  , "OVERTEMPERATUE/UNDERTEMPERATURE PROTECTION CURRENTLY DISABLED \n" );
-			    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   			   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	         }
+			    	   	   	   	       Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	        	    	   }
 
-			    	   	   	  sprintf(message  , "BALLANCING STATS: \n" );
-			    	   	   	  		    	   	   	   		   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	  		    	   	   	   			   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	  		    	   	   	   	   	         }
+			    	   	   	          sprintf(message  , "BALLANCING STATS: \n" );
+			    	   	             Send_USB_Message(message, 2); // Send with a 5ms timeout
 
 			    	   	   			if(BqMeasurements[x].CB_DONE)
 			    	   	   			  	{
 			    	   	   			    sprintf(message  , "CELL BALLANCING DONE \n" );
-			    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   			    		HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   			    	   	  }
+			    	   	   			  Send_USB_Message(message, 2); // Send with a 5ms timeout
 			    	   	   		    	}
 
 			    	   	   			if(BqMeasurements[x].MB_DONE)
 			    	   	   			  	{
 			    	   	   			    sprintf(message  , "MODULE BALLANCING DONE \n" );
-			    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   			    		HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   			    	   	  }
+			    	   	   			    Send_USB_Message(message, 2); // Send with a 5ms timeout
 			    	   	   		    	}
 
 			    	   	   			if(BqMeasurements[x].ABORTFLT)
 			    	   	   			  	{
 			    	   	   			    sprintf(message  , "BALLANCING ABORTED, ABORTFLT=1 \n" );
-			    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   			    		HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   			    	   	  }
+			    	   	   			    Send_USB_Message(message, 2); // Send with a 5ms timeout
 			    	   	   		    	}
 			    	   	   			if(BqMeasurements[x].CB_RUN)
 			    	   	   			  	{
 			    	   	   			    sprintf(message  , "BALLANCING IS RUNNING \n" );
-			    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   			    			HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   			    	   	  }
+			    	   	   			    Send_USB_Message(message, 2); // Send with a 5ms timeout
 			    	   	   		    	}
 			    	   	   			if(BqMeasurements[x].MB_RUN)
 			    	   	   			  	{
 			    	   	   			    sprintf(message  , "MODULE BALLANCING IS RUNNING \n" );
-			    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   			    		HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   			    	   	  }
+			    	   	   			  Send_USB_Message(message, 2); // Send with a 5ms timeout
 			    	   	   		    	}
 			    	   	   			if(BqMeasurements[x].CB_INPAUSE)
 			    	   	   			  	{
 			    	   	   			    sprintf(message  , " BALLANCING IS PAUSED \n" );
-			    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   			    		HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   			    	   	  }
+			    	   	   			   Send_USB_Message(message, 2); // Send with a 5ms timeout
 			    	   	   		    	}
 			    	   	   			if(BqMeasurements[x].OT_PAUSE_DET)
 			    	   	   			  	{
 			    	   	   			    sprintf(message  , " BALLANCING IS PAUSED DUE TO OVERTEMPERATURE \n" );
-			    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   			    		HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   			    	   	  }
+			    	   	   			  Send_USB_Message(message, 2); // Send with a 5ms timeout
 			    	   	   		    	}
 			    	   	   			if(BqMeasurements[x].INVALID_CBCONF)
 			    	   	   			  	{
 			    	   	   			    sprintf(message  , " INVALID BALLANCE CONFIG  \n" );
-			    	   	   			    while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   			    		HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   			    	   	  }
-			    	   	   		    	}
-
+			    	   	   			 Send_USB_Message(message, 2); // Send with a 5ms timeout
+			    	   	   			  	}
 			    	   	   		for(int i = 0 ; i< N_CELLS_PER_DEVICE; i++ )
 			    	   	   			    {
 
@@ -1182,33 +1149,26 @@ void Usb_COMM()
 			    	   	   			   if(BqMeasurements[x].CB_Done[i])
 			    	   	   			     {
 			    	   	   			    sprintf(message  , "Ballancing done on cell: %d \n",i+1);
-			    	   	   			   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   				   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   			     }
-			    	   	   			}
+			    	   	   			Send_USB_Message(message, 2); // Send with a 5ms timeout
 			    	   	   			    }
 
+			    	   	   			    }
 
 			    	   	   	   	   	   sprintf(message  , "Temperature of BQ: %d  [deg C]\n" , (int)BqMeasurements[x].dietemp );
-			    	   	   	   	   	   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   	   		   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   }
-			    	   	   	   	   	   sprintf(message  , "Timestamp: %d \n" , BqMeasurements[x].Bq_Timestamp );
-			    	   	   	   	   	   while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-			    	   	   	   	   		   	   HAL_Delay(1); // Delay to allow USB stack to process
-			    	   	   	   	   	   }
+			    	   	   	   	  Send_USB_Message(message, 2); // Send with a 5ms timeout
+			    	   	   	   	   	   sprintf(message  , "Timestamp: %u \n" , BqMeasurements[x].Bq_Timestamp );
+			    	   	   	   	  Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	                 //CDC_Transmit_FS((uint8_t*)message2, strlen(message2));
 			    	   	   	     HAL_Delay(5);
 		    	                 char message[6] = " \n";
 		    	                 for(int i = 0 ; i< 3; i++ )
-		    	                while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY) {
-		    	                			HAL_Delay(1); // Delay to allow USB stack to process
-		    	                }
+		    	                 Send_USB_Message(message, 2); // Send with a 5ms timeout
 
 
 
-		       HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_3) ;
 	  }
+
+
 
 		  if(usbRxFlag && usbRxBufLen)
 		  {
@@ -1228,9 +1188,17 @@ void Usb_COMM()
 			  }
 			  else if (strcmp((char*)usbRxBuf, "Restart\n") == 0)
 			  {
-				  HAL_Delay(1000);
+				  data_in =3;
+				//  HAL_Delay(100);
+				//  memset(usbRxBuf,0,sizeof(usbRxBuf));
+				//  HAL_Delay(100);
 				 // HAL_NVIC_SystemReset();
 			  }
+			  else if (strcmp((char*)usbRxBuf, "Start charging\n") == 0)
+				  data_in =4;
+			  else if (strcmp((char*)usbRxBuf, "Go to standby\n") == 0)
+				  data_in =5;
+
 			  memset(usbRxBuf,0, sizeof(usbRxBuf));
 			  usbRxFlag = 0 ;
 			  usbRxBufLen  = 0 ;
@@ -1242,11 +1210,61 @@ void Usb_COMM()
 
 
 }
+  void Safety()
+  {
+
+	 if( BqMeasurements->BQ_Overvoltage_Error || BqMeasurements->BQ_Undervoltage_Error ) // || BqMeasurements->OT_ERROR || BqMeasurements->UT_ERROR
+	 {
+		 Safety_Error = 1;
+		 Battery_status = 3; // enter error staus
+		 HAL_GPIO_WritePin(GPIOE, GPIO_PIN_4, GPIO_PIN_SET); // set led
+		 HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET); // open safety relay
+
+	 }
+
+		if(Battery_status != 3 && Battery_status != 4 && data_in ==4 ) // if not in error and command sent to charge
+		{
+			Battery_status = 1 ;
+			HAL_GPIO_WritePin(GPIOE, GPIO_PIN_7, GPIO_PIN_RESET); // close safety relay
+		}
+		if(data_in == 5 && Battery_status!=3 )
+		{
+			Battery_status = 0 ;
+			HAL_GPIO_WritePin(GPIOE, GPIO_PIN_7, GPIO_PIN_SET);
+		}
+		if(data_in == 66 && Battery_status!=3 ) // enable discharge
+		{
+			Battery_status = 2 ;
+			HAL_GPIO_WritePin(GPIOE, GPIO_PIN_7, GPIO_PIN_RESET);
+		}
+
+
+  }
 
 
 
 
+  void Send_USB_Message(const char* message, uint32_t timeout_ms)
+  {
+      extern USBD_HandleTypeDef hUsbDeviceFS; // Assumes this is your handle
 
+      // 1. Check if USB is configured
+      if (hUsbDeviceFS.dev_state != USBD_STATE_CONFIGURED)
+      {
+          return; // Not connected, do nothing
+      }
+
+      // 2. Try to send with a timeout
+      uint32_t start_time = HAL_GetTick();
+      while (CDC_Transmit_FS((uint8_t*)message, strlen(message)) == USBD_BUSY)
+      {
+          if (HAL_GetTick() - start_time > timeout_ms)
+          {
+              return; // Timeout, give up
+          }
+          HAL_Delay(1); // Wait for USB stack
+      }
+  }
 
 
 
