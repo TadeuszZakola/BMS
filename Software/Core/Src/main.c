@@ -219,16 +219,9 @@ int main(void)
 	  BQ_COMM(bms_instance);
 	  if (hUsbDeviceFS.dev_state == USBD_STATE_CONFIGURED)
 	  Usb_COMM();
-	  if(HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_2))
-	  {
-		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_2);
-	  }
-	  HAL_GPIO_TogglePin (GPIOC, GPIO_PIN_7);
-	  HAL_GPIO_TogglePin (GPIOC, GPIO_PIN_8);
-	  HAL_GPIO_TogglePin (GPIOA, GPIO_PIN_5);
 	  Safety();
-	  HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_3) ;
-	  HAL_Delay(5000);
+	  Led();
+	  HAL_Delay(250);
   }
     /* USER CODE BEGIN 3 */
 
@@ -1189,6 +1182,9 @@ void Usb_COMM()
 			  else if (strcmp((char*)usbRxBuf, "Restart\n") == 0)
 			  {
 				  data_in =3;
+			   Safety_Error = 0;
+				Battery_status = 0;
+				  //NVIC_SystemReset(); // testing
 				//  HAL_Delay(100);
 				//  memset(usbRxBuf,0,sizeof(usbRxBuf));
 				//  HAL_Delay(100);
@@ -1212,31 +1208,103 @@ void Usb_COMM()
 }
   void Safety()
   {
+	  // Battery status = 0 - standby , 1- charging, 2 - discharging , 3 - error
 
-	 if( BqMeasurements->BQ_Overvoltage_Error || BqMeasurements->BQ_Undervoltage_Error ) // || BqMeasurements->OT_ERROR || BqMeasurements->UT_ERROR
+
+     int xd = 0 ;
+     int overvoltage = 0 ;
+     int undervoltage = 0 ;
+
+     for(int iterator = 0 ; iterator < N_CELLS_PER_DEVICE ; iterator ++)
+     {
+       if(BqMeasurements[0].OV_ERROR[iterator] == 1 || BqMeasurements[1].OV_ERROR[iterator] == 1 )
+       {
+    	   overvoltage = 1;
+       }
+       if(BqMeasurements[0].UV_ERROR[iterator] == 1 || BqMeasurements[1].UV_ERROR[iterator] == 1 )
+       {
+    	   undervoltage = 1;
+       }
+
+     }
+	 if( overvoltage != 0  || undervoltage != 0  ) // || BqMeasurements->OT_ERROR || BqMeasurements->UT_ERROR
 	 {
 		 Safety_Error = 1;
 		 Battery_status = 3; // enter error staus
-		 HAL_GPIO_WritePin(GPIOE, GPIO_PIN_4, GPIO_PIN_SET); // set led
-		 HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET); // open safety relay
+		 HAL_GPIO_WritePin(GPIOE, GPIO_PIN_4, GPIO_PIN_SET);
+		 HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET); // open safety relay
 
 	 }
 
 		if(Battery_status != 3 && Battery_status != 4 && data_in ==4 ) // if not in error and command sent to charge
 		{
 			Battery_status = 1 ;
-			HAL_GPIO_WritePin(GPIOE, GPIO_PIN_7, GPIO_PIN_RESET); // close safety relay
+			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET); // close safety relay
+			data_in = 999; // block the variable so it doesnt repat
+			HAL_Delay(200);
+			 xd = HAL_GPIO_ReadPin (GPIOB, GPIO_PIN_10);
+
 		}
-		if(data_in == 5 && Battery_status!=3 )
+
+
+		if(data_in == 5 && Battery_status!=3 ) // turn charging off, relay to open
 		{
 			Battery_status = 0 ;
-			HAL_GPIO_WritePin(GPIOE, GPIO_PIN_7, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+			data_in = 999; // block the variable so it doesnt repat
+			HAL_Delay(200);
 		}
+
+
 		if(data_in == 66 && Battery_status!=3 ) // enable discharge
 		{
 			Battery_status = 2 ;
-			HAL_GPIO_WritePin(GPIOE, GPIO_PIN_7, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 		}
+
+
+		xd = HAL_GPIO_ReadPin (GPIOB, GPIO_PIN_10); // read state of auxilary relay contacts
+        if ((Battery_status == 1 || Battery_status == 2 ) && xd != 1) // if charging or discharging
+        {
+             // check if relay was closed with axuily contacts , the concacts are NC, meanging if this ==1 then its good
+			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET); // if not open it and go to error
+			Safety_Error = 1;
+			Battery_status = 3; // enter error staus
+
+        }
+
+
+        if (!(Battery_status == 1 || Battery_status == 2) && xd  != 0 ) // this means that relay auxilary contacts are not present
+        {
+			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET); // if not open it and go to error
+			Safety_Error = 1;
+			Battery_status = 3; // enter error staus
+        }
+
+
+
+  }
+  void Led()
+  {
+	  if( (Battery_status == 3 || Safety_Error == 1) && !HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_2) )
+	  {
+		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_5);
+		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_4);
+		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_3);
+		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_2);
+	  }
+	  else if(HAL_GPIO_ReadPin (GPIOB, GPIO_PIN_10) && !HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_2))
+	  {
+	  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_5);
+	  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_4);
+	  }
+	  else
+	  {
+		  HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(GPIOE, GPIO_PIN_4 , GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(GPIOE, GPIO_PIN_3 , GPIO_PIN_RESET);
+		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_2);
+	  }
 
 
   }

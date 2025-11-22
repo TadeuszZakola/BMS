@@ -174,7 +174,7 @@ void initalize_communication(bq79600_t *instance,UART_HandleTypeDef *uart_port ,
 
 
 		      /* Set long communication timeout */
-		      buf = 0x0A;  // CTL_ACT=1 | CTL_TIME=010 (2s)
+		      buf = 0x010;  // CTL_ACT=1 | CTL_TIME=010 (2s)
 		      bq79600_construct_command(instance, STACK_WRITE, 0, COMM_TIMEOUT_CONF, 1, &buf);
 		      bq79600_tx(instance);
 		      HAL_Delay(1);
@@ -233,7 +233,7 @@ void initalize_communication(bq79600_t *instance,UART_HandleTypeDef *uart_port ,
 
 		      /*  Setup OV, UV for balancing  */
 
-		      uint8_t ov_threshold = 0x22;//0x22; // 4175 mV threshold value
+		      uint8_t ov_threshold = 0x22;// 0X1E - 3800mv //0x22; // 4175 mV threshold value
 		      bq79600_construct_command(instance, STACK_WRITE, 0, OV_THRESH, 1, &ov_threshold);
 		      bq79600_tx(instance);
 		      HAL_Delay(1 * n_devices);
