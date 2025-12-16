@@ -66,6 +66,7 @@ int Safety_Error;
 int Battery_status; // 0 = standby, 1= charging , 2=discharging , 3 =  Error
 int ballancing;
 int data_in;
+int current_raw;
 BQ_Data BqMeasurements[2];
 
 typedef struct {
@@ -79,7 +80,13 @@ uint8_t usbRxBuf[128];
 uint16_t usbRxBufLen;
 uint8_t usbRxFlag = 0 ;
 
+// digital lowpass filter variable
+float alpha = 0.5f;    // adjust as needed (0.05–0.2 is common)
 
+int current_raw = 31000;   // your ADC reading each loop
+float current_filtered = 31000;  // filtered output
+float current = 0 ;
+////
 
 char message[128];
 char buffer_usb1[] = "BMS TEST /n";
@@ -108,7 +115,7 @@ static void MX_ADC1_Init(void);
 static void MX_FDCAN1_Init(void);
 static void MX_USB_OTG_HS_PCD_Init(void);
 /* USER CODE BEGIN PFP */
-
+float convert_adc_to_current(float data);
 void BQ_COMM(bq79600_t *bms_instance);
 void Usb_COMM();
 //#define bms_fault(state) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, (state) ? GPIO_PIN_RESET : GPIO_PIN_SET)
@@ -208,21 +215,36 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
-    /* USER CODE END WHILE */
+  HAL_ADC_Start(&hadc1);
   Safety_Error = 0 ;
-  bq79600_t *bms_instance = open_bq79600_instance(0);
-  BQ_INNIT(bms_instance);
+   bq79600_t *bms_instance = open_bq79600_instance(0);
+   BQ_INNIT(bms_instance);
 
-  while(1)
-  {
-	  BQ_COMM(bms_instance);
-	  if (hUsbDeviceFS.dev_state == USBD_STATE_CONFIGURED)
-	  Usb_COMM();
-	  Safety();
-	  Led();
-	  HAL_Delay(250);
-  }
+
+
+
+   while(1)
+   {
+ 	  BQ_COMM(bms_instance);
+ 	 if (HAL_ADC_PollForConversion(&hadc1, 10) == HAL_OK)
+ 	 {
+ 		        current_raw = HAL_ADC_GetValue(&hadc1);
+ 	 			HAL_ADC_Start(&hadc1);
+ 	 			current_filtered = current_filtered +
+ 	 			                       alpha * (current_raw - current_filtered);
+ 	 }
+ 	 current = convert_adc_to_current(current_filtered);
+ 	  if (hUsbDeviceFS.dev_state == USBD_STATE_CONFIGURED)
+ 	  Usb_COMM();
+ 	  Safety();
+ 	  Led();
+ 	  HAL_Delay(250);
+   }
+    /* USER CODE END WHILE */
+
+
+
+
     /* USER CODE BEGIN 3 */
 
   /* USER CODE END 3 */
@@ -1206,6 +1228,10 @@ void Usb_COMM()
 
 
 }
+float convert_adc_to_current(float data)
+{
+	return data*0.0213 -694.3999 ;
+}
   void Safety()
   {
 	  // Battery status = 0 - standby , 1- charging, 2 - discharging , 3 - error
@@ -1419,3 +1445,4 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
