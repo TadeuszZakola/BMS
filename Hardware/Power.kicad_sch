@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "9.0")
 	(uuid "4074319c-e7a4-4aba-a717-50495b62b8ec")
-	(paper "A4")
+	(paper "A5")
 	(lib_symbols
 		(symbol "Connector:TestPoint_Small"
 			(pin_numbers
@@ -356,29 +356,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Zasilacz z 110V na 12V "
-		(exclude_from_sim no)
-		(at 140.716 108.458 0)
-		(effects
-			(font
-				(size 10 10)
-			)
-		)
-		(uuid "25cfd0f5-1d1d-4ead-b3eb-93a7bd06db2b")
-	)
-	(text "Będzie zewnętrzny"
-		(exclude_from_sim no)
-		(at 138.938 125.73 0)
-		(effects
-			(font
-				(size 10 10)
-			)
-		)
-		(uuid "338ff0da-2cfa-4a07-8ff4-067ea2a485fe")
-	)
 	(text "5V power supply\n"
 		(exclude_from_sim no)
-		(at 88.138 57.658 0)
+		(at 77.47 50.8 0)
 		(effects
 			(font
 				(size 4 4)
@@ -388,7 +368,7 @@
 	)
 	(text "3.3V power supply\n"
 		(exclude_from_sim no)
-		(at 215.9 54.356 0)
+		(at 158.75 53.975 0)
 		(effects
 			(font
 				(size 4 4)
@@ -416,7 +396,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 41.91) (xy 171.45 41.91)
+			(xy 106.045 41.91) (xy 127 41.91)
 		)
 		(stroke
 			(width 0)
@@ -436,7 +416,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 44.45) (xy 171.45 44.45)
+			(xy 106.045 44.45) (xy 127 44.45)
 		)
 		(stroke
 			(width 0)
@@ -752,7 +732,7 @@
 	)
 	(sheet
 		(at 49.53 33.02)
-		(size 81.28 53.34)
+		(size 56.515 34.29)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -776,7 +756,7 @@
 			)
 		)
 		(property "Sheetfile" "5V_sch.kicad_sch"
-			(at 49.53 86.9446 0)
+			(at 49.53 67.8946 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -785,7 +765,7 @@
 			)
 		)
 		(pin "0V_OUT" input
-			(at 130.81 44.45 0)
+			(at 106.045 44.45 0)
 			(uuid "3482e5b4-210b-47b9-b299-13d39321e279")
 			(effects
 				(font
@@ -795,7 +775,7 @@
 			)
 		)
 		(pin "+5V_OUT" input
-			(at 130.81 41.91 0)
+			(at 106.045 41.91 0)
 			(uuid "dd11d04e-3c61-4725-9274-eb0210d5fb39")
 			(effects
 				(font
@@ -833,8 +813,8 @@
 		)
 	)
 	(sheet
-		(at 171.45 33.02)
-		(size 81.28 53.34)
+		(at 127 33.02)
+		(size 61.595 35.56)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -849,7 +829,7 @@
 		)
 		(uuid "36deb01f-8567-4cbb-9333-b925b4509962")
 		(property "Sheetname" "Power_3.3V"
-			(at 171.45 32.3084 0)
+			(at 127 32.3084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -858,7 +838,7 @@
 			)
 		)
 		(property "Sheetfile" "Power_3.3V.kicad_sch"
-			(at 171.45 86.9446 0)
+			(at 127 69.1646 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -867,7 +847,7 @@
 			)
 		)
 		(pin "0V_IN" input
-			(at 171.45 44.45 180)
+			(at 127 44.45 180)
 			(uuid "f628c368-55a4-4892-814b-4da30a68a340")
 			(effects
 				(font
@@ -877,7 +857,7 @@
 			)
 		)
 		(pin "+5V_IN" input
-			(at 171.45 41.91 180)
+			(at 127 41.91 180)
 			(uuid "722693b0-3cb9-4761-93b0-e9618f8fef5a")
 			(effects
 				(font

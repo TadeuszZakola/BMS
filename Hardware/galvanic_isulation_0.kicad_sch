@@ -374,26 +374,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "49 ohm overall\n"
-		(exclude_from_sim no)
-		(at 103.886 89.916 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "0c81a43c-d76f-45f7-be3e-e266113fb36e")
-	)
-	(text "49 ohm overall\n"
-		(exclude_from_sim no)
-		(at 133.096 89.916 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "18fd0dbc-9a2e-4354-b3e5-3c3cef997e74")
-	)
 	(junction
 		(at 83.82 74.93)
 		(diameter 0)

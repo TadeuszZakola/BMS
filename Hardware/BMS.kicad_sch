@@ -2613,16 +2613,6 @@
 		)
 		(uuid "464a2175-0896-440a-b798-7b82eef0c328")
 	)
-	(text "podlaczyc to\n"
-		(exclude_from_sim no)
-		(at 186.69 155.194 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "59bb798e-d262-442c-9930-a4c9412a3d5d")
-	)
 	(text "12/5/3.3V supplies\n"
 		(exclude_from_sim no)
 		(at 50.292 35.56 0)
@@ -2634,26 +2624,6 @@
 		)
 		(uuid "79e10049-fe97-44a3-97f5-7939829e015d")
 	)
-	(text "np h5"
-		(exclude_from_sim no)
-		(at 168.402 20.066 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "84952cc0-2288-4598-b9fa-6cd33e3a4afd")
-	)
-	(text "wziac nowsza stm serie h albo g"
-		(exclude_from_sim no)
-		(at 164.846 17.526 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "889bf83f-e9a0-4f30-832d-f7aace499908")
-	)
 	(text "Curr_sense is connected to ADC "
 		(exclude_from_sim no)
 		(at 142.24 154.178 0)
@@ -2663,16 +2633,6 @@
 			)
 		)
 		(uuid "91e8a735-4221-4345-887d-008cfd4ea781")
-	)
-	(text "stm co ma 2x usb fs bez hs"
-		(exclude_from_sim no)
-		(at 167.64 22.098 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "9654775f-f830-4e44-92d8-f4480a16e6ec")
 	)
 	(junction
 		(at 104.14 105.41)

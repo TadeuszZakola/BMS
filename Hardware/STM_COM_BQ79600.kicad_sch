@@ -1113,6 +1113,12 @@
 		(uuid "9dafe27d-fd60-46db-9c8f-a1abb24b26ba")
 	)
 	(junction
+		(at 95.25 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b71f21cb-c462-47e7-b64f-3d9a007d528b")
+	)
+	(junction
 		(at 162.56 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1125,10 +1131,10 @@
 		(uuid "bea7bd04-24f0-4944-889d-af4e779a21e2")
 	)
 	(junction
-		(at 92.71 81.28)
+		(at 95.25 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d18f26b9-049c-4679-97b2-11185dd93135")
+		(uuid "c2d4ed07-8123-44ce-b988-068dd2b9f6dc")
 	)
 	(junction
 		(at 104.14 81.28)
@@ -1141,12 +1147,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f456ceb0-d0ff-4798-b577-b9fd6a4bfae4")
-	)
-	(junction
-		(at 92.71 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fb633d22-653a-44e7-9065-8cd3a3572950")
 	)
 	(wire
 		(pts
@@ -1190,7 +1190,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 87.63) (xy 92.71 92.71)
+			(xy 95.25 87.63) (xy 95.25 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1230,7 +1230,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 83.82) (xy 95.25 92.71)
+			(xy 97.155 83.82) (xy 97.155 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1240,7 +1240,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 92.71) (xy 92.71 92.71)
+			(xy 97.155 92.71) (xy 95.25 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1250,7 +1250,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 92.71) (xy 92.71 92.71)
+			(xy 73.66 92.71) (xy 95.25 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1270,7 +1270,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 86.36) (xy 96.52 105.41)
+			(xy 98.425 86.36) (xy 98.425 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1290,7 +1290,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 105.41) (xy 96.52 105.41)
+			(xy 88.9 105.41) (xy 98.425 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1310,7 +1310,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 82.55) (xy 92.71 81.28)
+			(xy 95.25 82.55) (xy 95.25 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1337,16 +1337,6 @@
 			(type default)
 		)
 		(uuid "68cfff3c-bc5a-4db7-b6b9-3a57233dd52c")
-	)
-	(wire
-		(pts
-			(xy 92.71 81.28) (xy 104.14 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6bea7acd-98e6-406e-b233-482e4322c54c")
 	)
 	(wire
 		(pts
@@ -1380,7 +1370,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 86.36) (xy 96.52 86.36)
+			(xy 116.84 86.36) (xy 98.425 86.36)
 		)
 		(stroke
 			(width 0)
@@ -1440,7 +1430,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 83.82) (xy 95.25 83.82)
+			(xy 116.84 83.82) (xy 97.155 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1460,7 +1450,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 81.28) (xy 92.71 81.28)
+			(xy 88.9 81.28) (xy 95.25 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1487,6 +1477,16 @@
 			(type default)
 		)
 		(uuid "d9dbe702-5303-403b-871a-c6bb629fc46f")
+	)
+	(wire
+		(pts
+			(xy 95.25 81.28) (xy 104.14 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1dc0018-4dc4-4e3c-81ed-b2bfebb5f06e")
 	)
 	(wire
 		(pts
@@ -1647,7 +1647,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 92.71 85.09 180)
+		(at 95.25 85.09 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1655,7 +1655,7 @@
 		(dnp no)
 		(uuid "20f9f479-4645-438e-b52e-41b479dd9f2e")
 		(property "Reference" "R142"
-			(at 94.488 75.946 0)
+			(at 93.98 76.835 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1664,7 +1664,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 96.266 85.09 0)
+			(at 90.805 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1673,7 +1673,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 92.71 85.09 0)
+			(at 95.25 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1682,7 +1682,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Vishay-Dale/CRCW060310K0FKEI?qs=sGAEpiMZZMvdGkrng054t8tsKUCh5%2FbYoR58PzIQdJA%3D"
-			(at 92.71 85.09 0)
+			(at 95.25 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1691,7 +1691,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 92.71 85.09 0)
+			(at 95.25 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1724,7 +1724,7 @@
 		(dnp no)
 		(uuid "277e2602-2aad-4089-9ba5-fe195d250dfd")
 		(property "Reference" "R141"
-			(at 80.772 76.2 0)
+			(at 87.63 76.835 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1733,7 +1733,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 84.582 84.582 0)
+			(at 84.455 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2106,7 +2106,7 @@
 		(dnp no)
 		(uuid "94bfcff9-5909-401b-affc-a824c7731706")
 		(property "Reference" "R140"
-			(at 74.422 76.2 0)
+			(at 81.915 76.835 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2115,7 +2115,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 78.232 84.582 0)
+			(at 76.2 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
