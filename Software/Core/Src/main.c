@@ -67,6 +67,7 @@ int Battery_status; // 0 = standby, 1= charging , 2=discharging , 3 =  Error
 int ballancing;
 int data_in;
 int current_raw;
+int prev_button_state;
 BQ_Data BqMeasurements[2];
 
 typedef struct {
@@ -81,7 +82,7 @@ uint16_t usbRxBufLen;
 uint8_t usbRxFlag = 0 ;
 
 // digital lowpass filter variable
-float alpha = 0.5f;    // adjust as needed (0.05–0.2 is common)
+float alpha = 0.05f;    // adjust as needed (0.05–0.2 is common)
 
 int current_raw = 31000;   // your ADC reading each loop
 float current_filtered = 31000;  // filtered output
@@ -98,7 +99,12 @@ char message_buffer[32];
 volatile uint8_t CDC_TransmitReady = 1;
 
 
+// VARIABLES FOR SAFETY TASK
 
+int relay_status = 0 ;
+int overvoltage = 0 ;
+int undervoltage = 0 ;
+int overtemperature = 0;
 
 
 /* USER CODE END PV */
@@ -210,7 +216,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start(&htim2);
   HAL_TIM_Base_Start(&htim1);
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -219,9 +226,7 @@ int main(void)
   Safety_Error = 0 ;
    bq79600_t *bms_instance = open_bq79600_instance(0);
    BQ_INNIT(bms_instance);
-
-
-
+   prev_button_state = HAL_GPIO_ReadPin (GPIOE, GPIO_PIN_14);
 
    while(1)
    {
@@ -238,7 +243,6 @@ int main(void)
  	  Usb_COMM();
  	  Safety();
  	  Led();
- 	  HAL_Delay(250);
    }
     /* USER CODE END WHILE */
 
@@ -764,7 +768,7 @@ void BQ_COMM(bq79600_t *bms_instance)
  	           }
  	         } // bq2 temp 2 works fine
 
- 	       // osDelay(5);
+
 
  	         uint32_t start_temp = GPIO1_HI  ;
  	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_temp, N_TEMPS_PER_DEVICE * 2, NULL);
@@ -775,21 +779,13 @@ void BQ_COMM(bq79600_t *bms_instance)
  	         {
  	           for (int j = 0; j < N_TEMPS_PER_DEVICE; j++)
  	           {
- 	        	   if(j==0)
- 	        	   {
- 	        		 modules[i].temperature[j] =voltage_to_temperature2(
- 	        		   	                 raw_to_float(&bms_instance->rx_buf[4 + i * (N_TEMPS_PER_DEVICE * 2 + 6) + 2 * j ] )  * 0.15259);
- 	        	   }
- 	        	   else
- 	        	   {
  	             modules[i].temperature[j] =voltage_to_temperature(
  	                 raw_to_float(&bms_instance->rx_buf[4 + i * (N_TEMPS_PER_DEVICE * 2 + 6) + 2 * j ] )  * 0.15259);
- 	        	   }
  	           }
  	         }
 
 
- 	       // HAL_Delay(10);
+
 
  	         uint32_t start_temp_ref = TSREF_HI ;
  	         bq79600_construct_command(bms_instance, STACK_READ, 0, start_temp_ref, 2, NULL);
@@ -882,11 +878,13 @@ void BQ_COMM(bq79600_t *bms_instance)
 	 	        	buf = 0x3; // fault detection off, autoballancing on, ballgo = 1
 	 	            bq79600_construct_command(bms_instance, STACK_WRITE, 0, BAL_CTRL2, 1, &buf);
 	 	        	bq79600_tx(bms_instance);
+	 	        	data_in =0;
 	 	        	break;
  	        	case 2:
 	 	        	buf = 0x40;
 	 	            bq79600_construct_command(bms_instance, STACK_WRITE, 0, BAL_CTRL2, 1, &buf);
 	 	        	bq79600_tx(bms_instance);
+	 	        	data_in =0;
 	 	        	break;
  	        	case 3:
 	 	        	buf = 0x3;
@@ -937,8 +935,8 @@ void BQ_COMM(bq79600_t *bms_instance)
 
  		    for(int x = 0 ; x < 8  ; x++)
  		    {
- 		    	BqMeasurements[i].OT_ERROR[x] = (modules[i].UT_RAW >> x  ) & 0x01;
- 		    	BqMeasurements[i].UT_ERROR[x] = (modules[i].OT_RAW >> x  ) & 0x01;
+ 		    	BqMeasurements[i].OT_ERROR[x] = (modules[i].OT_RAW >> x  ) & 0x01;
+ 		    	BqMeasurements[i].UT_ERROR[x] = (modules[i].UT_RAW >> x  ) & 0x01;
  		    }
  		     for(int x = 0 ; x < N_CELLS_PER_DEVICE - 8  ; x++)
  		     {
@@ -1173,6 +1171,9 @@ void Usb_COMM()
 			    	   	   	   	  Send_USB_Message(message, 2); // Send with a 5ms timeout
 			    	   	   	   	   	   sprintf(message  , "Timestamp: %u \n" , BqMeasurements[x].Bq_Timestamp );
 			    	   	   	   	  Send_USB_Message(message, 2); // Send with a 5ms timeout
+
+			    	   	   	   	  	  printf(message  , "Current:" , (int)current );
+			    	   	   	   	  Send_USB_Message(message, 2); // Send with a 5ms timeout
 		    	                 //CDC_Transmit_FS((uint8_t*)message2, strlen(message2));
 			    	   	   	     HAL_Delay(5);
 		    	                 char message[6] = " \n";
@@ -1216,7 +1217,8 @@ void Usb_COMM()
 				  data_in =4;
 			  else if (strcmp((char*)usbRxBuf, "Go to standby\n") == 0)
 				  data_in =5;
-
+			  else if (strcmp((char*)usbRxBuf, "Start discharging\n") == 0)
+				  data_in = 6;
 			  memset(usbRxBuf,0, sizeof(usbRxBuf));
 			  usbRxFlag = 0 ;
 			  usbRxBufLen  = 0 ;
@@ -1237,38 +1239,43 @@ float convert_adc_to_current(float data)
 	  // Battery status = 0 - standby , 1- charging, 2 - discharging , 3 - error
 
 
-     int xd = 0 ;
-     int overvoltage = 0 ;
-     int undervoltage = 0 ;
 
+     for (int bq_num = 0 ; bq_num < N_DEVICES - 2 ; bq_num++ )
+     {
      for(int iterator = 0 ; iterator < N_CELLS_PER_DEVICE ; iterator ++)
      {
-       if(BqMeasurements[0].OV_ERROR[iterator] == 1 || BqMeasurements[1].OV_ERROR[iterator] == 1 )
+       if(BqMeasurements[bq_num].OV_ERROR[iterator] == 1 || BqMeasurements[bq_num].OV_ERROR[iterator] == 1 )
        {
     	   overvoltage = 1;
        }
-       if(BqMeasurements[0].UV_ERROR[iterator] == 1 || BqMeasurements[1].UV_ERROR[iterator] == 1 )
+       if(BqMeasurements[bq_num].UV_ERROR[iterator] == 1 || BqMeasurements[bq_num].UV_ERROR[iterator] == 1 )
        {
     	   undervoltage = 1;
        }
+       if(BqMeasurements[bq_num].OT_ERROR[iterator] == 1)
+       {
+    	   overtemperature = 1;
+       }
 
      }
-	 if( overvoltage != 0  || undervoltage != 0  ) // || BqMeasurements->OT_ERROR || BqMeasurements->UT_ERROR
+
+     ////////////////////////////////////////
+
+     }
+	 if( overvoltage != 0    || overtemperature != 0  ) // if the status is charging undervoltage is not applicable
 	 {
 		 Safety_Error = 1;
 		 Battery_status = 3; // enter error staus
-		 HAL_GPIO_WritePin(GPIOE, GPIO_PIN_4, GPIO_PIN_SET);
-		 HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET); // open safety relay
+		 HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET); // open safety relay
 
 	 }
 
-		if(Battery_status != 3 && Battery_status != 4 && data_in ==4 ) // if not in error and command sent to charge
+		if(Battery_status != 3 && Battery_status != 4 && data_in == 4 ) // if not in error and command sent to charge
 		{
 			Battery_status = 1 ;
-			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET); // close safety relay
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET); // close safety relay
 			data_in = 999; // block the variable so it doesnt repat
-			HAL_Delay(200);
-			 xd = HAL_GPIO_ReadPin (GPIOB, GPIO_PIN_10);
+			HAL_Delay(400);
 
 		}
 
@@ -1276,59 +1283,67 @@ float convert_adc_to_current(float data)
 		if(data_in == 5 && Battery_status!=3 ) // turn charging off, relay to open
 		{
 			Battery_status = 0 ;
-			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
 			data_in = 999; // block the variable so it doesnt repat
 			HAL_Delay(200);
 		}
 
 
-		if(data_in == 66 && Battery_status!=3 ) // enable discharge
+		if(( data_in == 6  || (!HAL_GPIO_ReadPin (GPIOE, GPIO_PIN_14)) && prev_button_state == 1)&& (Battery_status != 3  && undervoltage == 0 )  ) // enable discharge
 		{
 			Battery_status = 2 ;
-			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET); // close safety relay
+			data_in = 999; // block the variable so it doesnt repat
+			HAL_Delay(400);
+			relay_status = HAL_GPIO_ReadPin (GPIOB, GPIO_PIN_10);
+		}
+		if( Battery_status == 2 && HAL_GPIO_ReadPin (GPIOE, GPIO_PIN_14) )
+		{
+			Battery_status = 0 ;
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
+			HAL_Delay(500);
 		}
 
 
-		xd = HAL_GPIO_ReadPin (GPIOB, GPIO_PIN_10); // read state of auxilary relay contacts
-        if ((Battery_status == 1 || Battery_status == 2 ) && xd != 1) // if charging or discharging
+
+        //xd = HAL_GPIO_ReadPin (GPIOB, GPIO_PIN_10); // read state of auxilary relay contacts
+		relay_status = HAL_GPIO_ReadPin (GPIOE, GPIO_PIN_14);
+		relay_status = HAL_GPIO_ReadPin (GPIOB, GPIO_PIN_10);
+        if ((Battery_status == 1 || Battery_status == 2) && relay_status  == 0 ) // this means that relay auxilary contacts are not present
         {
-             // check if relay was closed with axuily contacts , the concacts are NC, meanging if this ==1 then its good
-			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET); // if not open it and go to error
-			Safety_Error = 1;
-			Battery_status = 3; // enter error staus
-
-        }
-
-
-        if (!(Battery_status == 1 || Battery_status == 2) && xd  != 0 ) // this means that relay auxilary contacts are not present
-        {
-			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET); // if not open it and go to error
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET); // if not open it and go to error
 			Safety_Error = 1;
 			Battery_status = 3; // enter error staus
         }
-
-
+        prev_button_state = HAL_GPIO_ReadPin (GPIOE, GPIO_PIN_14);
 
   }
   void Led()
   {
-	  if( (Battery_status == 3 || Safety_Error == 1) && !HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_2) )
+  	  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_2);
+  	  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_3);
+	  if( (Battery_status == 3 || Safety_Error == 1)  )
 	  {
 		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_5);
 		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_4);
 		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_3);
 		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_2);
+		  HAL_GPIO_TogglePin (GPIOA, GPIO_PIN_5);
 	  }
-	  else if(HAL_GPIO_ReadPin (GPIOB, GPIO_PIN_10) && !HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_2))
+	  else if(Battery_status == 1 || Battery_status == 2 )
 	  {
-	  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_5);
-	  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_4);
+		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+	  	  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_5);
+	  	  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_4);
+
 	  }
+
 	  else
 	  {
 		  HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_RESET);
 		  HAL_GPIO_WritePin(GPIOE, GPIO_PIN_4 , GPIO_PIN_RESET);
 		  HAL_GPIO_WritePin(GPIOE, GPIO_PIN_3 , GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 		  HAL_GPIO_TogglePin (GPIOE, GPIO_PIN_2);
 	  }
 
@@ -1445,4 +1460,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-

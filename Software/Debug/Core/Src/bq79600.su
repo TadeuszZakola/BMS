@@ -7,7 +7,7 @@
 ../Core/Src/bq79600.c:86:6:bq79600_wakeup	16	static
 ../Core/Src/bq79600.c:99:17:bq79600_auto_addressing	48	static
 ../Core/Src/bq79600.c:151:6:initalize_communication	40	static
-../Core/Src/bq79600.c:297:18:read_data	1384	dynamic
-../Core/Src/bq79600.c:483:6:HAL_UARTEx_RxEventCallback	16	static
-../Core/Src/bq79600.c:503:5:voltage_to_temperature	16	static
-../Core/Src/bq79600.c:512:5:voltage_to_temperature2	16	static
+../Core/Src/bq79600.c:300:18:read_data	1000	dynamic
+../Core/Src/bq79600.c:486:6:HAL_UARTEx_RxEventCallback	16	static
+../Core/Src/bq79600.c:506:5:voltage_to_temperature	16	static
+../Core/Src/bq79600.c:515:5:voltage_to_temperature2	16	static

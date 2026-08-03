@@ -104,7 +104,7 @@ bq79600_error_t bq79600_auto_addressing(bq79600_t *instance, const size_t n_devi
   }
   instance->fault = 0 ;
   // Enable auto addressing
-  buf = 0x1; //0x1
+  buf =0x1; //0x81; //0x1
   bq79600_construct_command(instance, BROADCAST_WRITE, 0, CONTROL1, 1, &buf);
   bq79600_tx(instance);
   // brdcast write consecutively to 0x306
@@ -153,13 +153,13 @@ void initalize_communication(bq79600_t *instance,UART_HandleTypeDef *uart_port ,
 
 
 
-		      uint8_t buf = 0x20;
+		      uint8_t buf = 0x20;//0x20;// 0x20;//0x20;
 		      bq79600_write_reg(instance, 0x00, CONTROL1, &buf, 1);
 		      HAL_Delay(12 * n_devices);
 
 		      bq79600_error_t err = bq79600_auto_addressing(instance, n_devices);
 		      if (err) {
-		    	//  Message autoadress = {0};
+		    	//  int autoadress = 0 ;
 		    	//  strcpy(autoadress.Buf, "Autoadressing failed!\n0");
 		    	//  autoadress.Timestamp = HAL_GetTick();
 		    	 // osMessageQueuePut(Messages_QueueHandle, &autoadress, 0, 50);
@@ -247,6 +247,7 @@ void initalize_communication(bq79600_t *instance,UART_HandleTypeDef *uart_port ,
 		      HAL_Delay(1 * n_devices);
 
 
+													// and start OV UV comparators
 
 
 		      buf = 0x5 ; //0x5;
@@ -263,8 +264,11 @@ void initalize_communication(bq79600_t *instance,UART_HandleTypeDef *uart_port ,
 		      bq79600_tx(instance);
 
 		      // setup ballancing
+		        buf = 0x1;
+			    bq79600_construct_command(instance, STACK_WRITE, 0, BAL_CTRL1, 1, &buf); // 5s ballancing timer
+			    bq79600_tx(instance);
 
-		        buf = 0x7;
+		        buf = 0x07; //0x07
 		        bq79600_construct_command(instance, STACK_WRITE, 0, CB_CELL1_CTRL, 1 , &buf);
 			    bq79600_tx(instance);
 			    bq79600_construct_command(instance, STACK_WRITE, 0, CB_CELL2_CTRL, 1 , &buf);
@@ -291,7 +295,6 @@ void initalize_communication(bq79600_t *instance,UART_HandleTypeDef *uart_port ,
 			    bq79600_tx(instance);
 			    bq79600_construct_command(instance, STACK_WRITE, 0, CB_CELL13_CTRL, 1 , &buf);
 			    bq79600_tx(instance);
-
 }
 
 BQ_Data_Combined read_data(bq79600_t *instance , UART_HandleTypeDef  *uart_port , int n_devices,   int n_cells_per_device, int n_temp_pre_device)

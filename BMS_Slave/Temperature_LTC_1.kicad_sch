@@ -1,0 +1,872 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "2ec753f1-438c-4343-93a5-622e04eb8bd1")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 79.375 125.73) (xy 81.915 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e367d08-cb12-40a3-9c34-7c1b24853272")
+	)
+	(wire
+		(pts
+			(xy 78.105 163.83) (xy 80.645 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "407739d7-f8a5-44be-a393-867df61a2fbe")
+	)
+	(wire
+		(pts
+			(xy 79.375 113.03) (xy 81.915 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d5e8ead-8996-4579-bd1a-2d841583892b")
+	)
+	(wire
+		(pts
+			(xy 79.375 143.51) (xy 81.28 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "790ffdda-7739-4e97-b926-cf2e6d381d76")
+	)
+	(wire
+		(pts
+			(xy 80.01 76.2) (xy 82.55 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a46b710-dbbc-4412-a941-c41a4736e1a2")
+	)
+	(wire
+		(pts
+			(xy 80.01 63.5) (xy 82.55 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f340263-3716-47e2-afd6-a2a3c5f383ad")
+	)
+	(wire
+		(pts
+			(xy 80.01 79.375) (xy 82.55 79.375)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "905d505b-9438-446b-9d05-482459cba02f")
+	)
+	(wire
+		(pts
+			(xy 81.915 46.355) (xy 83.185 46.355)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2bff365-4ef4-47ca-9d0e-26ea740488dc")
+	)
+	(wire
+		(pts
+			(xy 80.01 60.325) (xy 82.55 60.325)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a307b73c-020a-4d72-850e-438c6013ffc9")
+	)
+	(wire
+		(pts
+			(xy 79.375 128.905) (xy 81.915 128.905)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab5dfd26-97b2-483b-857b-3dbf48e58a12")
+	)
+	(wire
+		(pts
+			(xy 80.645 92.71) (xy 82.55 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acb27997-f8b3-4f7f-b4e4-2a9e7f0dc13a")
+	)
+	(wire
+		(pts
+			(xy 81.28 95.885) (xy 82.55 95.885)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad992818-338b-4254-beb8-abd615717795")
+	)
+	(wire
+		(pts
+			(xy 79.375 109.855) (xy 81.915 109.855)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b58dfdb0-4bb2-4125-9602-916b7e874123")
+	)
+	(wire
+		(pts
+			(xy 78.105 160.655) (xy 80.645 160.655)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd121c61-7905-49fd-87b6-7b5448946533")
+	)
+	(wire
+		(pts
+			(xy 80.01 146.685) (xy 81.28 146.685)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f417fd9c-7375-45f5-a078-5363ec58f146")
+	)
+	(wire
+		(pts
+			(xy 81.28 43.18) (xy 83.185 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fccdc893-93b6-4764-8917-eecfe1c4ace2")
+	)
+	(hierarchical_label "T8"
+		(shape output)
+		(at 78.105 160.655 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "01414c28-e668-425c-8650-7f7573b2c35e")
+	)
+	(hierarchical_label "T4"
+		(shape output)
+		(at 80.645 92.71 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "06ad1b7f-58c4-4013-aa12-2a8e136e73a0")
+	)
+	(hierarchical_label "TSREF"
+		(shape input)
+		(at 79.375 128.905 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "14b926c5-55e4-4776-b065-88d86c6c8e6e")
+	)
+	(hierarchical_label "TSREF"
+		(shape input)
+		(at 78.105 163.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "351e00df-0230-4266-b424-895fd4aa8387")
+	)
+	(hierarchical_label "T7"
+		(shape output)
+		(at 79.375 143.51 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4af45c44-0677-49de-bd88-dbea468b6d53")
+	)
+	(hierarchical_label "TSREF"
+		(shape input)
+		(at 80.01 146.685 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4e5dc427-054f-4405-b31b-23fee56c2895")
+	)
+	(hierarchical_label "T6"
+		(shape output)
+		(at 79.375 125.73 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5fe31778-ee76-4645-8a1d-5a894c0af314")
+	)
+	(hierarchical_label "T2"
+		(shape output)
+		(at 80.01 60.325 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6d258613-22c2-4a3c-844c-3481996c06a0")
+	)
+	(hierarchical_label "TSREF"
+		(shape input)
+		(at 81.28 95.885 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7f5cb867-aafe-465a-b48e-defd7719646e")
+	)
+	(hierarchical_label "T3"
+		(shape output)
+		(at 80.01 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "80bba12b-bf72-416c-a33a-4d7608a841de")
+	)
+	(hierarchical_label "TSREF"
+		(shape input)
+		(at 81.915 46.355 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "83eae046-494f-42ef-9d57-c8b95d57e085")
+	)
+	(hierarchical_label "TSREF"
+		(shape input)
+		(at 79.375 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "87eba040-d765-4391-b9f7-c9316a75a6cd")
+	)
+	(hierarchical_label "T1"
+		(shape output)
+		(at 81.28 43.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8d3f0441-4e7b-404b-b964-8ea64ed40d0e")
+	)
+	(hierarchical_label "TSREF"
+		(shape input)
+		(at 80.01 79.375 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a557433e-44f6-4ab6-b62d-a1ebfc27bc52")
+	)
+	(hierarchical_label "TSREF"
+		(shape input)
+		(at 80.01 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a5a78ce3-b971-4c6e-9185-04d1b92dd789")
+	)
+	(hierarchical_label "T5"
+		(shape output)
+		(at 79.375 109.855 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e29ef75f-44be-4fe3-aa4e-2f9b6408913c")
+	)
+	(sheet
+		(at 83.185 40.64)
+		(size 19.05 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "23bf61dd-5d23-435c-89d7-2fdd51bc53d2")
+		(property "Sheetname" "Thermistor"
+			(at 83.185 39.9284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thermistor.kicad_sch"
+			(at 83.185 51.3846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "TSREF" input
+			(at 83.185 46.355 180)
+			(uuid "623d20d1-6312-4656-b819-9e4544b20cf9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Output" output
+			(at 83.185 43.18 180)
+			(uuid "f3297900-2364-4c47-b0c0-ddfaf7476f06")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BMS_Slave"
+				(path "/5ef38d78-c36e-4401-b313-d3049d9eb692/0b0fc6ad-448e-4167-aded-23e4c297a3d0"
+					(page "18")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 82.55 57.785)
+		(size 19.05 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "4979df7a-8959-413c-b9bb-f49784721b8b")
+		(property "Sheetname" "Thermistor1"
+			(at 82.55 57.0734 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thermistor.kicad_sch"
+			(at 82.55 68.5296 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "TSREF" input
+			(at 82.55 63.5 180)
+			(uuid "a5cf2f16-0f94-4b3c-9fbb-68d74db6bd0b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Output" output
+			(at 82.55 60.325 180)
+			(uuid "cf4c7e60-b2b9-4404-b8f8-0ae01d0042e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BMS_Slave"
+				(path "/5ef38d78-c36e-4401-b313-d3049d9eb692/0b0fc6ad-448e-4167-aded-23e4c297a3d0"
+					(page "19")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 81.915 107.315)
+		(size 19.05 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "586078e4-3089-4ae4-a9f6-165cac54bbad")
+		(property "Sheetname" "Thermistor4"
+			(at 81.915 106.6034 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thermistor.kicad_sch"
+			(at 81.915 118.0596 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "TSREF" input
+			(at 81.915 113.03 180)
+			(uuid "09e4284d-83da-455f-9171-e959f832234b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Output" output
+			(at 81.915 109.855 180)
+			(uuid "38bbd76e-3d0a-4a93-bbea-78a39dc8735c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BMS_Slave"
+				(path "/5ef38d78-c36e-4401-b313-d3049d9eb692/0b0fc6ad-448e-4167-aded-23e4c297a3d0"
+					(page "22")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 82.55 73.66)
+		(size 19.05 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "72eac9f8-492a-4954-9eb8-707977ac7ce3")
+		(property "Sheetname" "Thermistor2"
+			(at 82.55 72.9484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thermistor.kicad_sch"
+			(at 82.55 84.4046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "TSREF" input
+			(at 82.55 79.375 180)
+			(uuid "90d349c2-49ec-4a30-97cf-646ad1c8d516")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Output" output
+			(at 82.55 76.2 180)
+			(uuid "c45ce359-b0d0-430e-bc78-47ed8ec7f7d7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BMS_Slave"
+				(path "/5ef38d78-c36e-4401-b313-d3049d9eb692/0b0fc6ad-448e-4167-aded-23e4c297a3d0"
+					(page "20")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 82.55 90.17)
+		(size 19.05 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "826d0442-05c9-4e60-b71b-108b4ffa42fc")
+		(property "Sheetname" "Thermistor3"
+			(at 82.55 89.4584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thermistor.kicad_sch"
+			(at 82.55 100.9146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "TSREF" input
+			(at 82.55 95.885 180)
+			(uuid "f8a6702b-8c44-44b8-85ee-9aaf3f2487c6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Output" output
+			(at 82.55 92.71 180)
+			(uuid "64ba0c1b-1c10-40ad-a690-75a926b06999")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BMS_Slave"
+				(path "/5ef38d78-c36e-4401-b313-d3049d9eb692/0b0fc6ad-448e-4167-aded-23e4c297a3d0"
+					(page "21")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 80.645 158.115)
+		(size 19.05 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "89a22301-ba2d-4b05-acf6-34f97f509d6f")
+		(property "Sheetname" "Thermistor7"
+			(at 80.645 157.4034 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thermistor.kicad_sch"
+			(at 80.645 168.8596 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "TSREF" input
+			(at 80.645 163.83 180)
+			(uuid "c7560933-9f7b-46b4-83eb-01d40963bb4b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Output" output
+			(at 80.645 160.655 180)
+			(uuid "486e5bfe-cd73-4e25-b174-5fd57aa5e617")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BMS_Slave"
+				(path "/5ef38d78-c36e-4401-b313-d3049d9eb692/0b0fc6ad-448e-4167-aded-23e4c297a3d0"
+					(page "25")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 81.28 140.97)
+		(size 19.05 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "aa460927-ab93-4652-af6b-45b4c9afadf7")
+		(property "Sheetname" "Thermistor6"
+			(at 81.28 140.2584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thermistor.kicad_sch"
+			(at 81.28 151.7146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "TSREF" input
+			(at 81.28 146.685 180)
+			(uuid "74a8e152-032c-4ed5-81b3-a5b36200088b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Output" output
+			(at 81.28 143.51 180)
+			(uuid "b334a9e8-7a78-4c14-9186-3b745cf94d8f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BMS_Slave"
+				(path "/5ef38d78-c36e-4401-b313-d3049d9eb692/0b0fc6ad-448e-4167-aded-23e4c297a3d0"
+					(page "24")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 81.915 123.19)
+		(size 19.05 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ab4ca1a3-a9e8-4c4c-b104-038080d38720")
+		(property "Sheetname" "Thermistor5"
+			(at 81.915 122.4784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thermistor.kicad_sch"
+			(at 81.915 133.9346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "TSREF" input
+			(at 81.915 128.905 180)
+			(uuid "8955fcd6-b04e-4420-8fe4-e596ea59d6d4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Output" output
+			(at 81.915 125.73 180)
+			(uuid "c9da7956-da27-40be-bb29-3db7a5cb255c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BMS_Slave"
+				(path "/5ef38d78-c36e-4401-b313-d3049d9eb692/0b0fc6ad-448e-4167-aded-23e4c297a3d0"
+					(page "23")
+				)
+			)
+		)
+	)
+)

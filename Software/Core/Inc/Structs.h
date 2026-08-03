@@ -2,7 +2,7 @@
 #define STRUCTS_H
 
 // Configuration constants
-#define N_DEVICES            3
+#define N_DEVICES           2// 3
 #define N_CELLS_PER_DEVICE   13
 #define N_TEMPS_PER_DEVICE   8
 
