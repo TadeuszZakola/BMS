@@ -11517,16 +11517,6 @@
 				(justify left)
 			)
 		)
-		(pin "Batt1_+" input
-			(at 59.69 104.14 0)
-			(uuid "334ebe52-9b33-4e4b-9560-2ee86fe8b7de")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "CB13" output
 			(at 59.69 106.68 0)
 			(uuid "0aa9d44b-3272-4cfa-a3a4-8e0288d0abdc")
@@ -11585,6 +11575,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "Batt+" output
+			(at 59.69 104.14 0)
+			(uuid "a328e8f6-e370-4347-b285-db3ea122efe3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
