@@ -2560,7 +2560,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PHD_B16B-PHDSS_2x08_P2.00mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_PHD_S16B-PHDSS_2x08_P2.00mm_Horizontal"
 			(at 149.86 98.425 0)
 			(hide yes)
 			(show_name no)
