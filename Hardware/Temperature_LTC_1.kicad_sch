@@ -1325,12 +1325,6 @@
 		(uuid "e1734bf4-1b89-4939-b5fd-c75ad431443b")
 	)
 	(junction
-		(at 123.19 30.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "edd0b980-c634-4ed0-8073-fd0460ef5f01")
-	)
-	(junction
 		(at 189.23 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1355,16 +1349,6 @@
 			(type default)
 		)
 		(uuid "0432beb4-bfd4-48b2-8469-52e48d920bae")
-	)
-	(wire
-		(pts
-			(xy 123.19 30.48) (xy 133.35 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0621d8bc-d0a0-478c-a894-63f47d62d5da")
 	)
 	(wire
 		(pts
@@ -1505,16 +1489,6 @@
 			(type default)
 		)
 		(uuid "2799078b-8a4c-444b-844c-0f08a0739b5c")
-	)
-	(wire
-		(pts
-			(xy 123.19 36.83) (xy 123.19 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2841154a-ae90-4fc5-aa51-0b19c078b951")
 	)
 	(wire
 		(pts
@@ -2018,7 +1992,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 30.48) (xy 123.19 30.48)
+			(xy 116.84 30.48) (xy 133.35 30.48)
 		)
 		(stroke
 			(width 0)
@@ -2700,7 +2674,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1272160f-4734-4341-b22b-57b87ac9cf30")
 		(property "Reference" "R10"
 			(at 120.65 153.67 90)
@@ -3332,88 +3305,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/a43b6b0a-d3da-47c5-ab92-e0e154337573"
 					(reference "C50")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 123.19 33.02 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3ce9388d-a831-4f31-a9c7-25e550301c3b")
-		(property "Reference" "C47"
-			(at 125.73 31.7562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 125.73 34.2962 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 123.19 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMK107B7105MA8T?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXD%252BuSrqeE39U%3D"
-			(at 123.19 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 123.19 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1b880a83-072c-42d0-888c-25d457d95b5d")
-		)
-		(pin "2"
-			(uuid "15be6eb5-0761-47cd-9aaf-3b193c9d17e3")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/a43b6b0a-d3da-47c5-ab92-e0e154337573"
-					(reference "C47")
 					(unit 1)
 				)
 			)
@@ -5042,84 +4933,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/a43b6b0a-d3da-47c5-ab92-e0e154337573"
 					(reference "R54")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 123.19 36.83 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "93dc84f6-1c5e-4907-bb29-75f9ad68977b")
-		(property "Reference" "#PWR042"
-			(at 116.84 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND_HV"
-			(at 119.38 36.83 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 123.19 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 123.19 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 123.19 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "93a2483f-399f-4f94-9d3e-b1fae2129c09")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/a43b6b0a-d3da-47c5-ab92-e0e154337573"
-					(reference "#PWR042")
 					(unit 1)
 				)
 			)
