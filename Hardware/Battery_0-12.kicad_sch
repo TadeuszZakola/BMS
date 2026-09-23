@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "debd73fa-63c1-4c44-a498-d26e05955267")
 	(paper "A4")
 	(lib_symbols
@@ -13,8 +13,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
 				(at 0 35.56 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -23,6 +27,8 @@
 			)
 			(property "Value" "Conn_01x28"
 				(at 0 -38.1 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -31,47 +37,57 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Generic connector, single row, 01x28, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "connector"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "Connector*:*_1x??_*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "Conn_01x28_1_1"
@@ -912,8 +928,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "BT"
 				(at 2.54 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -923,6 +943,8 @@
 			)
 			(property "Value" "Battery_Cell"
 				(at 2.54 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -932,38 +954,79 @@
 			)
 			(property "Footprint" ""
 				(at 0 1.524 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 1.524 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Single-cell battery"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
+				)
+			)
+			(property "Sim.Device" "V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Type" "DC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=+ 2=-"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
 				)
 			)
 			(property "ki_keywords" "battery cell"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "Battery_Cell_0_1"
@@ -1089,8 +1152,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
 				(at 0.254 1.778 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1100,6 +1167,8 @@
 			)
 			(property "Value" "C_Small"
 				(at 0.254 -2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1109,47 +1178,57 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Unpolarized capacitor, small symbol"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "capacitor cap"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "C_*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "C_Small_0_1"
@@ -1182,7 +1261,7 @@
 				(pin passive line
 					(at 0 2.54 270)
 					(length 2.032)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1200,7 +1279,160 @@
 				(pin passive line
 					(at 0 -2.54 90)
 					(length 2.032)
-					(name "~"
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:Fuse_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse_Small"
+				(at 0 1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Fuse, small symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Fuse_Small_0_1"
+				(rectangle
+					(start -1.27 0.508)
+					(end 1.27 -0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_Small_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 1.27)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1229,67 +1461,81 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 0.762 0.508 0)
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.016 1.016)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "R_Small"
-				(at 0.762 -1.016 0)
+				(at 1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Resistor, small symbol"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "R resistor"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "R_*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "R_Small_0_1"
@@ -1309,7 +1555,7 @@
 				(pin passive line
 					(at 0 2.54 270)
 					(length 0.762)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1327,7 +1573,7 @@
 				(pin passive line
 					(at 0 -2.54 90)
 					(length 0.762)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1346,7 +1592,7 @@
 			(embedded_fonts no)
 		)
 		(symbol "power:GND"
-			(power)
+			(power global)
 			(pin_numbers
 				(hide yes)
 			)
@@ -1357,17 +1603,23 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "#PWR"
 				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Value" "GND"
 				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1376,38 +1628,46 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "global power"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "GND_0_1"
@@ -1428,7 +1688,7 @@
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1458,7 +1718,7 @@
 		(fill
 			(type none)
 		)
-		(uuid 35b1e09e-9c5c-4d7e-bba1-3e3e747fb47e)
+		(uuid "35b1e09e-9c5c-4d7e-bba1-3e3e747fb47e")
 	)
 	(text "Explanation:"
 		(exclude_from_sim no)
@@ -1496,16 +1756,16 @@
 		(uuid "01f1553a-0e34-4aa3-b0fd-5e94c7443b1b")
 	)
 	(junction
-		(at 101.6 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02961ce5-7fb9-44d2-adfe-eee4caad226a")
-	)
-	(junction
 		(at 110.49 187.96)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "05cf05cc-2e59-4a64-a441-aa2395ca3bd6")
+	)
+	(junction
+		(at 101.6 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "07a0a34d-0219-456e-9035-6a12bd951c8e")
 	)
 	(junction
 		(at 110.49 63.5)
@@ -1514,13 +1774,25 @@
 		(uuid "092c9c40-c0fa-4c43-8fa8-e1138f998be0")
 	)
 	(junction
+		(at 101.6 24.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0db10f56-5a5d-4b89-ab70-ba0ae71bb7c7")
+	)
+	(junction
+		(at 98.425 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f538e74-658f-4c53-b8bf-e7a065ef31c0")
+	)
+	(junction
 		(at 110.49 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2287aaf2-3fb1-4cbc-8800-366c6d093901")
 	)
 	(junction
-		(at 95.25 175.26)
+		(at 80.645 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "29b0ab06-0a88-46e7-ac69-118db4feddbb")
@@ -1538,34 +1810,28 @@
 		(uuid "2b824eb3-df14-464c-a1e8-d1012d11b42f")
 	)
 	(junction
-		(at 101.6 175.26)
+		(at 101.6 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "30028c7d-7e43-417f-8a19-7e041de23bb8")
+		(uuid "34e8428b-4b8e-4097-95ce-e7b651306cd0")
 	)
 	(junction
-		(at 101.6 24.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "35291c5b-4126-4a45-a2d5-cc2a256e7921")
-	)
-	(junction
-		(at 101.6 187.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "35d95035-9fa1-47b9-9e38-e8bd24223cf6")
-	)
-	(junction
-		(at 95.25 162.56)
+		(at 80.645 162.56)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "367a1176-252a-4289-8847-14d0893a7e79")
 	)
 	(junction
-		(at 95.25 137.16)
+		(at 80.645 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3b1da545-cdfc-41ff-93f1-04ef639d02f0")
+	)
+	(junction
+		(at 101.6 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3fa9a9a9-089b-4eac-b44c-87beba39525f")
 	)
 	(junction
 		(at 110.49 99.06)
@@ -1574,7 +1840,7 @@
 		(uuid "424b5b45-b2b1-481f-a9ae-30663dfc9d0c")
 	)
 	(junction
-		(at 95.25 49.53)
+		(at 80.645 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4975c70a-f29a-4ff8-bd6c-a8f720b32537")
@@ -1586,25 +1852,31 @@
 		(uuid "4ae28e33-f5f9-49d7-ae53-be6093569eb7")
 	)
 	(junction
+		(at 101.6 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b5b4138-261e-45ec-8a47-64447f32995d")
+	)
+	(junction
+		(at 101.6 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4be03348-c261-4cf4-ad4f-a2e01f003904")
+	)
+	(junction
 		(at 110.49 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4c6e3fc9-5b0a-40fa-af45-f2a53b97afc6")
 	)
 	(junction
-		(at 101.6 124.46)
+		(at 101.6 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "533751c9-52c2-4773-bb1a-d2ea456ec555")
+		(uuid "535b5d59-f614-4ccb-bf50-4e52fbcd3664")
 	)
 	(junction
-		(at 151.13 180.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "538eb1ed-c194-4f1b-85a9-333b17fee877")
-	)
-	(junction
-		(at 95.25 36.83)
+		(at 80.645 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "56d46270-9a64-4c8f-8749-bf21d07264ea")
@@ -1622,7 +1894,7 @@
 		(uuid "6249cf06-4921-4faa-b48f-904134fa5861")
 	)
 	(junction
-		(at 95.25 187.96)
+		(at 80.645 187.96)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "676dd074-b9e4-4951-a806-7e830b087be3")
@@ -1640,13 +1912,7 @@
 		(uuid "7123c48a-b250-4ff0-80b7-2291886683e7")
 	)
 	(junction
-		(at 101.6 162.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7388c92a-10d7-4759-a92a-041a457eae7c")
-	)
-	(junction
-		(at 95.25 76.2)
+		(at 80.645 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "77e938b0-30cf-419d-99f4-ad18c164db40")
@@ -1658,22 +1924,16 @@
 		(uuid "7fa458e2-7500-4675-a504-2dfc8d5dfa7d")
 	)
 	(junction
-		(at 95.25 185.42)
+		(at 80.645 185.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8491143f-5494-4af8-b38b-d4db9ef4f2f2")
 	)
 	(junction
-		(at 95.25 63.5)
+		(at 80.645 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "84ec5d11-e2c0-44cb-85b8-a877bfa3979d")
-	)
-	(junction
-		(at 101.6 137.16)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "86864e9f-d7f9-45ae-89f3-86c8f8400e7f")
 	)
 	(junction
 		(at 151.13 107.95)
@@ -1682,7 +1942,7 @@
 		(uuid "874e79c4-7e91-4d55-843b-ac84be484c61")
 	)
 	(junction
-		(at 95.25 99.06)
+		(at 80.645 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "87a8cd32-c558-4bc6-bcc4-37743317d3ef")
@@ -1694,22 +1954,28 @@
 		(uuid "8bd0edf2-2b08-4b8f-bbef-dd1935e6822c")
 	)
 	(junction
-		(at 101.6 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8f1a531d-dd36-430c-a4ee-3eef7e6ae7c1")
-	)
-	(junction
 		(at 110.49 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9136913d-19a0-4d7b-848c-88cf5aac2de8")
 	)
 	(junction
-		(at 95.25 24.13)
+		(at 101.6 137.16)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9402f57f-1472-4069-a59b-d2ac64da3764")
+	)
+	(junction
+		(at 80.645 24.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a17a07b0-759a-4dcc-9a6f-f0c3c7ff0dd6")
+	)
+	(junction
+		(at 101.6 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a2a21ba6-54a4-4b0d-8d97-f325048da221")
 	)
 	(junction
 		(at 110.49 137.16)
@@ -1718,19 +1984,25 @@
 		(uuid "ab74b474-f3c8-441d-8214-1abccd4c469c")
 	)
 	(junction
-		(at 101.6 111.76)
+		(at 101.6 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ae0ae0b2-3ddc-40c1-bc93-d44b4a9e9e7e")
+		(uuid "b816e4f1-dc63-4582-b0fb-19646bfbf683")
 	)
 	(junction
-		(at 95.25 149.86)
+		(at 151.13 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c083be96-6db7-4e39-a1a9-475d6f136ccc")
+	)
+	(junction
+		(at 80.645 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c11036cd-ee7e-419a-9ea9-c76e18bf734a")
 	)
 	(junction
-		(at 95.25 86.36)
+		(at 80.645 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c2207311-a1e0-4b54-889e-7cee855c7eec")
@@ -1748,13 +2020,25 @@
 		(uuid "c80470d3-0ee9-4e9e-bc82-c6c79257cc17")
 	)
 	(junction
-		(at 95.25 124.46)
+		(at 101.6 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cc1ff018-08f8-42b6-80f4-824346597421")
+	)
+	(junction
+		(at 80.645 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cc6cd55e-38ad-494e-8d86-1c2f206d7ad4")
 	)
 	(junction
-		(at 95.25 111.76)
+		(at 101.6 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d1a8dc99-8439-45dc-a050-43b83a39d13e")
+	)
+	(junction
+		(at 80.645 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d27729af-db14-4e47-be1c-7012ed61e7b4")
@@ -1764,6 +2048,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d67aca63-9002-493b-b5c4-af6f4c70c729")
+	)
+	(junction
+		(at 101.6 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dbdf2daa-fb4a-4a03-8cb9-34a450c3582a")
 	)
 	(junction
 		(at 110.49 162.56)
@@ -1778,7 +2068,7 @@
 		(uuid "e27ec693-0cd3-4a9b-934e-bf0307e9a0b5")
 	)
 	(junction
-		(at 95.25 16.51)
+		(at 80.645 16.51)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e330be1c-8f1d-4541-a315-410244c6bb29")
@@ -1790,40 +2080,10 @@
 		(uuid "e736410d-7c77-4ef1-ae17-797c9243fc39")
 	)
 	(junction
-		(at 101.6 36.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ec441d64-bba5-43a5-b072-4b7595d4cd5e")
-	)
-	(junction
 		(at 151.13 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ed9ef4ff-8ee5-442e-b576-9d8e116cae1d")
-	)
-	(junction
-		(at 101.6 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "edeb91c7-2808-4df7-a3de-80629056982c")
-	)
-	(junction
-		(at 101.6 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ef7cc393-d831-441c-8d27-9d64b0adecae")
-	)
-	(junction
-		(at 101.6 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f5a6d956-77b0-4142-88f7-8445d19a8181")
-	)
-	(junction
-		(at 101.6 149.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f6a8d614-cc6c-4783-be46-c317cea04df1")
 	)
 	(junction
 		(at 110.49 124.46)
@@ -1857,7 +2117,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 111.76) (xy 95.25 114.3)
+			(xy 80.645 111.76) (xy 80.645 114.3)
 		)
 		(stroke
 			(width 0)
@@ -1887,6 +2147,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.685 72.39) (xy 151.13 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07a4da7e-dcbc-4fc8-93b9-94d88054a320")
+	)
+	(wire
+		(pts
 			(xy 110.49 162.56) (xy 110.49 165.1)
 		)
 		(stroke
@@ -1907,7 +2177,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 16.51) (xy 95.25 16.51)
+			(xy 73.025 16.51) (xy 80.645 16.51)
 		)
 		(stroke
 			(width 0)
@@ -1927,7 +2197,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 72.39) (xy 101.6 76.2)
+			(xy 98.425 72.39) (xy 98.425 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1977,7 +2247,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 171.45) (xy 144.78 171.45)
+			(xy 101.6 171.45) (xy 140.335 171.45)
 		)
 		(stroke
 			(width 0)
@@ -1997,7 +2267,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 121.92) (xy 88.9 111.76)
+			(xy 74.295 121.92) (xy 74.295 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2027,7 +2297,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 76.2) (xy 95.25 76.2)
+			(xy 98.425 76.2) (xy 104.14 76.2)
 		)
 		(stroke
 			(width 0)
@@ -2044,6 +2314,16 @@
 			(type default)
 		)
 		(uuid "1a59507e-fab2-45bc-98e9-fcea9f4b58ba")
+	)
+	(wire
+		(pts
+			(xy 88.9 124.46) (xy 80.645 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c7de449-b417-4184-8245-2806c8b258f2")
 	)
 	(wire
 		(pts
@@ -2097,7 +2377,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 124.46) (xy 95.25 124.46)
+			(xy 101.6 124.46) (xy 93.98 124.46)
 		)
 		(stroke
 			(width 0)
@@ -2127,7 +2407,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 104.14) (xy 71.12 104.14)
+			(xy 26.67 104.14) (xy 56.515 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2137,7 +2417,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 149.86) (xy 95.25 147.32)
+			(xy 80.645 149.86) (xy 80.645 147.32)
 		)
 		(stroke
 			(width 0)
@@ -2147,7 +2427,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 82.55) (xy 101.6 82.55)
+			(xy 141.605 82.55) (xy 101.6 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2157,7 +2437,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 86.36) (xy 95.25 86.36)
+			(xy 69.215 86.36) (xy 80.645 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2317,7 +2597,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 175.26) (xy 95.25 175.26)
+			(xy 35.56 175.26) (xy 80.645 175.26)
 		)
 		(stroke
 			(width 0)
@@ -2337,7 +2617,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 49.53) (xy 101.6 49.53)
+			(xy 80.645 49.53) (xy 87.63 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2367,7 +2647,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 182.88) (xy 95.25 185.42)
+			(xy 80.645 182.88) (xy 80.645 185.42)
 		)
 		(stroke
 			(width 0)
@@ -2377,7 +2657,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 63.5) (xy 95.25 63.5)
+			(xy 101.6 63.5) (xy 92.075 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2387,7 +2667,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 95.25) (xy 149.86 95.25)
+			(xy 151.13 95.25) (xy 146.05 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2397,7 +2677,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 95.25) (xy 144.78 95.25)
+			(xy 101.6 95.25) (xy 140.97 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2417,13 +2697,23 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 114.3) (xy 81.28 76.2)
+			(xy 66.675 114.3) (xy 66.675 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3807aa67-570e-4033-8745-880ebe4c0e42")
+	)
+	(wire
+		(pts
+			(xy 98.425 76.2) (xy 92.075 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3841f974-952c-46c4-9487-e25be914d784")
 	)
 	(wire
 		(pts
@@ -2467,6 +2757,16 @@
 	)
 	(wire
 		(pts
+			(xy 88.9 162.56) (xy 80.645 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3edc074b-dd15-40f5-825a-ce7750f0e6b2")
+	)
+	(wire
+		(pts
 			(xy 109.22 124.46) (xy 110.49 124.46)
 		)
 		(stroke
@@ -2484,6 +2784,16 @@
 			(type default)
 		)
 		(uuid "4018cb88-c211-495b-8fd2-2dba21bc3a92")
+	)
+	(wire
+		(pts
+			(xy 100.33 16.51) (xy 115.57 16.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4074d761-5572-4709-8694-141caccd11ff")
 	)
 	(wire
 		(pts
@@ -2528,7 +2838,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 133.35) (xy 151.13 133.35)
+			(xy 145.415 133.35) (xy 151.13 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2568,7 +2878,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 26.67) (xy 95.25 24.13)
+			(xy 80.645 26.67) (xy 80.645 24.13)
 		)
 		(stroke
 			(width 0)
@@ -2578,7 +2888,17 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 124.46) (xy 95.25 124.46)
+			(xy 88.9 111.76) (xy 80.645 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c71b836-0bdc-4f7c-8483-79ff5bf0e8a1")
+	)
+	(wire
+		(pts
+			(xy 26.67 124.46) (xy 80.645 124.46)
 		)
 		(stroke
 			(width 0)
@@ -2588,17 +2908,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 24.13) (xy 101.6 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4df159da-2fe7-408a-aade-aa928a1df3c0")
-	)
-	(wire
-		(pts
-			(xy 88.9 111.76) (xy 95.25 111.76)
+			(xy 74.295 111.76) (xy 80.645 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2618,7 +2928,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 116.84) (xy 83.82 116.84)
+			(xy 26.67 116.84) (xy 69.215 116.84)
 		)
 		(stroke
 			(width 0)
@@ -2628,7 +2938,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 162.56) (xy 36.83 162.56)
+			(xy 80.645 162.56) (xy 36.83 162.56)
 		)
 		(stroke
 			(width 0)
@@ -2638,7 +2948,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 111.76) (xy 95.25 111.76)
+			(xy 101.6 111.76) (xy 93.98 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2668,7 +2978,17 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 187.96) (xy 95.25 194.31)
+			(xy 87.63 86.36) (xy 80.645 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57fb978e-2316-4950-9850-b32c68f74e56")
+	)
+	(wire
+		(pts
+			(xy 80.645 187.96) (xy 80.645 194.31)
 		)
 		(stroke
 			(width 0)
@@ -2688,7 +3008,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 185.42) (xy 95.25 185.42)
+			(xy 34.29 185.42) (xy 80.645 185.42)
 		)
 		(stroke
 			(width 0)
@@ -2708,7 +3028,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 76.2) (xy 95.25 73.66)
+			(xy 80.645 76.2) (xy 80.645 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2738,7 +3058,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 133.35) (xy 144.78 133.35)
+			(xy 101.6 133.35) (xy 140.335 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2778,7 +3098,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 149.86) (xy 95.25 149.86)
+			(xy 38.1 149.86) (xy 80.645 149.86)
 		)
 		(stroke
 			(width 0)
@@ -2788,7 +3108,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 124.46) (xy 95.25 121.92)
+			(xy 80.645 124.46) (xy 80.645 121.92)
 		)
 		(stroke
 			(width 0)
@@ -2818,7 +3138,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 120.65) (xy 144.78 120.65)
+			(xy 101.6 120.65) (xy 140.335 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2838,7 +3158,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 36.83) (xy 95.25 36.83)
+			(xy 59.055 36.83) (xy 80.645 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2848,7 +3168,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 158.75) (xy 149.86 158.75)
+			(xy 151.13 158.75) (xy 145.415 158.75)
 		)
 		(stroke
 			(width 0)
@@ -2878,7 +3198,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 49.53) (xy 95.25 52.07)
+			(xy 80.645 49.53) (xy 80.645 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2898,7 +3218,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 137.16) (xy 40.64 137.16)
+			(xy 80.645 137.16) (xy 40.64 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2908,7 +3228,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 137.16) (xy 95.25 134.62)
+			(xy 80.645 137.16) (xy 80.645 134.62)
 		)
 		(stroke
 			(width 0)
@@ -2918,7 +3238,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 120.65) (xy 151.13 120.65)
+			(xy 145.415 120.65) (xy 151.13 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2938,6 +3258,16 @@
 	)
 	(wire
 		(pts
+			(xy 88.265 99.06) (xy 80.645 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f3dd0df-90bb-4019-93fe-05d2f7f1efa4")
+	)
+	(wire
+		(pts
 			(xy 110.49 86.36) (xy 120.65 86.36)
 		)
 		(stroke
@@ -2948,7 +3278,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 171.45) (xy 95.25 175.26)
+			(xy 80.645 171.45) (xy 80.645 175.26)
 		)
 		(stroke
 			(width 0)
@@ -2968,7 +3298,17 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 63.5) (xy 95.25 63.5)
+			(xy 80.645 24.13) (xy 88.265 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70f61759-bbb7-4bf7-aeff-7efa8cfc22c0")
+	)
+	(wire
+		(pts
+			(xy 64.135 63.5) (xy 80.645 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2978,7 +3318,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 99.06) (xy 95.25 102.87)
+			(xy 80.645 99.06) (xy 80.645 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2988,7 +3328,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 149.86) (xy 95.25 152.4)
+			(xy 80.645 149.86) (xy 80.645 152.4)
 		)
 		(stroke
 			(width 0)
@@ -3019,7 +3359,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 86.36) (xy 95.25 86.36)
+			(xy 101.6 86.36) (xy 92.71 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3029,7 +3369,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 119.38) (xy 86.36 119.38)
+			(xy 26.67 119.38) (xy 71.755 119.38)
 		)
 		(stroke
 			(width 0)
@@ -3049,7 +3389,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 36.83) (xy 95.25 39.37)
+			(xy 80.645 36.83) (xy 80.645 39.37)
 		)
 		(stroke
 			(width 0)
@@ -3079,7 +3419,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 107.95) (xy 149.86 107.95)
+			(xy 151.13 107.95) (xy 145.415 107.95)
 		)
 		(stroke
 			(width 0)
@@ -3099,7 +3439,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 162.56) (xy 95.25 162.56)
+			(xy 101.6 162.56) (xy 93.98 162.56)
 		)
 		(stroke
 			(width 0)
@@ -3129,7 +3469,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 106.68) (xy 73.66 36.83)
+			(xy 59.055 106.68) (xy 59.055 36.83)
 		)
 		(stroke
 			(width 0)
@@ -3149,7 +3489,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 24.13) (xy 95.25 24.13)
+			(xy 56.515 24.13) (xy 80.645 24.13)
 		)
 		(stroke
 			(width 0)
@@ -3169,7 +3509,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 137.16) (xy 95.25 139.7)
+			(xy 80.645 137.16) (xy 80.645 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3199,7 +3539,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 187.96) (xy 95.25 187.96)
+			(xy 74.295 187.96) (xy 80.645 187.96)
 		)
 		(stroke
 			(width 0)
@@ -3219,7 +3559,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 111.76) (xy 78.74 111.76)
+			(xy 26.67 111.76) (xy 64.135 111.76)
 		)
 		(stroke
 			(width 0)
@@ -3239,7 +3579,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 16.51) (xy 95.25 24.13)
+			(xy 80.645 16.51) (xy 80.645 24.13)
 		)
 		(stroke
 			(width 0)
@@ -3249,7 +3589,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 16.51) (xy 115.57 16.51)
+			(xy 80.645 16.51) (xy 95.25 16.51)
 		)
 		(stroke
 			(width 0)
@@ -3259,7 +3599,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 116.84) (xy 83.82 86.36)
+			(xy 69.215 116.84) (xy 69.215 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3269,17 +3609,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 36.83) (xy 101.6 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87f755ec-4622-4826-9e3e-d12416cac3dd")
-	)
-	(wire
-		(pts
-			(xy 149.86 82.55) (xy 151.13 82.55)
+			(xy 146.685 82.55) (xy 151.13 82.55)
 		)
 		(stroke
 			(width 0)
@@ -3296,6 +3626,16 @@
 			(type default)
 		)
 		(uuid "896e0206-c0b5-4b3f-a628-5d25e8468b55")
+	)
+	(wire
+		(pts
+			(xy 92.71 36.83) (xy 101.6 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89861cce-455a-4a68-9216-1e5bfa5bb9a1")
 	)
 	(wire
 		(pts
@@ -3319,7 +3659,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 46.99) (xy 95.25 49.53)
+			(xy 80.645 46.99) (xy 80.645 49.53)
 		)
 		(stroke
 			(width 0)
@@ -3349,6 +3689,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.995 76.2) (xy 80.645 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8eb2678c-762a-4b17-abca-23de343a2b31")
+	)
+	(wire
+		(pts
 			(xy 151.13 120.65) (xy 151.13 124.46)
 		)
 		(stroke
@@ -3359,7 +3709,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 111.76) (xy 95.25 110.49)
+			(xy 80.645 111.76) (xy 80.645 110.49)
 		)
 		(stroke
 			(width 0)
@@ -3369,7 +3719,17 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 59.69) (xy 95.25 63.5)
+			(xy 80.645 36.83) (xy 87.63 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fd05f95-554c-40ed-a5e3-302aa9d56649")
+	)
+	(wire
+		(pts
+			(xy 80.645 59.69) (xy 80.645 63.5)
 		)
 		(stroke
 			(width 0)
@@ -3419,17 +3779,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 72.39) (xy 151.13 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96bd1365-0588-461a-8d5c-a9e48926cc1e")
-	)
-	(wire
-		(pts
-			(xy 151.13 146.05) (xy 149.86 146.05)
+			(xy 151.13 146.05) (xy 145.415 146.05)
 		)
 		(stroke
 			(width 0)
@@ -3439,7 +3789,17 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 99.06) (xy 95.25 99.06)
+			(xy 92.71 49.53) (xy 101.6 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a1c5ae1-1905-4b3b-852d-822657dfb2e7")
+	)
+	(wire
+		(pts
+			(xy 101.6 99.06) (xy 93.345 99.06)
 		)
 		(stroke
 			(width 0)
@@ -3459,7 +3819,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 111.76) (xy 78.74 63.5)
+			(xy 64.135 111.76) (xy 64.135 63.5)
 		)
 		(stroke
 			(width 0)
@@ -3479,7 +3839,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 63.5) (xy 95.25 66.04)
+			(xy 80.645 63.5) (xy 80.645 66.04)
 		)
 		(stroke
 			(width 0)
@@ -3489,7 +3849,17 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 180.34) (xy 144.78 180.34)
+			(xy 88.9 175.26) (xy 80.645 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a146249f-c834-46f2-bcd8-49b013855deb")
+	)
+	(wire
+		(pts
+			(xy 101.6 180.34) (xy 140.335 180.34)
 		)
 		(stroke
 			(width 0)
@@ -3519,7 +3889,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 119.38) (xy 86.36 99.06)
+			(xy 71.755 119.38) (xy 71.755 99.06)
 		)
 		(stroke
 			(width 0)
@@ -3529,7 +3899,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 49.53) (xy 95.25 49.53)
+			(xy 61.595 49.53) (xy 80.645 49.53)
 		)
 		(stroke
 			(width 0)
@@ -3539,7 +3909,17 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 99.06) (xy 95.25 97.79)
+			(xy 88.9 137.16) (xy 80.645 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a76d2138-d8ca-4ea6-9d6d-6ee09614ccf7")
+	)
+	(wire
+		(pts
+			(xy 80.645 99.06) (xy 80.645 97.79)
 		)
 		(stroke
 			(width 0)
@@ -3576,16 +3956,6 @@
 			(type default)
 		)
 		(uuid "ab0f2e08-d58a-4155-8662-d367a9ef10f1")
-	)
-	(wire
-		(pts
-			(xy 104.14 76.2) (xy 101.6 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "acf4cf96-5954-421d-82f5-e42b543b5776")
 	)
 	(wire
 		(pts
@@ -3639,7 +4009,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 107.95) (xy 144.78 107.95)
+			(xy 101.6 107.95) (xy 140.335 107.95)
 		)
 		(stroke
 			(width 0)
@@ -3719,7 +4089,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 86.36) (xy 95.25 90.17)
+			(xy 80.645 86.36) (xy 80.645 90.17)
 		)
 		(stroke
 			(width 0)
@@ -3759,7 +4129,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 171.45) (xy 151.13 171.45)
+			(xy 145.415 171.45) (xy 151.13 171.45)
 		)
 		(stroke
 			(width 0)
@@ -3779,7 +4149,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 187.96) (xy 95.25 185.42)
+			(xy 80.645 187.96) (xy 80.645 185.42)
 		)
 		(stroke
 			(width 0)
@@ -3789,7 +4159,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 34.29) (xy 95.25 36.83)
+			(xy 80.645 34.29) (xy 80.645 36.83)
 		)
 		(stroke
 			(width 0)
@@ -3799,7 +4169,17 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 121.92) (xy 88.9 121.92)
+			(xy 86.995 63.5) (xy 80.645 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c56cbd37-f110-47c1-ab8b-8b964537a12a")
+	)
+	(wire
+		(pts
+			(xy 26.67 121.92) (xy 74.295 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3829,7 +4209,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 162.56) (xy 95.25 163.83)
+			(xy 80.645 162.56) (xy 80.645 163.83)
 		)
 		(stroke
 			(width 0)
@@ -3849,7 +4229,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 187.96) (xy 101.6 187.96)
+			(xy 80.645 187.96) (xy 88.9 187.96)
 		)
 		(stroke
 			(width 0)
@@ -3929,7 +4309,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 194.31) (xy 97.79 194.31)
+			(xy 80.645 194.31) (xy 84.455 194.31)
 		)
 		(stroke
 			(width 0)
@@ -3939,7 +4319,17 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 76.2) (xy 95.25 78.74)
+			(xy 89.535 194.31) (xy 97.79 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8b3e625-3794-4520-9f48-6dd768fc9334")
+	)
+	(wire
+		(pts
+			(xy 80.645 76.2) (xy 80.645 78.74)
 		)
 		(stroke
 			(width 0)
@@ -3949,7 +4339,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 114.3) (xy 81.28 114.3)
+			(xy 26.67 114.3) (xy 66.675 114.3)
 		)
 		(stroke
 			(width 0)
@@ -3969,7 +4359,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 76.2) (xy 95.25 76.2)
+			(xy 66.675 76.2) (xy 80.645 76.2)
 		)
 		(stroke
 			(width 0)
@@ -3979,7 +4369,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 124.46) (xy 95.25 127)
+			(xy 80.645 124.46) (xy 80.645 127)
 		)
 		(stroke
 			(width 0)
@@ -4009,7 +4399,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 109.22) (xy 76.2 49.53)
+			(xy 61.595 109.22) (xy 61.595 49.53)
 		)
 		(stroke
 			(width 0)
@@ -4019,7 +4409,17 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 175.26) (xy 95.25 175.26)
+			(xy 88.9 149.86) (xy 80.645 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df51dee0-242e-4cd6-b165-e5129c465e20")
+	)
+	(wire
+		(pts
+			(xy 101.6 175.26) (xy 93.98 175.26)
 		)
 		(stroke
 			(width 0)
@@ -4059,7 +4459,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 149.86) (xy 95.25 149.86)
+			(xy 101.6 149.86) (xy 93.98 149.86)
 		)
 		(stroke
 			(width 0)
@@ -4079,13 +4479,23 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 137.16) (xy 95.25 137.16)
+			(xy 101.6 137.16) (xy 93.98 137.16)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e6aed7c3-6e61-4921-a82b-27eafb4eb027")
+	)
+	(wire
+		(pts
+			(xy 93.345 24.13) (xy 101.6 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7aaa832-f558-4127-91c7-67bdb3173e85")
 	)
 	(wire
 		(pts
@@ -4109,7 +4519,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 106.68) (xy 73.66 106.68)
+			(xy 26.67 106.68) (xy 59.055 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4139,7 +4549,17 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 180.34) (xy 151.13 180.34)
+			(xy 93.98 187.96) (xy 101.6 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb7c8f02-38bf-408d-875f-ae21a8e59e5e")
+	)
+	(wire
+		(pts
+			(xy 145.415 180.34) (xy 151.13 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4169,7 +4589,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 104.14) (xy 71.12 24.13)
+			(xy 56.515 104.14) (xy 56.515 24.13)
 		)
 		(stroke
 			(width 0)
@@ -4179,7 +4599,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 72.39) (xy 144.78 72.39)
+			(xy 98.425 72.39) (xy 141.605 72.39)
 		)
 		(stroke
 			(width 0)
@@ -4199,7 +4619,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 109.22) (xy 76.2 109.22)
+			(xy 26.67 109.22) (xy 61.595 109.22)
 		)
 		(stroke
 			(width 0)
@@ -4209,7 +4629,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 158.75) (xy 144.78 158.75)
+			(xy 101.6 158.75) (xy 140.335 158.75)
 		)
 		(stroke
 			(width 0)
@@ -4219,7 +4639,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 99.06) (xy 95.25 99.06)
+			(xy 71.755 99.06) (xy 80.645 99.06)
 		)
 		(stroke
 			(width 0)
@@ -4229,7 +4649,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 162.56) (xy 95.25 160.02)
+			(xy 80.645 162.56) (xy 80.645 160.02)
 		)
 		(stroke
 			(width 0)
@@ -4289,7 +4709,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 146.05) (xy 144.78 146.05)
+			(xy 101.6 146.05) (xy 140.335 146.05)
 		)
 		(stroke
 			(width 0)
@@ -4350,12 +4770,14 @@
 		(uuid "0ed44526-90ee-45a6-9600-843f45874d32")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4372,12 +4794,14 @@
 		(uuid "1511ca24-4779-41ea-b38f-579067bf55d9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4394,12 +4818,14 @@
 		(uuid "155e313d-ad7c-456d-aff4-c52cc6105e78")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4416,18 +4842,20 @@
 		(uuid "25d3c434-baee-4798-91f6-02360ba1dba8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
 	(global_label "Stack-"
 		(shape input)
-		(at 88.9 187.96 180)
+		(at 74.295 187.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4437,19 +4865,21 @@
 		)
 		(uuid "2a163d0c-6210-4d24-aee4-d994edabccf5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 79.1415 187.96 0)
+			(at 64.5365 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
 	(global_label "Batt_Coupling"
 		(shape bidirectional)
-		(at 87.63 16.51 180)
+		(at 73.025 16.51 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4459,13 +4889,15 @@
 		)
 		(uuid "462b5b7a-a479-4260-91bc-d1024d48a09b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 70.4105 16.51 0)
+			(at 55.8055 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4482,12 +4914,14 @@
 		(uuid "56dff23c-46dd-45c3-84c4-dc17b7a2f6e1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4504,12 +4938,14 @@
 		(uuid "581d19cc-3f43-47c9-a114-b12189ad7b6d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4526,12 +4962,14 @@
 		(uuid "5e479f90-9dba-4f1b-a41e-057d2a39f48b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4548,12 +4986,14 @@
 		(uuid "82bad791-fbec-4a4e-8b83-a099daefc46d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4570,12 +5010,14 @@
 		(uuid "8457464d-68c6-4ee3-a585-ae6fbc18eb93")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4592,12 +5034,14 @@
 		(uuid "99a30e30-fc23-4e11-bee2-68fb7583c702")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4614,12 +5058,14 @@
 		(uuid "a3631d19-7ed0-40f4-aa09-01b4b890de61")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4636,12 +5082,14 @@
 		(uuid "ac499ef0-99f0-4363-9a2e-3f206140e893")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4658,12 +5106,14 @@
 		(uuid "e013dbff-fee7-4b60-b36d-65027792bc34")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.3594 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4987,17 +5437,101 @@
 		(uuid "fd88dde6-1e88-4b5c-a022-1924b944761a")
 	)
 	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 95.25 119.38 0)
+		(lib_id "Device:Fuse_Small")
+		(at 91.44 149.86 0)
 		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0061dd71-0b09-4a24-adef-f311620e2d35")
+		(property "Reference" "F16"
+			(at 91.44 144.145 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 91.44 146.685 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 91.44 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 91.44 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 91.44 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "9dd8fc90-f27b-42bb-8a13-08e95cf8f1f3")
+		)
+		(pin "1"
+			(uuid "99d8a6c7-e2e5-42ad-a63d-cc8b2ffa012b")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 80.645 119.38 0)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "006c11de-657f-424d-b849-12f450a4d582")
 		(property "Reference" "BT8"
-			(at 99.06 116.2684 0)
+			(at 84.455 116.2684 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5006,40 +5540,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 118.8084 0)
+			(at 84.455 118.8084 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 117.856 90)
+			(at 80.645 117.856 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 117.856 90)
+		(property "Datasheet" ""
+			(at 80.645 117.856 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 119.38 0)
+			(at 80.645 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -5061,54 +5636,66 @@
 		(lib_id "Device:R_Small")
 		(at 144.78 20.32 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03ab717d-f91f-464d-9dd9-d708589e9530")
 		(property "Reference" "R33"
 			(at 144.78 15.24 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "20R 2W"
 			(at 144.78 17.78 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "footrpint:RESC6331X80N"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
 			(at 144.78 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
 			(at 144.78 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 144.78 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5128,25 +5715,112 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 105.41 187.96 90)
+		(at 142.875 146.05 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0693a09e-293b-4eac-8504-e3357573a2b5")
+		(property "Reference" "R43"
+			(at 142.875 140.97 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R 2W"
+			(at 142.875 143.51 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 142.875 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 142.875 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 142.875 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ccd7c249-7687-41d8-a3cb-6c4c525447b4")
+		)
+		(pin "2"
+			(uuid "97752236-ff52-4b2b-8432-fd868aa1e815")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R43")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 105.41 187.96 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "083029bc-fc51-4128-b817-c2a2e71741fc")
 		(property "Reference" "R19"
 			(at 105.41 182.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 105.41 185.42 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5155,29 +5829,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 105.41 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 105.41 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 105.41 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5199,23 +5879,29 @@
 		(lib_id "Device:R_Small")
 		(at 106.68 111.76 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "08f39835-fe3b-4d2f-9d5f-c60096a1e9ed")
 		(property "Reference" "R27"
 			(at 106.68 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 109.22 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5224,29 +5910,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5268,14 +5960,18 @@
 		(lib_id "Device:C_Small")
 		(at 110.49 140.97 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "09495398-89f1-4021-a0d9-5cfafe371fd5")
 		(property "Reference" "C25"
 			(at 113.03 139.6935 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5285,6 +5981,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 142.2335 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5294,29 +5992,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5336,16 +6040,20 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 107.95 0)
+		(at 80.645 107.95 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0cc59992-6c51-40e2-94ef-b6678a263276")
 		(property "Reference" "BT7"
-			(at 99.06 104.8384 0)
+			(at 84.455 104.8384 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5354,40 +6062,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 107.3784 0)
+			(at 84.455 107.3784 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 106.426 90)
+			(at 80.645 106.426 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 106.426 90)
+		(property "Datasheet" ""
+			(at 80.645 106.426 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 107.95 0)
+			(at 80.645 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -5406,17 +6155,101 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 110.49 81.28 180)
+		(lib_id "Device:Fuse_Small")
+		(at 91.44 162.56 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e6d3478-54a4-41d9-baad-89af43c01875")
+		(property "Reference" "F17"
+			(at 91.44 156.845 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 91.44 159.385 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 91.44 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 91.44 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 91.44 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6fd39326-93ac-4353-9401-c37b44bf1d08")
+		)
+		(pin "1"
+			(uuid "7ae8a5e3-80c2-4c88-ad02-a2d4a5ebd249")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 110.49 81.28 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "11deb669-ee95-4d0f-9d7f-be540d3624cf")
 		(property "Reference" "C20"
 			(at 113.03 80.0035 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5426,6 +6259,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 82.5435 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5435,29 +6270,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5476,17 +6317,343 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 151.13 78.74 180)
+		(lib_id "Device:R_Small")
+		(at 144.145 82.55 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "139bd297-e9dd-4846-8a28-3a0af3d3a096")
+		(property "Reference" "R38"
+			(at 144.145 77.47 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R 2W"
+			(at 144.145 80.01 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 144.145 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 144.145 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 144.145 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2b4004ba-ac29-4e31-978e-0452cd3ced82")
+		)
+		(pin "2"
+			(uuid "26e54d78-46d8-4970-9361-a894d86e9013")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse_Small")
+		(at 91.44 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "16641be5-eada-4d3f-aeb7-5f2b7ea6a7c1")
+		(property "Reference" "F14"
+			(at 91.44 118.745 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 91.44 121.285 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 91.44 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 91.44 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 91.44 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "dcd04c56-a9e1-40a7-a6f9-5e6b756d3c42")
+		)
+		(pin "1"
+			(uuid "8c16cf9a-9ee0-4a27-9a28-6e0a51ef51d9")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 143.51 95.25 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1882efaf-0296-4ae8-93e9-e7ead5af593a")
+		(property "Reference" "R39"
+			(at 143.51 90.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R 2W"
+			(at 143.51 92.71 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 143.51 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 143.51 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 143.51 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7a84855a-0e86-4287-b3cf-bc0520854b85")
+		)
+		(pin "2"
+			(uuid "4ce52be9-86d3-444b-93a0-980cdd1fbeeb")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse_Small")
+		(at 91.44 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "18db926c-60d7-4386-bfe3-cc1302fc9490")
+		(property "Reference" "F13"
+			(at 91.44 106.045 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 91.44 108.585 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 91.44 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 91.44 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 91.44 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6b2e84fd-880e-4469-bdf2-129267d13679")
+		)
+		(pin "1"
+			(uuid "38f0839c-ef02-4ac4-ae76-0b5f20416d8e")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 151.13 78.74 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1994c3d6-5b57-481e-8495-a7d750d4229f")
 		(property "Reference" "C33"
 			(at 153.67 77.4635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5496,6 +6663,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 80.0035 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5505,29 +6674,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5547,163 +6722,31 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 144.78 33.02 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1cdffd2f-f214-4c46-ad9a-eba0884ec7b6")
-		(property "Reference" "R34"
-			(at 144.78 27.94 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 144.78 30.48 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 144.78 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 144.78 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 144.78 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5f47b087-521e-42d2-8564-3d19a2e6494b")
-		)
-		(pin "2"
-			(uuid "eb2995c7-5ca6-40c2-918f-d40c387c6452")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R34")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 147.32 171.45 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "23035b39-8ab9-4f93-95a9-c64938708b8a")
-		(property "Reference" "R45"
-			(at 147.32 166.37 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 147.32 168.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 147.32 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 147.32 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 147.32 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b9b9f7e9-ae66-4245-b564-3efcf1d22b0d")
-		)
-		(pin "2"
-			(uuid "5227c0db-0342-449c-b053-191350fb9a78")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R45")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
 		(at 106.68 175.26 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "25010716-040c-407b-aa22-d6f440332910")
 		(property "Reference" "R32"
 			(at 106.68 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 172.72 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5712,29 +6755,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5756,14 +6805,18 @@
 		(lib_id "Device:C_Small")
 		(at 151.13 39.37 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "26080b1d-c521-4550-99b0-8231e9931d8b")
 		(property "Reference" "C30"
 			(at 153.67 38.0935 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5773,6 +6826,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 40.6335 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5782,29 +6837,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5823,86 +6884,21 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 147.32 120.65 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "271842b6-191f-4d97-bdf4-93f3a27ce597")
-		(property "Reference" "R41"
-			(at 147.32 115.57 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 147.32 118.11 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 147.32 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 147.32 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 147.32 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ca6cbf37-0306-4343-852e-a6fa85b5b676")
-		)
-		(pin "2"
-			(uuid "235b680d-5ab3-4c16-ba41-efa23ab5b2c4")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R41")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 110.49 104.14 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c0bcf30-007e-4f18-beea-f748617c64ea")
 		(property "Reference" "C22"
 			(at 113.03 102.8635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5912,6 +6908,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 105.4035 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5921,29 +6919,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5963,25 +6967,112 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 106.68 162.56 90)
+		(at 144.78 59.69 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "30f726be-b789-4a03-b2c6-438020aaaabd")
+		(property "Reference" "R36"
+			(at 144.78 54.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R 2W"
+			(at 144.78 57.15 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 144.78 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 144.78 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 144.78 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9fb89e49-8710-4105-848c-77297204eac0")
+		)
+		(pin "2"
+			(uuid "a24f071d-7dbe-4e37-bc79-69d16e6c2599")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 106.68 162.56 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33a5d9af-b6b9-4f63-b88b-1736f6d18b29")
 		(property "Reference" "R31"
 			(at 106.68 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 160.02 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5990,29 +7081,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6031,17 +7128,102 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 151.13 26.67 180)
+		(lib_id "Device:R_Small")
+		(at 144.78 33.02 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "34f84a96-f37e-44ce-b161-6ccf95e7f7af")
+		(property "Reference" "R34"
+			(at 144.78 27.94 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R 2W"
+			(at 144.78 30.48 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 144.78 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 144.78 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 144.78 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "05d66e97-d214-4e19-b57f-20d36db6dbad")
+		)
+		(pin "2"
+			(uuid "8b2da7b4-4a4f-4f47-8ba4-f2e8425dc564")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 151.13 26.67 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3afebaf1-730a-4193-b3ca-3285864b2a74")
 		(property "Reference" "C29"
 			(at 153.67 25.3935 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6051,6 +7233,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 27.9335 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6060,29 +7244,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6101,69 +7291,161 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 147.32 146.05 90)
+		(lib_id "Device:Fuse_Small")
+		(at 90.17 86.36 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3cfb84e4-2e45-4d27-8895-e29c0bcc43aa")
-		(property "Reference" "R43"
-			(at 147.32 140.97 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 147.32 143.51 90)
+		(uuid "3b5329c8-cc6a-4ff4-aeca-33eb487538a5")
+		(property "Reference" "F11"
+			(at 90.17 80.645 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 147.32 146.05 0)
+		(property "Value" "400mA"
+			(at 90.17 83.185 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 147.32 146.05 0)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 90.17 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
-			(at 147.32 146.05 0)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 90.17 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "3b95f956-75cb-4c77-bc44-1dfac4a49276")
+		(property "Description" "Fuse, small symbol"
+			(at 90.17 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "2"
-			(uuid "ac8be2f7-c51b-4d4a-99c3-0f8f0a0061db")
+			(uuid "cea643d3-3e36-481e-862b-cc998a3fbffa")
+		)
+		(pin "1"
+			(uuid "86cabc76-7660-4215-9ccd-21abe1e6bcd1")
 		)
 		(instances
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R43")
+					(reference "F11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 142.875 120.65 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e74f715-ffd0-4783-bea6-29253bfb2ec5")
+		(property "Reference" "R41"
+			(at 142.875 115.57 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R 2W"
+			(at 142.875 118.11 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 142.875 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 142.875 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 142.875 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d166e9be-0214-4349-87eb-f720ec2ff7d2")
+		)
+		(pin "2"
+			(uuid "524f7912-b40c-44f1-aaad-6629598ffddd")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R41")
 					(unit 1)
 				)
 			)
@@ -6171,16 +7453,20 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 132.08 0)
+		(at 80.645 132.08 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3ebf22a3-09c8-4744-b296-9f64d82dcd64")
 		(property "Reference" "BT9"
-			(at 99.06 128.9684 0)
+			(at 84.455 128.9684 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6189,40 +7475,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 131.5084 0)
+			(at 84.455 131.5084 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 130.556 90)
+			(at 80.645 130.556 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 130.556 90)
+		(property "Datasheet" ""
+			(at 80.645 130.556 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 132.08 0)
+			(at 80.645 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -6241,86 +7568,21 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 147.32 72.39 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "40736d07-7fa7-42d0-9fec-ebba962c6d19")
-		(property "Reference" "R37"
-			(at 147.32 67.31 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 147.32 69.85 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 147.32 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 147.32 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 147.32 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3bc89e47-3e29-4a5e-8f1e-823911d47430")
-		)
-		(pin "2"
-			(uuid "746ba75b-d1e2-4d8b-b2a8-de009ca5e17b")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 180.34 0)
+		(at 80.645 180.34 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4383f620-1c7c-4fc2-a128-644ba336b532")
 		(property "Reference" "BT13"
-			(at 99.06 177.2284 0)
+			(at 84.455 177.2284 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6329,40 +7591,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 179.7684 0)
+			(at 84.455 179.7684 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 178.816 90)
+			(at 80.645 178.816 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 178.816 90)
+		(property "Datasheet" ""
+			(at 80.645 178.816 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 180.34 0)
+			(at 80.645 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -6382,68 +7685,80 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 147.32 158.75 90)
+		(at 144.78 45.72 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4ae41202-95f0-43de-b9c8-ae0de03b2a7d")
-		(property "Reference" "R44"
-			(at 147.32 153.67 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 147.32 156.21 90)
+		(uuid "4b30c45f-4284-4495-8c35-407ae336dbd6")
+		(property "Reference" "R35"
+			(at 144.78 40.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 147.32 158.75 0)
+		(property "Value" "20R 2W"
+			(at 144.78 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 147.32 158.75 0)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 144.78 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 144.78 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 147.32 158.75 0)
+			(at 144.78 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "1e345c57-21f6-46fd-809e-3e5d9bc49484")
+			(uuid "062a1c65-af28-4746-8cf6-ffe4e5727c7c")
 		)
 		(pin "2"
-			(uuid "16c31605-9312-4ded-97fc-837af8807644")
+			(uuid "7c83a4ac-3706-41e5-a3ba-972e662b4e85")
 		)
 		(instances
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R44")
+					(reference "R35")
 					(unit 1)
 				)
 			)
@@ -6453,14 +7768,18 @@
 		(lib_id "Device:C_Small")
 		(at 151.13 88.9 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "502c1994-e2da-4c48-9476-18318dbdecc6")
 		(property "Reference" "C34"
 			(at 153.67 87.6235 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6470,6 +7789,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 90.1635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6479,29 +7800,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6523,23 +7850,29 @@
 		(lib_id "Device:R_Small")
 		(at 106.68 86.36 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "53367b3a-64cf-4493-b889-12dc7838f5ad")
 		(property "Reference" "R25"
 			(at 106.68 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 83.82 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6548,29 +7881,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6589,17 +7928,101 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 95.25 31.75 0)
+		(lib_id "Device:Fuse_Small")
+		(at 90.17 49.53 0)
 		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "557661c3-53a0-4a79-9f6d-9cf36f7a2a64")
+		(property "Reference" "F8"
+			(at 90.17 43.815 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 90.17 46.355 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 90.17 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 90.17 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 90.17 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "9e85588c-8dab-4b81-b281-d20a9f01bc29")
+		)
+		(pin "1"
+			(uuid "5fa686c2-8b7f-497c-a7cb-e219b472263d")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 80.645 31.75 0)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "597aa6c3-2b2f-4e0f-b9dc-7147ce5768c9")
 		(property "Reference" "BT1"
-			(at 99.06 28.6384 0)
+			(at 84.455 28.6384 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6608,40 +8031,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 31.1784 0)
+			(at 84.455 31.1784 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 30.226 90)
+			(at 80.645 30.226 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 30.226 90)
+		(property "Datasheet" ""
+			(at 80.645 30.226 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 31.75 0)
+			(at 80.645 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -6663,14 +8127,18 @@
 		(lib_id "Device:C_Small")
 		(at 110.49 154.94 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "59d2a66e-d9f5-486d-897f-bbb8565867f3")
 		(property "Reference" "C26"
 			(at 113.03 153.6635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6680,6 +8148,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 156.2035 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6689,29 +8159,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6731,16 +8207,20 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 144.78 0)
+		(at 80.645 144.78 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6dd00875-d817-440c-9c2e-70699491aa46")
 		(property "Reference" "BT10"
-			(at 99.06 141.6684 0)
+			(at 84.455 141.6684 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6749,40 +8229,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 144.2084 0)
+			(at 84.455 144.2084 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 143.256 90)
+			(at 80.645 143.256 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 143.256 90)
+		(property "Datasheet" ""
+			(at 80.645 143.256 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 144.78 0)
+			(at 80.645 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -6801,69 +8322,240 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 147.32 95.25 90)
+		(lib_id "Device:Fuse_Small")
+		(at 86.995 194.31 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7069bf23-38f9-4e05-84fc-5e4a9d8662e9")
-		(property "Reference" "R39"
-			(at 147.32 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 147.32 92.71 90)
+		(uuid "72dc2ab9-81fe-470d-862c-aa19eaaac0e7")
+		(property "Reference" "F20"
+			(at 86.995 190.5 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 147.32 95.25 0)
+		(property "Value" "400mA"
+			(at 86.995 192.405 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 147.32 95.25 0)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 86.995 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
-			(at 147.32 95.25 0)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 86.995 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "bb1755c9-2dd5-46cf-8baa-6c58617f0b5e")
+		(property "Description" "Fuse, small symbol"
+			(at 86.995 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "2"
-			(uuid "108e3b5c-d260-4237-bf7b-d94adc7b172b")
+			(uuid "d49ee9d6-0abc-4623-a9cb-caba9e20d9a1")
+		)
+		(pin "1"
+			(uuid "4f036a25-0605-41ba-8a88-43142c572a3a")
 		)
 		(instances
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R39")
+					(reference "F20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 142.875 171.45 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "73a8209c-0476-4f1a-9842-c23329644962")
+		(property "Reference" "R45"
+			(at 142.875 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R 2W"
+			(at 142.875 168.91 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 142.875 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 142.875 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 142.875 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "077e9212-7657-4924-8320-afcd91dd5538")
+		)
+		(pin "2"
+			(uuid "c88199ba-9e30-4ce9-af67-45c9383b4471")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse_Small")
+		(at 91.44 137.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "770803c3-dad3-4674-a67f-b802e0448116")
+		(property "Reference" "F15"
+			(at 91.44 131.445 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 91.44 133.985 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 91.44 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 91.44 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 91.44 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "980c7966-c0f6-43a8-9c06-4cefdc087fa2")
+		)
+		(pin "1"
+			(uuid "0be9f84c-1cbc-4066-8cd8-347bd9de9b45")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F15")
 					(unit 1)
 				)
 			)
@@ -6873,14 +8565,18 @@
 		(lib_id "Device:C_Small")
 		(at 151.13 176.53 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7b3c6e1f-71b0-44a1-ae28-3620d087128d")
 		(property "Reference" "C41"
 			(at 153.67 175.2535 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6890,6 +8586,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 177.7935 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6899,29 +8597,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6940,69 +8644,80 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 147.32 82.55 90)
+		(lib_id "Device:Fuse_Small")
+		(at 90.17 36.83 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8356d27c-2191-4166-8049-7d9f35265e52")
-		(property "Reference" "R38"
-			(at 147.32 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 147.32 80.01 90)
+		(uuid "7f99c8c0-5342-43b2-b253-530587e5af33")
+		(property "Reference" "F7"
+			(at 90.17 31.115 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 147.32 82.55 0)
+		(property "Value" "400mA"
+			(at 90.17 33.655 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 147.32 82.55 0)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 90.17 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
-			(at 147.32 82.55 0)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 90.17 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "4709d674-38bf-46c4-b6c1-81377773ff19")
+		(property "Description" "Fuse, small symbol"
+			(at 90.17 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "2"
-			(uuid "a9bb964f-91e8-4070-b831-f172b6938949")
+			(uuid "e6cc99e9-2628-429f-bef0-f4c260e3d24e")
+		)
+		(pin "1"
+			(uuid "a44898d7-e6dd-4045-b82a-8917aaa90594")
 		)
 		(instances
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R38")
+					(reference "F7")
 					(unit 1)
 				)
 			)
@@ -7012,14 +8727,18 @@
 		(lib_id "Device:C_Small")
 		(at 151.13 66.04 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "84ba5f86-cdc4-429e-8389-9fca48c5a600")
 		(property "Reference" "C32"
 			(at 153.67 64.7635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7029,6 +8748,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 67.3035 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7038,29 +8759,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7080,15 +8807,19 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 57.15 0)
+		(at 80.645 57.15 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "866beabe-5d2c-4a29-a41e-93c93b0a76bd")
 		(property "Reference" "BT3"
-			(at 100.33 54.0384 0)
+			(at 85.725 54.0384 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7097,40 +8828,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 56.5784 0)
+			(at 84.455 56.5784 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 55.626 90)
+			(at 80.645 55.626 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 55.626 90)
+		(property "Datasheet" ""
+			(at 80.645 55.626 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 57.15 0)
+			(at 80.645 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -7152,22 +8924,28 @@
 		(lib_id "power:GND")
 		(at 97.79 194.31 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "868ef81e-1e8a-4d27-b2ca-c7d0e3c05eb3")
 		(property "Reference" "#PWR027"
 			(at 104.14 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "GND_HV"
 			(at 101.6 194.31 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7177,29 +8955,35 @@
 		)
 		(property "Footprint" ""
 			(at 97.79 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
 			(at 97.79 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 97.79 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7215,86 +8999,21 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 144.78 59.69 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8b6e43ed-a9e9-4a6b-a96c-4b4c5e81e5de")
-		(property "Reference" "R36"
-			(at 144.78 54.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 144.78 57.15 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 144.78 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 144.78 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 144.78 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "49fa2d47-08e1-4989-b758-b768798221a3")
-		)
-		(pin "2"
-			(uuid "93f261de-1858-43e2-9121-774d4d5e682a")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R36")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 95.25 0)
+		(at 80.645 95.25 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c793c45-5014-4cf6-8368-54cffe7098f4")
 		(property "Reference" "BT6"
-			(at 99.06 92.1384 0)
+			(at 84.455 92.1384 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7303,40 +9022,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 94.6784 0)
+			(at 84.455 94.6784 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 93.726 90)
+			(at 80.645 93.726 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 93.726 90)
+		(property "Datasheet" ""
+			(at 80.645 93.726 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 95.25 0)
+			(at 80.645 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -7358,14 +9118,18 @@
 		(lib_id "Device:C_Small")
 		(at 110.49 40.64 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8cca6893-6216-404a-8087-c176aeaad346")
 		(property "Reference" "C17"
 			(at 113.03 39.3635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7375,6 +9139,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 41.9035 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7384,29 +9150,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7426,94 +9198,31 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 147.32 180.34 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8f3c1893-a49f-4c2c-b834-7f3fc2b843ee")
-		(property "Reference" "R46"
-			(at 147.32 175.26 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 147.32 177.8 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 147.32 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 147.32 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 147.32 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f154bcb5-5c01-451f-8be3-7f8245ffb7c4")
-		)
-		(pin "2"
-			(uuid "64c4ee9a-8f03-41a3-8a8f-cfb04d31a768")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R46")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
 		(at 106.68 99.06 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "91ed695e-bd01-4a44-8749-e9fc889a7d56")
 		(property "Reference" "R26"
 			(at 106.68 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 96.52 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7522,29 +9231,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7566,14 +9281,18 @@
 		(lib_id "Device:C_Small")
 		(at 110.49 129.54 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "92af96fc-676b-438a-a03f-2a3cf6ab82c8")
 		(property "Reference" "C24"
 			(at 113.03 128.2635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7583,6 +9302,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 130.8035 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7592,29 +9313,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7634,16 +9361,20 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 83.82 0)
+		(at 80.645 83.82 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "932476fb-21bf-48d0-ad98-5c662b4fdd28")
 		(property "Reference" "BT5"
-			(at 99.06 80.7084 0)
+			(at 84.455 80.7084 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7652,40 +9383,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 83.2484 0)
+			(at 84.455 83.2484 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 82.296 90)
+			(at 80.645 82.296 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 82.296 90)
+		(property "Datasheet" ""
+			(at 80.645 82.296 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 83.82 0)
+			(at 80.645 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -7707,23 +9479,29 @@
 		(lib_id "Device:R_Small")
 		(at 106.68 36.83 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9452d0aa-b382-4a21-866f-6b29e34a1456")
 		(property "Reference" "R21"
 			(at 106.68 31.75 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 34.29 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7732,29 +9510,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7776,23 +9560,29 @@
 		(lib_id "Device:R_Small")
 		(at 106.68 149.86 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97eba0c3-ecb1-4ebc-9a78-415929f4dbe2")
 		(property "Reference" "R30"
 			(at 106.68 144.78 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 147.32 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7801,29 +9591,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7842,17 +9638,102 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x28")
-		(at 21.59 104.14 180)
+		(lib_id "Device:R_Small")
+		(at 144.145 72.39 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97f9b3a5-f6b4-4388-ba6f-38682a9150a9")
+		(property "Reference" "R37"
+			(at 144.145 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R 2W"
+			(at 144.145 69.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 144.145 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 144.145 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 144.145 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "52754ef0-badd-4195-a4d9-e6cffa9ff802")
+		)
+		(pin "2"
+			(uuid "244341ba-4ff3-4211-9e37-39954d0f8550")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x28")
+		(at 21.59 104.14 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9d5e5b39-f7b8-48b9-bf72-a7f936b4755d")
 		(property "Reference" "J1"
 			(at 21.59 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7861,6 +9742,8 @@
 		)
 		(property "Value" "Conn_01x28"
 			(at 21.59 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7869,29 +9752,35 @@
 		)
 		(property "Footprint" "footrpint:HARWIN_M80-5002842"
 			(at 21.59 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 21.59 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x28, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 21.59 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -7979,9 +9868,90 @@
 			(uuid "f21e0bdf-6ce8-45bf-9dc5-b38b7c5278b0")
 		)
 		(instances
-			(project ""
+			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 142.875 107.95 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9e1d2383-6bd1-4f5c-8451-61d1ce01e45f")
+		(property "Reference" "R40"
+			(at 142.875 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R 2W"
+			(at 142.875 105.41 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 142.875 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 142.875 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 142.875 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f927f019-16b6-47ea-af09-62619c94868a")
+		)
+		(pin "2"
+			(uuid "a2b4485a-11d3-4577-91f9-5f4cc61e06b2")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -7991,14 +9961,18 @@
 		(lib_id "Device:C_Small")
 		(at 110.49 115.57 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2d30a6f-b8c3-4585-b858-34ba423ff508")
 		(property "Reference" "C23"
 			(at 113.03 114.2935 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8008,6 +9982,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 116.8335 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8017,29 +9993,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8059,68 +10041,80 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 144.78 45.72 90)
+		(at 142.875 180.34 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a4ce18b5-ad87-40f7-b221-c909007fc77b")
-		(property "Reference" "R35"
-			(at 144.78 40.64 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 144.78 43.18 90)
+		(uuid "a47db8e2-0b3b-43f4-b973-01246eeb558d")
+		(property "Reference" "R46"
+			(at 142.875 175.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 144.78 45.72 0)
+		(property "Value" "20R 2W"
+			(at 142.875 177.8 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 144.78 45.72 0)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 142.875 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 142.875 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 144.78 45.72 0)
+			(at 142.875 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "b40db40a-6638-4cd0-bb2d-a2ffc3d652e9")
+			(uuid "7e8d196a-f3e9-446c-b8cb-370b0b379ddf")
 		)
 		(pin "2"
-			(uuid "2ce69b53-9832-4bf5-9dfe-4f3e9e6b391a")
+			(uuid "9191c78c-4674-4e79-a3a8-a0160830b9ff")
 		)
 		(instances
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R35")
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -8130,14 +10124,18 @@
 		(lib_id "Device:C_Small")
 		(at 110.49 67.31 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a4d83303-3f77-474f-8cb2-04dac5a68170")
 		(property "Reference" "C19"
 			(at 113.03 66.0335 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8147,6 +10145,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 68.5735 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8156,29 +10156,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8200,23 +10206,29 @@
 		(lib_id "Device:R_Small")
 		(at 106.68 124.46 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a7357080-7324-4be7-a52b-076e300ec49c")
 		(property "Reference" "R28"
 			(at 106.68 119.38 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 121.92 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8225,29 +10237,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8266,60 +10284,265 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Fuse_Small")
+		(at 89.535 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a764a6c4-265c-44cb-a2d6-e755d089d698")
+		(property "Reference" "F9"
+			(at 89.535 57.785 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 89.535 60.325 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 89.535 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 89.535 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 89.535 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5b469720-2fae-4f32-8a69-394f83ab7996")
+		)
+		(pin "1"
+			(uuid "28f4901b-d979-49fb-95ea-11cee0f6c9a8")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse_Small")
+		(at 90.805 24.13 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aaa1cb97-9e54-4bfb-9f2c-aded92efc079")
+		(property "Reference" "F1"
+			(at 90.805 18.415 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 90.805 20.955 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 90.805 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 90.805 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 90.805 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "339003d8-b937-462e-865a-58e72f9fca07")
+		)
+		(pin "1"
+			(uuid "4dbf23f1-b883-4d1b-8544-5c7d237c1f80")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Battery_Cell")
 		(at 228.6 62.23 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "acfb13f2-6253-49a6-a0f3-99d4bd2406b8")
 		(property "Reference" "BT27"
 			(at 232.41 59.1184 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "Battery_Cell"
 			(at 232.41 61.6584 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
 			(at 228.6 60.706 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 228.6 60.706 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
 			(at 228.6 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 228.6 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 228.6 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 228.6 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -8339,16 +10562,20 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 71.12 0)
+		(at 80.645 71.12 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af8a2889-cf5c-47bc-b779-79eb6703930d")
 		(property "Reference" "BT4"
-			(at 99.06 68.0084 0)
+			(at 84.455 68.0084 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8357,40 +10584,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 70.5484 0)
+			(at 84.455 70.5484 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 69.596 90)
+			(at 80.645 69.596 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 69.596 90)
+		(property "Datasheet" ""
+			(at 80.645 69.596 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 71.12 0)
+			(at 80.645 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -8412,14 +10680,18 @@
 		(lib_id "Device:C_Small")
 		(at 110.49 90.17 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b0d2cc93-831e-4e35-825a-24be2735b2b2")
 		(property "Reference" "C21"
 			(at 113.03 88.8935 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8429,6 +10701,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 91.4335 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8438,29 +10712,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8480,16 +10760,20 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 168.91 0)
+		(at 80.645 168.91 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b6b2f67b-901a-47e4-93fb-52c84bd2ce05")
 		(property "Reference" "BT12"
-			(at 99.06 165.7984 0)
+			(at 84.455 165.7984 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8498,40 +10782,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 168.3384 0)
+			(at 84.455 168.3384 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 167.386 90)
+			(at 80.645 167.386 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 167.386 90)
+		(property "Datasheet" ""
+			(at 80.645 167.386 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 168.91 0)
+			(at 80.645 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -8553,14 +10878,18 @@
 		(lib_id "Device:C_Small")
 		(at 151.13 152.4 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb7989f6-e88f-4a71-81b9-31b7f5fa6717")
 		(property "Reference" "C39"
 			(at 153.67 151.1235 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8570,6 +10899,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 153.6635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8579,29 +10910,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8620,17 +10957,101 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 110.49 184.15 180)
+		(lib_id "Device:Fuse_Small")
+		(at 90.805 99.06 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd6e669d-64ea-422d-b921-4b2bba0b5224")
+		(property "Reference" "F12"
+			(at 90.805 93.345 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 90.805 95.885 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 90.805 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 90.805 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 90.805 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "cd43feaf-7f27-48e6-97e9-5683bf3e07a3")
+		)
+		(pin "1"
+			(uuid "c0f110ca-89fb-4c0f-bfa3-7ae6dede6e40")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 110.49 184.15 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1f47b18-c1cc-41fe-8648-a6f10a3b16e0")
 		(property "Reference" "C28"
 			(at 113.03 182.8735 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8640,6 +11061,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 185.4135 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8649,29 +11072,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8690,86 +11119,21 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 147.32 107.95 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c361a716-1703-4558-895f-4cca80b27d32")
-		(property "Reference" "R40"
-			(at 147.32 102.87 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 147.32 105.41 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 147.32 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 147.32 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 147.32 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8e7c8dee-42e3-421f-8e5b-8fd5fcf4b5ec")
-		)
-		(pin "2"
-			(uuid "784872f3-16ea-4253-b245-af7182735a00")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
-					(reference "R40")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 151.13 127 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c7eb05e7-6ae3-4a11-96ec-ff5928953005")
 		(property "Reference" "C37"
 			(at 153.67 125.7235 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8779,6 +11143,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 128.2635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8788,29 +11154,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8829,64 +11201,156 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 147.32 133.35 90)
+		(lib_id "Device:Fuse_Small")
+		(at 91.44 187.96 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "cd579466-fbab-4fef-8ddb-f0741e2ad9e3")
+		(uuid "cb977a8d-b6e0-49bd-99a3-b48aedb6d1e5")
+		(property "Reference" "F19"
+			(at 91.44 182.245 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 91.44 184.785 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 91.44 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 91.44 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 91.44 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "72dea5b3-3089-464a-aa8e-efafcd117cca")
+		)
+		(pin "1"
+			(uuid "7122d7d0-582e-4b64-bda3-654e69d11d6c")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 142.875 133.35 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdaaf08d-d6bf-4265-b46a-949292596474")
 		(property "Reference" "R42"
-			(at 147.32 128.27 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "10"
-			(at 147.32 130.81 90)
+			(at 142.875 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "footrpint:RESC6331X80N"
-			(at 147.32 133.35 0)
+		(property "Value" "20R 2W"
+			(at 142.875 130.81 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CRM2512QFW-10R0ELF?qs=sGAEpiMZZMvdGkrng054t2cqbZCzJY7NpHS3xgyJn8kv84%2FVq0xHeQ%3D%3D"
-			(at 147.32 133.35 0)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 142.875 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 142.875 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 147.32 133.35 0)
+			(at 142.875 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "a184aaaf-4c15-4417-b382-74350553cddf")
+			(uuid "0d037217-9124-4895-9e29-479757f232d4")
 		)
 		(pin "2"
-			(uuid "130d2778-f688-4873-9038-e67db74390e9")
+			(uuid "954f5c43-21e9-4cc1-b3b7-e02307a2ae98")
 		)
 		(instances
 			(project "BMS"
@@ -8901,23 +11365,29 @@
 		(lib_id "Device:R_Small")
 		(at 106.68 49.53 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cecd7bc2-8873-475c-9af4-bc48c5985bd2")
 		(property "Reference" "R22"
 			(at 106.68 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 46.99 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8926,29 +11396,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8970,23 +11446,29 @@
 		(lib_id "Device:R_Small")
 		(at 106.68 63.5 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cfe47f81-3e6a-4f78-a54d-d4b2d5fd3060")
 		(property "Reference" "R23"
 			(at 106.68 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 60.96 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8995,29 +11477,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9039,23 +11527,29 @@
 		(lib_id "Device:R_Small")
 		(at 106.68 76.2 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e180a8b4-6a71-4357-b1ed-5328fafb327a")
 		(property "Reference" "R24"
 			(at 106.68 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 73.66 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9064,29 +11558,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9108,14 +11608,18 @@
 		(lib_id "Device:C_Small")
 		(at 110.49 167.64 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e2fd2615-8aa8-436e-8423-33ab9745a39f")
 		(property "Reference" "C27"
 			(at 113.03 166.3635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9125,6 +11629,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 168.9035 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9134,29 +11640,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9178,14 +11690,18 @@
 		(lib_id "Device:C_Small")
 		(at 151.13 114.3 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e4709578-d635-4564-bc48-1566f08daa8f")
 		(property "Reference" "C36"
 			(at 153.67 113.0235 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9195,6 +11711,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 115.5635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9204,29 +11722,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9248,14 +11772,18 @@
 		(lib_id "Device:C_Small")
 		(at 151.13 165.1 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e50ce782-76b4-4954-8585-25bf0ea1581b")
 		(property "Reference" "C40"
 			(at 153.67 163.8235 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9265,6 +11793,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 166.3635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9274,29 +11804,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9318,14 +11854,18 @@
 		(lib_id "Device:C_Small")
 		(at 110.49 53.34 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e53171fe-8f2c-46d1-9018-e2eb660b91c3")
 		(property "Reference" "C18"
 			(at 113.03 52.0635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9335,6 +11875,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 54.6035 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9344,29 +11886,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9386,16 +11934,20 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 157.48 0)
+		(at 80.645 157.48 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e974cac7-9aa5-45c9-86a2-5254bb3fa13a")
 		(property "Reference" "BT11"
-			(at 99.06 154.3684 0)
+			(at 84.455 154.3684 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9404,40 +11956,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 156.9084 0)
+			(at 84.455 156.9084 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 155.956 90)
+			(at 80.645 155.956 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 155.956 90)
+		(property "Datasheet" ""
+			(at 80.645 155.956 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 157.48 0)
+			(at 80.645 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -9459,23 +12052,29 @@
 		(lib_id "Device:R_Small")
 		(at 106.68 137.16 90)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e9a781cc-2207-449c-b280-20fb88cd5d5e")
 		(property "Reference" "R29"
 			(at 106.68 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 134.62 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9484,29 +12083,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9526,16 +12131,20 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 95.25 44.45 0)
+		(at 80.645 44.45 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eb4a8e98-694a-40f6-b595-8cd8ebdcb9a4")
 		(property "Reference" "BT2"
-			(at 99.06 41.3384 0)
+			(at 84.455 41.3384 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9544,40 +12153,81 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 99.06 43.8784 0)
+			(at 84.455 43.8784 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 42.926 90)
+			(at 80.645 42.926 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 95.25 42.926 90)
+		(property "Datasheet" ""
+			(at 80.645 42.926 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 95.25 44.45 0)
+			(at 80.645 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 80.645 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 80.645 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 80.645 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -9596,17 +12246,100 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 151.13 139.7 180)
+		(lib_id "Device:Fuse_Small")
+		(at 97.79 16.51 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ed2dc98a-d316-492f-8782-966a0696ba29")
+		(property "Reference" "F21"
+			(at 97.79 12.065 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 97.79 13.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 97.79 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 97.79 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 97.79 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "77afaee9-e57b-4874-87b6-f533e9f29a2b")
+		)
+		(pin "1"
+			(uuid "46b79734-e94c-4872-9ca9-55fa6610afcc")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 151.13 139.7 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f1f14de4-317e-4e32-b7f5-2e06f6f53ae2")
 		(property "Reference" "C38"
 			(at 153.67 138.4235 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9616,6 +12349,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 140.9635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9625,29 +12360,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9669,14 +12410,18 @@
 		(lib_id "Device:C_Small")
 		(at 151.13 101.6 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f5ef6cb5-18b1-4c8a-880d-cb0df0d88f64")
 		(property "Reference" "C35"
 			(at 153.67 100.3235 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9686,6 +12431,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 102.8635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9695,29 +12442,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9739,14 +12492,18 @@
 		(lib_id "Device:C_Small")
 		(at 110.49 27.94 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f6a65f0b-8540-4298-b795-58c462783676")
 		(property "Reference" "C16"
 			(at 113.03 26.6635 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9756,6 +12513,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 113.03 29.2035 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9765,29 +12524,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 110.49 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 110.49 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9806,26 +12571,112 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 106.68 24.13 90)
+		(lib_id "Device:Fuse_Small")
+		(at 91.44 175.26 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f6d6645a-4747-4735-aac3-0424a5c55e42")
+		(property "Reference" "F18"
+			(at 91.44 169.545 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 91.44 172.085 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 91.44 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 91.44 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 91.44 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "15d3fa76-b1b5-4249-8374-ca6ecacc8ddf")
+		)
+		(pin "1"
+			(uuid "34d4afe7-d9c7-4f76-a859-4b14c6fa13ab")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 106.68 24.13 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f902b550-9fd3-426a-a0ab-85091fd85839")
 		(property "Reference" "R20"
 			(at 106.68 19.05 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "100"
 			(at 106.68 21.59 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9834,29 +12685,35 @@
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 106.68 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/CHP0603-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t7z4BkURc4Lz%252BNTgd8VElomqW50fcYQWeQ%3D%3D"
 			(at 106.68 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 106.68 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9878,14 +12735,18 @@
 		(lib_id "Device:C_Small")
 		(at 151.13 52.07 180)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa3531f2-09b6-4428-84b8-458a94c9f54d")
 		(property "Reference" "C31"
 			(at 153.67 50.7935 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9895,6 +12756,8 @@
 		)
 		(property "Value" "0.47uF"
 			(at 153.67 53.3335 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9904,29 +12767,35 @@
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 151.13 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMF107B7474KAHT?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXbZmTEzBsZ7s%3D"
 			(at 151.13 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 151.13 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9939,6 +12808,167 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
 					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse_Small")
+		(at 89.535 76.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa3cab13-5489-4c39-bda3-aeb527b6b8ba")
+		(property "Reference" "F10"
+			(at 89.535 70.485 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "400mA"
+			(at 89.535 73.025 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 89.535 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Circuit_Protection/Resettable_Fuses_3294"
+			(at 89.535 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 89.535 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e7e781a4-1aff-49df-888a-bc289912d763")
+		)
+		(pin "1"
+			(uuid "2319af96-7ed9-4e7f-8830-04ba5daa5447")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "F10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 142.875 158.75 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa802dcc-42eb-4f48-8601-dfe1c79e32f5")
+		(property "Reference" "R44"
+			(at 142.875 153.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R 2W"
+			(at 142.875 156.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 142.875 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Ever_OhmsTech-CRH2512J20R0E04Z/C175427"
+			(at 142.875 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 142.875 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee205720-d5cb-4b72-bb77-e820a6bce608")
+		)
+		(pin "2"
+			(uuid "cdd41d33-d541-4339-92c1-6c93452006e5")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/329d2a9a-b359-4d8c-80ce-edb0b764c6b7/1b0b9d23-485d-43ce-ac65-957d0a9baa65"
+					(reference "R44")
 					(unit 1)
 				)
 			)
