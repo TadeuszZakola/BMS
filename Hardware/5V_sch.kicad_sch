@@ -5,129 +5,6 @@
 	(uuid "bc6b0834-eb34-4f14-9799-4143ae4e5b08")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:TestPoint_Small"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint_Small"
-				(at 0 2.032 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TestPoint_Small_0_1"
-				(circle
-					(center 0 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_Small_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 0)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C_Polarized_Small"
 			(pin_numbers
 				(hide yes)
@@ -1949,12 +1826,6 @@
 		(uuid "b1c16ab6-80ae-4179-89c3-22440cbdbe8f")
 	)
 	(junction
-		(at 106.68 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0bd20144-0c7a-4bf0-8fae-0f80856e67ad")
-	)
-	(junction
 		(at 237.49 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1965,12 +1836,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2a1fbc56-2e6c-46ee-b397-54076d638407")
-	)
-	(junction
-		(at 219.71 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2e8c37a9-e949-487a-8686-701b047ea3d8")
 	)
 	(junction
 		(at 119.38 82.55)
@@ -2073,12 +1938,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a302943d-9ee2-47b8-bbd3-d37b5afda744")
-	)
-	(junction
-		(at 227.33 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a504060f-df7a-4c0a-8a10-2ccb63325bd9")
 	)
 	(junction
 		(at 74.93 82.55)
@@ -2186,16 +2045,6 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 72.39) (xy 219.71 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "080cd17e-2b84-4ae7-b043-1fe81b83e353")
-	)
-	(wire
-		(pts
 			(xy 119.38 82.55) (xy 124.46 82.55)
 		)
 		(stroke
@@ -2206,23 +2055,13 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 82.55) (xy 110.49 82.55)
+			(xy 102.87 82.55) (xy 110.49 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "11ecf86b-a23f-44ad-8987-0be86c79f88d")
-	)
-	(wire
-		(pts
-			(xy 218.44 82.55) (xy 219.71 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1402011e-8cc9-4150-884c-addc006a837a")
 	)
 	(wire
 		(pts
@@ -2416,7 +2255,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 82.55) (xy 227.33 82.55)
+			(xy 226.06 82.55) (xy 237.49 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2433,16 +2272,6 @@
 			(type default)
 		)
 		(uuid "48865da4-4f6b-4520-8365-2338b4785070")
-	)
-	(wire
-		(pts
-			(xy 228.6 72.39) (xy 237.49 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "496f28a9-9fcb-4888-b45f-eb27f0cc54f8")
 	)
 	(wire
 		(pts
@@ -2503,16 +2332,6 @@
 			(type default)
 		)
 		(uuid "69f476e9-1217-4464-b099-7468edd52670")
-	)
-	(wire
-		(pts
-			(xy 219.71 72.39) (xy 223.52 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "704c4c8e-169a-4c44-82c2-4ccec6da23b1")
 	)
 	(wire
 		(pts
@@ -2706,16 +2525,6 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 82.55) (xy 237.49 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b5a561ae-14db-4e6a-a72b-dbbbdbbc5711")
-	)
-	(wire
-		(pts
 			(xy 74.93 127) (xy 85.09 127)
 		)
 		(stroke
@@ -2826,16 +2635,6 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 82.55) (xy 106.68 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6d2ba51-841c-4121-8948-4b1dc9644e55")
-	)
-	(wire
-		(pts
 			(xy 271.78 48.26) (xy 261.62 48.26)
 		)
 		(stroke
@@ -2906,7 +2705,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 82.55) (xy 219.71 82.55)
+			(xy 218.44 82.55) (xy 220.98 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2997,30 +2796,6 @@
 		(uuid "6a92980f-ee00-429c-9243-26e52c5f28a3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 261.5209 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "+5V_external"
-		(shape input)
-		(at 237.49 72.39 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ad574ad2-d21f-4155-bee9-f93a351d22a6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.9937 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3467,86 +3242,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/3120d456-738f-4dcb-b831-006287d4ee74"
 					(reference "R165")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Fuse_Small")
-		(at 226.06 72.39 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3633eb2b-566a-44a0-a6e2-963d28566d96")
-		(property "Reference" "F6"
-			(at 223.266 70.612 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1A"
-			(at 226.568 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Fuse:Fuse_1206_3216Metric"
-			(at 226.06 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/6061149-JK_nSMD1006/C5307798"
-			(at 226.06 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Fuse, small symbol"
-			(at 226.06 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "5b520af1-e39e-45cc-ab9b-6a9778ea77de")
-		)
-		(pin "1"
-			(uuid "f65eb2ba-1ba7-4a20-bf74-3e47e4acffba")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/3120d456-738f-4dcb-b831-006287d4ee74"
-					(reference "F6")
 					(unit 1)
 				)
 			)
@@ -4065,86 +3760,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 106.68 82.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7f5b27f6-52ce-48cf-88f9-bba44684e11f")
-		(property "Reference" "TP12"
-			(at 107.95 81.2799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint_Small"
-			(at 107.95 83.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 111.76 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 111.76 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 106.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1c21e4fb-6467-4e2d-b4f5-438d034cbd68")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/3120d456-738f-4dcb-b831-006287d4ee74"
-					(reference "TP12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 203.2 99.06 0)
 		(unit 1)
@@ -4312,86 +3927,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/3120d456-738f-4dcb-b831-006287d4ee74"
 					(reference "R169")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 227.33 82.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b4e79e5c-16f1-4120-9131-850b79f4ac2f")
-		(property "Reference" "TP14"
-			(at 228.6 81.2799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint_Small"
-			(at 228.6 83.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 232.41 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 232.41 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 227.33 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ffed8a36-0f46-4369-80d3-1af0d6ef7fd2")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/3120d456-738f-4dcb-b831-006287d4ee74"
-					(reference "TP14")
 					(unit 1)
 				)
 			)

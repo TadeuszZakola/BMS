@@ -1253,12 +1253,6 @@
 		(uuid "185d13bd-0b43-486f-8896-6da72e3587c8")
 	)
 	(junction
-		(at 115.57 20.32)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1a4cd42c-1d29-4439-857a-4ee57013677c")
-	)
-	(junction
 		(at 120.65 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1358,7 +1352,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 20.32) (xy 125.73 20.32)
+			(xy 109.22 20.32) (xy 125.73 20.32)
 		)
 		(stroke
 			(width 0)
@@ -1788,16 +1782,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 20.32) (xy 115.57 20.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f26b70e-c339-44e4-a0ff-e106eff295fb")
-	)
-	(wire
-		(pts
 			(xy 116.84 90.17) (xy 121.92 90.17)
 		)
 		(stroke
@@ -2055,16 +2039,6 @@
 			(type default)
 		)
 		(uuid "c8c76720-b9b2-4b77-8c98-4bb8aa43017b")
-	)
-	(wire
-		(pts
-			(xy 115.57 26.67) (xy 115.57 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd205c06-ac07-4d12-a7e6-f23618d7d7d9")
 	)
 	(wire
 		(pts
@@ -3992,88 +3966,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 115.57 22.86 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "534b30ff-7e6e-4a58-9c9b-02029404045e")
-		(property "Reference" "C71"
-			(at 118.11 21.5962 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 118.11 24.1362 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 115.57 22.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TAIYO-YUDEN/EMK107B7105MA8T?qs=sGAEpiMZZMsh%252B1woXyUXj30ZYomYlxpXD%252BuSrqeE39U%3D"
-			(at 115.57 22.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 115.57 22.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "838854cc-6d3e-44ac-945d-681f88e844c2")
-		)
-		(pin "2"
-			(uuid "ee9556f4-2186-465a-9d8e-2d57a319fdaf")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/99f7ea83-6836-44ea-889b-f0d453e84b38/ebf36db7-cdb4-471e-a54c-71c0b45a68a4"
-					(reference "C71")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Fuse_Small")
 		(at 50.165 76.2 0)
 		(unit 1)
@@ -5613,84 +5505,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/99f7ea83-6836-44ea-889b-f0d453e84b38/ebf36db7-cdb4-471e-a54c-71c0b45a68a4"
 					(reference "#PWR068")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 115.57 26.67 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "acfc85a4-6ccb-4f74-9f3a-acc8ffdd02ea")
-		(property "Reference" "#PWR066"
-			(at 109.22 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND_HV2"
-			(at 111.76 26.67 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 115.57 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 115.57 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 115.57 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b0bd27ee-0534-42c8-b6a1-4bf73a76dfbb")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/99f7ea83-6836-44ea-889b-f0d453e84b38/ebf36db7-cdb4-471e-a54c-71c0b45a68a4"
-					(reference "#PWR066")
 					(unit 1)
 				)
 			)

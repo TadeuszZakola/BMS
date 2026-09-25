@@ -52,8 +52,8 @@
         "zones": {
           "border_display_style": 2,
           "border_hatch_pitch": 0.5,
-          "corner_radius": 0.0,
-          "corner_smoothing": 0,
+          "corner_radius": 1.0,
+          "corner_smoothing": 1,
           "fill_mode": 0,
           "hatch_gap": 1.5,
           "hatch_orientation": 0.0,
@@ -62,11 +62,11 @@
           "hatch_thickness": 1.0,
           "min_clearance": 0.2,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
+          "min_thickness": 0.1,
           "pad_connection": 1,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.5,
-          "thermal_relief_spoke_width": 0.5
+          "thermal_relief_gap": 0.2,
+          "thermal_relief_spoke_width": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -174,10 +174,10 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
+        "min_through_hole_diameter": 0.2,
         "min_track_width": 0.1,
         "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.3,
+        "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -266,7 +266,7 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.4,
+          "diameter": 0.5,
           "drill": 0.3
         },
         {
@@ -558,12 +558,22 @@
         "wire_width": 6
       },
       {
+        "clearance": 0.3,
+        "diff_pair_gap": 0.3,
+        "diff_pair_width": 0.12,
+        "name": "CAN",
+        "pcb_color": "rgb(255, 0, 164)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
+      },
+      {
         "clearance": 0.2,
         "diff_pair_gap": 0.2,
-        "diff_pair_width": 0.2,
+        "diff_pair_width": 0.19,
         "name": "usb_c",
         "pcb_color": "rgb(255, 15, 31)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
         "tuning_profile": "",
@@ -584,6 +594,10 @@
       {
         "netclass": "usb_c",
         "pattern": "*USB*"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "*CANFD*"
       }
     ]
   },
@@ -799,7 +813,7 @@
         "uuid": "26289bb6-56bc-4ca1-b1a2-18d58d1afdf5"
       }
     ],
-    "used_designators": "",
+    "used_designators": "F47,R127-128,R181",
     "variants": []
   },
   "sheets": [

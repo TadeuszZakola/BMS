@@ -2700,10 +2700,22 @@
 		(uuid "cfa2aa3d-d8e9-45ef-869e-43365394b47e")
 	)
 	(junction
+		(at 217.805 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "da8b41bc-9d1e-41da-90b3-7f9513ae4b11")
+	)
+	(junction
 		(at 101.6 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ed0a948a-8d36-4222-8a3e-8ec96dd2c80b")
+	)
+	(junction
+		(at 216.535 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f1b7a521-6fed-4bf5-bd11-fc49320ad71d")
 	)
 	(junction
 		(at 132.08 23.495)
@@ -2718,10 +2730,6 @@
 	(no_connect
 		(at 119.38 115.57)
 		(uuid "0e8aa7ef-9936-4655-8465-37076d84907f")
-	)
-	(no_connect
-		(at 154.94 36.83)
-		(uuid "0fa8c85b-28cd-4d7c-82ea-fb5cbe918af5")
 	)
 	(no_connect
 		(at 80.01 120.65)
@@ -2766,10 +2774,6 @@
 	(no_connect
 		(at 119.38 72.39)
 		(uuid "3a8c82d8-6a76-407d-bcf5-ee96dfc2949b")
-	)
-	(no_connect
-		(at 195.58 85.09)
-		(uuid "3c42161e-08a7-468e-9e31-089791eb3847")
 	)
 	(no_connect
 		(at 167.64 36.83)
@@ -2818,10 +2822,6 @@
 	(no_connect
 		(at 147.32 36.83)
 		(uuid "625fe936-9f7d-453e-880a-f396c7a1f72e")
-	)
-	(no_connect
-		(at 139.7 133.35)
-		(uuid "62cb2186-49ff-474e-ac4e-e2b2e14d4d03")
 	)
 	(no_connect
 		(at 119.38 77.47)
@@ -2914,10 +2914,6 @@
 	(no_connect
 		(at 134.62 36.83)
 		(uuid "d77a9d09-4f10-4254-856c-e505f5cc26ac")
-	)
-	(no_connect
-		(at 137.16 133.35)
-		(uuid "e8e6437a-455c-44a6-b7a6-8b2ddf4bb55e")
 	)
 	(no_connect
 		(at 119.38 74.93)
@@ -3053,6 +3049,16 @@
 	)
 	(wire
 		(pts
+			(xy 80.01 149.225) (xy 88.9 149.225)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c5caf9e-646d-4d11-b574-f27c4cb5e873")
+	)
+	(wire
+		(pts
 			(xy 80.01 107.95) (xy 83.82 107.95)
 		)
 		(stroke
@@ -3090,6 +3096,16 @@
 			(type default)
 		)
 		(uuid "19b69b2b-88f8-4140-ba10-d5a382819d77")
+	)
+	(wire
+		(pts
+			(xy 139.7 133.35) (xy 139.7 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c185c65-cad8-425b-adce-df9633359f49")
 	)
 	(wire
 		(pts
@@ -3233,6 +3249,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.805 151.13) (xy 229.87 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e00e7d2-ca2b-4f1f-91ac-9e8d2722deeb")
+	)
+	(wire
+		(pts
 			(xy 195.58 113.03) (xy 205.74 113.03)
 		)
 		(stroke
@@ -3253,7 +3279,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.075 151.13) (xy 229.87 151.13)
+			(xy 215.265 151.13) (xy 217.805 151.13)
 		)
 		(stroke
 			(width 0)
@@ -3320,6 +3346,16 @@
 			(type default)
 		)
 		(uuid "3768fe25-0008-4048-9bb2-e1459457e61c")
+	)
+	(wire
+		(pts
+			(xy 216.535 148.59) (xy 229.87 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3912e501-8365-4593-b287-95a809ba4ae2")
 	)
 	(wire
 		(pts
@@ -3433,6 +3469,26 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 156.21) (xy 216.535 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53d4a89c-592e-459c-90ca-44247ee39b6f")
+	)
+	(wire
+		(pts
+			(xy 218.44 163.195) (xy 218.44 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54065036-e9b8-4798-aad7-c89d79c93629")
+	)
+	(wire
+		(pts
 			(xy 101.6 105.41) (xy 104.14 105.41)
 		)
 		(stroke
@@ -3460,6 +3516,16 @@
 			(type default)
 		)
 		(uuid "55790284-ae98-49d9-b72d-1c178e40b823")
+	)
+	(wire
+		(pts
+			(xy 80.01 151.765) (xy 88.9 151.765)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56d81f47-786f-4ef9-90b8-d25004a44007")
 	)
 	(wire
 		(pts
@@ -3563,6 +3629,16 @@
 	)
 	(wire
 		(pts
+			(xy 80.01 143.51) (xy 95.25 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a79cdfe-b6ce-44b2-8223-ecf69970f76e")
+	)
+	(wire
+		(pts
 			(xy 107.95 100.33) (xy 109.22 100.33)
 		)
 		(stroke
@@ -3653,6 +3729,26 @@
 	)
 	(wire
 		(pts
+			(xy 80.01 146.685) (xy 88.9 146.685)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76e969bf-972c-4f51-a5ea-78e4b2d31963")
+	)
+	(wire
+		(pts
+			(xy 216.535 156.21) (xy 216.535 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "774aa571-9875-49f7-8d0f-3a0a961f8f49")
+	)
+	(wire
+		(pts
 			(xy 172.72 133.35) (xy 172.72 148.59)
 		)
 		(stroke
@@ -3693,7 +3789,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.995 154.94) (xy 221.615 154.94)
+			(xy 218.44 163.195) (xy 226.695 163.195)
 		)
 		(stroke
 			(width 0)
@@ -3720,6 +3816,16 @@
 			(type default)
 		)
 		(uuid "8873cc12-999d-4f8d-9c60-67f5e32f194d")
+	)
+	(wire
+		(pts
+			(xy 218.44 154.94) (xy 221.615 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8907adf4-8a33-4b3c-a53f-f69a001e4ba9")
 	)
 	(wire
 		(pts
@@ -3790,6 +3896,16 @@
 			(type default)
 		)
 		(uuid "9266c938-e14a-4c17-9537-4eb5ae32419a")
+	)
+	(wire
+		(pts
+			(xy 195.58 85.09) (xy 213.36 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94bfe6b2-878f-41f6-ac71-8340dde8e3f8")
 	)
 	(wire
 		(pts
@@ -3903,7 +4019,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.075 148.59) (xy 229.87 148.59)
+			(xy 215.265 148.59) (xy 216.535 148.59)
 		)
 		(stroke
 			(width 0)
@@ -3940,6 +4056,16 @@
 			(type default)
 		)
 		(uuid "ab8f096f-73e5-408f-907c-be272d27a5a2")
+	)
+	(wire
+		(pts
+			(xy 217.805 151.13) (xy 217.805 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae0a179d-13c2-46ad-9ac7-7475181c010e")
 	)
 	(wire
 		(pts
@@ -4013,6 +4139,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 27.94) (xy 154.94 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b86e1ea3-f674-497e-a8e3-05d082d0fc25")
+	)
+	(wire
+		(pts
 			(xy 221.615 30.48) (xy 228.6 30.48)
 		)
 		(stroke
@@ -4020,6 +4156,16 @@
 			(type default)
 		)
 		(uuid "b9255491-e9db-4f5d-8070-6d68691a37e0")
+	)
+	(wire
+		(pts
+			(xy 213.36 158.75) (xy 217.805 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbcc5ba6-6d7f-4a25-8f50-6cbec4982121")
 	)
 	(wire
 		(pts
@@ -4110,6 +4256,16 @@
 			(type default)
 		)
 		(uuid "c89241d6-a628-41ed-88ec-8966e8e28389")
+	)
+	(wire
+		(pts
+			(xy 137.16 133.35) (xy 137.16 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c96a8c67-0400-4dfb-b13a-55ed536f91f9")
 	)
 	(wire
 		(pts
@@ -4273,7 +4429,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.915 148.59) (xy 213.995 148.59)
+			(xy 205.105 148.59) (xy 210.185 148.59)
 		)
 		(stroke
 			(width 0)
@@ -4293,7 +4449,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 151.13) (xy 213.995 151.13)
+			(xy 204.47 151.13) (xy 210.185 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4422,7 +4578,7 @@
 		(uuid "03c3c068-0011-4e9f-b806-d296b8d9a3ac")
 	)
 	(label "RX_1"
-		(at 208.915 148.59 0)
+		(at 205.105 148.59 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4452,7 +4608,7 @@
 		(uuid "0d627275-4306-41e3-b35f-e1584d091dbd")
 	)
 	(label "TX_1"
-		(at 208.28 151.13 0)
+		(at 204.47 151.13 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4501,6 +4657,26 @@
 		)
 		(uuid "22d28dcc-a807-45f4-a797-e5d1941d0829")
 	)
+	(label "SIGNAL_RELAY2"
+		(at 213.36 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "271a702a-2ad7-4c8d-b23a-265cab7a03ad")
+	)
+	(label "esp32_RX2"
+		(at 208.28 156.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2b9e3d10-a7ce-4bcc-9ff8-f3ad83046e6d")
+	)
 	(label "ERROR"
 		(at 83.82 77.47 0)
 		(effects
@@ -4511,6 +4687,16 @@
 		)
 		(uuid "30848e94-f820-404b-a78c-f6aa5eb1b808")
 	)
+	(label "SPI_CLK"
+		(at 88.9 151.765 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "31a7f439-4bef-4cde-90a0-f2f0d9044354")
+	)
 	(label "USB-"
 		(at 203.2 67.31 180)
 		(effects
@@ -4520,6 +4706,16 @@
 			(justify right bottom)
 		)
 		(uuid "31d6abee-ae8f-402e-a913-02cacab96b86")
+	)
+	(label "SIGNAL_RELAY2"
+		(at 95.25 143.51 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3b2aee42-12c9-4c0f-93e8-b1319f53ba39")
 	)
 	(label "RX_1"
 		(at 110.49 110.49 0)
@@ -4600,6 +4796,16 @@
 			(justify right bottom)
 		)
 		(uuid "48c9c266-6087-47b9-90e8-c4c3dd42a6c6")
+	)
+	(label "SPI_CLK"
+		(at 154.94 27.94 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4967fd08-89f8-48ce-8435-5eeb0328cbc9")
 	)
 	(label "LED1"
 		(at 111.76 57.15 0)
@@ -4691,6 +4897,16 @@
 		)
 		(uuid "6e804d94-3aae-4ba9-8690-3d8547fc6a76")
 	)
+	(label "SPI_MOSI"
+		(at 88.9 149.225 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "76a2ec4f-fa87-483a-9c85-dbe93d4a8bbd")
+	)
 	(label "NFAULT"
 		(at 110.49 113.03 0)
 		(effects
@@ -4700,6 +4916,16 @@
 			(justify left bottom)
 		)
 		(uuid "77bc6efc-a963-41e8-bf37-f3e16eb9bb5a")
+	)
+	(label "esp32_TX2"
+		(at 208.28 158.75 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "77c51771-357f-47d6-862b-048466348d33")
 	)
 	(label "SIGNAL_PRECHARGE"
 		(at 214.63 80.01 180)
@@ -4871,26 +5097,6 @@
 		)
 		(uuid "caa3b81a-837d-4e25-be40-ff0a93e3b20c")
 	)
-	(label "esp32_RX2"
-		(at 228.5829 148.59 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "cac0c3da-c0db-4365-a98d-da9e29da80c7")
-	)
-	(label "esp32_TX2"
-		(at 229.235 151.13 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "cd35943a-f7a7-4516-ae5f-555241f11f27")
-	)
 	(label "LED2"
 		(at 83.82 82.55 0)
 		(effects
@@ -4941,6 +5147,26 @@
 		)
 		(uuid "e9b04c1c-685d-4c48-a2f9-6ce85159326c")
 	)
+	(label "SPI_MISO"
+		(at 88.9 146.685 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ec856afd-d05d-46e5-8d02-6a976dfd9a8f")
+	)
+	(label "SPI_MOSI"
+		(at 139.7 148.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed35a131-5c80-47cd-bc06-f4771e5bcb98")
+	)
 	(label "Button2"
 		(at 177.8 148.59 90)
 		(effects
@@ -4961,6 +5187,16 @@
 		)
 		(uuid "f009065a-f6a3-42eb-908e-b25ac4a43272")
 	)
+	(label "SPI_MISO"
+		(at 137.16 148.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f2cf0184-ad75-4d3c-be47-1f0a97b248e2")
+	)
 	(label "Curr_sense"
 		(at 142.24 153.035 90)
 		(effects
@@ -4972,7 +5208,7 @@
 		(uuid "f304b2c8-0463-4b91-93b4-1a2c5ae87ab3")
 	)
 	(label "NFAULT"
-		(at 213.995 154.94 0)
+		(at 226.695 163.195 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5071,7 +5307,7 @@
 		(dnp no)
 		(uuid "070ddc40-97c9-4002-86ad-97214f29a710")
 		(property "Reference" "R170"
-			(at 144.78 138.43 90)
+			(at 153.035 138.43 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5081,7 +5317,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 147.0914 138.43 90)
+			(at 155.575 138.43 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5885,6 +6121,142 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5"
 					(reference "C66")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 210.82 158.75 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "34f28ead-273f-4781-8169-b332c5f7b061")
+		(property "Reference" "R128"
+			(at 210.82 156.21 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0R"
+			(at 214.63 157.48 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 210.82 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://eu.mouser.com/ProductDetail/Vishay-Beyschlag/MCT06030D5301BP500?qs=sGAEpiMZZMvdGkrng054tz3%252BeNFGeSG0UDsIiI3q%252BH88%252BoaD8JK2RQ%3D%3D"
+			(at 210.82 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 210.82 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "--"
+			(at 210.82 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "--"
+			(at 210.82 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 210.82 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 210.82 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" "--"
+			(at 210.82 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f0ff559f-f4c3-4b19-818a-624a4cfbcd9a")
+		)
+		(pin "2"
+			(uuid "22d54949-46f4-4bb9-8f4d-41a1d5653b9c")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5"
+					(reference "R128")
 					(unit 1)
 				)
 			)
@@ -6888,7 +7260,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 216.535 148.59 270)
+		(at 212.725 148.59 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -6899,7 +7271,7 @@
 		(dnp no)
 		(uuid "86d2d2df-18ac-4d19-94a9-3e9b8e056cf9")
 		(property "Reference" "R91"
-			(at 216.535 146.05 90)
+			(at 212.725 146.05 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6910,7 +7282,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 214.63 145.415 90)
+			(at 210.82 145.415 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6920,7 +7292,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 216.535 148.59 0)
+			(at 212.725 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6931,7 +7303,7 @@
 			)
 		)
 		(property "Datasheet" "https://eu.mouser.com/ProductDetail/Vishay-Beyschlag/MCT06030D5301BP500?qs=sGAEpiMZZMvdGkrng054tz3%252BeNFGeSG0UDsIiI3q%252BH88%252BoaD8JK2RQ%3D%3D"
-			(at 216.535 148.59 0)
+			(at 212.725 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6942,7 +7314,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 216.535 148.59 0)
+			(at 212.725 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6953,7 +7325,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "--"
-			(at 216.535 148.59 0)
+			(at 212.725 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6964,7 +7336,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "--"
-			(at 216.535 148.59 0)
+			(at 212.725 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6975,7 +7347,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 216.535 148.59 0)
+			(at 212.725 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6986,7 +7358,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 216.535 148.59 0)
+			(at 212.725 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6997,7 +7369,7 @@
 			)
 		)
 		(property "Mouser Part Number" "--"
-			(at 216.535 148.59 0)
+			(at 212.725 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8184,7 +8556,7 @@
 		(dnp no)
 		(uuid "bab694d0-1a30-419c-b3ec-084f5160e6c5")
 		(property "Reference" "R179"
-			(at 137.16 138.43 90)
+			(at 144.145 138.43 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8194,7 +8566,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 139.4714 138.43 90)
+			(at 146.05 138.43 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8308,7 +8680,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 216.535 151.13 270)
+		(at 210.82 156.21 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -8317,9 +8689,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d8ccdd68-a2d5-40e3-bf52-f26a8bf5243c")
-		(property "Reference" "R92"
-			(at 216.535 148.59 90)
+		(uuid "c7777618-1d0f-4152-8643-770eee35351f")
+		(property "Reference" "R127"
+			(at 210.82 153.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8330,7 +8702,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 212.09 152.4 90)
+			(at 214.63 154.94 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8340,7 +8712,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 216.535 151.13 0)
+			(at 210.82 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8351,7 +8723,7 @@
 			)
 		)
 		(property "Datasheet" "https://eu.mouser.com/ProductDetail/Vishay-Beyschlag/MCT06030D5301BP500?qs=sGAEpiMZZMvdGkrng054tz3%252BeNFGeSG0UDsIiI3q%252BH88%252BoaD8JK2RQ%3D%3D"
-			(at 216.535 151.13 0)
+			(at 210.82 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8362,7 +8734,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 216.535 151.13 0)
+			(at 210.82 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8373,7 +8745,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "--"
-			(at 216.535 151.13 0)
+			(at 210.82 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8384,7 +8756,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "--"
-			(at 216.535 151.13 0)
+			(at 210.82 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8395,7 +8767,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 216.535 151.13 0)
+			(at 210.82 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8406,7 +8778,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 216.535 151.13 0)
+			(at 210.82 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8417,7 +8789,143 @@
 			)
 		)
 		(property "Mouser Part Number" "--"
-			(at 216.535 151.13 0)
+			(at 210.82 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d917abc2-7887-4c79-bcfb-12a0c01d5c9b")
+		)
+		(pin "2"
+			(uuid "0d8cc4db-72b2-4ec9-a628-631f4493fa5a")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5"
+					(reference "R127")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 212.725 151.13 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d8ccdd68-a2d5-40e3-bf52-f26a8bf5243c")
+		(property "Reference" "R92"
+			(at 212.725 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0R"
+			(at 208.28 152.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 212.725 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://eu.mouser.com/ProductDetail/Vishay-Beyschlag/MCT06030D5301BP500?qs=sGAEpiMZZMvdGkrng054tz3%252BeNFGeSG0UDsIiI3q%252BH88%252BoaD8JK2RQ%3D%3D"
+			(at 212.725 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 212.725 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "--"
+			(at 212.725 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "--"
+			(at 212.725 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 212.725 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 212.725 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" "--"
+			(at 212.725 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9430,7 +9938,7 @@
 	)
 	(sheet
 		(at 21.59 64.77)
-		(size 58.42 82.55)
+		(size 58.42 92.71)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -9456,7 +9964,7 @@
 			)
 		)
 		(property "Sheetfile" "Connectivity.kicad_sch"
-			(at 21.59 147.9046 0)
+			(at 21.59 158.0646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9719,6 +10227,46 @@
 		(pin "esp32_TX2" input
 			(at 80.01 140.97 0)
 			(uuid "57cfb902-4c21-4a27-9428-33e2ae45c4f5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "relay_enable3" input
+			(at 80.01 143.51 0)
+			(uuid "88dd87ed-8462-49bf-ba1d-a845b121dcb6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SPI_CLK" input
+			(at 80.01 151.765 0)
+			(uuid "85e0f8ec-a3bd-4076-9340-b32713699ec2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SPI_MISO" input
+			(at 80.01 146.685 0)
+			(uuid "81a0f145-3e68-4895-bde0-5f210bff1914")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SPI_MOSI" input
+			(at 80.01 149.225 0)
+			(uuid "ac499420-6919-46df-aa86-dcbe9f44309f")
 			(effects
 				(font
 					(size 1.27 1.27)
