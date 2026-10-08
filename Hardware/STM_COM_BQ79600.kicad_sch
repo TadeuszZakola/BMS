@@ -4,6 +4,9 @@
 	(generator_version "10.0")
 	(uuid "69399ad3-ed6e-43f9-b6c6-623ef3129de0")
 	(paper "A4")
+	(title_block
+		(title "Battery Management System for a high power gokart battery")
+	)
 	(lib_symbols
 		(symbol "BQ79600-Q1:PBQ79600PWQ1"
 			(pin_names

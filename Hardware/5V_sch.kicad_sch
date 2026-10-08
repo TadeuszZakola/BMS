@@ -4,6 +4,9 @@
 	(generator_version "10.0")
 	(uuid "bc6b0834-eb34-4f14-9799-4143ae4e5b08")
 	(paper "A4")
+	(title_block
+		(title "Battery Management System for a high power gokart battery")
+	)
 	(lib_symbols
 		(symbol "Device:C_Polarized_Small"
 			(pin_numbers
