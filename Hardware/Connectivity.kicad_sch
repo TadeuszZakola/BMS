@@ -6348,16 +6348,6 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 168.91) (xy 255.905 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "063be95f-b438-41fd-8ed8-6f6f04d73893")
-	)
-	(wire
-		(pts
 			(xy 342.9 130.81) (xy 353.695 130.81)
 		)
 		(stroke
@@ -6778,16 +6768,6 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 156.845) (xy 226.06 156.845)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22cf92b9-42d0-4b04-a181-95a12adc2e9f")
-	)
-	(wire
-		(pts
 			(xy 332.105 267.335) (xy 353.06 267.335)
 		)
 		(stroke
@@ -6965,16 +6945,6 @@
 			(type default)
 		)
 		(uuid "302ee163-9159-4bfb-8f63-8a0f3359cecd")
-	)
-	(wire
-		(pts
-			(xy 225.425 151.765) (xy 231.14 151.765)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30baacbb-f6dc-41c4-a8da-051527d286af")
 	)
 	(wire
 		(pts
@@ -8158,16 +8128,6 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 156.845) (xy 203.2 156.845)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80f987bb-8016-4d81-95d5-b9e567d4b29e")
-	)
-	(wire
-		(pts
 			(xy 308.61 58.42) (xy 311.15 58.42)
 		)
 		(stroke
@@ -8685,16 +8645,6 @@
 			(type default)
 		)
 		(uuid "a2357ee1-ecc9-4626-9fc5-4f68b979c9f3")
-	)
-	(wire
-		(pts
-			(xy 224.79 168.91) (xy 231.14 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a249849e-0f4b-468b-b590-afa2c2eb201e")
 	)
 	(wire
 		(pts
@@ -9658,16 +9608,6 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 151.765) (xy 255.905 151.765)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e46ae367-0d48-4794-837a-95f581415c38")
-	)
-	(wire
-		(pts
 			(xy 92.075 245.11) (xy 102.235 245.11)
 		)
 		(stroke
@@ -10076,16 +10016,6 @@
 		)
 		(uuid "184c9771-c9b5-4c7a-9826-4d00b2ccf1f2")
 	)
-	(label "B4_IN"
-		(at 196.85 156.845 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1c83adb9-8d30-4ea2-826c-e1f7cefc1215")
-	)
 	(label "B2_IN"
 		(at 45.72 92.71 0)
 		(effects
@@ -10145,6 +10075,16 @@
 			(justify right bottom)
 		)
 		(uuid "3a5a20cd-55de-4515-9922-c7aab652ced9")
+	)
+	(label "+12V_curr_sense"
+		(at 220.98 156.845 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3fa67bdb-7593-4bac-bba2-0c3708c1507c")
 	)
 	(label "PreCharge_OUT"
 		(at 396.24 49.53 180)
@@ -10206,7 +10146,7 @@
 		)
 		(uuid "4fbf893a-061f-4ade-8030-bd0306e46c94")
 	)
-	(label "+5V_curr_sense"
+	(label "+12V_curr_sense"
 		(at 170.18 135.89 0)
 		(effects
 			(font
@@ -10296,7 +10236,7 @@
 		)
 		(uuid "6c763536-ac2a-4603-834a-598330e18e0c")
 	)
-	(label "+5V_curr_sense"
+	(label "+12V_curr_sense"
 		(at 178.435 172.72 0)
 		(effects
 			(font
@@ -10386,36 +10326,6 @@
 		)
 		(uuid "912a78c4-3705-4091-b3ee-d5a85565302c")
 	)
-	(label "B2_IN"
-		(at 224.79 168.91 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "92311cc7-1d97-4a63-822e-6b96092938d2")
-	)
-	(label "MOSI"
-		(at 225.425 151.765 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9684ece6-3a16-47f5-9f46-1a7650b26b99")
-	)
-	(label "CLK"
-		(at 226.06 156.845 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "96f13487-e41e-456a-ba32-457bd9a02f1c")
-	)
 	(label "D3"
 		(at 236.22 36.83 0)
 		(effects
@@ -10476,16 +10386,6 @@
 		)
 		(uuid "ae4342dc-1d3d-47bf-8d02-2f4b3621f7e8")
 	)
-	(label "B3_IN"
-		(at 255.905 151.765 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b005d817-e21c-41dd-a05e-047f5878be9e")
-	)
 	(label "USB2+"
 		(at 24.13 242.57 0)
 		(effects
@@ -10535,16 +10435,6 @@
 			(justify right bottom)
 		)
 		(uuid "c33bf545-ef5e-4494-bfdb-502a1250602b")
-	)
-	(label "MISO"
-		(at 255.905 168.91 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c73f20d5-6345-46de-a326-3d7c72c49abf")
 	)
 	(label "esp32_can_rx"
 		(at 63.5 327.025 180)
@@ -10995,6 +10885,17 @@
 		)
 		(uuid "42db6f25-3975-40c2-95ef-a6f0ef18a38a")
 	)
+	(hierarchical_label "SPI_MISO"
+		(shape input)
+		(at 202.565 175.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4804df98-8e41-460b-a1ac-da86c032fd4d")
+	)
 	(hierarchical_label "SWCLK"
 		(shape input)
 		(at 140.97 99.06 180)
@@ -11005,6 +10906,17 @@
 			(justify right)
 		)
 		(uuid "502da103-baaf-4f7e-b9c1-d0b189b77ade")
+	)
+	(hierarchical_label "SPI_MOSI"
+		(shape input)
+		(at 220.345 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "54356ac5-99a4-400a-82c5-a9c2653995ef")
 	)
 	(hierarchical_label "USB1-"
 		(shape input)
@@ -11203,6 +11115,17 @@
 			(justify right)
 		)
 		(uuid "f0c53737-a902-4f7d-9c0f-dd022d3a9578")
+	)
+	(hierarchical_label "SPI_CLK"
+		(shape input)
+		(at 203.2 156.845 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f6453737-4770-4175-b336-4d0eae4625a3")
 	)
 	(hierarchical_label "UART_TX"
 		(shape input)
@@ -11669,6 +11592,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 211.455 179.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "07de28fe-5cd7-4374-93c3-64e4542fc576")
+		(property "Reference" "#PWR0203"
+			(at 211.455 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 211.455 183.515 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 211.455 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 211.455 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 211.455 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6755ea40-7d30-4977-98df-d6851be2d4f0")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
+					(reference "#PWR0203")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 248.92 281.305 0)
 		(unit 1)
 		(body_style 1)
@@ -11739,84 +11740,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
 					(reference "#PWR0196")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 240.03 155.575 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "09efdff6-77d2-4d6a-855c-ddf81da2f3e4")
-		(property "Reference" "#PWR062"
-			(at 240.03 161.925 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 240.03 160.02 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 240.03 155.575 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 240.03 155.575 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 240.03 155.575 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5580d8f3-664d-4b0c-9cc9-8b017d5fbd24")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
-					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -17027,84 +16950,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 240.03 172.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "40c8efaf-e113-469a-abfa-7fb6c912f02a")
-		(property "Reference" "#PWR066"
-			(at 240.03 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 240.03 177.165 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 240.03 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 240.03 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 240.03 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2bafc744-dc56-4c35-a7e3-0f66a7524ee5")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
-					(reference "#PWR066")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 184.785 280.67 0)
 		(unit 1)
 		(body_style 1)
@@ -18470,89 +18315,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_TVS_Dual_AAC")
-		(at 240.03 151.765 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5eb3c180-58b4-4003-8bef-e1b25a99e375")
-		(property "Reference" "D32"
-			(at 240.03 145.415 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "13.3V tvs"
-			(at 240.03 147.955 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 243.84 151.765 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/ProTekDevices-PSM712_LFT7/C32677"
-			(at 243.84 151.765 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "PSM712-LF-T7"
-			(at 240.03 151.765 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "6f6b11f0-9877-4561-aa36-0012a8cccaf8")
-		)
-		(pin "1"
-			(uuid "3535c43d-150f-4c9f-aba9-fdd2225da3e7")
-		)
-		(pin "2"
-			(uuid "7110b2c0-95a2-4299-b9ed-88b2cd292ffc")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
-					(reference "D32")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x05")
 		(at 167.005 170.18 180)
 		(unit 1)
@@ -19569,85 +19331,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
 					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 190.5 135.89 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6ac5ff2f-1a77-406f-bd88-b9a909abbc95")
-		(property "Reference" "#PWR0202"
-			(at 186.69 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 194.31 135.8899 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 190.5 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 190.5 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 190.5 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b26751ad-fa81-43d6-8d0e-e4a4143f588f")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
-					(reference "#PWR0202")
 					(unit 1)
 				)
 			)
@@ -22781,6 +22464,89 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
 					(reference "F48")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_TVS_Dual_AAC")
+		(at 211.455 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a78c930-fd6f-4bc8-a274-734e99205202")
+		(property "Reference" "D45"
+			(at 211.455 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "13.3V tvs"
+			(at 211.455 171.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 207.645 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/ProTekDevices-PSM712_LFT7/C32677"
+			(at 207.645 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "PSM712-LF-T7"
+			(at 211.455 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "a68661ce-83c8-4c6f-b4bd-f240feaa8ebf")
+		)
+		(pin "1"
+			(uuid "2060640f-f813-4352-a125-ba2c9cd845d2")
+		)
+		(pin "2"
+			(uuid "83bbef2a-4aac-4d02-a41d-844df19ab152")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
+					(reference "D45")
 					(unit 1)
 				)
 			)
@@ -27362,89 +27128,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_TVS_Dual_AAC")
-		(at 240.03 168.91 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b4ee2007-dadc-40be-a9d0-c4912d21850f")
-		(property "Reference" "D31"
-			(at 240.03 162.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "13.3V tvs"
-			(at 240.03 165.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 243.84 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/ProTekDevices-PSM712_LFT7/C32677"
-			(at 243.84 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "PSM712-LF-T7"
-			(at 240.03 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "929ab542-2991-445b-9f85-88014ea28add")
-		)
-		(pin "1"
-			(uuid "02b3f5b7-fd7d-4b92-9324-d76cd767c591")
-		)
-		(pin "2"
-			(uuid "9aefadda-d90b-4ef4-adee-32254f5928e4")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
-					(reference "D31")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 22.86 104.14 270)
 		(unit 1)
@@ -30200,6 +29883,83 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
 					(reference "R161")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 190.5 135.89 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e688a5f7-68d7-49f4-94ac-f266f267d28d")
+		(property "Reference" "#PWR0138"
+			(at 186.69 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 192.405 133.985 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.5 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 190.5 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "27def6a6-6bd4-4a47-bf2a-de51a5406d77")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/d34f5976-9b74-4159-94dc-792c476298a2"
+					(reference "#PWR0138")
 					(unit 1)
 				)
 			)

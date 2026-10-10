@@ -1317,16 +1317,6 @@
 		)
 		(uuid "9f947ac3-92e4-4bc4-86df-4b7272e70d0f")
 	)
-	(text "'GND_HV2' is connected via 'Batt_coupling' to cell number 13 and serves as a ground for 2nd ltc"
-		(exclude_from_sim no)
-		(at 97.536 203.962 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "1f732330-eb9f-445c-bf15-25d659317023")
-	)
 	(text "Batteries in the schematic are there only for \nprinciple,they are ment to show how the pcb \nis connected to the battery pack. In reality\nthe connection is purely external as the\nconnector on the left shows. \n\n"
 		(exclude_from_sim no)
 		(at 232.41 44.45 0)
@@ -1439,12 +1429,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3b8d23fd-3ab2-4800-beb2-924589531a61")
-	)
-	(junction
-		(at 75.565 13.97)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3d49791f-b77f-477b-99c0-5b6b370e138f")
 	)
 	(junction
 		(at 100.33 22.86)
@@ -1595,6 +1579,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a2a430af-83ed-440f-b907-fdf34219f104")
+	)
+	(junction
+		(at 75.565 194.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a2e084f0-df19-4c49-8ccf-b726a58c5198")
 	)
 	(junction
 		(at 75.565 111.76)
@@ -2731,6 +2721,16 @@
 	)
 	(wire
 		(pts
+			(xy 72.39 194.31) (xy 75.565 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5aa69189-125c-467a-9b20-053fc2fb0f0b")
+	)
+	(wire
+		(pts
 			(xy 83.82 76.2) (xy 75.565 76.2)
 		)
 		(stroke
@@ -2778,16 +2778,6 @@
 			(type default)
 		)
 		(uuid "5f407dc6-6b3d-4820-8e05-43eeb05a11fd")
-	)
-	(wire
-		(pts
-			(xy 75.565 13.97) (xy 66.675 13.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "625530b5-bafa-4812-ab72-82d1ae7d0acd")
 	)
 	(wire
 		(pts
@@ -4250,33 +4240,9 @@
 		)
 		(uuid "fff92c97-053f-4225-be8a-dc37c4b37f94")
 	)
-	(global_label "Batt_Coupling"
-		(shape bidirectional)
-		(at 52.705 194.31 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0f173cd7-fedf-4b00-9666-c3119261852d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.4855 194.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "Stack+"
+	(global_label "Stack-"
 		(shape input)
-		(at 66.675 13.97 180)
+		(at 72.39 194.31 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4284,9 +4250,9 @@
 			)
 			(justify right)
 		)
-		(uuid "faf91714-e7dd-47ac-a23e-c5916663f7b2")
+		(uuid "86fce1fa-754f-4900-9090-236388467eb4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 56.9165 13.97 0)
+			(at 62.6315 194.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7752,84 +7718,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 57.785 194.31 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8dca84bc-ff29-481e-a497-94cca526bb66")
-		(property "Reference" "#PWR0113"
-			(at 64.135 194.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND_HV2"
-			(at 61.595 194.31 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 57.785 194.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 57.785 194.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 57.785 194.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3e490a1f-34c8-4241-992e-6a2b31ac1e82")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/99f7ea83-6836-44ea-889b-f0d453e84b38/3dcd8643-765f-4aab-99d6-4ed68d4de44f"
-					(reference "#PWR0113")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 154.94 38.1 180)
 		(unit 1)
@@ -9472,86 +9360,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/99f7ea83-6836-44ea-889b-f0d453e84b38/3dcd8643-765f-4aab-99d6-4ed68d4de44f"
 					(reference "BT24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 55.245 194.31 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "b692e171-7e98-4e04-9944-fa4bf6b17f20")
-		(property "Reference" "R136"
-			(at 55.245 189.23 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Value" "0R"
-			(at 55.245 191.77 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 55.245 194.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 55.245 194.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 55.245 194.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "cbfec892-b817-4cd3-b4c8-350e1e18d8ed")
-		)
-		(pin "1"
-			(uuid "72b6b066-9cec-4cae-aa04-33e6fd280298")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/99f7ea83-6836-44ea-889b-f0d453e84b38/3dcd8643-765f-4aab-99d6-4ed68d4de44f"
-					(reference "R136")
 					(unit 1)
 				)
 			)

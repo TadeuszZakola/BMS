@@ -813,29 +813,27 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "IC"
-				(at 24.13 7.62 0)
+			(property "Reference" "IC2"
+				(at 13.97 6.985 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "TPS563200DDCR"
-				(at 24.13 5.08 0)
+				(at 13.97 4.445 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" "SOT95P280X110-6N"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
 				(at 24.13 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -859,18 +857,7 @@
 					(justify left)
 				)
 			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description_1" "17 V Input, 3A Synchronous Step-Down Regulator in SOT-23 with Advanced Eco-mode"
+			(property "Description" "17 V Input, 3A Synchronous Step-Down Regulator in SOT-23 with Advanced Eco-mode"
 				(at 24.13 -2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -942,9 +929,21 @@
 					(justify left)
 				)
 			)
+			(property "Description_1" "17 V Input, 3A Synchronous Step-Down Regulator in SOT-23 with Advanced Eco-mode"
+				(at 24.13 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
 			(symbol "TPS563200DDCR_0_0"
 				(pin power_in line
-					(at 0 0 0)
+					(at 14.605 -12.7 90)
 					(length 5.08)
 					(name "GND"
 						(effects
@@ -962,7 +961,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 0 -2.54 0)
+					(at 27.94 0.635 180)
 					(length 5.08)
 					(name "SW"
 						(effects
@@ -980,7 +979,7 @@
 					)
 				)
 				(pin power_in line
-					(at 0 -5.08 0)
+					(at 0 0.635 0)
 					(length 5.08)
 					(name "VIN"
 						(effects
@@ -998,7 +997,7 @@
 					)
 				)
 				(pin input line
-					(at 27.94 -5.08 180)
+					(at 27.94 -5.715 180)
 					(length 5.08)
 					(name "VFB"
 						(effects
@@ -1016,7 +1015,7 @@
 					)
 				)
 				(pin input line
-					(at 27.94 -2.54 180)
+					(at 0 -2.54 0)
 					(length 5.08)
 					(name "EN"
 						(effects
@@ -1034,7 +1033,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 27.94 0 180)
+					(at 27.94 -2.54 180)
 					(length 5.08)
 					(name "VBST"
 						(effects
@@ -1336,16 +1335,10 @@
 		(uuid "3d07d815-cadb-4883-b285-0004243ee7f5")
 	)
 	(junction
-		(at 162.56 76.2)
+		(at 110.49 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "5a80e6b3-5416-426a-8a29-26045d221fa8")
-	)
-	(junction
-		(at 116.84 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6079b062-a835-4ab0-b5fa-9bbae4a4156c")
+		(uuid "5e352ef9-a20b-4d5c-8b9d-45c4fa6fbc1e")
 	)
 	(junction
 		(at 189.23 120.65)
@@ -1390,12 +1383,6 @@
 		(uuid "8daf8856-bbd4-447d-80a6-778cb04ee3ef")
 	)
 	(junction
-		(at 121.92 120.65)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "931daf59-65fc-4687-84a7-615b2e3f157c")
-	)
-	(junction
 		(at 100.33 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1420,6 +1407,12 @@
 		(uuid "bfa4523b-67fe-458e-9f2b-75afcfe73aff")
 	)
 	(junction
+		(at 161.925 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bffd7761-127d-45b7-b78f-04a61c2b5681")
+	)
+	(junction
 		(at 205.74 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1430,6 +1423,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d84c3b48-f926-4d54-91fc-b17dbcec426c")
+	)
+	(junction
+		(at 133.985 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f92835cb-d5d8-494f-ab45-754abeb53ffa")
 	)
 	(junction
 		(at 76.2 120.65)
@@ -1446,6 +1445,16 @@
 			(type default)
 		)
 		(uuid "036e3898-061f-4d63-84f0-023e10df01b3")
+	)
+	(wire
+		(pts
+			(xy 117.475 79.375) (xy 119.38 79.375)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "064568ac-54fa-4635-b021-895c5cfb1376")
 	)
 	(wire
 		(pts
@@ -1469,6 +1478,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 79.375) (xy 151.765 79.375)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a58ab53-7c4d-4d6f-8361-d6345c0751f1")
+	)
+	(wire
+		(pts
 			(xy 200.66 120.65) (xy 205.74 120.65)
 		)
 		(stroke
@@ -1489,13 +1508,13 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 76.2) (xy 121.92 76.2)
+			(xy 147.32 82.55) (xy 149.86 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1d846576-75a5-4144-a22e-68b7d0e5d3f4")
+		(uuid "180f29bb-ac65-4c1b-b8b0-68560a932426")
 	)
 	(wire
 		(pts
@@ -1506,16 +1525,6 @@
 			(type default)
 		)
 		(uuid "1e285a52-bca9-4510-b6e6-ccdcf4b240fa")
-	)
-	(wire
-		(pts
-			(xy 189.23 120.65) (xy 121.92 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22883039-b0b1-4ee5-b644-a417469e18d9")
 	)
 	(wire
 		(pts
@@ -1559,17 +1568,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 78.74) (xy 116.84 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "39816893-a928-462a-9c06-e66f26cc5a62")
-	)
-	(wire
-		(pts
-			(xy 107.95 76.2) (xy 116.84 76.2)
+			(xy 107.95 76.2) (xy 110.49 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1589,6 +1588,26 @@
 	)
 	(wire
 		(pts
+			(xy 133.985 120.65) (xy 189.23 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "470756ae-7a36-4dd5-bce0-9ba4ce208450")
+	)
+	(wire
+		(pts
+			(xy 156.845 79.375) (xy 161.925 79.375)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "495e3f37-6bca-4830-9454-2f9ad1a05261")
+	)
+	(wire
+		(pts
 			(xy 100.33 76.2) (xy 107.95 76.2)
 		)
 		(stroke
@@ -1599,13 +1618,23 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 120.65) (xy 121.92 120.65)
+			(xy 107.95 120.65) (xy 133.985 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "560280e4-7790-4efa-a270-5d3c6bfe3232")
+	)
+	(wire
+		(pts
+			(xy 110.49 76.2) (xy 119.38 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "566c27c8-a2d3-4510-8004-83d867f81afd")
 	)
 	(wire
 		(pts
@@ -1619,13 +1648,13 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 78.74) (xy 154.94 83.82)
+			(xy 147.32 76.2) (xy 161.925 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "70154fb6-ce3e-40e1-bb94-66b36fc1ee90")
+		(uuid "5f8d5654-09f7-4dde-91ab-fbdf9f68b066")
 	)
 	(wire
 		(pts
@@ -1656,16 +1685,6 @@
 			(type default)
 		)
 		(uuid "771598de-151c-4992-9fb3-34d7e0233a49")
-	)
-	(wire
-		(pts
-			(xy 121.92 78.74) (xy 116.84 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "77a2ea12-d25c-4ac2-a3ac-e85c77a0baea")
 	)
 	(wire
 		(pts
@@ -1749,13 +1768,13 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 76.2) (xy 162.56 77.47)
+			(xy 161.925 79.375) (xy 161.925 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9602414d-2402-4343-b0c6-956aa3191fa2")
+		(uuid "94450192-8d03-43c5-b896-5eb07ac66a9b")
 	)
 	(wire
 		(pts
@@ -1769,16 +1788,6 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 78.74) (xy 154.94 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a830c5cb-78d5-4ce5-b986-14b2207d69c4")
-	)
-	(wire
-		(pts
 			(xy 76.2 101.6) (xy 76.2 120.65)
 		)
 		(stroke
@@ -1789,23 +1798,13 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 76.2) (xy 168.91 76.2)
+			(xy 133.985 89.535) (xy 133.985 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ab8f74c1-9b38-4654-a854-0e643e4ee0ac")
-	)
-	(wire
-		(pts
-			(xy 162.56 83.82) (xy 162.56 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b82896ee-0853-4479-8057-547618bd4580")
+		(uuid "b8d3b1f4-02fe-47d6-9ea8-290ba487ed79")
 	)
 	(wire
 		(pts
@@ -1839,13 +1838,23 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 76.2) (xy 162.56 76.2)
+			(xy 149.86 82.55) (xy 149.86 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c2f4a9ed-ff72-4a41-9b2d-d21e4d41e29e")
+		(uuid "bf41a57e-5155-4c36-a613-2d9a289b00de")
+	)
+	(wire
+		(pts
+			(xy 110.49 79.375) (xy 110.49 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c026560a-e39c-4ef7-b9b8-2ea1eb31e637")
 	)
 	(wire
 		(pts
@@ -1869,16 +1878,6 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 81.28) (xy 149.86 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbb575ec-84b6-466a-91ac-892e30b74875")
-	)
-	(wire
-		(pts
 			(xy 107.95 100.33) (xy 107.95 120.65)
 		)
 		(stroke
@@ -1889,13 +1888,13 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 81.28) (xy 121.92 120.65)
+			(xy 161.925 76.2) (xy 168.91 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d608c0f4-ba59-4573-b262-3c499b8d1587")
+		(uuid "db697e7d-084c-4297-be32-a296da01c516")
 	)
 	(wire
 		(pts
@@ -1919,16 +1918,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 83.82) (xy 162.56 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e46f32c3-cbe7-4537-9c13-d96ce6cc8a26")
-	)
-	(wire
-		(pts
 			(xy 93.98 76.2) (xy 100.33 76.2)
 		)
 		(stroke
@@ -1936,6 +1925,16 @@
 			(type default)
 		)
 		(uuid "e50e1500-324a-4e5a-86a9-863de57ec8b5")
+	)
+	(wire
+		(pts
+			(xy 112.395 79.375) (xy 110.49 79.375)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed6ab7be-8832-4ece-a56c-6da411e4af55")
 	)
 	(wire
 		(pts
@@ -2035,7 +2034,7 @@
 				)
 			)
 		)
-		(property "Value" "3.3u 20mOhm"
+		(property "Value" "3.3u"
 			(at 171.45 73.66 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2045,7 +2044,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footrpint:CLF7045__"
+		(property "Footprint" "Inductor_SMD:L_Sunlord_MWSA0402S"
 			(at 171.45 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -2056,7 +2055,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/CLF7045NIT-3R3N-D?qs=P8zzrVhehaveWwbrqo7%252Bdg%3D%3D"
+		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Inductors_Coils_Chokes/Inductors_(SMD)_2936?queryFilterParams=N4IgDgTgpgzghgGygFQJ5liAXAbQLoA0IAxgPYC2YpAdlNQC4AyAlgEZoYzY4itwxQQhEhSq0GAIQhxqAExYx63PAF8gA"
 			(at 171.45 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -2067,7 +2066,7 @@
 				)
 			)
 		)
-		(property "Description" "Inductor, small symbol"
+		(property "Description" "CKST04015-3.3uH/M"
 			(at 171.45 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -2088,429 +2087,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
 					(reference "L2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "TPS563200DDCR:TPS563200DDCR")
-		(at 121.92 76.2 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0e5d0e39-ce71-47b4-9396-ea496b85240a")
-		(property "Reference" "IC3"
-			(at 135.89 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPS563200DDCR"
-			(at 135.89 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 146.05 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/TPS563200"
-			(at 146.05 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "17 V Input, 3A Synchronous Step-Down Regulator in SOT-23 with Advanced Eco-mode"
-			(at 146.05 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Height" "1.1"
-			(at 146.05 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Mouser Part Number" "595-TPS563200DDCR"
-			(at 146.05 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS563200DDCR?qs=bT6MOr62zwLjxJIF4PA64g%3D%3D"
-			(at 146.05 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at 146.05 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer_Part_Number" "TPS563200DDCR"
-			(at 146.05 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description_1" "17 V Input, 3A Synchronous Step-Down Regulator in SOT-23 with Advanced Eco-mode"
-			(at 146.05 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "6"
-			(uuid "eaf80cb3-9a82-47f6-91bf-83b3dbed7fb5")
-		)
-		(pin "5"
-			(uuid "8e1beafd-3864-4706-8f68-edcd71b903df")
-		)
-		(pin "4"
-			(uuid "a219e765-efcf-4770-8570-7c2282e53e98")
-		)
-		(pin "1"
-			(uuid "0ec5009b-0c0f-4308-b7ec-a4982748a511")
-		)
-		(pin "2"
-			(uuid "d8fd7e45-0760-4f8a-90a3-c7530143a29e")
-		)
-		(pin "3"
-			(uuid "2301ad85-d2ea-404b-b9b9-87284c0333ee")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
-					(reference "IC3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 107.95 97.79 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2290dda4-0bcc-41d4-931d-513e0a9e259e")
-		(property "Reference" "C127"
-			(at 110.49 96.5262 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uf"
-			(at 110.49 99.0662 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 107.95 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/C2012X5R1V106K085AC?qs=6JAMGB%252BEdky%252BlYMcTLhFyA%3D%3D"
-			(at 107.95 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 107.95 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "75bce4b6-6bb1-43dc-bffb-d857a9e5ac8d")
-		)
-		(pin "1"
-			(uuid "03b7c872-04ee-4469-9879-a64e588d29d3")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
-					(reference "C127")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 162.56 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2301fc25-6078-4835-b967-a289a8214374")
-		(property "Reference" "C128"
-			(at 165.1 78.7462 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n 280mOhm"
-			(at 165.1 81.2862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 162.56 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/KYOCERA-AVX/08053C104KAT2A?qs=EihRZLdKnF2GcTBzDkE%2FiQ%3D%3D"
-			(at 162.56 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 162.56 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "07c375e2-cc1d-4a70-9eea-b3bd74a54a96")
-		)
-		(pin "1"
-			(uuid "52a9e016-4845-4408-8a4b-9613c6a94c37")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
-					(reference "C128")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 205.74 92.71 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2a713a39-673b-42b7-a45f-eafbfcf7938c")
-		(property "Reference" "C131"
-			(at 208.28 91.4462 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22u"
-			(at 208.28 93.9862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 205.74 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/C1608X5R1A226M080AC?qs=dfay7wIA1uED3Fb1o4f9Dg%3D%3D"
-			(at 205.74 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 205.74 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field5" "22u 3.71mOhm"
-			(at 205.74 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "5550d4c0-93d6-420b-9780-7e90fa279781")
-		)
-		(pin "1"
-			(uuid "9f4e1538-6f5e-4174-8412-1a96bab0f2d6")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
-					(reference "C131")
 					(unit 1)
 				)
 			)
@@ -2591,6 +2167,87 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
 					(reference "F5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 154.305 79.375 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3b37c9b7-a328-45b7-9357-492e65fd3afa")
+		(property "Reference" "C122"
+			(at 154.305 82.55 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n 280mOhm"
+			(at 155.5812 76.835 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 154.305 79.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/KYOCERA-AVX/08053C104KAT2A?qs=EihRZLdKnF2GcTBzDkE%2FiQ%3D%3D"
+			(at 154.305 79.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 154.305 79.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "224fbbdf-c04a-4ab4-8bfb-682388f2e57c")
+		)
+		(pin "1"
+			(uuid "ff37540e-d09b-42e7-b94c-75d221339312")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
+					(reference "C122")
 					(unit 1)
 				)
 			)
@@ -2678,6 +2335,172 @@
 		)
 	)
 	(symbol
+		(lib_id "TPS563200DDCR:TPS563200DDCR")
+		(at 119.38 76.835 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5bb7b29f-f8fd-4067-818e-af981f1bb0f4")
+		(property "Reference" "IC3"
+			(at 133.35 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TPS563200DDCR"
+			(at 133.35 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 143.51 74.295 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/gpn/TPS563200"
+			(at 143.51 76.835 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "17 V Input, 3A Synchronous Step-Down Regulator in SOT-23 with Advanced Eco-mode"
+			(at 143.51 79.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Height" "1.1"
+			(at 143.51 81.915 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Mouser Part Number" "595-TPS563200DDCR"
+			(at 143.51 84.455 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS563200DDCR?qs=bT6MOr62zwLjxJIF4PA64g%3D%3D"
+			(at 143.51 86.995 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 143.51 89.535 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer_Part_Number" "TPS563200DDCR"
+			(at 143.51 92.075 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description_1" "17 V Input, 3A Synchronous Step-Down Regulator in SOT-23 with Advanced Eco-mode"
+			(at 143.51 79.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "6"
+			(uuid "a7ff27d6-5dc8-49d0-95a2-2e37dd6f6eac")
+		)
+		(pin "5"
+			(uuid "cbb77c27-d276-4f42-a0c5-5af45ad37b23")
+		)
+		(pin "4"
+			(uuid "3bb7ada7-3624-493e-b31b-8c38438a0dd6")
+		)
+		(pin "1"
+			(uuid "7e83d9ce-5083-4ab3-8934-cc5ce0e481c9")
+		)
+		(pin "2"
+			(uuid "9f50cc3e-eb60-4763-876d-f987b0c3fabf")
+		)
+		(pin "3"
+			(uuid "a4cc3e31-bc73-47a3-a620-6c23c4ed975e")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
+					(reference "IC3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_TVS")
 		(at 76.2 97.79 90)
 		(unit 1)
@@ -2699,7 +2522,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TVS diode 5V"
+		(property "Value" "P6SMB6.8CA/TR13"
 			(at 60.96 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2710,7 +2533,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
+		(property "Footprint" "Diode_SMD:D_SMB"
 			(at 76.2 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -2753,6 +2576,99 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
 					(reference "D17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 107.95 97.79 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "66723dd2-b11f-4084-97be-7dc3cf65e9e1")
+		(property "Reference" "C161"
+			(at 114.808 96.266 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22u"
+			(at 114.3 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 107.95 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/C1608X5R1A226M080AC?qs=dfay7wIA1uED3Fb1o4f9Dg%3D%3D"
+			(at 107.95 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 107.95 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field5" "22u 3.71mOhm"
+			(at 107.95 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a1a00960-a801-4a5f-b26e-2275e69cb792")
+		)
+		(pin "1"
+			(uuid "4ae52666-a199-451e-bd1f-023d4d4d40cf")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
+					(reference "C161")
 					(unit 1)
 				)
 			)
@@ -2837,6 +2753,98 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
+		(at 100.33 97.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "82b807e5-fbb3-439f-a46d-92b028622dfa")
+		(property "Reference" "C160"
+			(at 93.472 96.266 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22u"
+			(at 93.98 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 100.33 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/C1608X5R1A226M080AC?qs=dfay7wIA1uED3Fb1o4f9Dg%3D%3D"
+			(at 100.33 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 100.33 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field5" "22u 3.71mOhm"
+			(at 100.33 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "bc9878c5-8f12-4ee6-8347-69f2d70d9fb9")
+		)
+		(pin "1"
+			(uuid "182bf2b0-6ac3-4134-9b3d-314c4c711c66")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
+					(reference "C160")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
 		(at 215.9 92.71 0)
 		(unit 1)
 		(body_style 1)
@@ -2869,7 +2877,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 215.9 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -2996,6 +3004,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 205.74 92.71 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a4280701-1784-4dac-904f-3cd4d319c116")
+		(property "Reference" "C131"
+			(at 212.598 91.186 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22u"
+			(at 212.09 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 205.74 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/C1608X5R1A226M080AC?qs=dfay7wIA1uED3Fb1o4f9Dg%3D%3D"
+			(at 205.74 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 205.74 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field5" "22u 3.71mOhm"
+			(at 205.74 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5c0b27b9-9bab-4b38-9b35-7c5d4b02c44c")
+		)
+		(pin "1"
+			(uuid "77ca457c-e424-4a95-8d33-d30a970e20c6")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
+					(reference "C131")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 189.23 82.55 180)
 		(unit 1)
@@ -3017,7 +3118,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "30K"
+		(property "Value" "33.2"
 			(at 183.642 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3157,6 +3258,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 114.935 79.375 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c101e044-673c-4f7b-92df-01513ae15823")
+		(property "Reference" "R179"
+			(at 117.475 81.915 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 116.84 84.455 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 114.935 79.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/26547-0603WAF1002T5E/C25804"
+			(at 114.935 79.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 114.935 79.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e60e6d60-d01b-468e-97f1-13419917e66f")
+		)
+		(pin "2"
+			(uuid "cc03b65f-f851-4fa8-8cc1-13ca727ca476")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
+					(reference "R179")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 200.66 92.71 0)
 		(unit 1)
@@ -3189,7 +3371,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 200.66 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -3243,87 +3425,6 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
 					(reference "C130")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 100.33 97.79 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fa4252bc-e8d7-4642-b348-586176d75fd4")
-		(property "Reference" "C126"
-			(at 92.71 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 93.98 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 100.33 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/TDK/C2012X5R1V106K085AC?qs=6JAMGB%252BEdky%252BlYMcTLhFyA%3D%3D"
-			(at 100.33 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 100.33 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "87f79b77-a542-4618-9126-6e471cca7f04")
-		)
-		(pin "1"
-			(uuid "eafad361-f7fa-4e07-98ec-ff7567e45bad")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
-					(reference "C126")
 					(unit 1)
 				)
 			)

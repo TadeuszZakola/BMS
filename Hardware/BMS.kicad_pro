@@ -52,8 +52,8 @@
         "zones": {
           "border_display_style": 2,
           "border_hatch_pitch": 0.5,
-          "corner_radius": 0.0,
-          "corner_smoothing": 0,
+          "corner_radius": 1.0,
+          "corner_smoothing": 1,
           "fill_mode": 0,
           "hatch_gap": 1.5,
           "hatch_orientation": 0.0,
@@ -91,7 +91,28 @@
           "width": 0.4
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "footprint_type_mismatch|260050000|152395000|1004407c-57c1-4f75-a91d-2d7829f57247|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "footprint_type_mismatch|260070000|142300000|a8077304-ba61-4d61-8964-e1eced56637f|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "starved_thermal|184400000|123421875|ecc4de99-f473-4586-a854-2d7d0ffd4cb9|73302293-83a1-4f2b-a788-96e5d886be23|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|184650000|175700000|06abd308-9800-4ba3-a887-b8e4e2382829|58f3af13-e478-4e58-b297-ace83c487c12|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|185650000|175700000|06abd308-9800-4ba3-a887-b8e4e2382829|4dc052a1-7e2c-40bc-85b3-c9fae8268993|F.Cu",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -580,7 +601,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
         "tuning_profile": "",
-        "via_diameter": 0.4,
+        "via_diameter": 0.6,
         "via_drill": 0.3
       }
     ],
@@ -816,7 +837,7 @@
         "uuid": "26289bb6-56bc-4ca1-b1a2-18d58d1afdf5"
       }
     ],
-    "used_designators": "J17,J21-24,D11,#PWR117,#PWR135,#PWR202,F55",
+    "used_designators": "D11,#PWR138,C145,F45-46,R15,R61,J11",
     "variants": []
   },
   "sheets": [
