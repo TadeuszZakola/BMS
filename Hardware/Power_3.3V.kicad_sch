@@ -2013,86 +2013,6 @@
 		(uuid "d8cb7e71-9142-4ca1-beae-4ceba6514296")
 	)
 	(symbol
-		(lib_id "Device:L_Small")
-		(at 171.45 76.2 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "00233d17-4a86-499d-be60-5ad29f2c752f")
-		(property "Reference" "L2"
-			(at 171.45 71.12 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "3.3u"
-			(at 171.45 73.66 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_Sunlord_MWSA0402S"
-			(at 171.45 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/parts/2nd/Inductors_Coils_Chokes/Inductors_(SMD)_2936?queryFilterParams=N4IgDgTgpgzghgGygFQJ5liAXAbQLoA0IAxgPYC2YpAdlNQC4AyAlgEZoYzY4itwxQQhEhSq0GAIQhxqAExYx63PAF8gA"
-			(at 171.45 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "CKST04015-3.3uH/M"
-			(at 171.45 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a6a2193f-452c-4043-b464-e16069ea12ff")
-		)
-		(pin "2"
-			(uuid "17de08f5-c308-4556-aac1-05e0fcc24b7d")
-		)
-		(instances
-			(project "BMS"
-				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
-					(reference "L2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Fuse_Small")
 		(at 220.98 76.2 0)
 		(unit 1)
@@ -2838,6 +2758,86 @@
 			(project "BMS"
 				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
 					(reference "C160")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L_Small")
+		(at 171.45 76.2 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "95acd851-7fe3-4491-a50c-120fbbb8eeaa")
+		(property "Reference" "L2"
+			(at 171.45 71.12 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3.3u"
+			(at 171.45 73.66 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_TDK_VLS6045EX_VLS6045AF"
+			(at 171.45 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/pl/ProductDetail/Pulse-Electronics/BWVS006060453R3M00?qs=DRkmTr78QASfB1%2FzOxIslQ%3D%3D"
+			(at 171.45 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "BWVS006060453R3M00"
+			(at 171.45 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "69b692ae-8145-45b2-bd79-1f36adfe4a96")
+		)
+		(pin "2"
+			(uuid "412afeeb-79fb-4b93-a525-862e1401361a")
+		)
+		(instances
+			(project "BMS"
+				(path "/26289bb6-56bc-4ca1-b1a2-18d58d1afdf5/b306fb08-ef5e-4bf5-8efa-c4e5200f566a/36deb01f-8567-4cbb-9333-b925b4509962"
+					(reference "L2")
 					(unit 1)
 				)
 			)
